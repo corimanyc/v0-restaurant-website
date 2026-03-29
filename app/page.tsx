@@ -1,20 +1,43 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
+
+const heroImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5160%202-9rUNzC6kmRQxuPNwa5oZORQycZa9Nr.png',
+    alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/23961C38-CBF4-4307-AC90-345364EE350F_1_201_a-SFVhjEpDnwUKeJfiFk7bZkfnLc0ZV6.jpeg',
+    alt: 'CORIMA kitchen — 9:34 PM service in progress',
+  },
+]
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="relative w-screen h-screen overflow-hidden bg-black text-white">
-      {/* Hero Background Image — full bleed */}
+      {/* Hero Background — full bleed carousel */}
       <div className="absolute inset-0 w-full h-full">
-        <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5160%202-9rUNzC6kmRQxuPNwa5oZORQycZa9Nr.png"
-          alt="CORIMA fine dining — a dry-aged cut of beef presented tableside"
-          className="w-full h-full object-cover"
-        />
+        {heroImages.map((image, index) => (
+          <img
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+            style={{ opacity: index === currentIndex ? 1 : 0 }}
+          />
+        ))}
       </div>
 
       {/* Header/Navigation */}
