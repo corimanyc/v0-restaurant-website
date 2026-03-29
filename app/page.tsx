@@ -127,7 +127,8 @@ export default function Home() {
               alt="Tasting menu dish"
               width="349"
               height="523"
-              className="w-full max-w-sm object-cover mb-12"
+              className="object-cover mb-12"
+              style={{ width: '349px', height: '523px' }}
             />
 
             <h3 className="text-sm uppercase tracking-wider mb-6">Tasting Menu</h3>
@@ -170,7 +171,8 @@ export default function Home() {
               alt="Chef preparing service with traditional pottery"
               width="905"
               height="742"
-              className="w-full max-w-3xl object-cover mt-8"
+              className="object-cover mt-8"
+              style={{ width: '905px', height: '742px' }}
             />
           </div>
         </div>
