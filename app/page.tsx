@@ -26,26 +26,28 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-black text-white">
-      {/* Hero Background — full bleed carousel */}
-      <div className="absolute inset-0 w-full h-full">
-        {heroImages.map((image, index) => (
-          <img
-            key={image.src}
-            src={image.src}
-            alt={image.alt}
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-            style={{ 
-              opacity: index === currentIndex ? 1 : 0,
-              objectPosition: index === 1 ? 'center 20%' : 'center',
-            }}
-          />
-        ))}
-      </div>
+    <div className="bg-black text-white">
+      {/* Hero Section */}
+      <section className="relative w-screen h-screen overflow-hidden">
+        {/* Hero Background — full bleed carousel */}
+        <div className="absolute inset-0 w-full h-full">
+          {heroImages.map((image, index) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+              style={{ 
+                opacity: index === currentIndex ? 1 : 0,
+                objectPosition: index === 1 ? 'center 20%' : 'center',
+              }}
+            />
+          ))}
+        </div>
 
-      {/* Header/Navigation */}
-      <header className="relative z-40">
-        <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
+        {/* Header/Navigation */}
+        <header className="relative z-40">
+          <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 w-24 h-auto">
             <img 
@@ -91,22 +93,84 @@ export default function Home() {
         )}
       </header>
 
-      {/* Footer — positioned absolutely at bottom */}
-      <footer className="absolute bottom-0 left-0 right-0 z-40">
-        <div style={{ padding: '24px' }} className="flex items-center justify-between">
-          {/* Location and Hours */}
-          <p className="text-xs md:text-sm tracking-widest uppercase text-white">
-            3 ALLEN ST NY 10002&nbsp;&nbsp;&nbsp;TUESDAY -&nbsp; SATURDAY&nbsp; 5:30PM - 10PM
-          </p>
+        {/* Footer — positioned absolutely at bottom */}
+        <footer className="absolute bottom-0 left-0 right-0 z-40">
+          <div style={{ padding: '24px' }} className="flex items-center justify-between">
+            {/* Location and Hours */}
+            <p className="text-xs md:text-sm tracking-widest uppercase text-white">
+              3 ALLEN ST NY 10002&nbsp;&nbsp;&nbsp;TUESDAY -&nbsp; SATURDAY&nbsp; 5:30PM - 10PM
+            </p>
 
-          {/* Footer Logo */}
-          <img 
-            src="/footer-logo.png" 
-            alt="CORIMA" 
-            className="w-6 h-6 object-contain"
-          />
+            {/* Footer Logo */}
+            <img 
+              src="/footer-logo.png" 
+              alt="CORIMA" 
+              className="w-6 h-6 object-contain"
+            />
+          </div>
+        </footer>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '64px 24px' }}>
+        {/* Headline */}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl leading-snug max-w-3xl mb-16">
+          Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
+        </h2>
+
+        {/* Two Column Layout */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+          {/* Left Column - Tasting Menu */}
+          <div className="flex-1">
+            <img
+              src="/placeholder.svg?height=400&width=400"
+              alt="Tasting menu dish"
+              className="w-full max-w-md aspect-square object-cover mb-12"
+            />
+
+            <h3 className="text-sm uppercase tracking-wider mb-6">Tasting Menu</h3>
+
+            <p className="text-sm leading-relaxed mb-4 max-w-md">
+              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            </p>
+
+            <p className="text-sm leading-relaxed mb-6 max-w-md">
+              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+            </p>
+
+            <p className="text-sm leading-relaxed mb-8 max-w-md">
+              We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
+            </p>
+
+            <Link href="mailto:info@corimanyc.com" className="text-sm hover:opacity-70 transition">
+              <span className="mr-2">&bull;</span>Contact
+            </Link>
+          </div>
+
+          {/* Right Column - A La Carte */}
+          <div className="flex-1">
+            <h3 className="text-sm uppercase tracking-wider mb-6">A La Carte</h3>
+
+            <p className="text-sm leading-relaxed mb-4 max-w-xl">
+              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            </p>
+
+            <p className="text-sm leading-relaxed mb-8 max-w-xl">
+              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+            </p>
+
+            <Link href="#menu" className="text-sm hover:opacity-70 transition mb-12 inline-block">
+              <span className="mr-2">&bull;</span>View Menu
+            </Link>
+
+            <img
+              src="/placeholder.svg?height=600&width=700"
+              alt="Chef preparing service with traditional pottery"
+              className="w-full max-w-2xl aspect-[4/3] object-cover mt-8"
+            />
+          </div>
         </div>
-      </footer>
+      </section>
     </div>
   )
 }
