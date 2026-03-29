@@ -73,30 +73,12 @@ export default function Home() {
             3 ALLEN ST NY 10002&nbsp;&nbsp;&nbsp;TUESDAY -&nbsp; SATURDAY&nbsp; 5:30PM - 10PM
           </p>
 
-          {/* Decorative snowflake icon */}
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            stroke="white"
-            strokeWidth="1.2"
-            strokeLinecap="round"
-            aria-hidden="true"
-          >
-            <line x1="14" y1="2" x2="14" y2="26" />
-            <line x1="2" y1="14" x2="26" y2="14" />
-            <line x1="5.5" y1="5.5" x2="22.5" y2="22.5" />
-            <line x1="22.5" y1="5.5" x2="5.5" y2="22.5" />
-            <line x1="14" y1="2" x2="10" y2="6" />
-            <line x1="14" y1="2" x2="18" y2="6" />
-            <line x1="14" y1="26" x2="10" y2="22" />
-            <line x1="14" y1="26" x2="18" y2="22" />
-            <line x1="2" y1="14" x2="6" y2="10" />
-            <line x1="2" y1="14" x2="6" y2="18" />
-            <line x1="26" y1="14" x2="22" y2="10" />
-            <line x1="26" y1="14" x2="22" y2="18" />
-          </svg>
+          {/* Footer Logo */}
+          <img 
+            src="/footer-logo.png" 
+            alt="CORIMA" 
+            className="w-7 h-7 object-contain"
+          />
         </div>
       </footer>
     </div>
