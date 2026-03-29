@@ -123,7 +123,7 @@ export default function Home() {
           {/* Left Column - Tasting Menu */}
           <div className="flex-1 flex flex-col">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-RYnzmNsgjLLMOoO45J2diTEDIAnyDE.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-XpdLJxwWnBtbh1nCqXx5syDG1wFAVy.png"
               alt="Tasting menu dish"
               width="349"
               height="523"
