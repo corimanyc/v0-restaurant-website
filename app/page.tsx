@@ -123,9 +123,11 @@ export default function Home() {
           {/* Left Column - Tasting Menu */}
           <div className="flex-1">
             <img
-              src="/placeholder.svg?height=400&width=400"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-RYnzmNsgjLLMOoO45J2diTEDIAnyDE.png"
               alt="Tasting menu dish"
-              className="w-full max-w-md aspect-square object-cover mb-12"
+              width="349"
+              height="523"
+              className="w-full max-w-sm object-cover mb-12"
             />
 
             <h3 className="text-sm uppercase tracking-wider mb-6">Tasting Menu</h3>
@@ -164,9 +166,11 @@ export default function Home() {
             </Link>
 
             <img
-              src="/placeholder.svg?height=600&width=700"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png"
               alt="Chef preparing service with traditional pottery"
-              className="w-full max-w-2xl aspect-[4/3] object-cover mt-8"
+              width="905"
+              height="742"
+              className="w-full max-w-3xl object-cover mt-8"
             />
           </div>
         </div>
