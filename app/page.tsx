@@ -112,35 +112,36 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '64px 24px' }}>
+      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px' }}>
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl lg:text-4xl leading-snug max-w-3xl mb-16">
+        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10">
           Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
         </h2>
 
-        {/* Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+        {/* Two Column Layout — 36px gap */}
+        <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
           {/* Left Column - Tasting Menu */}
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-RYnzmNsgjLLMOoO45J2diTEDIAnyDE.png"
               alt="Tasting menu dish"
               width="349"
               height="523"
-              className="w-full max-w-sm object-cover mb-12"
+              className="object-cover mb-6"
+              style={{ width: '349px', height: '523px', maxWidth: '100%' }}
             />
 
-            <h3 className="text-sm uppercase tracking-wider mb-6">Tasting Menu</h3>
+            <h3 className="text-xs uppercase tracking-widest mb-4">Tasting Menu</h3>
 
-            <p className="text-sm leading-relaxed mb-4 max-w-md">
+            <p className="text-sm leading-relaxed mb-3" style={{ maxWidth: '349px' }}>
               At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
             </p>
 
-            <p className="text-sm leading-relaxed mb-6 max-w-md">
+            <p className="text-sm leading-relaxed mb-3" style={{ maxWidth: '349px' }}>
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
-            <p className="text-sm leading-relaxed mb-8 max-w-md">
+            <p className="text-sm leading-relaxed mb-6" style={{ maxWidth: '349px' }}>
               We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
             </p>
 
@@ -150,18 +151,18 @@ export default function Home() {
           </div>
 
           {/* Right Column - A La Carte */}
-          <div className="flex-1">
-            <h3 className="text-sm uppercase tracking-wider mb-6">A La Carte</h3>
+          <div className="flex-1 flex flex-col">
+            <h3 className="text-xs uppercase tracking-widest mb-4">A La Carte</h3>
 
-            <p className="text-sm leading-relaxed mb-4 max-w-xl">
+            <p className="text-sm leading-relaxed mb-3">
               At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
             </p>
 
-            <p className="text-sm leading-relaxed mb-8 max-w-xl">
+            <p className="text-sm leading-relaxed mb-5">
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
-            <Link href="#menu" className="text-sm hover:opacity-70 transition mb-12 inline-block">
+            <Link href="#menu" className="text-sm hover:opacity-70 transition mb-6 inline-block">
               <span className="mr-2">&bull;</span>View Menu
             </Link>
 
@@ -170,7 +171,8 @@ export default function Home() {
               alt="Chef preparing service with traditional pottery"
               width="905"
               height="742"
-              className="w-full max-w-3xl object-cover mt-8"
+              className="object-cover w-full"
+              style={{ maxWidth: '905px', height: 'auto', aspectRatio: '905/742' }}
             />
           </div>
         </div>
