@@ -35,7 +35,10 @@ export default function Home() {
             src={image.src}
             alt={image.alt}
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
-            style={{ opacity: index === currentIndex ? 1 : 0 }}
+            style={{ 
+              opacity: index === currentIndex ? 1 : 0,
+              objectPosition: index === 1 ? 'center 20%' : 'center',
+            }}
           />
         ))}
       </div>
