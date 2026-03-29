@@ -127,8 +127,8 @@ export default function Home() {
               alt="Tasting menu dish"
               width="349"
               height="523"
-              className="object-cover mb-6 w-full"
-              style={{ maxWidth: '100%', height: 'auto', aspectRatio: '349/523' }}
+              className="object-cover mb-6"
+              style={{ width: '420px', height: '628px', aspectRatio: '349/523' }}
             />
 
             <h3 className="text-xs uppercase tracking-widest mb-4">Tasting Menu</h3>
