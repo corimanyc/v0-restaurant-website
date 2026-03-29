@@ -130,15 +130,15 @@ export default function Home() {
 
             <h3 className="text-xs uppercase tracking-widest mb-4">Tasting Menu</h3>
 
-            <p className="text-sm leading-relaxed mb-3">
+            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
               At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
             </p>
 
-            <p className="text-sm leading-relaxed mb-3">
+            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
-            <p className="text-sm leading-relaxed mb-6">
+            <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
               We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
             </p>
 
@@ -151,11 +151,11 @@ export default function Home() {
           <div className="flex-1 flex flex-col">
             <h3 className="text-xs uppercase tracking-widest mb-4">A La Carte</h3>
 
-            <p className="text-sm leading-relaxed mb-3">
+            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
               At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
             </p>
 
-            <p className="text-sm leading-relaxed mb-5">
+            <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
