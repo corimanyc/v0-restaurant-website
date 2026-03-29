@@ -7,9 +7,9 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="relative min-h-screen bg-black text-white">
       {/* Header/Navigation */}
-      <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm">
+      <header className="fixed top-0 w-full z-50">
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -52,46 +52,47 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero Section with Image */}
-      <main className="pt-24 pb-20">
-        <div className="relative w-full h-screen max-h-[800px] md:max-h-screen overflow-hidden bg-black">
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled.png-Nga1NabiDtCfjekLZkyFBPcMe6DX6R.jpeg"
-            alt="CORIMA fine dining"
-            className="w-full h-full object-cover"
-          />
-          
-          {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
-        </div>
+      {/* Hero — full bleed, full viewport */}
+      <main className="fixed inset-0 -z-10">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled.png-Nga1NabiDtCfjekLZkyFBPcMe6DX6R.jpeg"
+          alt="CORIMA fine dining — a dry-aged cut of beef presented tableside"
+          className="w-full h-full object-cover"
+        />
       </main>
 
-      {/* Footer Information */}
-      <footer className="bg-black border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Location and Hours */}
-            <div className="text-center md:text-left">
-              <p className="text-sm md:text-base tracking-wide">3 ALLEN ST NY 10002</p>
-              <p className="text-sm md:text-base tracking-wide mt-2">TUESDAY - SATURDAY 5:30PM - 10PM</p>
-            </div>
+      {/* Footer — pinned to bottom */}
+      <footer className="fixed bottom-0 left-0 right-0 z-50">
+        <div className="px-6 lg:px-8 py-6 flex items-center justify-between">
+          {/* Location and Hours */}
+          <p className="text-xs md:text-sm tracking-widest uppercase text-white">
+            3 ALLEN ST NY 10002&nbsp;&nbsp;&nbsp;TUESDAY -&nbsp; SATURDAY&nbsp; 5:30PM - 10PM
+          </p>
 
-            {/* Decorative Icon */}
-            <div className="flex items-center justify-center">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 32 32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                className="text-white"
-              >
-                <circle cx="16" cy="16" r="15" />
-                <path d="M16 10v12M10 16h12" />
-              </svg>
-            </div>
-          </div>
+          {/* Decorative snowflake icon */}
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            stroke="white"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            aria-hidden="true"
+          >
+            <line x1="14" y1="2" x2="14" y2="26" />
+            <line x1="2" y1="14" x2="26" y2="14" />
+            <line x1="5.5" y1="5.5" x2="22.5" y2="22.5" />
+            <line x1="22.5" y1="5.5" x2="5.5" y2="22.5" />
+            <line x1="14" y1="2" x2="10" y2="6" />
+            <line x1="14" y1="2" x2="18" y2="6" />
+            <line x1="14" y1="26" x2="10" y2="22" />
+            <line x1="14" y1="26" x2="18" y2="22" />
+            <line x1="2" y1="14" x2="6" y2="10" />
+            <line x1="2" y1="14" x2="6" y2="18" />
+            <line x1="26" y1="14" x2="22" y2="10" />
+            <line x1="26" y1="14" x2="22" y2="18" />
+          </svg>
         </div>
       </footer>
     </div>
