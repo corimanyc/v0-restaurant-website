@@ -7,9 +7,18 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="relative min-h-screen bg-black text-white">
+    <div className="relative w-screen h-screen overflow-hidden bg-black text-white">
+      {/* Hero Background Image — full bleed */}
+      <div className="absolute inset-0 w-full h-full">
+        <img
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5160%202-9rUNzC6kmRQxuPNwa5oZORQycZa9Nr.png"
+          alt="CORIMA fine dining — a dry-aged cut of beef presented tableside"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
       {/* Header/Navigation */}
-      <header className="fixed top-0 w-full z-50">
+      <header className="relative z-40">
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 py-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -52,17 +61,8 @@ export default function Home() {
         )}
       </header>
 
-      {/* Hero — full bleed, full viewport */}
-      <main className="fixed inset-0 -z-10">
-        <img
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled.png-Nga1NabiDtCfjekLZkyFBPcMe6DX6R.jpeg"
-          alt="CORIMA fine dining — a dry-aged cut of beef presented tableside"
-          className="w-full h-full object-cover"
-        />
-      </main>
-
-      {/* Footer — pinned to bottom */}
-      <footer className="fixed bottom-0 left-0 right-0 z-50">
+      {/* Footer — positioned absolutely at bottom */}
+      <footer className="absolute bottom-0 left-0 right-0 z-40">
         <div className="px-6 lg:px-8 py-6 flex items-center justify-between">
           {/* Location and Hours */}
           <p className="text-xs md:text-sm tracking-widest uppercase text-white">
