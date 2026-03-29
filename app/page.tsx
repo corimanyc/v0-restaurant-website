@@ -77,7 +77,7 @@ export default function Home() {
           <img 
             src="/footer-logo.png" 
             alt="CORIMA" 
-            className="w-7 h-7 object-contain"
+            className="w-6 h-6 object-contain"
           />
         </div>
       </footer>
