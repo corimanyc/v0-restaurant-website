@@ -1,6 +1,23 @@
 import type { Metadata } from 'next'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+const satoshi = localFont({
+  src: [
+    {
+      path: '/fonts/Satoshi-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '/fonts/Satoshi-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-satoshi',
+})
 
 export const metadata: Metadata = {
   title: 'CORIMA - Fine Dining Restaurant',
@@ -31,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
+    <html lang="en" className={satoshi.variable}>
+      <body className="font-satoshi antialiased">
         {children}
         <Analytics />
       </body>
