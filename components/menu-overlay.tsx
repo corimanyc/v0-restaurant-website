@@ -96,19 +96,6 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           />
         </div>
       </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right — Image */}
-        <div className="hidden lg:block" style={{ width: '42%', flexShrink: 0 }}>
-          <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
-            alt="CORIMA dish being plated"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </div>
     </div>
   )
 }
