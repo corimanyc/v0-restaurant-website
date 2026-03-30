@@ -186,31 +186,29 @@ export default function Home() {
               <span className="mr-2">&bull;</span>View Menu
             </button>
 
-            <div className="relative overflow-hidden w-full" style={{ maxWidth: '905px' }}>
+            <div className="relative overflow-hidden w-full" style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}>
               {aboutSectionImages.map((image, index) => (
                 <img
                   key={image.src}
                   src={image.src}
                   alt={image.alt}
-                  width="905"
-                  height="742"
-                  className="object-cover w-full transition-opacity duration-700"
-                  style={{ aspectRatio: '905/742', opacity: index === aboutImgIndex ? 1 : 0 }}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
+                  style={{ opacity: index === aboutImgIndex ? 1 : 0 }}
                 />
               ))}
               {/* Left half — previous image */}
               <button
                 onClick={prevAboutImg}
-                className="absolute left-0 top-0 h-full w-1/2 z-10"
+                className="absolute left-0 top-0 h-full z-10"
+                style={{ width: '50%', cursor: 'w-resize' }}
                 aria-label="Previous image"
-                style={{ cursor: 'w-resize' }}
               />
               {/* Right half — next image */}
               <button
                 onClick={nextAboutImg}
-                className="absolute right-0 top-0 h-full w-1/2 z-10"
+                className="absolute right-0 top-0 h-full z-10"
+                style={{ width: '50%', cursor: 'e-resize' }}
                 aria-label="Next image"
-                style={{ cursor: 'e-resize' }}
               />
             </div>
           </div>
