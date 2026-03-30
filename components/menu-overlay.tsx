@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react'
+
 interface MenuItem {
   name: string
   price?: number
@@ -26,6 +28,17 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
   return (
     <div
       className="fixed inset-0 z-50 flex flex-col"
@@ -36,7 +49,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       }}
     >
       {/* Header */}
-      <div className="flex items-center justify-between" style={{ padding: '24px' }}>
+      <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
         <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>Menu</h1>
         <button
           onClick={onClose}
@@ -49,14 +62,17 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden" style={{ gap: '0', paddingRight: '24px' }}>
-        {/* Left — Menu List */}
-        <div className="flex-1 overflow-y-auto" style={{ padding: '32px 24px 48px 24px', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-          <style>{`
-            div::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
+      <div className="flex flex-1 overflow-hidden" style={{ paddingRight: '24px' }}>
+
+        {/* Left — scrollable menu list */}
+        <div
+          className="flex-1 overflow-y-auto"
+          style={{
+            padding: '32px 24px 48px 24px',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+          }}
+        >
           <h2 className="text-black uppercase tracking-widest font-medium mb-4" style={{ fontSize: '16px' }}>
             A La Carte
           </h2>
@@ -70,10 +86,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
           <div className="flex flex-col">
             {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start justify-between py-4"
-              >
+              <div key={index} className="flex items-start justify-between py-4">
                 <p className="text-black uppercase tracking-wide pr-8" style={{ fontSize: '14px', maxWidth: '500px' }}>
                   {item.name}
                 </p>
@@ -87,14 +100,15 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           </div>
         </div>
 
-        {/* Right — Image */}
-        <div className="hidden lg:block" style={{ width: '42%', flexShrink: 0 }}>
+        {/* Right — static image */}
+        <div className="hidden lg:block flex-shrink-0" style={{ width: '42%' }}>
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
             alt="CORIMA dish being plated"
             className="w-full h-full object-cover"
           />
         </div>
+
       </div>
     </div>
   )
