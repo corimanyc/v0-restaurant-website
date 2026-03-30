@@ -49,9 +49,9 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden" style={{ gap: '0' }}>
+      <div className="flex flex-1 overflow-hidden" style={{ gap: '0', paddingRight: '24px' }}>
         {/* Left — Menu List */}
-        <div className="flex-1 overflow-y-auto" style={{ padding: '32px 24px 48px', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div className="flex-1 overflow-y-auto" style={{ padding: '32px 24px 48px 24px', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           <style>{`
             div::-webkit-scrollbar {
               display: none;
@@ -74,7 +74,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                 key={index}
                 className="flex items-start justify-between py-4"
               >
-                <p className="text-black uppercase tracking-wide pr-8" style={{ fontSize: '14px', maxWidth: '540px' }}>
+                <p className="text-black uppercase tracking-wide pr-8" style={{ fontSize: '14px', maxWidth: '500px' }}>
                   {item.name}
                 </p>
                 {item.price && (
@@ -83,6 +83,19 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                   </p>
                 )}
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right — Image */}
+        <div className="hidden lg:block" style={{ width: '42%', flexShrink: 0 }}>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
+            alt="CORIMA dish being plated"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
             ))}
           </div>
         </div>
