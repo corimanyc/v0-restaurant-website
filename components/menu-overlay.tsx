@@ -9,16 +9,16 @@ interface MenuItem {
 
 const menuItems: MenuItem[] = [
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: 29 },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE,  CHAPULINES', price: 33 },
+  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: 33 },
   { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: 24 },
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: 23 },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE,  CHAPULINES', price: 23 },
+  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: 23 },
   { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: 13 },
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: 32 },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE,  CHAPULINES', price: 40 },
+  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: 40 },
   { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA' },
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER' },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE,  CHAPULINES' },
+  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES' },
   { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA' },
 ]
 
@@ -49,20 +49,26 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       }}
     >
       <style>{`
-        div::-webkit-scrollbar {
+        .menu-scroll::-webkit-scrollbar {
           display: none;
         }
       `}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>
+      <div
+        className="flex items-center justify-between flex-shrink-0"
+        style={{ padding: '24px' }}
+      >
+        <h1
+          className="text-black uppercase font-medium"
+          style={{ fontSize: '20px', letterSpacing: '-0.02em' }}
+        >
           Menu
         </h1>
         <button
           onClick={onClose}
-          className="text-black hover:opacity-60 transition uppercase tracking-widest"
-          style={{ fontSize: '16px' }}
+          className="text-black hover:opacity-60 transition uppercase"
+          style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
           aria-label="Close menu"
         >
           X
@@ -70,15 +76,15 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden justify-between">
         {/* Left — scrollable menu list */}
         <div
-          className="flex-1 overflow-y-auto"
+          className="menu-scroll overflow-y-auto"
           style={{
+            width: '50%',
             padding: '16px 24px 48px 24px',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
-            letterSpacing: '-0.02em',
           }}
         >
           <h2
@@ -106,26 +112,17 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               <div
                 key={index}
                 className="flex items-start justify-between py-4"
-                style={{ letterSpacing: '-0.02em' }}
               >
                 <p
-                  className="text-black uppercase tracking-wide"
-                  style={{
-                    fontSize: '14px',
-                    maxWidth: '420px',
-                    letterSpacing: '-0.02em',
-                  }}
+                  className="text-black uppercase"
+                  style={{ fontSize: '14px', maxWidth: '380px', letterSpacing: '-0.02em' }}
                 >
                   {item.name}
                 </p>
                 {item.price && (
                   <p
                     className="text-black flex-shrink-0"
-                    style={{
-                      fontSize: '14px',
-                      marginLeft: '16px',
-                      letterSpacing: '-0.02em',
-                    }}
+                    style={{ fontSize: '14px', letterSpacing: '-0.02em' }}
                   >
                     {item.price}
                   </p>
@@ -135,8 +132,11 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           </div>
         </div>
 
-        {/* Right — static image, aligned to right with padding */}
-        <div className="hidden lg:block flex-shrink-0" style={{ paddingRight: '24px' }}>
+        {/* Right — image aligned to right edge with 24px margin */}
+        <div
+          className="hidden lg:block flex-shrink-0"
+          style={{ marginRight: '24px' }}
+        >
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
             alt="CORIMA dish being plated"
