@@ -141,7 +141,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
             alt="CORIMA dish being plated"
             className="h-full object-cover"
-            style={{ width: '420px' }}
+            style={{ width: '550px' }}
           />
         </div>
       </div>
