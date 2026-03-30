@@ -114,7 +114,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10">
+        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl" style={{ marginTop: '100px', marginBottom: '100px' }}>
           Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
         </h2>
 
@@ -125,7 +125,8 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
               alt="Tasting menu dish"
-              className="object-cover mb-6 w-full"
+              className="object-cover w-full"
+              style={{ marginBottom: '64px' }}
             />
 
             <h3 className="text-xs uppercase tracking-widest mb-4">Tasting Menu</h3>
@@ -159,7 +160,7 @@ export default function Home() {
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
-            <Link href="#menu" className="text-sm hover:opacity-70 transition mb-6 inline-block">
+            <Link href="#menu" className="text-sm hover:opacity-70 transition inline-block" style={{ marginBottom: '64px' }}>
               <span className="mr-2">&bull;</span>View Menu
             </Link>
 
