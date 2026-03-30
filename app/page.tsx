@@ -15,10 +15,25 @@ const heroImages = [
   },
 ]
 
+const aboutSectionImages = [
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
+    alt: 'Chef preparing service with traditional pottery',
+  },
+  {
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1305D7C9-5A98-4D73-B74E-1A6F046A1C86_1_201_a-EFAUCGZA4GiiJzrPF2Ko0f5bV7IVns.jpeg',
+    alt: 'CORIMA chef cooking on wood-fire grill',
+  },
+]
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [aboutImgIndex, setAboutImgIndex] = useState(0)
+
+  const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
+  const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -171,14 +186,33 @@ export default function Home() {
               <span className="mr-2">&bull;</span>View Menu
             </button>
 
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png"
-              alt="Chef preparing service with traditional pottery"
-              width="905"
-              height="742"
-              className="object-cover w-full"
-              style={{ maxWidth: '905px', height: 'auto', aspectRatio: '905/742' }}
-            />
+            <div className="relative overflow-hidden w-full" style={{ maxWidth: '905px' }}>
+              {aboutSectionImages.map((image, index) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  width="905"
+                  height="742"
+                  className="object-cover w-full transition-opacity duration-700"
+                  style={{ aspectRatio: '905/742', opacity: index === aboutImgIndex ? 1 : 0 }}
+                />
+              ))}
+              {/* Left half — previous image */}
+              <button
+                onClick={prevAboutImg}
+                className="absolute left-0 top-0 h-full w-1/2 z-10"
+                aria-label="Previous image"
+                style={{ cursor: 'w-resize' }}
+              />
+              {/* Right half — next image */}
+              <button
+                onClick={nextAboutImg}
+                className="absolute right-0 top-0 h-full w-1/2 z-10"
+                aria-label="Next image"
+                style={{ cursor: 'e-resize' }}
+              />
+            </div>
           </div>
         </div>
       </section>
