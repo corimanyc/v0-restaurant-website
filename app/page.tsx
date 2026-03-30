@@ -112,14 +112,14 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px' }}>
+      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10">
+        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10" style={{ paddingRight: '24px' }}>
           Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
         </h2>
 
         {/* Two Column Layout — 36px gap, 40:60 split */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
+        <div className="flex flex-col lg:flex-row" style={{ gap: '36px', paddingRight: '24px' }}>
           {/* Left Column - Tasting Menu */}
           <div style={{ flex: '0 0 40%' }} className="flex flex-col">
             <img
