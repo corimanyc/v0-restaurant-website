@@ -190,7 +190,7 @@ export default function Home() {
             </button>
 
             <div 
-              className="relative overflow-hidden w-full" 
+              className="relative overflow-hidden w-full bg-black" 
               style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
@@ -198,22 +198,30 @@ export default function Home() {
               {/* Black & White Base Layer */}
               {aboutSectionImages.map((image, index) => (
                 <img
-                  key={`bw-${image.bw}`}
+                  key={`bw-${index}`}
                   src={image.bw}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                  style={{ opacity: (index === aboutImgIndex && !isHovering) ? 1 : 0 }}
+                  className="absolute inset-0 w-full h-full transition-opacity duration-500"
+                  style={{ 
+                    opacity: (index === aboutImgIndex && !isHovering) ? 1 : 0,
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                  }}
                 />
               ))}
               
-              {/* Color Overlay Layer */}
+              {/* Color Overlay Layer — exactly same positioning */}
               {aboutSectionImages.map((image, index) => (
                 <img
-                  key={`color-${image.color}`}
+                  key={`color-${index}`}
                   src={image.color}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
-                  style={{ opacity: (index === aboutImgIndex && isHovering) ? 1 : 0 }}
+                  className="absolute inset-0 w-full h-full transition-opacity duration-500"
+                  style={{ 
+                    opacity: (index === aboutImgIndex && isHovering) ? 1 : 0,
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                  }}
                 />
               ))}
               
