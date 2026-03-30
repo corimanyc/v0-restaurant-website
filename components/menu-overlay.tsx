@@ -70,11 +70,12 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden" style={{ paddingRight: '24px' }}>
+      <div className="flex flex-1 overflow-hidden">
         {/* Left — scrollable menu list */}
         <div
-          className="flex-1 overflow-y-auto"
+          className="overflow-y-auto"
           style={{
+            width: '48%',
             padding: '16px 24px 48px 24px',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -137,8 +138,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
         {/* Right — static image */}
         <div
-          className="hidden lg:block flex-shrink-0"
-          style={{ width: '42%' }}
+          className="hidden lg:flex flex-shrink-0"
+          style={{ width: '52%', paddingRight: '24px' }}
         >
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
