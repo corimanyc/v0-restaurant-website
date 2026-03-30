@@ -48,9 +48,17 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         transition: 'transform 0.6s cubic-bezier(0.76, 0, 0.24, 1)',
       }}
     >
+      <style>{`
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>Menu</h1>
+        <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>
+          Menu
+        </h1>
         <button
           onClick={onClose}
           className="text-black hover:opacity-60 transition uppercase tracking-widest"
@@ -63,35 +71,62 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
       {/* Content */}
       <div className="flex flex-1 overflow-hidden" style={{ paddingRight: '24px' }}>
-
         {/* Left — scrollable menu list */}
         <div
           className="flex-1 overflow-y-auto"
           style={{
-            padding: '32px 24px 48px 24px',
+            padding: '16px 24px 48px 24px',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
+            letterSpacing: '-0.02em',
           }}
         >
-          <h2 className="text-black uppercase tracking-widest font-medium mb-4" style={{ fontSize: '16px' }}>
+          <h2
+            className="text-black uppercase font-medium mb-4"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
+          >
             A La Carte
           </h2>
 
-          <p className="text-black mb-1" style={{ fontSize: '14px', opacity: 0.85 }}>
+          <p
+            className="text-black mb-1"
+            style={{ fontSize: '14px', opacity: 0.85, letterSpacing: '-0.02em' }}
+          >
             Our a la carte menu changes with the seasons and market availability.
           </p>
-          <p className="text-black mb-8" style={{ fontSize: '14px', opacity: 0.85 }}>
+          <p
+            className="text-black mb-8"
+            style={{ fontSize: '14px', opacity: 0.85, letterSpacing: '-0.02em' }}
+          >
             Below is a sample menu from 2/9/26. Dishes are subject to change.
           </p>
 
           <div className="flex flex-col">
             {menuItems.map((item, index) => (
-              <div key={index} className="flex items-start justify-between py-4">
-                <p className="text-black uppercase tracking-wide pr-8" style={{ fontSize: '14px', maxWidth: '500px' }}>
+              <div
+                key={index}
+                className="flex items-start justify-between py-4"
+                style={{ letterSpacing: '-0.02em' }}
+              >
+                <p
+                  className="text-black uppercase tracking-wide"
+                  style={{
+                    fontSize: '14px',
+                    maxWidth: '420px',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
                   {item.name}
                 </p>
                 {item.price && (
-                  <p className="text-black flex-shrink-0" style={{ fontSize: '14px' }}>
+                  <p
+                    className="text-black flex-shrink-0"
+                    style={{
+                      fontSize: '14px',
+                      marginLeft: '16px',
+                      letterSpacing: '-0.02em',
+                    }}
+                  >
                     {item.price}
                   </p>
                 )}
@@ -101,14 +136,16 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         </div>
 
         {/* Right — static image */}
-        <div className="hidden lg:block flex-shrink-0" style={{ width: '42%' }}>
+        <div
+          className="hidden lg:block flex-shrink-0"
+          style={{ width: '42%' }}
+        >
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
             alt="CORIMA dish being plated"
             className="w-full h-full object-cover"
           />
         </div>
-
       </div>
     </div>
   )
