@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import MenuOverlay from '@/components/menu-overlay'
 
 const heroImages = [
   {
@@ -16,6 +17,7 @@ const heroImages = [
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -27,6 +29,7 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white">
+      <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
       {/* Hero Section */}
       <section className="relative w-screen h-screen overflow-hidden">
         {/* Hero Background — full bleed carousel */}
@@ -160,9 +163,13 @@ export default function Home() {
               The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
             </p>
 
-            <Link href="#menu" className="hover:opacity-70 transition inline-block" style={{ marginBottom: '64px', fontSize: '16px' }}>
+            <button
+              onClick={() => setIsMenuOverlayOpen(true)}
+              className="hover:opacity-70 transition inline-block text-left"
+              style={{ marginBottom: '64px', fontSize: '16px', color: 'white' }}
+            >
               <span className="mr-2">&bull;</span>View Menu
-            </Link>
+            </button>
 
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png"
