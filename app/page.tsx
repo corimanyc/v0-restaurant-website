@@ -101,7 +101,7 @@ export default function Home() {
           <div style={{ padding: '24px' }} className="flex items-center justify-between">
             {/* Location and Hours */}
             <p className="text-xs md:text-sm tracking-widest uppercase text-white">
-              3 ALLEN ST NY 10002&nbsp;&nbsp;&nbsp;TUESDAY -&nbsp; SATURDAY&nbsp; 5:30PM - 10PM
+              3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM
             </p>
 
             {/* Footer Logo */}
