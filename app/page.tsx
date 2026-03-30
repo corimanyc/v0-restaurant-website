@@ -114,14 +114,14 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10" style={{ paddingRight: '24px' }}>
+        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl mb-10">
           Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
         </h2>
 
         {/* Two Column Layout — 36px gap, 40:60 split */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: '36px', paddingRight: '24px' }}>
+        <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
           {/* Left Column - Tasting Menu */}
-          <div style={{ flex: '0 0 40%' }} className="flex flex-col">
+          <div style={{ flex: '0 0 calc(40% - 18px)' }} className="flex flex-col">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
               alt="Tasting menu dish"
@@ -148,7 +148,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - A La Carte */}
-          <div style={{ flex: '0 0 60%' }} className="flex flex-col">
+          <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col">
             <h3 className="text-xs uppercase tracking-widest mb-4">A La Carte</h3>
 
             <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
