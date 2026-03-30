@@ -195,28 +195,28 @@ export default function Home() {
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              {/* Black & White Base Layer */}
+              {/* Black & White Base Layer — always visible when current slide */}
               {aboutSectionImages.map((image, index) => (
                 <img
                   key={`bw-${index}`}
                   src={image.bw}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full transition-opacity duration-500"
+                  className="absolute inset-0 w-full h-full transition-opacity duration-700"
                   style={{ 
-                    opacity: (index === aboutImgIndex && !isHovering) ? 1 : 0,
+                    opacity: index === aboutImgIndex ? 1 : 0,
                     objectFit: 'cover',
                     objectPosition: 'center',
                   }}
                 />
               ))}
               
-              {/* Color Overlay Layer — exactly same positioning */}
+              {/* Color Overlay Layer — fades in on top of BW, no gap */}
               {aboutSectionImages.map((image, index) => (
                 <img
                   key={`color-${index}`}
                   src={image.color}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full transition-opacity duration-500"
+                  className="absolute inset-0 w-full h-full transition-opacity duration-700"
                   style={{ 
                     opacity: (index === aboutImgIndex && isHovering) ? 1 : 0,
                     objectFit: 'cover',

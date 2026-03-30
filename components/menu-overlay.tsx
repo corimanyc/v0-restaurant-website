@@ -47,20 +47,19 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
     }
   }, [isOpen])
 
-  if (!isOpen) return null
-
   return (
     <div 
-      className="fixed inset-0 z-50 bg-[#8d8a86]"
+      className="fixed inset-0 z-50 bg-[#8d8a86] flex flex-col"
       style={{
         transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
         transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        pointerEvents: isOpen ? 'all' : 'none',
       }}
     >
       <style>{`div::-webkit-scrollbar { display: none; }`}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between" style={{ padding: '24px' }}>
+      <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
         <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>Menu</h1>
         <button
           onClick={onClose}
@@ -73,7 +72,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden justify-between">
+      <div className="flex overflow-hidden justify-between" style={{ flex: '1 1 0', minHeight: 0 }}>
         {/* Left — scrollable menu list */}
         <div
           className="overflow-y-auto"
