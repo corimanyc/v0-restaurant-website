@@ -139,7 +139,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         {/* Right — static image */}
         <div
           className="hidden lg:flex flex-shrink-0"
-          style={{ width: '52%', paddingRight: '24px' }}
+          style={{ width: '42%', paddingRight: '24px' }}
         >
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
