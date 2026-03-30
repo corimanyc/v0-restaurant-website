@@ -70,7 +70,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden" style={{ marginRight: '24px' }}>
         {/* Left — scrollable menu list */}
         <div
           className="overflow-y-auto"
@@ -137,10 +137,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         </div>
 
         {/* Right — static image */}
-        <div
-          className="hidden lg:flex flex-shrink-0"
-          style={{ width: '42%', paddingRight: '24px' }}
-        >
+        <div className="hidden lg:flex flex-shrink-0" style={{ width: '42%' }}>
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png"
             alt="CORIMA dish being plated"
