@@ -17,11 +17,13 @@ const heroImages = [
 
 const aboutSectionImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
+    bw: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
+    color: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
     alt: 'Chef preparing service with traditional pottery',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1305D7C9-5A98-4D73-B74E-1A6F046A1C86_1_201_a-EFAUCGZA4GiiJzrPF2Ko0f5bV7IVns.jpeg',
+    bw: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1305D7C9-5A98-4D73-B74E-1A6F046A1C86_1_201_a-EFAUCGZA4GiiJzrPF2Ko0f5bV7IVns.jpeg',
+    color: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/09484B47-6D79-4A3E-9592-DC2DA3694214_1_201_a-h9bwzAhnLpXcK17sNF0lTLxe4w7fdh.jpeg',
     alt: 'CORIMA chef cooking on wood-fire grill',
   },
 ]
@@ -31,6 +33,7 @@ export default function Home() {
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
@@ -186,16 +189,34 @@ export default function Home() {
               <span className="mr-2">&bull;</span>View Menu
             </button>
 
-            <div className="relative overflow-hidden w-full" style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}>
+            <div 
+              className="relative overflow-hidden w-full" 
+              style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
+            >
+              {/* Black & White Base Layer */}
               {aboutSectionImages.map((image, index) => (
                 <img
-                  key={image.src}
-                  src={image.src}
+                  key={`bw-${image.bw}`}
+                  src={image.bw}
                   alt={image.alt}
-                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700"
-                  style={{ opacity: index === aboutImgIndex ? 1 : 0 }}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                  style={{ opacity: (index === aboutImgIndex && !isHovering) ? 1 : 0 }}
                 />
               ))}
+              
+              {/* Color Overlay Layer */}
+              {aboutSectionImages.map((image, index) => (
+                <img
+                  key={`color-${image.color}`}
+                  src={image.color}
+                  alt={image.alt}
+                  className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+                  style={{ opacity: (index === aboutImgIndex && isHovering) ? 1 : 0 }}
+                />
+              ))}
+              
               {/* Left half — previous image */}
               <button
                 onClick={prevAboutImg}

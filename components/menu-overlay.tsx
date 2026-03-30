@@ -33,8 +33,8 @@ interface MenuOverlayProps {
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   const [imgIndex, setImgIndex] = useState(0)
 
-  const prevImg = () => setImgIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length)
-  const nextImg = () => setImgIndex((i) => (i + 1) % carouselImages.length)
+  const prev = () => setImgIndex((i) => (i - 1 + carouselImages.length) % carouselImages.length)
+  const next = () => setImgIndex((i) => (i + 1) % carouselImages.length)
 
   useEffect(() => {
     if (isOpen) {
@@ -50,35 +50,22 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   if (!isOpen) return null
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex flex-col bg-[#8d8a86]"
+    <div 
+      className="fixed inset-0 z-50 bg-[#8d8a86]"
       style={{
-        animation: isOpen ? 'slideUp 0.6s cubic-bezier(0.76, 0, 0.24, 1) forwards' : 'slideDown 0.6s cubic-bezier(0.76, 0, 0.24, 1) forwards',
+        transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
+        transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
       }}
     >
-      <style>{`
-        @keyframes slideUp {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
-        }
-        @keyframes slideDown {
-          from { transform: translateY(0); }
-          to { transform: translateY(100%); }
-        }
-        .menu-scroll::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
+      <style>{`div::-webkit-scrollbar { display: none; }`}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase font-medium" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
-          Menu
-        </h1>
+      <div className="flex items-center justify-between" style={{ padding: '24px' }}>
+        <h1 className="text-black uppercase tracking-widest font-medium" style={{ fontSize: '20px' }}>Menu</h1>
         <button
           onClick={onClose}
-          className="text-black hover:opacity-60 transition uppercase"
-          style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
+          className="text-black hover:opacity-60 transition uppercase tracking-widest"
+          style={{ fontSize: '16px' }}
           aria-label="Close menu"
         >
           X
@@ -89,7 +76,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
       <div className="flex flex-1 overflow-hidden justify-between">
         {/* Left — scrollable menu list */}
         <div
-          className="menu-scroll overflow-y-auto"
+          className="overflow-y-auto"
           style={{
             width: '50%',
             padding: '16px 24px 48px 24px',
@@ -101,20 +88,22 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           <h2 className="text-black uppercase font-medium mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             A La Carte
           </h2>
+
           <p className="text-black mb-1" style={{ fontSize: '14px', opacity: 0.85, letterSpacing: '-0.02em' }}>
             Our a la carte menu changes with the seasons and market availability.
           </p>
           <p className="text-black mb-8" style={{ fontSize: '14px', opacity: 0.85, letterSpacing: '-0.02em' }}>
             Below is a sample menu from 2/9/26. Dishes are subject to change.
           </p>
+
           <div className="flex flex-col">
             {menuItems.map((item, index) => (
-              <div key={index} className="flex items-start justify-between py-4">
-                <p className="text-black uppercase" style={{ fontSize: '14px', maxWidth: '420px', letterSpacing: '-0.02em' }}>
+              <div key={index} className="flex items-start justify-between py-4" style={{ letterSpacing: '-0.02em' }}>
+                <p className="text-black uppercase tracking-wide" style={{ fontSize: '14px', maxWidth: '420px', letterSpacing: '-0.02em' }}>
                   {item.name}
                 </p>
                 {item.price && (
-                  <p className="text-black flex-shrink-0" style={{ fontSize: '14px', letterSpacing: '-0.02em' }}>
+                  <p className="text-black flex-shrink-0" style={{ fontSize: '14px', marginLeft: '16px', letterSpacing: '-0.02em' }}>
                     {item.price}
                   </p>
                 )}
@@ -123,10 +112,10 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
           </div>
         </div>
 
-        {/* Right — carousel */}
+        {/* Right — click carousel */}
         <div
-          className="hidden lg:flex flex-shrink-0 relative overflow-hidden"
-          style={{ width: '550px', marginRight: '24px' }}
+          className="hidden lg:block flex-shrink-0 relative overflow-hidden"
+          style={{ marginRight: '24px', width: '550px' }}
         >
           {carouselImages.map((image, index) => (
             <img
@@ -134,19 +123,23 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               src={image.src}
               alt={image.alt}
               className="absolute inset-0 h-full object-cover transition-opacity duration-700"
-              style={{ width: '100%', opacity: index === imgIndex ? 1 : 0 }}
+              style={{ width: '550px', opacity: index === imgIndex ? 1 : 0 }}
             />
           ))}
+          
+          {/* Left half — go previous */}
           <button
-            onClick={prevImg}
+            onClick={prev}
             className="absolute left-0 top-0 h-full z-10"
-            style={{ width: '50%', cursor: 'w-resize', backgroundColor: 'transparent' }}
+            style={{ width: '50%', cursor: 'w-resize' }}
             aria-label="Previous image"
           />
+          
+          {/* Right half — go next */}
           <button
-            onClick={nextImg}
+            onClick={next}
             className="absolute right-0 top-0 h-full z-10"
-            style={{ width: '50%', cursor: 'e-resize', backgroundColor: 'transparent' }}
+            style={{ width: '50%', cursor: 'e-resize' }}
             aria-label="Next image"
           />
         </div>
