@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
+import DiningOverlay from '@/components/dining-overlay'
 
 const heroImages = [
   {
@@ -31,6 +32,7 @@ const aboutSectionImages = [
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
+  const [isDiningOpen, setIsDiningOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -48,8 +50,19 @@ export default function Home() {
   return (
     <div className="bg-black text-white">
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
+      <DiningOverlay
+        isOpen={isDiningOpen}
+        onClose={() => setIsDiningOpen(false)}
+        onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
+      />
       {/* Hero Section */}
-      <section className="relative w-screen h-screen overflow-hidden">
+      <section
+        className="relative h-screen overflow-hidden"
+        style={{
+          width: isDiningOpen ? '42%' : '100%',
+          transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      >
         {/* Hero Background — full bleed carousel */}
         <div className="absolute inset-0 w-full h-full">
           {heroImages.map((image, index) => (
@@ -82,7 +95,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <Link href="#about" className="text-sm uppercase tracking-wider hover:opacity-70 transition">About</Link>
             <Link href="#reservations" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Reservations</Link>
-            <Link href="#dining" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Dining</Link>
+              <button onClick={() => setIsDiningOpen(true)} className="text-sm uppercase tracking-wider hover:opacity-70 transition text-white text-left">Dining</button>
             <Link href="#events" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Events</Link>
             <Link href="#press" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Press</Link>
             <Link href="#shop" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Shop</Link>
@@ -105,7 +118,7 @@ export default function Home() {
             <div className="px-6 py-4 flex flex-col gap-4">
               <Link href="#about" className="text-sm uppercase tracking-wider hover:opacity-70 transition">About</Link>
               <Link href="#reservations" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Reservations</Link>
-              <Link href="#dining" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Dining</Link>
+            <button onClick={() => setIsDiningOpen(true)} className="text-sm uppercase tracking-wider hover:opacity-70 transition text-white">Dining</button>
               <Link href="#events" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Events</Link>
               <Link href="#press" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Press</Link>
               <Link href="#shop" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Shop</Link>

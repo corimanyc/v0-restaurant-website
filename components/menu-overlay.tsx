@@ -1,6 +1,5 @@
-// v2
 'use client'
-
+// build: 3
 import { useEffect, useRef, useState } from 'react'
 
 const sectionImages: Record<string, string> = {
