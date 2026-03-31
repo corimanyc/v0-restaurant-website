@@ -267,7 +267,7 @@ export default function Home() {
           <div style={{ position: 'absolute', top: '100px', left: '280px', width: '45%', paddingRight: '48px' }}>
             <h2
               className="text-white font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(32px, 3.5vw, 56px)', letterSpacing: '-0.02em', fontWeight: '300' }}
+              style={{ fontSize: '44px', letterSpacing: '-0.02em', fontWeight: '300' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
