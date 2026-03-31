@@ -58,8 +58,8 @@ export default function Home() {
   }, [])
 
   return (
-    <>
-      <div className="text-white" style={{ backgroundColor: '#1f1c18' }}>
+    <div className="flex flex-col min-h-screen">
+      <div className="text-white flex-1" style={{ backgroundColor: '#1f1c18' }}>
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
       <DiningOverlay
         isOpen={isDiningOpen}
@@ -412,7 +412,7 @@ export default function Home() {
       </section>
       </div>
 
-      {/* Footer — spans full width outside main wrapper */}
+      {/* Footer — spans full width at bottom edge */}
       <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px' }}>
       <div className="flex w-full items-center gap-8 justify-between">
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
@@ -422,7 +422,7 @@ export default function Home() {
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
         <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
       </div>
-      </footer>
-    </>
+    </footer>
+    </div>
   )
 }
