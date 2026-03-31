@@ -295,6 +295,40 @@ export default function Home() {
 
         </div>
       </section>
+      {/* Cooking Philosophy Section */}
+      <section style={{ backgroundColor: '#d1d1d1', padding: '120px 24px', position: 'relative', minHeight: '700px' }}>
+        <div style={{ position: 'relative', maxWidth: '1400px', margin: '0 auto' }}>
+
+          {/* Left — small plated dish image */}
+          <div style={{ position: 'absolute', top: '120px', left: '24px', width: '240px', height: '240px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
+              alt="Plated dish at Corima"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Center — flowing text */}
+          <div style={{ position: 'absolute', top: '160px', left: 'calc(50% - 240px)', width: '480px', textAlign: 'center' }}>
+            <p style={{ fontSize: '1.8vw', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.6', fontWeight: '300' }}>
+              The cooking is guided by a broad Mexican pantry,
+            </p>
+            <p style={{ fontSize: '1.8vw', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.6', fontWeight: '300', marginTop: '12px' }}>
+              shaped in practice by the seasons and conditions of the Northeast.
+            </p>
+          </div>
+
+          {/* Right — larger chef cooking image */}
+          <div style={{ position: 'absolute', top: '80px', right: '24px', width: '420px', height: '320px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
+              alt="Chef cooking at Corima"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }
