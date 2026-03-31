@@ -259,6 +259,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Corima Story Section */}
+      <section style={{ backgroundColor: '#1f1c18', padding: '120px 24px 120px 24px' }}>
+        <div className="flex items-start" style={{ gap: '0' }}>
+
+          {/* Left — large quote */}
+          <div style={{ flex: '0 0 45%', paddingRight: '48px' }}>
+            <h2
+              className="text-white font-light leading-tight text-pretty"
+              style={{ fontSize: 'clamp(32px, 3.5vw, 56px)', letterSpacing: '-0.02em', fontWeight: '300' }}
+            >
+              The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
+            </h2>
+          </div>
+
+          {/* Center — two body paragraphs */}
+          <div style={{ flex: '0 0 35%', paddingTop: '240px', paddingRight: '48px' }}>
+            <p className="text-white leading-relaxed mb-10" style={{ fontSize: '16px', letterSpacing: '-0.01em' }}>
+              The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
+            </p>
+            <p className="text-white leading-relaxed" style={{ fontSize: '16px', letterSpacing: '-0.01em' }}>
+              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
+            </p>
+          </div>
+
+          {/* Right — tall portrait photo */}
+          <div style={{ flex: '0 0 20%' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled-KcHZF5Ivp9GADlG9MVVEXlSOoXLpTW.png"
+              alt="Chef Fidel Caballero at Corima"
+              className="w-full object-cover"
+              style={{ aspectRatio: '3/4' }}
+            />
+          </div>
+
+        </div>
+      </section>
     </div>
   )
 }
