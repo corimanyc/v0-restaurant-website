@@ -261,150 +261,143 @@ export default function Home() {
         </div>
       </section>
       {/* Corima Story & Cooking Philosophy Section — One Continuous Page */}
-      <section style={{ backgroundColor: '#d1d1d1', padding: '100px 120px' }}>
-        
-        {/* Part 1: Corima Story */}
-        <div style={{ position: 'relative', minHeight: '700px', marginBottom: '120px' }}>
+      {/* 12-col grid: 36px margin, 20px gutter */}
+      <section style={{ backgroundColor: '#d1d1d1', paddingTop: '100px', paddingBottom: '100px' }}>
+        {/* Grid helper: 12 cols, 20px gap, 36px side padding */}
+        <style>{`
+          .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 20px;
+            padding-left: 36px;
+            padding-right: 36px;
+          }
+        `}</style>
 
-          {/* Editorial quote — upper left */}
-          <div style={{ position: 'absolute', top: '0', left: '0', width: '52%' }}>
+        {/* Part 1: Corima Story */}
+        {/* Quote: cols 3–8 | Image: cols 10–12 */}
+        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
+          <div style={{ gridColumn: '3 / 9' }}>
             <h2
               className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
+              style={{ fontSize: 'clamp(32px, 3.8vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
           </div>
-
-          {/* Body paragraphs — indented center, below quote */}
-          <div style={{ position: 'absolute', top: '340px', left: '28%', width: '320px' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-              The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
-            </p>
-            <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
-            </p>
-          </div>
-
-          {/* Portrait photo — far right, top aligned */}
-          <div style={{ position: 'absolute', top: '0', right: '0', width: '274px', height: '365px' }}>
+          <div style={{ gridColumn: '10 / 13', gridRow: '1 / 3' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ aspectRatio: '3/4' }}
             />
+          </div>
+          {/* Body: cols 5–9, row 2 */}
+          <div style={{ gridColumn: '5 / 9', marginTop: '60px' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+              The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
+            </p>
+            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
+            </p>
           </div>
         </div>
 
         {/* Part 2: Cooking Philosophy */}
-        <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr 420px', gap: '80px', alignItems: 'start' }}>
-          
-          {/* Left — small plated dish image */}
-          <div style={{ width: '240px', height: '240px' }}>
+        {/* Dish: cols 1–2 | SVG text: cols 3–8 | Chef: cols 9–12 */}
+        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
+          <div style={{ gridColumn: '1 / 3' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
               alt="Plated dish at Corima"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ aspectRatio: '1/1' }}
             />
           </div>
-
-          {/* Center — SVG text graphics */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', paddingTop: '20px' }}>
+          <div style={{ gridColumn: '3 / 9', display: 'flex', flexDirection: 'column', gap: '24px', paddingTop: '20px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
-              style={{ width: '100%', maxWidth: '440px', height: 'auto' }}
+              style={{ width: '100%', height: 'auto' }}
             />
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-uVDOBJpgOEi1oNID5uBSA7NqL02VSR.svg"
               alt="shaped in practice by the seasons and conditions of the Northeast."
-              style={{ width: '100%', maxWidth: '520px', height: 'auto' }}
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
-
-          {/* Right — larger chef cooking image */}
-          <div style={{ width: '420px', height: '320px' }}>
+          <div style={{ gridColumn: '9 / 13' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
               alt="Chef cooking at Corima"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ aspectRatio: '4/3' }}
             />
           </div>
         </div>
 
-        {/* Part 3: Philosophy & Sharing */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: '100px', marginTop: '120px' }}>
-          
-          {/* Left — body paragraphs */}
-          <div style={{ maxWidth: '450px' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+        {/* Part 3: Philosophy text + stacked images */}
+        {/* Text: cols 4–8 | Images: cols 9–12 */}
+        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
+          <div style={{ gridColumn: '4 / 8' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
-
-          {/* Right — two stacked portrait images */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-            <div style={{ width: '100%', aspectRatio: '3/4' }}>
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
-                alt="Tattooed hand with knife"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div style={{ width: '100%', aspectRatio: '3/4' }}>
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/469953188_596077342798134_5158409090500818209_n%201-CAZps8ywcGcqpSbnKINrH34fgR90IK.png"
-                alt="Kitchen interior"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div style={{ gridColumn: '9 / 13', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
+              alt="Tattooed hand with knife"
+              className="w-full object-cover"
+              style={{ aspectRatio: '3/4' }}
+            />
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/469953188_596077342798134_5158409090500818209_n%201-CAZps8ywcGcqpSbnKINrH34fgR90IK.png"
+              alt="Kitchen interior"
+              className="w-full object-cover"
+              style={{ aspectRatio: '3/4' }}
+            />
           </div>
         </div>
 
-        {/* Part 4: Sharing Philosophy */}
-        <div style={{ marginTop: '120px', display: 'grid', gridTemplateColumns: '1fr 280px', gap: '100px' }}>
-          
-          {/* Left — large editorial quote */}
-          <div>
+        {/* Part 4: Sharing Philosophy quote */}
+        {/* Quote: cols 1–7 | Continuation: cols 7–10 */}
+        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'end' }}>
+          <div style={{ gridColumn: '1 / 8' }}>
             <h3
               className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', lineHeight: '1.3' }}
+              style={{ fontSize: 'clamp(28px, 3.2vw, 48px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', lineHeight: '1.3' }}
             >
               The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen&apos;s work,
             </h3>
           </div>
-
-          {/* Right — continuation text, indented */}
-          <div style={{ paddingTop: '60px', textAlign: 'center' }}>
-            <p
-              style={{ fontSize: 'clamp(28px, 3vw, 42px)', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.4', fontWeight: '300' }}
-            >
+          <div style={{ gridColumn: '7 / 11', paddingTop: '40px' }}>
+            <p style={{ fontSize: 'clamp(24px, 2.6vw, 40px)', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.4', fontWeight: '300' }}>
               from farmers and foragers to artisans and guests.
             </p>
           </div>
         </div>
 
         {/* Part 5: Producer Partnership & Recognition */}
-        <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: '100px', marginTop: '120px', alignItems: 'start' }}>
-          
-          {/* Left — kitchen photo */}
-          <div style={{ width: '320px', height: '320px' }}>
+        {/* Photo: cols 1–3 | Text: cols 5–9 */}
+        <div className="grid-12" style={{ alignItems: 'start' }}>
+          <div style={{ gridColumn: '1 / 4' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2818%202-61XN6Jf0t53SCva3TBf63oJO510MRq.jpg"
               alt="Two chefs in the kitchen"
-              className="w-full h-full object-cover"
+              className="w-full object-cover"
+              style={{ aspectRatio: '1/1' }}
             />
           </div>
-
-          {/* Right — two body paragraphs */}
-          <div style={{ maxWidth: '450px' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+          <div style={{ gridColumn: '5 / 9' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               Within its first year, Corima earned a Michelin star, was named one of Bon Appétit&apos;s Best New Restaurants of 2024, and received a James Beard Award nomination. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
           </div>
