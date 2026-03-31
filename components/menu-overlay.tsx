@@ -45,12 +45,25 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
   const alaCarteRef = useRef<HTMLDivElement>(null)
   const cocktailRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
     }
+  }, [isOpen])
+
+  useEffect(() => {
+    const imageEl = imageRef.current
+    const scrollEl = scrollRef.current
+    if (!imageEl || !scrollEl) return
+    const forwardWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      scrollEl.scrollBy({ top: e.deltaY, behavior: 'auto' })
+    }
+    imageEl.addEventListener('wheel', forwardWheel, { passive: false })
+    return () => imageEl.removeEventListener('wheel', forwardWheel)
   }, [isOpen])
 
   useEffect(() => {
@@ -163,6 +176,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
         {/* Right — scroll-aware image */}
         <div
+          ref={imageRef}
           className="hidden lg:block flex-shrink-0 relative overflow-hidden"
           style={{ marginRight: '24px', width: '550px' }}
         >
