@@ -308,8 +308,8 @@ export default function Home() {
         {/* Row 2: SVG line 1 cols 2–5 | SVG line 2 cols 3–6 (indented) */}
         <div className="grid-12" style={{ marginBottom: '100px' }}>
 
-          {/* Dish image — cols 1–2, row 1 */}
-          <div style={{ gridColumn: '1 / 3', gridRow: '1', alignSelf: 'center' }}>
+          {/* Dish image — 1 col from left: col 2–4, row 1 */}
+          <div style={{ gridColumn: '2 / 4', gridRow: '1', alignSelf: 'center' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
               alt="Plated dish at Corima"
@@ -318,8 +318,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Chef image — cols 6–10, row 1 */}
-          <div style={{ gridColumn: '6 / 11', gridRow: '1', alignSelf: 'start' }}>
+          {/* Chef image — 2 cols from right: cols 7–11, row 1, 100px from Part 1 above */}
+          <div style={{ gridColumn: '7 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
               alt="Chef cooking at Corima"
