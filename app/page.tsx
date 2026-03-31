@@ -308,14 +308,18 @@ export default function Home() {
             />
           </div>
 
-          {/* Center — flowing text, left-aligned */}
-          <div style={{ paddingTop: '40px' }}>
-            <p style={{ fontSize: '1.8vw', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.65', fontWeight: '300', margin: '0' }}>
-              The cooking is guided by a broad Mexican pantry,
-            </p>
-            <p style={{ fontSize: '1.8vw', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.65', fontWeight: '300', margin: '24px 0 0 0' }}>
-              shaped in practice by the seasons and conditions of the Northeast.
-            </p>
+          {/* Center — SVG text graphics */}
+          <div style={{ paddingTop: '40px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
+              alt="The cooking is guided by a broad Mexican pantry,"
+              style={{ width: '100%', maxWidth: '440px', height: 'auto' }}
+            />
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-uVDOBJpgOEi1oNID5uBSA7NqL02VSR.svg"
+              alt="shaped in practice by the seasons and conditions of the Northeast."
+              style={{ width: '100%', maxWidth: '520px', height: 'auto' }}
+            />
           </div>
 
           {/* Right — larger chef cooking image */}
