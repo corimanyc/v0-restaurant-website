@@ -109,7 +109,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         <button
           onClick={onClose}
           className="text-black hover:opacity-60 transition uppercase"
-          style={{ fontSize: '16px' }}
+          style={{ fontSize: '24px', lineHeight: '1', fontWeight: '300' }}
           aria-label="Close menu"
         >
           X
