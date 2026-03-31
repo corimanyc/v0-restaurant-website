@@ -190,11 +190,11 @@ export default function Home() {
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>A La Carte</h3>
 
             <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+              Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
             </p>
 
             <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
-              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+              While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu. Our beverage program follows a similar sensibility, with a focused selection of Mexican spirits, particularly sotol, alongside wines chosen to complement a range of dishes.
             </p>
 
             <button
@@ -331,21 +331,6 @@ export default function Home() {
             />
           </div>
 
-        </div>
-      </section>
-
-      {/* A La Carte Section */}
-      <section style={{ backgroundColor: '#d1d1d1', padding: '120px 280px' }}>
-        <div style={{ maxWidth: '600px' }}>
-          <h2 className="font-medium mb-8" style={{ fontSize: '1.8vw', letterSpacing: '-0.02em', color: '#000' }}>
-            À La Carte
-          </h2>
-          <p className="leading-relaxed mb-6" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
-            Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
-          </p>
-          <p className="leading-relaxed" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
-            While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu. Our beverage program follows a similar sensibility, with a focused selection of Mexican spirits, particularly sotol, alongside wines chosen to complement a range of dishes.
-          </p>
         </div>
       </section>
     </div>
