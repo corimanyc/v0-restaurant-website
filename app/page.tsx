@@ -274,7 +274,7 @@ export default function Home() {
           </div>
 
           {/* Center — two body paragraphs, directly under the editorial quote */}
-          <div style={{ position: 'absolute', top: '480px', left: 'calc(240px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
+          <div style={{ position: 'absolute', top: '420px', left: 'calc(240px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
             <p className="leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
