@@ -286,7 +286,7 @@ export default function Home() {
           {/* Right — tall portrait photo */}
           <div style={{ flex: '0 0 20%' }}>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled-KcHZF5Ivp9GADlG9MVVEXlSOoXLpTW.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
               className="w-full object-cover"
               style={{ aspectRatio: '3/4' }}
