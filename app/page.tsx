@@ -284,7 +284,7 @@ export default function Home() {
           </div>
 
           {/* Right — tall portrait photo */}
-          <div style={{ position: 'absolute', top: '100px', right: '24px', width: '274px', height: '365px' }}>
+          <div style={{ position: 'absolute', top: '140px', right: '60px', width: '274px', height: '365px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
