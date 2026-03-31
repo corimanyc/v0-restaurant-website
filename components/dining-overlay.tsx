@@ -27,7 +27,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       className="fixed top-0 right-0 h-full overflow-y-auto bg-[#3a3531] text-white"
       style={{
         zIndex: 45,
-        width: '58%',
+        width: '50%',
         transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
         transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',

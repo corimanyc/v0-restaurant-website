@@ -71,7 +71,7 @@ export default function Home() {
         <div
           className="absolute top-0 left-0 h-full"
           style={{
-            width: isDiningOpen ? '42%' : '100%',
+            width: isDiningOpen ? '50%' : '100%',
             transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
             overflow: 'hidden',
           }}
