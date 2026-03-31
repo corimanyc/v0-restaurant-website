@@ -103,13 +103,13 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase font-medium" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
+        <h1 className="text-black uppercase font-medium" style={{ fontSize: '28px', letterSpacing: '-0.02em' }}>
           Menu
         </h1>
         <button
           onClick={onClose}
           className="text-black hover:opacity-60 transition uppercase"
-          style={{ fontSize: '24px', lineHeight: '1', fontWeight: '300' }}
+          style={{ fontSize: '32px', lineHeight: '1', fontWeight: '300' }}
           aria-label="Close menu"
         >
           X
@@ -145,7 +145,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase" style={{ ...base, maxWidth: '420px' }}>
+                  <p className="text-black uppercase font-medium" style={{ ...base, maxWidth: '420px' }}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
@@ -165,8 +165,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
                   <div style={{ maxWidth: '380px' }}>
-                    <p className="text-black uppercase" style={base}>{item.name}</p>
-                    <p className="text-black uppercase" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
+                    <p className="text-black uppercase font-medium" style={base}>{item.name}</p>
+                    <p className="text-black uppercase font-medium" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
                   </div>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
                     {item.price || '—'}
