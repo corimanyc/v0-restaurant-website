@@ -264,29 +264,30 @@ export default function Home() {
       <section style={{ backgroundColor: '#d1d1d1', padding: '100px 120px' }}>
         
         {/* Part 1: Corima Story */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 274px', gap: '80px', alignItems: 'start', marginBottom: '120px' }}>
-          
-          {/* Left column content */}
-          <div>
+        <div style={{ position: 'relative', minHeight: '700px', marginBottom: '120px' }}>
+
+          {/* Editorial quote — upper left */}
+          <div style={{ position: 'absolute', top: '0', left: '0', width: '52%' }}>
             <h2
               className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', marginBottom: '60px' }}
+              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
-            
-            <div style={{ maxWidth: '365px' }}>
-              <p className="leading-relaxed mb-8" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-                The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
-              </p>
-              <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-                Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
-              </p>
-            </div>
           </div>
 
-          {/* Right column — tall portrait photo */}
-          <div style={{ width: '274px', height: '365px' }}>
+          {/* Body paragraphs — indented center, below quote */}
+          <div style={{ position: 'absolute', top: '340px', left: '28%', width: '320px' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
+              The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
+            </p>
+            <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
+              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
+            </p>
+          </div>
+
+          {/* Portrait photo — far right, top aligned */}
+          <div style={{ position: 'absolute', top: '0', right: '0', width: '274px', height: '365px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
