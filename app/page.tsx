@@ -330,6 +330,61 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Part 3: Philosophy & Sharing */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 280px', gap: '100px', marginTop: '120px' }}>
+          
+          {/* Left — body paragraphs */}
+          <div style={{ maxWidth: '450px' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+              The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
+            </p>
+            <p className="leading-relaxed" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+              The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
+            </p>
+          </div>
+
+          {/* Right — two stacked portrait images */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+            <div style={{ width: '100%', aspectRatio: '3/4' }}>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
+                alt="Tattooed hand with knife"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div style={{ width: '100%', aspectRatio: '3/4' }}>
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/469953188_596077342798134_5158409090500818209_n%201-CAZps8ywcGcqpSbnKINrH34fgR90IK.png"
+                alt="Kitchen interior"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Part 4: Sharing Philosophy */}
+        <div style={{ marginTop: '120px', display: 'grid', gridTemplateColumns: '1fr 280px', gap: '100px' }}>
+          
+          {/* Left — large editorial quote */}
+          <div>
+            <h3
+              className="font-light leading-tight text-pretty"
+              style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', lineHeight: '1.3' }}
+            >
+              The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen&apos;s work,
+            </h3>
+          </div>
+
+          {/* Right — continuation text, indented */}
+          <div style={{ paddingTop: '60px', textAlign: 'center' }}>
+            <p
+              style={{ fontSize: 'clamp(28px, 3vw, 42px)', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.4', fontWeight: '300' }}
+            >
+              from farmers and foragers to artisans and guests.
+            </p>
+          </div>
+        </div>
+
       </section>
     </div>
   )
