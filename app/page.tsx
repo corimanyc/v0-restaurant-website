@@ -121,8 +121,11 @@ export default function Home() {
           )}
         </header>
 
-        {/* Footer — fixed at bottom-left (logo stays), bottom-right icon covered by overlay */}
-        <footer className="fixed bottom-0 left-0 right-0 z-40">
+        {/* Footer — hidden when dining overlay is open */}
+        <footer
+          className="fixed bottom-0 left-0 right-0 z-40 transition-opacity duration-500"
+          style={{ opacity: isDiningOpen ? 0 : 1, pointerEvents: isDiningOpen ? 'none' : 'all' }}
+        >
           <div style={{ padding: '24px' }} className="flex items-center justify-between">
             <p className="text-xs md:text-sm tracking-widest uppercase text-white">
               {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
