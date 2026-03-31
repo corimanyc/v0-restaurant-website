@@ -306,7 +306,7 @@ export default function Home() {
         {/* Part 2: Cooking Philosophy */}
         {/* Row 1: Dish cols 1–2 | Chef image cols 6–10 */}
         {/* Row 2: SVG line 1 cols 2–5 | SVG line 2 cols 3–6 (indented) */}
-        <div className="grid-12" style={{ marginBottom: '100px' }}>
+        <div className="grid-12" style={{ marginBottom: '100px', marginTop: '-100px' }}>
 
           {/* Dish image — 1 col from left: col 2–4, row 1 */}
           <div style={{ gridColumn: '2 / 4', gridRow: '1', alignSelf: 'center' }}>
