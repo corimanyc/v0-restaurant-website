@@ -260,11 +260,11 @@ export default function Home() {
         </div>
       </section>
       {/* Corima Story Section */}
-      <section style={{ backgroundColor: '#d1d1d1', padding: '0 24px', position: 'relative', minHeight: '800px' }}>
-        <div style={{ position: 'relative' }}>
+      <section style={{ backgroundColor: '#d1d1d1', padding: '100px 0' }}>
+        <div style={{ position: 'relative', height: '650px' }}>
 
           {/* Left — large quote with absolute positioning */}
-          <div style={{ position: 'absolute', top: '100px', left: '240px', width: '45%', paddingRight: '48px' }}>
+          <div style={{ position: 'absolute', top: '0', left: '240px', width: '45%', paddingRight: '48px' }}>
             <h2
               className="font-light leading-tight text-pretty"
               style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
@@ -274,7 +274,7 @@ export default function Home() {
           </div>
 
           {/* Center — two body paragraphs, directly under the editorial quote */}
-          <div style={{ position: 'absolute', top: '420px', left: 'calc(240px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
+          <div style={{ position: 'absolute', top: '320px', left: 'calc(240px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
             <p className="leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
@@ -284,7 +284,7 @@ export default function Home() {
           </div>
 
           {/* Right — tall portrait photo */}
-          <div style={{ position: 'absolute', top: '140px', right: '60px', width: '274px', height: '365px' }}>
+          <div style={{ position: 'absolute', top: '40px', right: '60px', width: '274px', height: '365px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
