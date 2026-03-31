@@ -413,16 +413,16 @@ export default function Home() {
       </div>
 
       {/* Footer — spans full width at bottom edge */}
-      <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px' }}>
-      <div className="flex w-full items-center gap-8 justify-between">
-        <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
-        <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
-        <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Instagram</p>
-        <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Spotify</p>
-        <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
-        <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
-      </div>
-    </footer>
+      <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px 12px 24px' }}>
+        <div className="flex w-full items-center gap-8 justify-between">
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Instagram</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Spotify</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
+          <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
+        </div>
+      </footer>
     </div>
   )
 }
