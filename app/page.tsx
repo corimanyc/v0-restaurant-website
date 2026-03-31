@@ -318,8 +318,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Chef image — 2 cols from right: cols 7–11, row 1, 100px from Part 1 above */}
-          <div style={{ gridColumn: '7 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
+          {/* Chef image — 2 cols from right: cols 8–11, row 1, 100px from Part 1 above */}
+          <div style={{ gridColumn: '8 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
               alt="Chef cooking at Corima"
