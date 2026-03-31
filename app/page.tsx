@@ -385,7 +385,54 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Part 5: Producer Partnership & Recognition */}
+        <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: '100px', marginTop: '120px', alignItems: 'start' }}>
+          
+          {/* Left — kitchen photo */}
+          <div style={{ width: '320px', height: '320px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2818%202-61XN6Jf0t53SCva3TBf63oJO510MRq.jpg"
+              alt="Two chefs in the kitchen"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Right — two body paragraphs */}
+          <div style={{ maxWidth: '450px' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+              Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
+            </p>
+            <p className="leading-relaxed" style={{ fontSize: '1vw', letterSpacing: '-0.01em', color: '#000' }}>
+              Within its first year, Corima earned a Michelin star, was named one of Bon Appétit&apos;s Best New Restaurants of 2024, and received a James Beard Award nomination. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+            </p>
+          </div>
+        </div>
+
       </section>
+
+      {/* Footer */}
+      <footer style={{ backgroundColor: '#d1d1d1', padding: '80px 120px', textAlign: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '40px', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+          <div>
+            <p style={{ fontSize: '16px', color: '#000', margin: '0' }}>Contact</p>
+          </div>
+          <div>
+            <p style={{ fontSize: '16px', color: '#000', margin: '0' }}>3 Allen St. NY 10002</p>
+          </div>
+          <div>
+            <p style={{ fontSize: '16px', color: '#000', margin: '0' }}>Instagram</p>
+          </div>
+          <div>
+            <p style={{ fontSize: '16px', color: '#000', margin: '0' }}>Spotify</p>
+          </div>
+          <div>
+            <p style={{ fontSize: '16px', color: '#000', margin: '0' }}>Tuesday - Saturday 5:30PM - 10PM</p>
+          </div>
+          <div>
+            <p style={{ fontSize: '24px', color: '#000', margin: '0' }}>❀</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
