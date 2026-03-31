@@ -58,7 +58,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="bg-black text-white">
+    <div className="text-white" style={{ backgroundColor: '#1f1c18' }}>
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
       <DiningOverlay
         isOpen={isDiningOpen}
@@ -149,7 +149,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#3d3a36] text-white" style={{ padding: '56px 24px 48px 24px' }}>
+      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
         <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl" style={{ marginTop: '100px', marginBottom: '100px' }}>
           Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
