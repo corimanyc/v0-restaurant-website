@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#d1d1d1', padding: '40px 24px' }}>
+      <footer style={{ backgroundColor: '#d1d1d1', width: '100vw', marginLeft: 'calc(-50vw + 50%)', padding: '40px 24px' }}>
         <div className="flex items-center gap-8">
           <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
           <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
