@@ -37,6 +37,8 @@ export default function Home() {
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
 
+  const [isAtTop, setIsAtTop] = useState(true)
+
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
 
@@ -45,6 +47,14 @@ export default function Home() {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length)
     }, 5000)
     return () => clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsAtTop(window.scrollY < window.innerHeight * 0.5)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
@@ -121,10 +131,10 @@ export default function Home() {
           )}
         </header>
 
-        {/* Footer — hidden when dining overlay is open */}
+        {/* Footer — hidden when scrolled past hero or dining overlay open */}
         <footer
           className="fixed bottom-0 left-0 right-0 z-40 transition-opacity duration-500"
-          style={{ opacity: isDiningOpen ? 0 : 1, pointerEvents: isDiningOpen ? 'none' : 'all' }}
+          style={{ opacity: isAtTop && !isDiningOpen ? 1 : 0, pointerEvents: isAtTop && !isDiningOpen ? 'all' : 'none' }}
         >
           <div style={{ padding: '24px' }} className="flex items-center justify-between">
             <p className="text-xs md:text-sm tracking-widest uppercase text-white">
