@@ -90,8 +90,11 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Header/Navigation — fixed so overlay covers it */}
-        <header className="fixed top-0 left-0 right-0 z-40">
+        {/* Header/Navigation — hidden when scrolled or dining overlay open */}
+        <header
+          className="fixed top-0 left-0 right-0 z-40 transition-opacity duration-500"
+          style={{ opacity: isAtTop && !isDiningOpen ? 1 : 0, pointerEvents: isAtTop && !isDiningOpen ? 'all' : 'none' }}
+        >
           <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
