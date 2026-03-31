@@ -280,7 +280,7 @@ export default function Home() {
           <div style={{ gridColumn: '3 / 9' }}>
             <h2
               className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(32px, 3.8vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
+              style={{ fontSize: '40px', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
