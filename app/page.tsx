@@ -260,11 +260,11 @@ export default function Home() {
         </div>
       </section>
       {/* Corima Story Section */}
-      <section style={{ backgroundColor: '#1f1c18', padding: '120px 24px 120px 24px' }}>
-        <div className="flex items-start" style={{ gap: '0' }}>
+      <section style={{ backgroundColor: '#1f1c18', padding: '0 24px', position: 'relative', minHeight: '800px' }}>
+        <div style={{ position: 'relative' }}>
 
-          {/* Left — large quote */}
-          <div style={{ flex: '0 0 45%', paddingRight: '48px' }}>
+          {/* Left — large quote with absolute positioning */}
+          <div style={{ position: 'absolute', top: '100px', left: '280px', width: '45%', paddingRight: '48px' }}>
             <h2
               className="text-white font-light leading-tight text-pretty"
               style={{ fontSize: 'clamp(32px, 3.5vw, 56px)', letterSpacing: '-0.02em', fontWeight: '300' }}
@@ -274,7 +274,7 @@ export default function Home() {
           </div>
 
           {/* Center — two body paragraphs */}
-          <div style={{ flex: '0 0 35%', paddingTop: '240px', paddingRight: '48px' }}>
+          <div style={{ position: 'absolute', top: '380px', left: '680px', width: '35%', paddingRight: '48px' }}>
             <p className="text-white leading-relaxed mb-10" style={{ fontSize: '16px', letterSpacing: '-0.01em' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
@@ -284,7 +284,7 @@ export default function Home() {
           </div>
 
           {/* Right — tall portrait photo */}
-          <div style={{ flex: '0 0 20%' }}>
+          <div style={{ position: 'absolute', top: '100px', right: '24px', width: '15%' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
