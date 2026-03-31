@@ -305,9 +305,12 @@ export default function Home() {
         </div>
 
         {/* Part 2: Cooking Philosophy */}
-        {/* Dish: cols 1–2 | SVG text: cols 3–8 | Chef: cols 9–12 */}
-        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '1 / 3' }}>
+        {/* Row 1: Dish cols 1–2 | Chef image cols 6–10 */}
+        {/* Row 2: SVG line 1 cols 2–5 | SVG line 2 cols 3–6 (indented) */}
+        <div className="grid-12" style={{ marginBottom: '100px' }}>
+
+          {/* Dish image — cols 1–2, row 1 */}
+          <div style={{ gridColumn: '1 / 3', gridRow: '1', alignSelf: 'center' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
               alt="Plated dish at Corima"
@@ -315,26 +318,35 @@ export default function Home() {
               style={{ aspectRatio: '1/1' }}
             />
           </div>
-          <div style={{ gridColumn: '3 / 9', display: 'flex', flexDirection: 'column', gap: '24px', paddingTop: '20px' }}>
+
+          {/* Chef image — cols 6–10, row 1 */}
+          <div style={{ gridColumn: '6 / 11', gridRow: '1', alignSelf: 'start' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
+              alt="Chef cooking at Corima"
+              className="w-full object-cover"
+              style={{ aspectRatio: '3/4' }}
+            />
+          </div>
+
+          {/* SVG line 1 — cols 2–5, row 2 */}
+          <div style={{ gridColumn: '2 / 6', gridRow: '2', paddingTop: '32px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
               style={{ width: '100%', height: 'auto' }}
             />
+          </div>
+
+          {/* SVG line 2 — cols 3–7, row 3 (indented right) */}
+          <div style={{ gridColumn: '3 / 7', gridRow: '3', paddingTop: '16px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-uVDOBJpgOEi1oNID5uBSA7NqL02VSR.svg"
               alt="shaped in practice by the seasons and conditions of the Northeast."
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-          <div style={{ gridColumn: '9 / 13' }}>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
-              alt="Chef cooking at Corima"
-              className="w-full object-cover"
-              style={{ aspectRatio: '4/3' }}
-            />
-          </div>
+
         </div>
 
         {/* Part 3: Philosophy text + stacked images */}
