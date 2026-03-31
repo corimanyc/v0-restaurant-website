@@ -260,14 +260,14 @@ export default function Home() {
         </div>
       </section>
       {/* Corima Story Section */}
-      <section style={{ backgroundColor: '#1f1c18', padding: '0 24px', position: 'relative', minHeight: '800px' }}>
+      <section style={{ backgroundColor: '#d1d1d1', padding: '0 24px', position: 'relative', minHeight: '800px' }}>
         <div style={{ position: 'relative' }}>
 
           {/* Left — large quote with absolute positioning */}
           <div style={{ position: 'absolute', top: '100px', left: '280px', width: '45%', paddingRight: '48px' }}>
             <h2
-              className="text-white font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300' }}
+              className="font-light leading-tight text-pretty"
+              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
@@ -275,10 +275,10 @@ export default function Home() {
 
           {/* Center — two body paragraphs, directly under the editorial quote */}
           <div style={{ position: 'absolute', top: '480px', left: 'calc(280px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
-            <p className="text-white leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em' }}>
+            <p className="leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
-            <p className="text-white leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em' }}>
+            <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
               Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
             </p>
           </div>
