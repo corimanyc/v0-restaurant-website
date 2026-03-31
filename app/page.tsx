@@ -411,13 +411,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#d1d1d1', padding: '40px 120px' }}>
-        <div className="flex items-center justify-between">
-          <p style={{ fontSize: '14px', color: '#000', margin: '0' }}>Contact</p>
-          <p style={{ fontSize: '14px', color: '#000', margin: '0' }}>3 Allen St. NY 10002</p>
-          <p style={{ fontSize: '14px', color: '#000', margin: '0' }}>Instagram</p>
-          <p style={{ fontSize: '14px', color: '#000', margin: '0' }}>Spotify</p>
-          <p style={{ fontSize: '14px', color: '#000', margin: '0' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
+      <footer style={{ backgroundColor: '#d1d1d1', padding: '40px 24px' }}>
+        <div className="flex items-center gap-8">
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Instagram</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Spotify</p>
+          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
           <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
         </div>
       </footer>
