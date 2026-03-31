@@ -278,12 +278,11 @@ export default function Home() {
         {/* Quote: cols 3–8 | Image: cols 10–12 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
           <div style={{ gridColumn: '3 / 8' }}>
-            <h2
-              className="font-light leading-tight text-pretty"
-              style={{ fontSize: '40px', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
-            >
-              The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
-            </h2>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20name%20Corima%20comes%20from%20the%20Tarahumara%20word%20for%20%E2%80%9Ccircle%20of%20sharing.%E2%80%9D-YCtwkAUM4TNjBZdGk8w5lgYn8QoMOA.svg"
+              alt="The name Corima comes from the Tarahumara word for circle of sharing."
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
           <div style={{ gridColumn: '10 / 13', gridRow: '1 / 3' }}>
             <img
