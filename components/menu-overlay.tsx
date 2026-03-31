@@ -21,18 +21,18 @@ const alaCarteItems = [
 ]
 
 const cocktailItems = [
-  { name: 'SAN PEDRO', desc: 'Sotol, Lime, Bitter Orange Agave, Nopales' },
-  { name: 'PUNTILLA', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit' },
-  { name: 'ORITO', desc: 'Tequila Blanco, Bergamot, Squirt, Yellow Chartreuse, Fennel Seed' },
-  { name: 'DUST DEVIL', desc: 'Bourbon, Beet, Pasilla, Aperol' },
-  { name: 'HIERBA MORA', desc: 'Vodka, Poblano Brine, Empirical Cilantro, Dry Vermouth' },
-  { name: 'SIX FEET', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina' },
-  { name: 'CARAJILLO DE LA CASA', desc: 'Aged Rum, Licor 43, Forthave Brown, Café Integral Coffee' },
-  { name: 'PELIRROJA', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn' },
-  { name: 'JAMAICA COOLER (Non-Alcoholic)', desc: 'Hibiscus, Licorice' },
-  { name: 'TEPACHE SPRITZ (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda' },
-  { name: 'MUGICHA ICED TEA', desc: 'Mugicha, Ver Jus, Coconut' },
-  { name: 'CHUCHUPASTE', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf' },
+  { name: 'SAN PEDRO', desc: 'SOTOL, LIME, BITTER ORANGE AGAVE, NOPALES', price: '18' },
+  { name: 'PUNTILLA', desc: 'TEQUILA REPOSADO, RED WINE, CINNAMON, GRAPEFRUIT', price: '18' },
+  { name: 'ORITO', desc: 'TEQUILA BLANCO, BERGAMOT, SQUIRT, YELLOW CHARTREUSE, FENNEL SEED', price: '19' },
+  { name: 'DUST DEVIL', desc: 'BOURBON, BEET, PASILLA, APEROL', price: '18' },
+  { name: 'HIERBA MORA', desc: 'VODKA, POBLANO BRINE, EMPIRICAL CILANTRO, DRY VERMOUTH', price: '18' },
+  { name: 'SIX FEET', desc: 'SOTOL DESIERTO, MARIGOLD, BLANC VERMOUTH, BONAL QUINQUINA', price: '18' },
+  { name: 'CARAJILLO DE LA CASA', desc: 'AGED RUM, LICOR 43, FORTHAVE BROWN, CAFÉ INTEGRAL COFFEE', price: '18' },
+  { name: 'PELIRROJA', desc: 'CARTA BLANCA, PERSIMMON, HABANERO, PEPPERCORN', price: '14' },
+  { name: 'JAMAICA COOLER (NON-ALCOHOLIC)', desc: 'HIBISCUS, LICORICE', price: '10' },
+  { name: 'TEPACHE SPRITZ (NON-ALCOHOLIC)', desc: 'TEPACHE, PENTIRE SEAWARD, SODA', price: '10' },
+  { name: 'MUGICHA ICED TEA', desc: 'MUGICHA, VER JUS, COCONUT', price: '10' },
+  { name: 'CHUCHUPASTE', desc: 'ALOE VERA, CHUCHUPASTE ROOT, GENTIAN, AVOCADO LEAF', price: '10' },
 ]
 
 interface MenuOverlayProps {
@@ -148,11 +148,9 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                   <p className="text-black uppercase" style={{ ...base, maxWidth: '420px' }}>
                     {item.name}
                   </p>
-                  {item.price ? (
-                    <p className="text-black flex-shrink-0" style={{ ...base, marginLeft: '16px' }}>
-                      {item.price}
-                    </p>
-                  ) : null}
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                    {item.price || '—'}
+                  </p>
                 </div>
               ))}
             </div>
@@ -165,9 +163,14 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             </h2>
             <div className="flex flex-col">
               {cocktailItems.map((item, i) => (
-                <div key={i} className="py-4" style={{ maxWidth: '420px' }}>
-                  <p className="text-black uppercase" style={base}>{item.name}</p>
-                  <p className="text-black" style={{ ...base, opacity: 0.65, marginTop: '2px' }}>{item.desc}</p>
+                <div key={i} className="flex items-start justify-between py-4">
+                  <div style={{ maxWidth: '380px' }}>
+                    <p className="text-black uppercase" style={base}>{item.name}</p>
+                    <p className="text-black uppercase" style={{ ...base, fontSize: '12px', opacity: 0.75, marginTop: '2px' }}>{item.desc}</p>
+                  </div>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                    {item.price || '—'}
+                  </p>
                 </div>
               ))}
             </div>
