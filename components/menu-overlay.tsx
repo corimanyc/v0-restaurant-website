@@ -136,12 +136,6 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             <h2 className="text-black uppercase font-medium mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
               A La Carte
             </h2>
-            <p className="text-black mb-1" style={base}>
-              Our a la carte menu changes with the seasons and market availability.
-            </p>
-            <p className="text-black mb-8" style={{ ...base }}>
-              Below is a sample menu from 2/9/26. Dishes are subject to change.
-            </p>
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
@@ -154,6 +148,12 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                 </div>
               ))}
             </div>
+            <p className="text-black mb-1" style={{ ...base, marginTop: '24px' }}>
+              Our a la carte menu changes with the seasons and market availability.
+            </p>
+            <p className="text-black mb-8" style={{ ...base }}>
+              Below is a sample menu from 2/9/26. Dishes are subject to change.
+            </p>
           </div>
 
           {/* Cocktail */}
