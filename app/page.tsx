@@ -259,48 +259,46 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Corima Story Section */}
-      <section style={{ backgroundColor: '#d1d1d1', padding: '100px 0' }}>
-        <div style={{ position: 'relative', height: '650px' }}>
-
-          {/* Left — large quote with absolute positioning */}
-          <div style={{ position: 'absolute', top: '0', left: '240px', width: '45%', paddingRight: '48px' }}>
+      {/* Corima Story & Cooking Philosophy Section — One Continuous Page */}
+      <section style={{ backgroundColor: '#d1d1d1', padding: '100px 120px' }}>
+        
+        {/* Part 1: Corima Story */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 274px', gap: '80px', alignItems: 'start', marginBottom: '120px' }}>
+          
+          {/* Left column content */}
+          <div>
             <h2
               className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
+              style={{ fontSize: 'clamp(36px, 4vw, 52px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', marginBottom: '60px' }}
             >
               The name Corima comes from the Tarahumara word for &ldquo;circle of sharing.&rdquo;
             </h2>
+            
+            <div style={{ maxWidth: '365px' }}>
+              <p className="leading-relaxed mb-8" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
+                The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
+              </p>
+              <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
+                Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
+              </p>
+            </div>
           </div>
 
-          {/* Center — two body paragraphs, directly under the editorial quote */}
-          <div style={{ position: 'absolute', top: '320px', left: 'calc(240px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
-            <p className="leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-              The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
-            </p>
-            <p className="leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em', color: '#000' }}>
-              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
-            </p>
-          </div>
-
-          {/* Right — tall portrait photo */}
-          <div style={{ position: 'absolute', top: '40px', right: '60px', width: '274px', height: '365px' }}>
+          {/* Right column — tall portrait photo */}
+          <div style={{ width: '274px', height: '365px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
               className="w-full h-full object-cover"
-              style={{ aspectRatio: '3/4' }}
             />
           </div>
-
         </div>
-      </section>
-      {/* Cooking Philosophy Section */}
-      <section style={{ backgroundColor: '#d1d1d1', padding: '80px 120px', position: 'relative', minHeight: '650px' }}>
-        <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: '240px 1fr 420px', gap: '60px', alignItems: 'start' }}>
 
+        {/* Part 2: Cooking Philosophy */}
+        <div style={{ display: 'grid', gridTemplateColumns: '240px 1fr 420px', gap: '80px', alignItems: 'start' }}>
+          
           {/* Left — small plated dish image */}
-          <div style={{ width: '240px', height: '240px', marginTop: '80px' }}>
+          <div style={{ width: '240px', height: '240px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
               alt="Plated dish at Corima"
@@ -309,7 +307,7 @@ export default function Home() {
           </div>
 
           {/* Center — SVG text graphics */}
-          <div style={{ paddingTop: '40px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', paddingTop: '20px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
@@ -330,8 +328,8 @@ export default function Home() {
               className="w-full h-full object-cover"
             />
           </div>
-
         </div>
+
       </section>
     </div>
   )
