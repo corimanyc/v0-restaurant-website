@@ -293,8 +293,8 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-          {/* Body: cols 5–7, row 2 */}
-          <div style={{ gridColumn: '5 / 7', marginTop: '60px' }}>
+          {/* Body: cols 5–8, row 2 */}
+          <div style={{ gridColumn: '5 / 8', marginTop: '60px' }}>
             <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
