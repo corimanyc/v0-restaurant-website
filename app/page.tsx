@@ -277,7 +277,7 @@ export default function Home() {
         {/* Part 1: Corima Story */}
         {/* Quote: cols 3–8 | Image: cols 10–12 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '3 / 9' }}>
+          <div style={{ gridColumn: '3 / 7' }}>
             <h2
               className="font-light leading-tight text-pretty"
               style={{ fontSize: '40px', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
@@ -293,8 +293,8 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-          {/* Body: cols 5–9, row 2 */}
-          <div style={{ gridColumn: '5 / 9', marginTop: '60px' }}>
+          {/* Body: cols 5–7, row 2 */}
+          <div style={{ gridColumn: '5 / 8', marginTop: '60px' }}>
             <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
