@@ -331,16 +331,16 @@ export default function Home() {
           {/* SVG line 1 — cols 3–7, row 2 */}
           <div style={{ gridColumn: '3 / 7', gridRow: '2', paddingTop: '32px' }}>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-EDZiNUXnZAkOvRkrUo8JtlYDLW1vZZ.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
 
-          {/* SVG line 2 — cols 4–8, row 3 (indented one col right) */}
-          <div style={{ gridColumn: '4 / 8', gridRow: '3', paddingTop: '16px' }}>
+          {/* SVG line 2 — cols 6–10, row 3 (indented 2 cols right) */}
+          <div style={{ gridColumn: '6 / 10', gridRow: '3', paddingTop: '16px' }}>
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-uVDOBJpgOEi1oNID5uBSA7NqL02VSR.svg"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-VPG1UrRBB5QVCjKBQNQw76eKsckRFc.svg"
               alt="shaped in practice by the seasons and conditions of the Northeast."
               style={{ width: '100%', height: 'auto' }}
             />
