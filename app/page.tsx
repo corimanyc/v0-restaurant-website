@@ -284,11 +284,11 @@ export default function Home() {
           </div>
 
           {/* Right — tall portrait photo */}
-          <div style={{ position: 'absolute', top: '100px', right: '24px', width: '15%' }}>
+          <div style={{ position: 'absolute', top: '100px', right: '24px', width: '274px', height: '365px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
-              className="w-full object-cover"
+              className="w-full h-full object-cover"
               style={{ aspectRatio: '3/4' }}
             />
           </div>
