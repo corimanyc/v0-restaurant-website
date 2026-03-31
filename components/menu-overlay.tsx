@@ -139,7 +139,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
             <p className="text-black mb-1" style={base}>
               Our a la carte menu changes with the seasons and market availability.
             </p>
-            <p className="text-black mb-8" style={{ ...base, opacity: 0.85 }}>
+            <p className="text-black mb-8" style={{ ...base }}>
               Below is a sample menu from 2/9/26. Dishes are subject to change.
             </p>
             <div className="flex flex-col">
@@ -148,7 +148,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                   <p className="text-black uppercase font-medium" style={{ ...base, maxWidth: '420px' }}>
                     {item.name}
                   </p>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                  <p className="text-black flex-shrink-0 text-right font-medium" style={{ ...base, marginLeft: '16px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
