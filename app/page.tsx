@@ -277,7 +277,7 @@ export default function Home() {
         {/* Part 1: Corima Story */}
         {/* Quote: cols 3–8 | Image: cols 10–12 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '3 / 7' }}>
+          <div style={{ gridColumn: '3 / 8' }}>
             <h2
               className="font-light leading-tight text-pretty"
               style={{ fontSize: '40px', letterSpacing: '-0.02em', fontWeight: '300', color: '#000' }}
