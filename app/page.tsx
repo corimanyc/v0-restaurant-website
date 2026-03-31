@@ -318,8 +318,8 @@ export default function Home() {
             />
           </div>
 
-          {/* Chef image — 2 cols from right: cols 8–11, 100px from Part 1 above */}
-          <div style={{ gridColumn: '8 / 11', gridRow: '1 / 3', alignSelf: 'start', marginTop: '100px' }}>
+          {/* Chef image — 2 cols from right: cols 7–11, row 1, 100px from Part 1 above */}
+          <div style={{ gridColumn: '7 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
               alt="Chef cooking at Corima"
@@ -328,8 +328,8 @@ export default function Home() {
             />
           </div>
 
-          {/* SVG line 1 — cols 2–5, row 2, moved up */}
-          <div style={{ gridColumn: '2 / 6', gridRow: '2', paddingTop: '12px' }}>
+          {/* SVG line 1 — cols 2–5, row 2 */}
+          <div style={{ gridColumn: '2 / 6', gridRow: '2', paddingTop: '32px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-hz1gSefWftkAEyTg0g3y7iQCFtZLtf.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
@@ -337,8 +337,8 @@ export default function Home() {
             />
           </div>
 
-          {/* SVG line 2 — cols 3–7, row 3 (indented right), moved up */}
-          <div style={{ gridColumn: '3 / 7', gridRow: '3', paddingTop: '8px' }}>
+          {/* SVG line 2 — cols 3–7, row 3 (indented right) */}
+          <div style={{ gridColumn: '3 / 7', gridRow: '3', paddingTop: '16px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-uVDOBJpgOEi1oNID5uBSA7NqL02VSR.svg"
               alt="shaped in practice by the seasons and conditions of the Northeast."
