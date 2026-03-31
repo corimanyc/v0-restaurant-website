@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <>
-    <div className="text-white" style={{ backgroundColor: '#1f1c18' }}>
+      <div className="text-white" style={{ backgroundColor: '#1f1c18' }}>
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
       <DiningOverlay
         isOpen={isDiningOpen}
@@ -410,11 +410,11 @@ export default function Home() {
         </div>
 
       </section>
-    </div>
+      </div>
 
-    {/* Footer — spans full width outside main wrapper */}
-    <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px' }}>
-      <div className="flex items-center gap-8">
+      {/* Footer — spans full width outside main wrapper */}
+      <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px' }}>
+      <div className="flex w-full items-center gap-8 justify-between">
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Instagram</p>
@@ -422,7 +422,7 @@ export default function Home() {
         <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
         <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
       </div>
-    </footer>
+      </footer>
     </>
   )
 }
