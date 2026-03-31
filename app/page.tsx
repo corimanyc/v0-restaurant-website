@@ -275,10 +275,10 @@ export default function Home() {
 
           {/* Center — two body paragraphs, directly under the editorial quote */}
           <div style={{ position: 'absolute', top: '480px', left: 'calc(280px + 45% - 413px)', width: '365px', paddingRight: '48px' }}>
-            <p className="text-white leading-relaxed mb-10" style={{ fontSize: '16px', letterSpacing: '-0.01em' }}>
+            <p className="text-white leading-relaxed mb-10" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
-            <p className="text-white leading-relaxed" style={{ fontSize: '16px', letterSpacing: '-0.01em' }}>
+            <p className="text-white leading-relaxed" style={{ fontSize: '1.2vw', letterSpacing: '-0.01em' }}>
               Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
             </p>
           </div>
