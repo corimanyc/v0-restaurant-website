@@ -352,11 +352,9 @@ export default function Home() {
         {/* Text: cols 4–8 | Images: cols 9–12 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
           <div style={{ gridColumn: '4 / 8' }}>
-            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
-          </div>
-          <div style={{ gridColumn: '4 / 7', gridRow: '2', marginTop: '32px' }}>
             <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
