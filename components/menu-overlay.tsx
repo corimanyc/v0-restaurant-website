@@ -147,12 +147,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                 </div>
               ))}
             </div>
-            <p className="text-black mb-4" style={{ ...base, marginTop: '32px' }}>
-              Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
-            </p>
-            <p className="text-black mb-8" style={{ ...base }}>
-              While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu. Our beverage program follows a similar sensibility, with a focused selection of Mexican spirits, particularly sotol, alongside wines chosen to complement a range of dishes.
-            </p>
+
           </div>
 
           {/* Cocktail */}
