@@ -306,10 +306,10 @@ export default function Home() {
           </div>
           {/* Body text — desktop: cols 4–7, row 2 | mobile: full width */}
           <div className="mb-6 lg:mb-0" style={{ gridColumn: '4 / 7', marginTop: '60px' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
             </p>
           </div>
@@ -357,10 +357,10 @@ export default function Home() {
         <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
           {/* Body text — desktop: cols 5–8 | mobile: full width */}
           <div className="mb-6 lg:mb-0" style={{ gridColumn: '5 / 8' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
@@ -408,10 +408,10 @@ export default function Home() {
           </div>
           {/* Text — desktop: cols 7–10 | mobile: full width */}
           <div style={{ gridColumn: '7 / 10' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               Within its first year, Corima earned a Michelin star, was named one of Bon Appétit&apos;s Best New Restaurants of 2024, and received a James Beard Award nomination. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
           </div>
