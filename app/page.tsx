@@ -382,8 +382,8 @@ export default function Home() {
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           </div>
-          {/* Second SVG — cols 3–7, 4 cols wide, one col to the right */}
-          <div style={{ gridColumn: '3 / 7', gridRow: '2' }}>
+          {/* Second SVG — cols 4–8, 4 cols wide, two cols to the right */}
+          <div style={{ gridColumn: '4 / 8', gridRow: '2' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/from%20farmers%20and%20foragers%20to%20artisans%20and%20guests.-3VLH1UA8tsfp7qWlJNGSzjkYbLbVJM.svg"
               alt="from farmers and foragers to artisans and guests."
