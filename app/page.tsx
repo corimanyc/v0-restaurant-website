@@ -395,8 +395,8 @@ export default function Home() {
         {/* Part 5: Producer Partnership & Recognition */}
         {/* Photo: cols 1–3 | Text: cols 5–9 */}
         <div className="grid-12" style={{ alignItems: 'start' }}>
-          {/* Image — 3 cols wide, one col left of text wrapper: cols 6–9 */}
-          <div style={{ gridColumn: '6 / 9' }}>
+          {/* Image — 3 cols wide: cols 3–6 */}
+          <div style={{ gridColumn: '3 / 6' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2818%202-61XN6Jf0t53SCva3TBf63oJO510MRq.jpg"
               alt="Two chefs in the kitchen"
@@ -404,8 +404,8 @@ export default function Home() {
               style={{ aspectRatio: '1/1' }}
             />
           </div>
-          {/* Text wrapper — 3 cols from right: cols 10–13 */}
-          <div style={{ gridColumn: '10 / 13' }}>
+          {/* Text wrapper — cols 7–10 */}
+          <div style={{ gridColumn: '7 / 10' }}>
             <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
             </p>
