@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
+import MobileNav from '@/components/mobile-nav'
 
 const heroImages = [
   {
@@ -121,20 +122,14 @@ export default function Home() {
             </button>
           </nav>
 
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden bg-black border-t border-gray-800">
-              <div className="px-6 py-4 flex flex-col gap-4">
-                <Link href="#about" className="text-sm uppercase tracking-wider hover:opacity-70 transition">About</Link>
-                <Link href="#reservations" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Reservations</Link>
-                <button onClick={() => setIsDiningOpen(true)} className="text-sm uppercase tracking-wider hover:opacity-70 transition text-white text-left">Dining</button>
-                <Link href="#events" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Events</Link>
-                <Link href="#press" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Press</Link>
-                <Link href="#shop" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Shop</Link>
-              </div>
-            </div>
-          )}
         </header>
+
+        {/* Mobile Nav Overlay — slides in from top */}
+        <MobileNav
+          isOpen={isMenuOpen}
+          onClose={() => setIsMenuOpen(false)}
+          onMenuClick={() => setIsMenuOverlayOpen(true)}
+        />
 
         {/* Footer — hidden when scrolled past hero or dining overlay open */}
         <footer
@@ -289,7 +284,6 @@ export default function Home() {
 
         </div>
       </section>
-      </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
 
