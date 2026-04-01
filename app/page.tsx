@@ -262,8 +262,11 @@ export default function Home() {
             <div style={{ marginTop: '80px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
               <div style={{ flex: '1' }}>
                 <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px', color: 'white' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: 'white' }}>
+                  The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
+                </p>
                 <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: 'white' }}>
-                  The wine program focuses on producer-driven bottles from Mexico and Europe, selected for their alignment with the menu&apos;s seasonal and regional sensibility.
+                  The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <a href="#" className="hover:opacity-70 transition inline-block" style={{ fontSize: '16px', color: 'white' }}>
                   <span className="mr-2">&bull;</span>Our wine list
