@@ -153,7 +153,7 @@ export default function Home() {
       <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
         <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl" style={{ marginTop: '100px', marginBottom: '100px' }}>
-          Translating to &ldquo;circle of sharing,&rdquo; Corima (ko-ree-ma) is rooted in Northern Mexico and expressed in New York through tradition defined by experience and shaped by place.
+          Corima is a restaurant shaped by the cooking of Northern Mexico, brought into conversation with New York through seasonality, craft, and lived experience.
         </h2>
 
         {/* Two Column Layout — 36px gap, 40:60 split */}
