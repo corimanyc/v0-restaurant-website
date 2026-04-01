@@ -151,7 +151,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '56px 24px 120px 24px' }}>
+      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
         <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '160px', marginBottom: '160px' }}>
           Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience.
@@ -292,6 +292,28 @@ export default function Home() {
       </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
+        <style>{`
+          .grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 20px;
+            padding-left: 36px;
+            padding-right: 36px;
+          }
+          @media (max-width: 768px) {
+            .grid-12 {
+              display: flex;
+              flex-direction: column;
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+            .grid-12 > * {
+              width: 100% !important;
+              margin-top: 0 !important;
+              transform: none !important;
+            }
+          }
+        `}</style>
 
         {/* Part 1: Corima Story */}
         <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
