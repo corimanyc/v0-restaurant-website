@@ -232,7 +232,7 @@ export default function Home() {
             </div>
 
             {/* Wine section */}
-            <div style={{ marginTop: '80px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
+            <div style={{ marginTop: '36px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
               <div style={{ flex: '0 0 35%' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
@@ -289,6 +289,7 @@ export default function Home() {
 
         </div>
       </section>
+      </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
         <style>{`
