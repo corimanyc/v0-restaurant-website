@@ -260,10 +260,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Corima Story & Cooking Philosophy Section — One Continuous Page */}
-      {/* 12-col grid: 36px margin, 20px gutter */}
-      <section style={{ backgroundColor: '#d1d1d1', paddingTop: '100px', paddingBottom: '100px' }}>
-        {/* Grid helper: 12 cols, 20px gap, 36px side padding */}
+      {/* About Section — 12-col desktop grid, single-col mobile */}
+      <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
         <style>{`
           .grid-12 {
             display: grid;
@@ -272,19 +270,33 @@ export default function Home() {
             padding-left: 36px;
             padding-right: 36px;
           }
+          @media (max-width: 768px) {
+            .grid-12 {
+              display: flex;
+              flex-direction: column;
+              padding-left: 20px;
+              padding-right: 20px;
+            }
+            .grid-12 > * {
+              width: 100% !important;
+              margin-top: 0 !important;
+              transform: none !important;
+            }
+          }
         `}</style>
 
         {/* Part 1: Corima Story */}
-        {/* Quote: cols 3–8 | Image: cols 10–12 */}
-        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '3 / 7' }}>
+        <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
+          {/* Corima SVG — desktop: cols 3–7 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '3 / 7' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20name%20Corima%20comes%20from%20the%20Tarahumara%20word%20for%20%E2%80%9Ccircle%20of%20sharing.%E2%80%9D-YCtwkAUM4TNjBZdGk8w5lgYn8QoMOA.svg"
               alt="The name Corima comes from the Tarahumara word for circle of sharing."
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-          <div style={{ gridColumn: '9 / 12', gridRow: '1 / 3' }}>
+          {/* Portrait image — desktop: cols 9–12, rows 1–3 | mobile: full width after SVG */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '9 / 12', gridRow: '1 / 3' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
               alt="Chef Fidel Caballero at Corima"
@@ -292,9 +304,9 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-          {/* Body: cols 4–7, row 2 */}
-          <div style={{ gridColumn: '4 / 7', marginTop: '60px' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+          {/* Body text — desktop: cols 4–7, row 2 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '4 / 7', marginTop: '60px' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
             <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
@@ -304,12 +316,9 @@ export default function Home() {
         </div>
 
         {/* Part 2: Cooking Philosophy */}
-        {/* Row 1: Dish cols 1–2 | Chef image cols 6–10 */}
-        {/* Row 2: SVG line 1 cols 2–5 | SVG line 2 cols 3–6 (indented) */}
-        <div className="grid-12" style={{ marginBottom: '100px', marginTop: '-100px' }}>
-
-          {/* Dish image — 1 col from left: col 2–4, row 1 */}
-          <div style={{ gridColumn: '2 / 4', gridRow: '1', alignSelf: 'center' }}>
+        <div className="grid-12 mb-16 lg:mb-24" style={{ marginTop: '-100px' }}>
+          {/* Dish image — desktop: cols 2–4 | mobile: hidden (chef is sufficient) */}
+          <div className="hidden lg:block" style={{ gridColumn: '2 / 4', gridRow: '1', alignSelf: 'center' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaNov24_JovaniDemetrie_22_Original%201-oG0EDkxE2vNa7KNJ0WDNsyohkWo3nQ.png"
               alt="Plated dish at Corima"
@@ -317,9 +326,8 @@ export default function Home() {
               style={{ aspectRatio: '1/1' }}
             />
           </div>
-
-          {/* Chef image — 2 cols from right: cols 8–11, row 1, 100px from Part 1 above */}
-          <div style={{ gridColumn: '8 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
+          {/* Chef cooking image — desktop: cols 8–11 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '8 / 11', gridRow: '1', alignSelf: 'start', marginTop: '100px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
               alt="Chef cooking at Corima"
@@ -327,17 +335,15 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-
-          {/* SVG line 1 — cols 2–6, row 2 */}
-          <div style={{ gridColumn: '2 / 6', gridRow: '2', paddingTop: '32px' }}>
+          {/* SVG line 1 — desktop: cols 2–6 | mobile: full width */}
+          <div className="mb-2 lg:mb-0" style={{ gridColumn: '2 / 6', gridRow: '2', paddingTop: '32px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-EDZiNUXnZAkOvRkrUo8JtlYDLW1vZZ.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-
-          {/* SVG line 2 — cols 5–9, row 3 */}
+          {/* SVG line 2 — desktop: cols 5–9 indented | mobile: full width with left indent */}
           <div style={{ gridColumn: '5 / 9', gridRow: '3', paddingTop: '16px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-VPG1UrRBB5QVCjKBQNQw76eKsckRFc.svg"
@@ -345,21 +351,20 @@ export default function Home() {
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-
         </div>
 
-        {/* Part 3: Philosophy text + stacked images */}
-        {/* Text: cols 4–8 | Images: cols 9–12 */}
-        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '5 / 8' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+        {/* Part 3: Philosophy text + hand image */}
+        <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
+          {/* Body text — desktop: cols 5–8 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '5 / 8' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
             <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
-          {/* Hand image — 3 cols wide, nudged half col right */}
+          {/* Hand image — desktop: cols 9–12 | mobile: full width */}
           <div style={{ gridColumn: '9 / 12', gridRow: '1', transform: 'translateX(calc(50% / 3))' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
@@ -368,21 +373,19 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-
         </div>
 
-        {/* Part 4: Sharing Philosophy quote */}
-        {/* Quote: cols 1–7 | Continuation: cols 7–10 */}
-        <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'end' }}>
-          {/* First SVG — cols 2–7, 5 cols wide */}
-          <div style={{ gridColumn: '2 / 7', gridRow: '1' }}>
+        {/* Part 4: Sharing Philosophy SVGs */}
+        <div className="grid-12 mb-16 lg:mb-24">
+          {/* First SVG — desktop: cols 2–7 | mobile: full width */}
+          <div className="mb-3 lg:mb-0" style={{ gridColumn: '2 / 7', gridRow: '1' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20idea%20of%20sharing%20extends%20beyond%20the%20dining%20room%2C%20shaping%20the%20relationships%20that%20support%20the%20kitchen%E2%80%99s%20work%2C-hB7zhSwk303icgfIRSHCgAX4r63jWa.svg"
               alt="The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen's work,"
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           </div>
-          {/* Second SVG — cols 4–8, 4 cols wide, two cols to the right */}
+          {/* Second SVG — desktop: cols 4–8 indented | mobile: full width with left indent */}
           <div style={{ gridColumn: '4 / 8', gridRow: '2', marginTop: '12px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/from%20farmers%20and%20foragers%20to%20artisans%20and%20guests.-3VLH1UA8tsfp7qWlJNGSzjkYbLbVJM.svg"
@@ -393,10 +396,9 @@ export default function Home() {
         </div>
 
         {/* Part 5: Producer Partnership & Recognition */}
-        {/* Photo: cols 1–3 | Text: cols 5–9 */}
         <div className="grid-12" style={{ alignItems: 'start' }}>
-          {/* Image — 3 cols wide: cols 3–6 */}
-          <div style={{ gridColumn: '3 / 6' }}>
+          {/* Kitchen image — desktop: cols 3–6 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '3 / 6' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2818%202-61XN6Jf0t53SCva3TBf63oJO510MRq.jpg"
               alt="Two chefs in the kitchen"
@@ -404,9 +406,9 @@ export default function Home() {
               style={{ aspectRatio: '1/1' }}
             />
           </div>
-          {/* Text wrapper — cols 7–10 */}
+          {/* Text — desktop: cols 7–10 | mobile: full width */}
           <div style={{ gridColumn: '7 / 10' }}>
-            <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
             </p>
             <p className="leading-relaxed" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
