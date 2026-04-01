@@ -148,12 +148,10 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 24px 100px 24px' }}>
         {/* Headline */}
-        <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '80px', marginBottom: '40px' }}>
-          Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience.
+        <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '80px', marginBottom: '160px' }}>
+          Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience.{' '}
+          <span style={{ fontSize: '15px', opacity: 0.6, fontWeight: 400 }}>Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.</span>
         </h2>
-        <p style={{ fontSize: '15px', color: 'white', opacity: 0.6, marginBottom: '120px' }}>
-          Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
-        </p>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
         <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
