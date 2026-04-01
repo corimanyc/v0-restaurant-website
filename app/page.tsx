@@ -293,8 +293,8 @@ export default function Home() {
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
 
-        <div className="grid-12 mb-10">
-          <h2 style={{ fontSize: '20px', fontWeight: 500, color: '#333333', gridColumn: '1 / -1' }}>OUR STORY</h2>
+        <div className="px-5 md:px-20 mb-10">
+          <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#333333' }}>OUR STORY</h2>
         </div>
 
         {/* Part 1: Corima Story */}
