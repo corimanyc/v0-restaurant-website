@@ -158,7 +158,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col order-2 lg:order-1">
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>A La Carte</h3>
+            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
 
             <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
               Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
@@ -238,7 +238,7 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px', color: 'white' }}>Wine</h3>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: 'white' }}>Wine</h3>
                 <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: 'white' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
@@ -265,7 +265,7 @@ export default function Home() {
               style={{ marginBottom: '64px' }}
             />
 
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>Tasting Menu</h3>
+            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Tasting Menu</h3>
 
             <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
               At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
