@@ -146,9 +146,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 24px 100px 24px' }}>
+      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 80px 100px 80px' }}>
         {/* Headline */}
-        <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '80px', marginBottom: '160px' }}>
+        <h2 className="leading-snug w-full text-center" style={{ fontSize: '40px', marginTop: '80px', marginBottom: '160px' }}>
           Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
         </h2>
 
