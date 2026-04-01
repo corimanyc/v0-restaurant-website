@@ -158,23 +158,25 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row" style={{ gap: '100px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
+            <div style={{ maxWidth: '80%' }}>
+              <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
 
-            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
-            </p>
+              <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
+                Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
+              </p>
 
-            <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
-              While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
-            </p>
+              <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
+                While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
+              </p>
 
-            <button
-              onClick={() => setIsMenuOverlayOpen(true)}
-              className="hover:opacity-70 transition inline-block text-left"
-              style={{ marginBottom: '64px', fontSize: '16px', color: 'white' }}
-            >
-              <span className="mr-2">&bull;</span>View Menu
-            </button>
+              <button
+                onClick={() => setIsMenuOverlayOpen(true)}
+                className="hover:opacity-70 transition inline-block text-left"
+                style={{ marginBottom: '64px', fontSize: '16px', color: 'white' }}
+              >
+                <span className="mr-2">&bull;</span>View Menu
+              </button>
+            </div>
 
             <div 
               className="relative overflow-hidden w-full bg-black" 
