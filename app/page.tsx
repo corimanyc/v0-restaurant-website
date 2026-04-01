@@ -233,6 +233,13 @@ export default function Home() {
 
             {/* Wine section */}
             <div style={{ marginTop: '80px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
+              <div style={{ flex: '0 0 35%' }}>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
+                  alt="Wine bottle with lamp"
+                  className="w-full object-cover"
+                />
+              </div>
               <div style={{ flex: '1' }}>
                 <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px', color: 'white' }}>Wine</h3>
                 <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: 'white' }}>
@@ -248,13 +255,6 @@ export default function Home() {
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
-              </div>
-              <div style={{ flex: '0 0 35%' }}>
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
-                  alt="Wine bottle with lamp"
-                  className="w-full object-cover"
-                />
               </div>
             </div>
           </div>
