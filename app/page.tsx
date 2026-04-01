@@ -351,7 +351,7 @@ export default function Home() {
         {/* Part 3: Philosophy text + stacked images */}
         {/* Text: cols 4–8 | Images: cols 9–12 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'start' }}>
-          <div style={{ gridColumn: '4 / 7' }}>
+          <div style={{ gridColumn: '5 / 8' }}>
             <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
