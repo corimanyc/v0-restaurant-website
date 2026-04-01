@@ -375,17 +375,18 @@ export default function Home() {
         {/* Quote: cols 1–7 | Continuation: cols 7–10 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'end' }}>
           <div style={{ gridColumn: '1 / 8' }}>
-            <h3
-              className="font-light leading-tight text-pretty"
-              style={{ fontSize: 'clamp(28px, 3.2vw, 48px)', letterSpacing: '-0.02em', fontWeight: '300', color: '#000', lineHeight: '1.3' }}
-            >
-              The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen&apos;s work,
-            </h3>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20idea%20of%20sharing%20extends%20beyond%20the%20dining%20room%2C%20shaping%20the%20relationships%20that%20support%20the%20kitchen%E2%80%99s%20work%2C-hB7zhSwk303icgfIRSHCgAX4r63jWa.svg"
+              alt="The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen's work,"
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
           <div style={{ gridColumn: '7 / 11', paddingTop: '40px' }}>
-            <p style={{ fontSize: 'clamp(24px, 2.6vw, 40px)', letterSpacing: '-0.02em', color: '#000', lineHeight: '1.4', fontWeight: '300' }}>
-              from farmers and foragers to artisans and guests.
-            </p>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/from%20farmers%20and%20foragers%20to%20artisans%20and%20guests.-3VLH1UA8tsfp7qWlJNGSzjkYbLbVJM.svg"
+              alt="from farmers and foragers to artisans and guests."
+              style={{ width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
 
