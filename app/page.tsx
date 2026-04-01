@@ -359,8 +359,8 @@ export default function Home() {
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
-          {/* Hand image — 3 cols wide */}
-          <div style={{ gridColumn: '9 / 12', gridRow: '1' }}>
+          {/* Hand image — 3 cols wide, nudged half col right */}
+          <div style={{ gridColumn: '9 / 12', gridRow: '1', transform: 'translateX(calc(50% / 3))' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
               alt="Tattooed hand with knife"
@@ -368,8 +368,8 @@ export default function Home() {
               style={{ aspectRatio: '3/4' }}
             />
           </div>
-          {/* Kitchen image — 2 cols wide, below hand image */}
-          <div style={{ gridColumn: '10 / 12', gridRow: '2', marginTop: '20px' }}>
+          {/* Kitchen image — 2 cols wide, below hand image, nudged half col right */}
+          <div style={{ gridColumn: '10 / 12', gridRow: '2', marginTop: '20px', transform: 'translateX(calc(50% / 2))' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/469953188_596077342798134_5158409090500818209_n%201-CAZps8ywcGcqpSbnKINrH34fgR90IK.png"
               alt="Kitchen interior"
