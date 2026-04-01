@@ -403,7 +403,7 @@ export default function Home() {
               style={{ aspectRatio: '1/1' }}
             />
           </div>
-          <div style={{ gridColumn: '5 / 9' }}>
+          <div style={{ gridColumn: '5 / 8' }}>
             <p className="leading-relaxed mb-8" style={{ fontSize: 'clamp(13px, 1.1vw, 16px)', letterSpacing: '-0.01em', color: '#000' }}>
               Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
             </p>
