@@ -291,7 +291,7 @@ export default function Home() {
       {/* End dark section */}
       </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
-      <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
+      <section style={{ backgroundColor: '#262421', color: '#e2e2e2' }} className="py-16 lg:py-24">
 
         {/* Part 1: Corima Story */}
         <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
