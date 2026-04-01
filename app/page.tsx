@@ -152,7 +152,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '56px 24px 48px 24px' }}>
         {/* Headline */}
-        <h2 className="text-2xl md:text-3xl leading-snug max-w-2xl" style={{ marginTop: '100px', marginBottom: '100px' }}>
+        <h2 className="text-2xl md:text-3xl leading-snug w-full" style={{ marginTop: '100px', marginBottom: '100px' }}>
           Corima is a restaurant shaped by the cooking of Northern Mexico, brought into conversation with New York through seasonality, craft, and lived experience.
         </h2>
 
