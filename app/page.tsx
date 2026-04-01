@@ -155,7 +155,7 @@ export default function Home() {
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
+        <div className="flex flex-col lg:flex-row" style={{ gap: '64px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col order-2 lg:order-1">
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
