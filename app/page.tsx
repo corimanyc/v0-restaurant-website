@@ -147,10 +147,12 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 80px 100px 80px' }}>
-        {/* Headline */}
-        <h2 className="leading-snug text-center mx-auto" style={{ fontSize: '48px', fontWeight: 400, maxWidth: '1100px', marginTop: '80px', marginBottom: '160px' }}>
-          Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
-        </h2>
+        {/* Headline — full viewport height */}
+        <div className="flex items-center justify-center" style={{ minHeight: '100vh' }}>
+          <h2 className="leading-snug text-center mx-auto" style={{ fontSize: '48px', fontWeight: 400, maxWidth: '1100px' }}>
+            Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
+          </h2>
+        </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
         <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
