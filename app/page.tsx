@@ -374,7 +374,7 @@ export default function Home() {
         {/* Part 4: Sharing Philosophy quote */}
         {/* Quote: cols 1–7 | Continuation: cols 7–10 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'end' }}>
-          <div style={{ gridColumn: '1 / 8' }}>
+          <div style={{ gridColumn: '1 / 6' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20idea%20of%20sharing%20extends%20beyond%20the%20dining%20room%2C%20shaping%20the%20relationships%20that%20support%20the%20kitchen%E2%80%99s%20work%2C-hB7zhSwk303icgfIRSHCgAX4r63jWa.svg"
               alt="The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen's work,"
