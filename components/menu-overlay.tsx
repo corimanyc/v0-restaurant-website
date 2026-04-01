@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react'
 const sectionImages: Record<string, string> = {
   'a-la-carte': 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png',
   cocktail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5644C25E-6307-4E8C-BD3A-2B954A8A2C73_1_201_a-ZGlZqzedBBSS7ErdSvQPfaVA2HjFZI.jpeg',
-}
+  wine: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg',
+  }
 
 const alaCarteItems = [
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: '29' },
@@ -40,9 +41,10 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
-  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail'>('a-la-carte')
+  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
   const alaCarteRef = useRef<HTMLDivElement>(null)
   const cocktailRef = useRef<HTMLDivElement>(null)
+  const wineRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
@@ -73,8 +75,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = (entry.target as HTMLElement).dataset.section
-            if (id === 'a-la-carte' || id === 'cocktail') {
-              setActiveSection(id)
+            if (id === 'a-la-carte' || id === 'cocktail' || id === 'wine') {
+              setActiveSection(id as 'a-la-carte' | 'cocktail' | 'wine')
             }
           }
         })
@@ -83,6 +85,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
     )
     if (alaCarteRef.current) observer.observe(alaCarteRef.current)
     if (cocktailRef.current) observer.observe(cocktailRef.current)
+    if (wineRef.current) observer.observe(wineRef.current)
     return () => observer.disconnect()
   }, [isOpen])
 
@@ -148,6 +151,27 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               ))}
             </div>
 
+          </div>
+
+          {/* Wine */}
+          <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
+            <h2 className="text-black uppercase font-medium mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+              Wine
+            </h2>
+            <p className="text-black mb-6" style={{ ...base, maxWidth: '420px', lineHeight: '1.6' }}>
+              The wine program focuses on producer-driven bottles from Mexico and Europe, selected for their alignment with the menu&apos;s seasonal and regional sensibility.
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li>
+                <a
+                  href="#"
+                  className="text-black underline underline-offset-2"
+                  style={{ ...base }}
+                >
+                  Our wine list
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* Cocktail */}
