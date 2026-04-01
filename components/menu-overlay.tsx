@@ -150,27 +150,6 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
           </div>
 
-          {/* Wine */}
-          <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase font-medium mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
-              Wine
-            </h2>
-            <p className="text-black mb-6" style={{ ...base, maxWidth: '420px', lineHeight: '1.6' }}>
-              The wine program focuses on producer-driven bottles from Mexico and Europe, selected for their alignment with the menu&apos;s seasonal and regional sensibility.
-            </p>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li>
-                <a
-                  href="#"
-                  className="text-black underline underline-offset-2"
-                  style={{ ...base }}
-                >
-                  Our wine list
-                </a>
-              </li>
-            </ul>
-          </div>
-
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
             <h2 className="text-black uppercase font-medium mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
