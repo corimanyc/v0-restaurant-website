@@ -374,14 +374,16 @@ export default function Home() {
         {/* Part 4: Sharing Philosophy quote */}
         {/* Quote: cols 1–7 | Continuation: cols 7–10 */}
         <div className="grid-12" style={{ marginBottom: '100px', alignItems: 'end' }}>
-          <div style={{ gridColumn: '1 / 6' }}>
+          {/* First SVG — 1 col from left, 5 cols wide: cols 2–7 */}
+          <div style={{ gridColumn: '2 / 7' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20idea%20of%20sharing%20extends%20beyond%20the%20dining%20room%2C%20shaping%20the%20relationships%20that%20support%20the%20kitchen%E2%80%99s%20work%2C-hB7zhSwk303icgfIRSHCgAX4r63jWa.svg"
               alt="The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen's work,"
               style={{ width: '100%', height: 'auto' }}
             />
           </div>
-          <div style={{ gridColumn: '7 / 11', paddingTop: '40px' }}>
+          {/* Second SVG — 5 cols from right, 4 cols wide: cols 8–12 */}
+          <div style={{ gridColumn: '8 / 12', paddingTop: '40px' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/from%20farmers%20and%20foragers%20to%20artisans%20and%20guests.-3VLH1UA8tsfp7qWlJNGSzjkYbLbVJM.svg"
               alt="from farmers and foragers to artisans and guests."
