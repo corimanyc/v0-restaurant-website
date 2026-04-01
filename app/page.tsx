@@ -165,7 +165,7 @@ export default function Home() {
             </p>
 
             <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
-              While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu. Our beverage program follows a similar sensibility, with a focused selection of Mexican spirits, particularly sotol, alongside wines chosen to complement a range of dishes.
+              While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
             </p>
 
             <button
