@@ -151,9 +151,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '24px 24px 80px 24px' }}>
+      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 24px 100px 24px' }}>
         {/* Headline */}
-        <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '160px', marginBottom: '160px' }}>
+        <h2 className="leading-snug w-full" style={{ fontSize: '40px', marginTop: '80px', marginBottom: '160px' }}>
           Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience.
         </h2>
 
