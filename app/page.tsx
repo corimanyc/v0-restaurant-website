@@ -257,6 +257,27 @@ export default function Home() {
                 aria-label="Next image"
               />
             </div>
+
+            {/* Wine section */}
+            <div style={{ marginTop: '80px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
+              <div style={{ flex: '1' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px', color: 'white' }}>Wine</h3>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: 'white' }}>
+                  The wine program focuses on producer-driven bottles from Mexico and Europe, selected for their alignment with the menu&apos;s seasonal and regional sensibility.
+                </p>
+                <a href="#" className="hover:opacity-70 transition inline-block" style={{ fontSize: '16px', color: 'white' }}>
+                  <span className="mr-2">&bull;</span>Our wine list
+                </a>
+              </div>
+              <div style={{ flex: '1' }}>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
+                  alt="Wine bottle with lamp"
+                  className="w-full object-cover"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
