@@ -409,7 +409,7 @@ export default function Home() {
           {/* Text — desktop: cols 7–10 | mobile: full width */}
           <div style={{ gridColumn: '7 / 10' }}>
             <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
-              Corima works closely with producers who follow seasonal growing and thoughtful stewardship, allowing ingredients to be used with care. This approach is grounded in seasonal sourcing, whole-product utilization, and long-term partnerships with producers whose work continues to shape what is served.
+              Corima works closely with farmers, foragers, and producers who follow seasonal growing practices and responsible stewardship. These relationships shape the menu as much as the kitchen itself, guiding how ingredients are sourced, used, and understood over time.
             </p>
             <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
               Within its first year, Corima earned a Michelin star, was named one of Bon Appétit&apos;s Best New Restaurants of 2024, and received a James Beard Award nomination. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
