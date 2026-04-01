@@ -24,8 +24,10 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
   return (
     <div
-      className="fixed top-0 right-0 h-full overflow-y-auto bg-[#3a3531] text-white"
+      className="fixed top-0 right-0 h-full overflow-y-auto"
       style={{
+        backgroundColor: '#333333',
+        color: '#d1d1d1',
         zIndex: 45,
         width: '50%',
         transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
@@ -39,12 +41,12 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
       {/* Header */}
       <div className="flex items-center justify-between" style={{ padding: '24px 24px 0 24px' }}>
-        <h1 className="uppercase tracking-widest font-medium text-white" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
+        <h1 className="uppercase tracking-widest font-medium" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
           Dining
         </h1>
         <button
           onClick={onClose}
-          className="text-white hover:opacity-60 transition uppercase tracking-widest"
+          className="hover:opacity-60 transition uppercase tracking-widest"
           style={{ fontSize: '16px' }}
           aria-label="Close dining panel"
         >
@@ -57,22 +59,22 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Tasting Menu */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase font-medium text-white mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             Tasting Menu
           </h2>
-          <p className="text-white leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
           </p>
-          <p className="text-white leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
           </p>
-          <p className="text-white leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.7 }}>
+          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.7 }}>
             We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
           </p>
           <Link
             href="mailto:info@corimanyc.com"
-            className="text-white hover:opacity-70 transition"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
+            className="hover:opacity-70 transition"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#d1d1d1' }}
           >
             <span className="mr-2">&bull;</span>Contact
           </Link>
@@ -80,19 +82,19 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* A La Carte */}
         <section>
-          <h2 className="uppercase font-medium text-white mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             A La Carte
           </h2>
-          <p className="text-white leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
           </p>
-          <p className="text-white leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
           </p>
           <button
             onClick={onViewMenu}
-            className="text-white hover:opacity-70 transition text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em' }}
+            className="hover:opacity-70 transition text-left"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#d1d1d1' }}
           >
             <span className="mr-2">&bull;</span>View Menu
           </button>
