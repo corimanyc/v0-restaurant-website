@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="text-white" style={{ backgroundColor: '#1f1c18', padding: '0 80px 100px 80px' }}>
+      <section id="about" className="text-white px-5 md:px-20" style={{ backgroundColor: '#1f1c18', paddingBottom: '100px' }}>
         {/* Headline — full viewport height */}
         <div className="flex items-center justify-center" style={{ minHeight: '100vh' }}>
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
