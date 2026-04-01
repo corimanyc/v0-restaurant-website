@@ -32,6 +32,7 @@ const aboutSectionImages = [
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
+  const [menuScrollTarget, setMenuScrollTarget] = useState<'a-la-carte' | 'cocktail' | 'wine' | undefined>(undefined)
   const [isDiningOpen, setIsDiningOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
@@ -60,7 +61,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="text-white flex-1" style={{ backgroundColor: '#1f1c18' }}>
-      <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => setIsMenuOverlayOpen(false)} />
+      <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }} scrollToSection={menuScrollTarget} />
       <DiningOverlay
         isOpen={isDiningOpen}
         onClose={() => setIsDiningOpen(false)}
@@ -268,9 +269,13 @@ export default function Home() {
                 <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: 'white' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
-                <a href="#" className="hover:opacity-70 transition inline-block" style={{ fontSize: '16px', color: 'white' }}>
+                <button
+                  onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
+                  className="hover:opacity-70 transition inline-block text-left"
+                  style={{ fontSize: '16px', color: 'white', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                >
                   <span className="mr-2">&bull;</span>Our wine list
-                </a>
+                </button>
               </div>
               <div style={{ flex: '1' }}>
                 <img

@@ -68,15 +68,26 @@ const cocktailItems = [
 interface MenuOverlayProps {
   isOpen: boolean
   onClose: () => void
+  scrollToSection?: 'a-la-carte' | 'cocktail' | 'wine'
 }
 
-export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
+export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOverlayProps) {
   const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
+  const wineRef = useRef<HTMLDivElement>(null)
   const alaCarteRef = useRef<HTMLDivElement>(null)
   const cocktailRef = useRef<HTMLDivElement>(null)
-  const wineRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (isOpen && scrollToSection) {
+      const refMap = { 'a-la-carte': alaCarteRef, cocktail: cocktailRef, wine: wineRef }
+      const target = refMap[scrollToSection]?.current
+      if (target) {
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      }
+    }
+  }, [isOpen, scrollToSection])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
