@@ -90,7 +90,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
 
   return (
     <div
-      className="fixed inset-0 bg-[#8d8a86] flex flex-col"
+      className="fixed inset-0 bg-[#d1d1d1] flex flex-col"
       style={{
         zIndex: 60,
         transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
