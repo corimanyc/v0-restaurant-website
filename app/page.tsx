@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="text-white px-5 md:px-20" style={{ backgroundColor: '#1f1c18', paddingBottom: '100px' }}>
+      <section id="about" className="px-5 md:px-20" style={{ backgroundColor: '#d1d1d1', color: '#333333', paddingBottom: '100px' }}>
         {/* Headline */}
         <div className="flex items-center justify-center py-24 md:min-h-screen">
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
@@ -172,7 +172,7 @@ export default function Home() {
               <button
                 onClick={() => setIsMenuOverlayOpen(true)}
                 className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: 'white' }}
+                style={{ marginBottom: '64px', fontSize: '16px', color: '#333333' }}
               >
                 <span className="mr-2">&bull;</span>View Menu
               </button>
@@ -240,17 +240,17 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: 'white' }}>Wine</h3>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: 'white' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#333333' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#333333' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: 'white' }}>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#333333' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <button
                   onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
                   className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: 'white', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: '16px', color: '#333333', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
