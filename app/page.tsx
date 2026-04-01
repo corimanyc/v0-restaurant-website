@@ -284,6 +284,8 @@ export default function Home() {
 
         </div>
       </section>
+      {/* End dark section */}
+      </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
 
