@@ -157,37 +157,9 @@ export default function Home() {
           Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience.
         </h2>
 
-        {/* Two Column Layout — 36px gap, 40:60 split */}
+        {/* Two Column Layout — 36px gap, 60:40 split */}
         <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
-          {/* Left Column - Tasting Menu */}
-          <div style={{ flex: '0 0 calc(40% - 18px)' }} className="flex flex-col">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
-              alt="Tasting menu dish"
-              className="object-cover w-full"
-              style={{ marginBottom: '64px' }}
-            />
-
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>Tasting Menu</h3>
-
-            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
-            </p>
-
-            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
-            </p>
-
-            <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
-              We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
-            </p>
-
-            <Link href="mailto:info@corimanyc.com" className="hover:opacity-70 transition" style={{ fontSize: '16px' }}>
-              <span className="mr-2">&bull;</span>Contact
-            </Link>
-          </div>
-
-          {/* Right Column - A La Carte */}
+          {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col">
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>A La Carte</h3>
 
@@ -285,8 +257,36 @@ export default function Home() {
                 />
               </div>
             </div>
-
           </div>
+
+          {/* Right Column - Tasting Menu */}
+          <div style={{ flex: '0 0 calc(40% - 18px)' }} className="flex flex-col">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
+              alt="Tasting menu dish"
+              className="object-cover w-full"
+              style={{ marginBottom: '64px' }}
+            />
+
+            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>Tasting Menu</h3>
+
+            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
+              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            </p>
+
+            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
+              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+            </p>
+
+            <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
+              We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
+            </p>
+
+            <Link href="mailto:info@corimanyc.com" className="hover:opacity-70 transition" style={{ fontSize: '16px' }}>
+              <span className="mr-2">&bull;</span>Contact
+            </Link>
+          </div>
+
         </div>
       </section>
       {/* About Section — 12-col desktop grid, single-col mobile */}
