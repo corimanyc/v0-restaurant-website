@@ -359,7 +359,7 @@ export default function Home() {
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
-          <div style={{ gridColumn: '9 / 12', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ gridColumn: '9 / 13', display: 'flex', flexDirection: 'column', gap: '20px', paddingLeft: 'calc((100% / 4) / 2)' }}>
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-IRGsT5HtQAQEdo07xOECpKYlsPUWqx.png"
               alt="Tattooed hand with knife"
