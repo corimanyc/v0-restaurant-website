@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const sectionImages: Record<string, string> = {
   'a-la-carte': 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png',
   cocktail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5644C25E-6307-4E8C-BD3A-2B954A8A2C73_1_201_a-ZGlZqzedBBSS7ErdSvQPfaVA2HjFZI.jpeg',
+  wine: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg',
   }
 
 const alaCarteItems = [
@@ -17,6 +18,36 @@ const alaCarteItems = [
   { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: '32' },
   { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: '40' },
   { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: '' },
+]
+
+const wineByGlass = [
+  { category: 'Sparkling', items: [
+    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '24' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '18' },
+  ]},
+  { category: 'White', items: [
+    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '22' },
+    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '20' },
+    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '18' },
+  ]},
+  { category: 'Skin Contact', items: [
+    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '19' },
+    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '21' },
+  ]},
+  { category: 'Red', items: [
+    { name: 'Douhairet-Porcheret, Les Prevaux \'21', desc: 'Pinot Noir · Burgundy, FR', price: '26' },
+    { name: 'Thomas Farge, Grande Angle St Joseph \'21', desc: 'Syrah · Rhone, FR', price: '23' },
+  ]},
+  { category: 'Sherry', items: [
+    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '14' },
+  ]},
+  { category: 'Sake', items: [
+    { name: 'Uehara Shuzo, Furosen Usunigori', desc: 'Ginjo Yamahai Nama · Shiga, JP', price: '18' },
+  ]},
+  { category: 'Non Alcoholic', items: [
+    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '12' },
+    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '12' },
+  ]},
 ]
 
 const cocktailItems = [
@@ -40,9 +71,10 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
-  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail'>('a-la-carte')
+  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
   const alaCarteRef = useRef<HTMLDivElement>(null)
   const cocktailRef = useRef<HTMLDivElement>(null)
+  const wineRef = useRef<HTMLDivElement>(null)
   const scrollRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLDivElement>(null)
 
@@ -73,8 +105,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = (entry.target as HTMLElement).dataset.section
-            if (id === 'a-la-carte' || id === 'cocktail') {
-              setActiveSection(id)
+            if (id === 'a-la-carte' || id === 'cocktail' || id === 'wine') {
+              setActiveSection(id as 'a-la-carte' | 'cocktail' | 'wine')
             }
           }
         })
@@ -83,6 +115,7 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
     )
     if (alaCarteRef.current) observer.observe(alaCarteRef.current)
     if (cocktailRef.current) observer.observe(cocktailRef.current)
+    if (wineRef.current) observer.observe(wineRef.current)
     return () => observer.disconnect()
   }, [isOpen])
 
@@ -169,6 +202,37 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
               ))}
             </div>
           </div>
+
+          {/* Wine */}
+          <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
+            <p className="text-black mb-2" style={{ ...base, opacity: 0.5 }}>
+              We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
+            </p>
+            <h2 className="text-black uppercase font-medium mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+              Wine by the Glass
+            </h2>
+            {wineByGlass.map((group, gi) => (
+              <div key={gi} style={{ marginBottom: '32px' }}>
+                <p className="text-black uppercase mb-3" style={{ ...base, fontSize: '11px', letterSpacing: '0.08em', opacity: 0.5 }}>
+                  {group.category}
+                </p>
+                <div className="flex flex-col">
+                  {group.items.map((item, i) => (
+                    <div key={i} className="flex items-start justify-between py-3" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
+                      <div style={{ maxWidth: '380px' }}>
+                        <p className="text-black font-medium" style={base}>{item.name}</p>
+                        <p className="text-black" style={{ ...base, fontSize: '12px', marginTop: '2px', opacity: 0.6 }}>{item.desc}</p>
+                      </div>
+                      <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                        {item.price}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
 
         {/* Right — scroll-aware image */}
