@@ -448,9 +448,8 @@ export default function Home() {
         </div>
 
       </section>
-      </div>
 
-      {/* Footer — spans full width at bottom edge */}
+      {/* Footer */}
       <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px 12px 24px' }}>
         <div className="flex w-full items-center gap-8 justify-between">
           <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
