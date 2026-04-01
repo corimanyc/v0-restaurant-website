@@ -216,7 +216,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Wine */}
           <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
-            <p className="text-black mb-2" style={{ ...base, opacity: 0.5 }}>
+            <p className="text-black mb-2" style={{ ...base }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             <h2 className="text-black uppercase font-medium mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -224,7 +224,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             </h2>
             {wineByGlass.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '32px' }}>
-                <p className="text-black uppercase mb-3" style={{ ...base, fontSize: '11px', letterSpacing: '0.08em', opacity: 0.5 }}>
+                <p className="text-black uppercase mb-3" style={{ ...base, fontSize: '11px', letterSpacing: '0.08em' }}>
                   {group.category}
                 </p>
                 <div className="flex flex-col">
@@ -232,7 +232,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                     <div key={i} className="flex items-start justify-between py-3" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
                       <div style={{ maxWidth: '380px' }}>
                         <p className="text-black font-medium" style={base}>{item.name}</p>
-                        <p className="text-black" style={{ ...base, fontSize: '12px', marginTop: '2px', opacity: 0.6 }}>{item.desc}</p>
+                        <p className="text-black" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
                       </div>
                       <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
                         {item.price}
