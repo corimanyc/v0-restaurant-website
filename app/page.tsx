@@ -157,7 +157,7 @@ export default function Home() {
         {/* Two Column Layout — 36px gap, 60:40 split */}
         <div className="flex flex-col lg:flex-row" style={{ gap: '36px' }}>
           {/* Left Column - A La Carte */}
-          <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col">
+          <div style={{ flex: '0 0 calc(60% - 18px)' }} className="flex flex-col order-2 lg:order-1">
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '16px' }}>A La Carte</h3>
 
             <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
@@ -257,7 +257,7 @@ export default function Home() {
           </div>
 
           {/* Right Column - Tasting Menu */}
-          <div style={{ flex: '0 0 calc(40% - 18px)' }} className="flex flex-col">
+          <div style={{ flex: '0 0 calc(40% - 18px)' }} className="flex flex-col order-1 lg:order-2">
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
               alt="Tasting menu dish"
