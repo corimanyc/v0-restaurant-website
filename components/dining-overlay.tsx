@@ -81,15 +81,15 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         </section>
 
         {/* A La Carte */}
-        <section>
+        <section style={{ marginBottom: '80px' }}>
           <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             A La Carte
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
-            At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            Offered alongside our tasting menu, the à la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
           </p>
           <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
-            The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+            While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
           </p>
           <button
             onClick={onViewMenu}
@@ -98,6 +98,19 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           >
             <span className="mr-2">&bull;</span>View Menu
           </button>
+        </section>
+
+        {/* Wine */}
+        <section>
+          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            Wine
+          </h2>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
+          </p>
+          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
+          </p>
         </section>
       </div>
     </div>
