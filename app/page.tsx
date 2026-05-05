@@ -68,6 +68,19 @@ export default function Home() {
         onClose={() => setIsDiningOpen(false)}
         onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
       />
+      {/* Persistent logo when dining overlay is open */}
+      <Link
+        href="/"
+        className="fixed top-0 left-0 flex-shrink-0 w-24 h-auto transition-opacity duration-500"
+        style={{
+          padding: '24px',
+          zIndex: 50,
+          opacity: isDiningOpen ? 1 : 0,
+          pointerEvents: isDiningOpen ? 'all' : 'none',
+        }}
+      >
+        <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
+      </Link>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
       <section className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
