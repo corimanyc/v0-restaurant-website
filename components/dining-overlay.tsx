@@ -24,7 +24,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
   return (
     <div
-      className="fixed top-0 right-0 h-full overflow-y-auto"
+      className="fixed top-0 right-0 h-full flex flex-col"
       style={{
         backgroundColor: '#333333',
         color: '#d1d1d1',
@@ -33,14 +33,15 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
         transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',
-        scrollbarWidth: 'none',
-        msOverflowStyle: 'none',
       }}
     >
-      <style>{`div::-webkit-scrollbar { display: none; }`}</style>
+      <style>{`.dining-scroll::-webkit-scrollbar { display: none; }`}</style>
 
-      {/* Header */}
-      <div className="flex items-center justify-between" style={{ padding: '24px 24px 0 24px' }}>
+      {/* Header — fixed at top */}
+      <div
+        className="flex items-center justify-between flex-shrink-0"
+        style={{ padding: '24px 24px 24px 24px', backgroundColor: '#333333' }}
+      >
         <h1 className="uppercase tracking-widest font-medium" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
           Dining
         </h1>
@@ -54,8 +55,15 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         </button>
       </div>
 
-      {/* Content */}
-      <div style={{ padding: '80px 24px 64px 24px' }}>
+      {/* Scrollable content */}
+      <div
+        className="dining-scroll flex-1 overflow-y-auto"
+        style={{
+          padding: '56px 24px 64px 24px',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}
+      >
 
         {/* Tasting Menu */}
         <section style={{ marginBottom: '80px' }}>
