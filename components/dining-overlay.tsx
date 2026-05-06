@@ -40,15 +40,13 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         .dining-close-btn {
           width: 40px;
           height: 40px;
-          font-size: 20px;
-          border: 1px solid transparent;
-          border-radius: 9999px;
-          transition: border-color 0.3s ease, transform 0.3s ease;
+          font-size: 28px;
           background: transparent;
           color: inherit;
+          transition: opacity 0.2s ease;
         }
         .dining-close-btn:hover {
-          border-color: currentColor;
+          opacity: 0.6;
         }
       `}</style>
 
