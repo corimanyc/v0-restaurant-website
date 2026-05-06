@@ -108,6 +108,16 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           </button>
         </section>
 
+        {/* Beverage */}
+        <section style={{ marginBottom: '80px' }}>
+          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
+          </h2>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            The beverage program consists of a collection of cocktails that mirror the essence of Corima. Sotol is heavily featured as an ode to the Northern region of Mexico.
+          </p>
+        </section>
+
         {/* Wine */}
         <section>
           <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
