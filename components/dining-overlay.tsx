@@ -35,7 +35,22 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         pointerEvents: isOpen ? 'all' : 'none',
       }}
     >
-      <style>{`.dining-scroll::-webkit-scrollbar { display: none; }`}</style>
+      <style>{`
+        .dining-scroll::-webkit-scrollbar { display: none; }
+        .dining-close-btn {
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+          border: 1px solid transparent;
+          border-radius: 9999px;
+          transition: border-color 0.3s ease, transform 0.3s ease;
+          background: transparent;
+          color: inherit;
+        }
+        .dining-close-btn:hover {
+          border-color: currentColor;
+        }
+      `}</style>
 
       {/* Header — fixed at top */}
       <div
@@ -47,8 +62,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         </h1>
         <button
           onClick={onClose}
-          className="hover:opacity-60 transition uppercase tracking-widest"
-          style={{ fontSize: '16px' }}
+          className="dining-close-btn flex items-center justify-center cursor-pointer uppercase"
           aria-label="Close dining panel"
         >
           X
