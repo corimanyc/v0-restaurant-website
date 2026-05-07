@@ -34,6 +34,14 @@ a, button, [role="button"], input[type="button"], input[type="submit"], select, 
 
 @font-face {
   font-family: 'Switzer';
+  src: url('/fonts/Switzer-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
   src: url('/fonts/Switzer-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -161,6 +169,7 @@ a, button, [role="button"], input[type="button"], input[type="submit"], select, 
   html, body {
     @apply bg-background text-foreground;
     font-family: 'Switzer', 'Geist', system-ui, -apple-system, sans-serif;
+    font-weight: 300;
     letter-spacing: -0.02em;
   }
 }
