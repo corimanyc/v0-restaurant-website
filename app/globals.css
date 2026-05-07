@@ -158,8 +158,9 @@ a, button, [role="button"], input[type="button"], input[type="submit"], select, 
   * {
     @apply border-border outline-ring/50;
   }
-  body {
+  html, body {
     @apply bg-background text-foreground;
+    font-family: 'Switzer', 'Geist', system-ui, -apple-system, sans-serif;
     letter-spacing: -0.02em;
   }
 }
