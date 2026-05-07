@@ -200,7 +200,7 @@ export default function Home() {
         id="about"
         className="px-5 md:px-20"
         style={{
-          backgroundImage: 'url(/about-bg.jpeg)',
+          backgroundImage: 'url(/about-bg-v2.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#b5b5b5',
