@@ -33,17 +33,11 @@ a, button, [role="button"], input[type="button"], input[type="submit"], select, 
 }
 
 @font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Regular.woff2') format('woff2');
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
+  font-display: swap;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -120,7 +114,7 @@ a, button, [role="button"], input[type="button"], input[type="submit"], select, 
 }
 
 @theme inline {
-  --font-sans: 'Satoshi', 'Geist', 'Geist Fallback';
+  --font-sans: 'Switzer', 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);

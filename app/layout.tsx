@@ -32,9 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap" />
-      </head>
       <body className="font-sans antialiased bg-background text-foreground" style={{ backgroundColor: '#1f1c18' }}>
         {children}
         <Analytics />
