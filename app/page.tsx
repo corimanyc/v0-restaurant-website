@@ -175,40 +175,16 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section
-        id="about"
-        className="px-5 md:px-20 relative"
-        style={{
-          backgroundColor: '#d1d1d1',
-          color: '#ffffff',
-          paddingBottom: '100px',
-        }}
-      >
-        {/* Base background layer — sits at the lowest z-index, fills entire section */}
-        <img
-          src="/about-bg.jpeg"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-          }}
-        />
+      <section id="about" className="px-5 md:px-20" style={{ backgroundColor: '#d1d1d1', color: '#333333', paddingBottom: '100px' }}>
         {/* Headline */}
-        <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
+        <div className="flex items-center justify-center py-24 md:min-h-screen">
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
             Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
           </h2>
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1 }}>
+        <div className="flex flex-col lg:flex-row" style={{ gap: '100px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
             <div style={{ maxWidth: '80%' }}>
@@ -225,7 +201,7 @@ export default function Home() {
               <button
                 onClick={() => setIsMenuOverlayOpen(true)}
                 className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: '#ffffff' }}
+                style={{ marginBottom: '64px', fontSize: '16px', color: '#333333' }}
               >
                 <span className="mr-2">&bull;</span>View Menu
               </button>
@@ -293,17 +269,17 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#ffffff' }}>Wine</h3>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#ffffff' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#333333' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#333333' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#ffffff' }}>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#333333' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <button
                   onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
                   className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: '#ffffff', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: '16px', color: '#333333', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
@@ -343,7 +319,7 @@ export default function Home() {
       </section>
       {/* End dark section */}
       </div>
-      {/* About Section ��� 12-col desktop grid, single-col mobile */}
+      {/* About Section — 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
 
         <div className="px-5 md:px-20 mb-10">
