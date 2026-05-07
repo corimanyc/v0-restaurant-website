@@ -32,7 +32,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased bg-background text-foreground" style={{ backgroundColor: '#1f1c18' }}>
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/Switzer-Light.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Switzer-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 300, backgroundColor: '#1f1c18' }}>
         {children}
         <Analytics />
       </body>
