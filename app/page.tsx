@@ -175,7 +175,19 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="px-5 md:px-20" style={{ backgroundColor: '#d1d1d1', color: '#333333', paddingBottom: '100px' }}>
+      <section
+        id="about"
+        className="px-5 md:px-20"
+        style={{
+          backgroundColor: '#d1d1d1',
+          backgroundImage: 'url(/about-bg.jpeg)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center 40%',
+          backgroundSize: 'min(900px, 80%) auto',
+          color: '#333333',
+          paddingBottom: '100px',
+        }}
+      >
         {/* Headline */}
         <div className="flex items-center justify-center py-24 md:min-h-screen">
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
