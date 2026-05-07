@@ -160,16 +160,37 @@ export default function Home() {
           onMenuClick={() => setIsMenuOverlayOpen(true)}
         />
 
-        {/* Footer — hidden when scrolled past hero or dining overlay open */}
+        {/* Footer — persistent icon, address only on landing */}
         <footer
-          className="fixed bottom-0 left-0 right-0 z-40 transition-opacity duration-500"
-          style={{ opacity: isAtTop && !isDiningOpen ? 1 : 0, pointerEvents: isAtTop && !isDiningOpen ? 'all' : 'none' }}
+          className="fixed bottom-0 left-0 right-0 z-40"
+          style={{
+            opacity: isDiningOpen ? 0 : 1,
+            pointerEvents: isDiningOpen ? 'none' : 'all',
+            transition: 'opacity 0.5s ease',
+          }}
         >
           <div style={{ padding: '24px' }} className="flex items-center justify-between">
-            <p className="text-xs md:text-sm tracking-widest uppercase text-white">
+            {/* Address — fades out as soon as hero leaves viewport */}
+            <p
+              className="text-xs md:text-sm tracking-widest uppercase text-white"
+              style={{
+                opacity: isAtTop ? 1 : 0,
+                pointerEvents: isAtTop ? 'all' : 'none',
+                transition: 'opacity 0.2s ease',
+              }}
+            >
               {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
             </p>
-            <img src="/footer-logo.png" alt="CORIMA" className="w-6 h-6 object-contain" />
+            {/* Persistent logo — switches from white to black when scrolled past hero */}
+            <img
+              src="/footer-logo.png"
+              alt="CORIMA"
+              className="w-6 h-6 object-contain ml-auto"
+              style={{
+                filter: isAtTop ? 'none' : 'brightness(0)',
+                transition: 'filter 0.2s ease',
+              }}
+            />
           </div>
         </footer>
       </section>
