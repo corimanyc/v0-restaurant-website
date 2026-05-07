@@ -177,27 +177,38 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="px-5 md:px-20"
+        className="px-5 md:px-20 relative"
         style={{
           backgroundColor: '#d1d1d1',
-          backgroundImage: 'url(/about-bg.jpeg)',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top',
-          backgroundSize: '100vw 100vh',
-          backgroundAttachment: 'local',
           color: '#333333',
           paddingBottom: '100px',
         }}
       >
+        {/* Base background layer — sits at the lowest z-index */}
+        <img
+          src="/about-bg.jpeg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            objectFit: 'cover',
+            zIndex: 0,
+          }}
+        />
         {/* Headline */}
-        <div className="flex items-center justify-center py-24 md:min-h-screen">
+        <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
             Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
           </h2>
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: '100px' }}>
+        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1 }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
             <div style={{ maxWidth: '80%' }}>
