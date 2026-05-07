@@ -184,7 +184,7 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Base background layer — sits at the lowest z-index */}
+        {/* Base background layer — sits at the lowest z-index, fills entire section */}
         <img
           src="/about-bg.jpeg"
           alt=""
@@ -194,8 +194,8 @@ export default function Home() {
             position: 'absolute',
             top: 0,
             left: 0,
-            width: '100vw',
-            height: '100vh',
+            width: '100%',
+            height: '100%',
             objectFit: 'cover',
             zIndex: 0,
           }}
