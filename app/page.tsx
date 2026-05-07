@@ -182,7 +182,7 @@ export default function Home() {
           backgroundImage: 'url(/about-bg.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
-          backgroundColor: '#4a4a4a',
+          backgroundColor: '#b5b5b5',
           color: '#000000',
           paddingBottom: '100px',
         }}
