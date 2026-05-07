@@ -179,10 +179,10 @@ export default function Home() {
         id="about"
         className="px-5 md:px-20"
         style={{
-          backgroundImage: 'url(/about-bg.jpeg)',
+          backgroundImage: 'url(/about-bg.webp)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
-          backgroundColor: '#d1d1d1',
+          backgroundColor: '#e5e5e5',
           color: '#333333',
           paddingBottom: '100px',
         }}
