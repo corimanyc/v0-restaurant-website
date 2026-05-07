@@ -182,8 +182,9 @@ export default function Home() {
           backgroundColor: '#d1d1d1',
           backgroundImage: 'url(/about-bg.jpeg)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center 40%',
-          backgroundSize: 'min(900px, 80%) auto',
+          backgroundPosition: 'center top',
+          backgroundSize: '100vw 100vh',
+          backgroundAttachment: 'local',
           color: '#333333',
           paddingBottom: '100px',
         }}
