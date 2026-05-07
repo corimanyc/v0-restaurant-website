@@ -53,8 +53,10 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsAtTop(window.scrollY < window.innerHeight * 0.5)
+      // Switch when the hero (full viewport) scrolls past the nav line (~80px)
+      setIsAtTop(window.scrollY < window.innerHeight - 80)
     }
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -109,12 +111,12 @@ export default function Home() {
 
         {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
-          className="fixed top-0 left-0 right-0 z-40 transition-opacity duration-500"
+          className="fixed top-0 left-0 right-0 z-40"
           style={{
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: isAtTop ? '#ffffff' : '#000000',
-            transitionProperty: 'opacity, color',
+            transition: 'opacity 0.5s ease, color 0.2s ease',
           }}
         >
           <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
@@ -123,8 +125,11 @@ export default function Home() {
               <img
                 src="/logo.svg"
                 alt="CORIMA"
-                className="w-full h-full object-contain transition-[filter] duration-500"
-                style={{ filter: isAtTop ? 'none' : 'brightness(0)' }}
+                className="w-full h-full object-contain"
+                style={{
+                  filter: isAtTop ? 'none' : 'brightness(0)',
+                  transition: 'filter 0.2s ease',
+                }}
               />
             </Link>
 
@@ -140,9 +145,9 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden flex flex-col gap-1.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
-              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
-              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
             </button>
           </nav>
 
