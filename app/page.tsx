@@ -180,7 +180,7 @@ export default function Home() {
         className="px-5 md:px-20 relative"
         style={{
           backgroundColor: '#d1d1d1',
-          color: '#333333',
+          color: '#ffffff',
           paddingBottom: '100px',
         }}
       >
@@ -225,7 +225,7 @@ export default function Home() {
               <button
                 onClick={() => setIsMenuOverlayOpen(true)}
                 className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: '#333333' }}
+                style={{ marginBottom: '64px', fontSize: '16px', color: '#ffffff' }}
               >
                 <span className="mr-2">&bull;</span>View Menu
               </button>
@@ -293,17 +293,17 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#333333' }}>Wine</h3>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#333333' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#ffffff' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#ffffff' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#333333' }}>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#ffffff' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <button
                   onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
                   className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: '#333333', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: '16px', color: '#ffffff', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
@@ -343,7 +343,7 @@ export default function Home() {
       </section>
       {/* End dark section */}
       </div>
-      {/* About Section — 12-col desktop grid, single-col mobile */}
+      {/* About Section ��� 12-col desktop grid, single-col mobile */}
       <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
 
         <div className="px-5 md:px-20 mb-10">
