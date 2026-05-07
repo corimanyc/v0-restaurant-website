@@ -107,22 +107,32 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Header/Navigation — hidden when scrolled or dining overlay open */}
+        {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
           className="fixed top-0 left-0 right-0 z-40 transition-opacity duration-500"
-          style={{ opacity: isAtTop && !isDiningOpen ? 1 : 0, pointerEvents: isAtTop && !isDiningOpen ? 'all' : 'none' }}
+          style={{
+            opacity: isDiningOpen ? 0 : 1,
+            pointerEvents: isDiningOpen ? 'none' : 'all',
+            color: isAtTop ? '#ffffff' : '#000000',
+            transitionProperty: 'opacity, color',
+          }}
         >
           <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
-              <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
+              <img
+                src="/logo.svg"
+                alt="CORIMA"
+                className="w-full h-full object-contain transition-[filter] duration-500"
+                style={{ filter: isAtTop ? 'none' : 'brightness(0)' }}
+              />
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
               <Link href="#about" className="text-sm uppercase tracking-wider hover:opacity-70 transition">About</Link>
               <Link href="#reservations" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Reservations</Link>
-              <button onClick={() => setIsDiningOpen(true)} className="text-sm uppercase tracking-wider hover:opacity-70 transition text-white text-left">Dining</button>
+              <button onClick={() => setIsDiningOpen(true)} className="text-sm uppercase tracking-wider hover:opacity-70 transition text-left">Dining</button>
               <Link href="#events" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Events</Link>
               <Link href="#press" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Press</Link>
               <Link href="#shop" className="text-sm uppercase tracking-wider hover:opacity-70 transition">Shop</Link>
@@ -130,9 +140,9 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden flex flex-col gap-1.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <div className="w-6 h-0.5 bg-white"></div>
-              <div className="w-6 h-0.5 bg-white"></div>
-              <div className="w-6 h-0.5 bg-white"></div>
+              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5 transition-colors duration-500" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
             </button>
           </nav>
 
