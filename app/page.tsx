@@ -205,8 +205,8 @@ export default function Home() {
           backgroundPosition: 'center top',
           backgroundSize: 'min(1100px, 90%) auto',
           backgroundAttachment: 'scroll',
-          backgroundColor: '#ffffff',
-          color: '#000000',
+          backgroundColor: '#1a1a1a',
+          color: '#CACACA',
           paddingBottom: '100px',
         }}
       >
@@ -235,7 +235,7 @@ export default function Home() {
               <button
                 onClick={() => setIsMenuOverlayOpen(true)}
                 className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: '#000000' }}
+                style={{ marginBottom: '64px', fontSize: '16px', color: '#CACACA' }}
               >
                 <span className="mr-2">&bull;</span>View Menu
               </button>
@@ -303,17 +303,17 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#000000' }}>Wine</h3>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#000000' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#CACACA' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CACACA' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#000000' }}>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#CACACA' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <button
                   onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
                   className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: '#000000', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: '16px', color: '#CACACA', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
