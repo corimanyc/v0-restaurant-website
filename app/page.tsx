@@ -74,7 +74,7 @@ export default function Home() {
       <div
         className="fixed top-0 left-0 transition-opacity duration-500"
         style={{
-          padding: '24px',
+          padding: '24px 48px',
           zIndex: 50,
           opacity: isDiningOpen ? 1 : 0,
           pointerEvents: isDiningOpen ? 'all' : 'none',
