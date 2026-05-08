@@ -146,7 +146,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase" style={{ fontSize: '28px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+        <h1 className="text-black uppercase" style={{ fontSize: '24px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           Menu
         </h1>
         <button

@@ -54,7 +54,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       >
         <h1
           className="uppercase tracking-widest flex items-center"
-          style={{ fontSize: '28px', lineHeight: 1, letterSpacing: '-0.02em', fontWeight: 400, margin: 0, height: '40px' }}
+          style={{ fontSize: '24px', lineHeight: 1, letterSpacing: '-0.02em', fontWeight: 400, margin: 0, height: '40px' }}
         >
           Dining
         </h1>
