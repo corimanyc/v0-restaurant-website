@@ -146,7 +146,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase" style={{ fontSize: '28px', letterSpacing: '-0.02em' }}>
+        <h1 className="text-black uppercase" style={{ fontSize: '28px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           Menu
         </h1>
         <button
@@ -175,7 +175,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         >
           {/* A La Carte */}
           <div ref={alaCarteRef} data-section="a-la-carte">
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               A La Carte
             </h2>
             <div className="flex flex-col">
@@ -195,7 +195,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Cocktail
             </h2>
             <div className="flex flex-col">
@@ -218,7 +218,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <p className="text-black mb-2" style={{ ...base }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
-            <h2 className="text-black uppercase mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
             {wineByGlass.map((group, gi) => (
