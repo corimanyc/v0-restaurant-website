@@ -119,15 +119,17 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          {/* Gradient blur layer — full blur at top, fades to 0 at bottom via mask */}
+          {/* Gradient blur layer — full 1.5px blur held through most of the nav, fading only at the bottom edge */}
           <div
             aria-hidden
             className="absolute inset-0 pointer-events-none"
             style={{
               backdropFilter: 'blur(1.5px)',
               WebkitBackdropFilter: 'blur(1.5px)',
-              maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+              maskImage:
+                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage:
+                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
             }}
           />
           <nav className="relative flex items-center justify-between" style={{ padding: '24px 48px 0 48px' }}>
