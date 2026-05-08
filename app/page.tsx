@@ -116,7 +116,7 @@ export default function Home() {
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
           style={{
-            height: '72px',
+            height: '48px',
             zIndex: 44,
             backdropFilter: 'blur(1.5px)',
             WebkitBackdropFilter: 'blur(1.5px)',
