@@ -258,6 +258,9 @@ export default function Home() {
               <p className="leading-relaxed" style={{ fontSize: '16px' }}>
                 Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
               </p>
+              <p className="leading-relaxed" style={{ fontSize: '16px', marginTop: '24px' }}>
+                Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
+              </p>
             </div>
 
             <div 
