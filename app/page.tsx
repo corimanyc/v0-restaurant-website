@@ -177,15 +177,11 @@ export default function Home() {
             >
               {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
             </p>
-            {/* Persistent logo — switches from white to black when scrolled past hero */}
+            {/* Persistent logo — stays white regardless of scroll */}
             <img
               src="/footer-logo.png"
               alt="CORIMA"
               className="w-6 h-6 object-contain ml-auto"
-              style={{
-                filter: isAtTop ? 'none' : 'brightness(0)',
-                transition: 'filter 0.2s ease',
-              }}
             />
           </div>
         </footer>
