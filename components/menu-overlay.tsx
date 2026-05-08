@@ -90,31 +90,13 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   }, [isOpen, scrollToSection])
 
   useEffect(() => {
-    // Lock scroll using position:fixed instead of overflow:hidden so the
-    // <html> scrollbar (and its gutter) is never touched. This keeps the
-    // viewport width constant, which means the fixed nav header / logo
-    // stay pinned to the exact same x-position when the panel opens.
-    if (isOpen) {
-      const scrollY = window.scrollY
-      const body = document.body
-      body.dataset.scrollLockY = String(scrollY)
-      body.style.position = 'fixed'
-      body.style.top = `-${scrollY}px`
-      body.style.left = '0'
-      body.style.right = '0'
-      body.style.width = '100%'
-    } else {
-      const body = document.body
-      const stored = body.dataset.scrollLockY
-      if (stored !== undefined) {
-        body.style.position = ''
-        body.style.top = ''
-        body.style.left = ''
-        body.style.right = ''
-        body.style.width = ''
-        delete body.dataset.scrollLockY
-        window.scrollTo(0, parseInt(stored, 10) || 0)
-      }
+    // The <html> element has overflow-y: scroll, so the scrollbar (and its
+    // gutter) is permanently reserved. Toggling body overflow doesn't change
+    // the layout width, and the standalone/nav logos share padding so the
+    // logo position stays constant when the panel opens.
+    document.body.style.overflow = isOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
     }
   }, [isOpen])
 
