@@ -227,9 +227,16 @@ export default function Home() {
 
         {/* Headline */}
         <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
-          <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 300, maxWidth: '1100px' }}>
-            {'Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'}
-          </h2>
+          <img
+            src="/hero-text.svg"
+            alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
+            className="block mx-auto w-full h-auto"
+            style={{
+              maxWidth: '1100px',
+              // tint the SVG's black paths to #CBCBCB to match the body text color
+              filter: 'invert(1) brightness(0.795)',
+            }}
+          />
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
