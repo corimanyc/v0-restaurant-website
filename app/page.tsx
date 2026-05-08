@@ -345,6 +345,26 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Part 2.5: Two vertical editorial photographs — brick wall & tattooed hand */}
+        <div className="grid-12 mb-16 lg:mb-24 relative" style={{ alignItems: 'start', zIndex: 1 }}>
+          {/* Brick wall portrait — desktop: cols 2–5 | mobile: full width */}
+          <div className="mb-6 lg:mb-0" style={{ gridColumn: '2 / 5' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-w1LMMlTfQ3Im7wcUBseRwawVLlcHaC.png"
+              alt="Black-and-white photograph of a man with arm tattoos walking past a textured brick wall featuring decorative metalwork"
+              className="w-full object-cover"
+            />
+          </div>
+          {/* Tattooed hand on plate — desktop: cols 8–11 | mobile: full width */}
+          <div style={{ gridColumn: '8 / 11', marginTop: '80px' }}>
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-bOdHHQ6GUPD9wjm1nSLr5B8tvLI94e.png"
+              alt="Black-and-white overhead shot of a heavily tattooed hand resting on a small white plate while another hand holds a small offset spatula"
+              className="w-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* Part 3: Wine bottle + Circle of Sharing */}
         <div className="grid-12 relative" style={{ alignItems: 'start', zIndex: 1 }}>
           {/* Wine bottle image — desktop: cols 3–6 | mobile: full width */}
