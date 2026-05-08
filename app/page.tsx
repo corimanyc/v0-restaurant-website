@@ -116,9 +116,9 @@ export default function Home() {
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#CBCBCB',
-            backgroundColor: 'rgba(26, 26, 26, 0.15)',
-            backdropFilter: 'blur(4px)',
-            WebkitBackdropFilter: 'blur(4px)',
+            backgroundColor: 'rgba(26, 26, 26, 0.04)',
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
             transition: 'opacity 0.5s ease',
           }}
         >
