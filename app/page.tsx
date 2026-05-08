@@ -204,11 +204,11 @@ export default function Home() {
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
-          color: '#CACACA',
+          color: '#CBCBCB',
           paddingBottom: '100px',
         }}
       >
-        {/* Sketch overlay — tinted to #CACACA to match the body text color */}
+        {/* Sketch overlay — original black ink layered over the dark grain */}
         <img
           src="/about-sketch-black.png"
           alt=""
@@ -220,8 +220,6 @@ export default function Home() {
             transform: 'translateX(-50%)',
             width: 'min(1800px, 140%)',
             height: 'auto',
-            // invert black -> white, then brightness(0.79) -> rgb(202,202,202) = #CACACA
-            filter: 'invert(1) brightness(0.79)',
             opacity: 1,
             zIndex: 0,
           }}
@@ -252,7 +250,7 @@ export default function Home() {
               <button
                 onClick={() => setIsMenuOverlayOpen(true)}
                 className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: '#CACACA' }}
+                style={{ marginBottom: '64px', fontSize: '16px', color: '#CBCBCB' }}
               >
                 <span className="mr-2">&bull;</span>View Menu
               </button>
@@ -320,17 +318,17 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#CACACA' }}>Wine</h3>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CACACA' }}>
+                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#CBCBCB' }}>Wine</h3>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
                   The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#CACACA' }}>
+                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#CBCBCB' }}>
                   The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
                 </p>
                 <button
                   onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
                   className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: '#CACACA', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: '16px', color: '#CBCBCB', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   <span className="mr-2">&bull;</span>Our wine list
                 </button>
