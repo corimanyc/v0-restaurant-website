@@ -165,7 +165,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div style={{ padding: '24px' }} className="flex items-center justify-between">
+          <div style={{ padding: '24px 48px' }} className="flex items-center justify-between">
             {/* Address — fades out as soon as hero leaves viewport */}
             <p
               className="text-xs md:text-sm tracking-widest uppercase text-white"
