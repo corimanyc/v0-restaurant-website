@@ -135,12 +135,12 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#about" className="text-sm tracking-wider hover:opacity-70" style={{ color: 'inherit', transition: 'opacity 0.2s ease' }}>About</Link>
-              <Link href="#reservations" className="text-sm tracking-wider hover:opacity-70" style={{ color: 'inherit', transition: 'opacity 0.2s ease' }}>Reservations</Link>
-              <button onClick={() => setIsDiningOpen(true)} className="text-sm tracking-wider hover:opacity-70 text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', padding: 0, transition: 'opacity 0.2s ease' }}>Dining</button>
-              <Link href="#events" className="text-sm tracking-wider hover:opacity-70" style={{ color: 'inherit', transition: 'opacity 0.2s ease' }}>Events</Link>
-              <Link href="#press" className="text-sm tracking-wider hover:opacity-70" style={{ color: 'inherit', transition: 'opacity 0.2s ease' }}>Press</Link>
-              <Link href="#shop" className="text-sm tracking-wider hover:opacity-70" style={{ color: 'inherit', transition: 'opacity 0.2s ease' }}>Shop</Link>
+              <Link href="#about" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>About</Link>
+              <Link href="#reservations" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Reservations</Link>
+              <button onClick={() => setIsDiningOpen(true)} className="nav-link text-sm tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', padding: 0 }}>Dining</button>
+              <Link href="#events" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Events</Link>
+              <Link href="#press" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Press</Link>
+              <Link href="#shop" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Shop</Link>
             </div>
 
             {/* Mobile Menu Button */}
