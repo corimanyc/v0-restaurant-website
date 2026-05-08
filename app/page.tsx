@@ -109,37 +109,29 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Gradient blur layer — sits at the top of the viewport at all times,
-            independent of the nav header's opacity. Sized to match the nav height
-            (~72px) so it covers the same area whether the dining panel is open or not. */}
-        <div
-          aria-hidden
-          className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: '72px',
-            zIndex: 46,
-            backdropFilter: 'blur(1.5px)',
-            WebkitBackdropFilter: 'blur(1.5px)',
-            maskImage:
-              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
-          }}
-        />
-
-        {/* Header/Navigation — fixed, hidden only when dining overlay open.
-            z-index sits above the gradient blur layer (z-46) so the nav text
-            stays sharp and isn't itself blurred. */}
+        {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
-          className="fixed top-0 left-0 right-0"
+          className="fixed top-0 left-0 right-0 z-40"
           style={{
-            zIndex: 47,
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#CBCBCB',
             transition: 'opacity 0.5s ease',
           }}
         >
+          {/* Gradient blur layer — full 1.5px blur held through most of the nav, fading only at the bottom edge */}
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              backdropFilter: 'blur(1.5px)',
+              WebkitBackdropFilter: 'blur(1.5px)',
+              maskImage:
+                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage:
+                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+            }}
+          />
           <nav className="relative flex items-center justify-between" style={{ padding: '24px 48px 0 48px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
