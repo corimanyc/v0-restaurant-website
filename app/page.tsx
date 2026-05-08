@@ -331,20 +331,18 @@ export default function Home() {
                 />
               </div>
               <div style={{ flex: '1' }}>
-                <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500, color: '#CBCBCB' }}>Wine</h3>
                 <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-                  The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
+                  Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
                 </p>
-                <p className="leading-relaxed mb-5" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-                  The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
-                <button
-                  onClick={() => { setMenuScrollTarget('wine'); setIsMenuOverlayOpen(true) }}
-                  className="hover:opacity-70 transition inline-block text-left"
-                  style={{ fontSize: '16px', color: '#CBCBCB', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                >
-                  <span className="mr-2">&bull;</span>Our wine list
-                </button>
+                <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
+                </p>
+                <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+                </p>
               </div>
             </div>
           </div>
