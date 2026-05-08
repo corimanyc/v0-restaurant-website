@@ -121,9 +121,9 @@ export default function Home() {
             backdropFilter: 'blur(1.5px)',
             WebkitBackdropFilter: 'blur(1.5px)',
             maskImage:
-              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+              'linear-gradient(to bottom, #000 0%, #000 35%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 70%)',
             WebkitMaskImage:
-              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+              'linear-gradient(to bottom, #000 0%, #000 35%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 70%)',
           }}
         />
 
