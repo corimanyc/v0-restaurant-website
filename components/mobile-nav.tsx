@@ -59,7 +59,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             key={label}
             href={href}
             onClick={onClick}
-            className="text-white uppercase hover:opacity-50 transition-opacity"
+            className="text-white hover:opacity-50 transition-opacity"
             style={{
               fontFamily: 'Satoshi, sans-serif',
               fontSize: '24px',
