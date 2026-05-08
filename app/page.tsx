@@ -254,20 +254,10 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '160px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
-            <div style={{ maxWidth: '80%' }}>
-              <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
-
-              <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
+            <div style={{ maxWidth: '80%', marginBottom: '64px' }}>
+              <p className="leading-relaxed" style={{ fontSize: '16px' }}>
                 Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
               </p>
-
-              <button
-                onClick={() => setIsMenuOverlayOpen(true)}
-                className="hover:opacity-70 transition inline-block text-left"
-                style={{ marginBottom: '64px', fontSize: '16px', color: '#CBCBCB' }}
-              >
-                <span className="mr-2">&bull;</span>View Menu
-              </button>
             </div>
 
             <div 
