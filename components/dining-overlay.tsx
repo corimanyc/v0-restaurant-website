@@ -27,7 +27,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       className="fixed top-0 right-0 h-full flex flex-col"
       style={{
         backgroundColor: '#CACACA',
-        backgroundImage: 'url(/dining-bg.jpeg)',
+        backgroundImage: 'url(/dining-bg.webp)',
         backgroundRepeat: 'repeat',
         backgroundSize: '512px 512px',
         color: '#000000',
