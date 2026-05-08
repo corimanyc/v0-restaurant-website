@@ -127,10 +127,13 @@ export default function Home() {
           }}
         />
 
-        {/* Header/Navigation — fixed, hidden only when dining overlay open */}
+        {/* Header/Navigation — fixed, hidden only when dining overlay open.
+            z-index sits above the gradient blur layer (z-46) so the nav text
+            stays sharp and isn't itself blurred. */}
         <header
-          className="fixed top-0 left-0 right-0 z-40"
+          className="fixed top-0 left-0 right-0"
           style={{
+            zIndex: 47,
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#CBCBCB',
