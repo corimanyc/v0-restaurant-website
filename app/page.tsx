@@ -116,14 +116,14 @@ export default function Home() {
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
           style={{
-            height: '72px',
+            height: '80px',
             zIndex: 44,
             backdropFilter: 'blur(1.5px)',
             WebkitBackdropFilter: 'blur(1.5px)',
             maskImage:
-              'linear-gradient(to bottom, #000 0%, #000 35%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 70%)',
+              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
             WebkitMaskImage:
-              'linear-gradient(to bottom, #000 0%, #000 35%, rgba(0,0,0,0.5) 55%, rgba(0,0,0,0) 70%)',
+              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
           }}
         />
 
