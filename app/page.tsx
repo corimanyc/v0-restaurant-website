@@ -198,27 +198,43 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="px-5 md:px-20"
+        className="px-5 md:px-20 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-sketch-black.png)',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top',
-          backgroundSize: 'min(1800px, 140%) auto',
-          backgroundAttachment: 'scroll',
+          backgroundImage: 'url(/about-bg-v5.jpeg)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
           color: '#CACACA',
           paddingBottom: '100px',
         }}
       >
+        {/* Sketch overlay — inverted so black ink renders white over the dark grain */}
+        <img
+          src="/about-sketch-black.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute"
+          style={{
+            top: '0',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 'min(1800px, 140%)',
+            height: 'auto',
+            filter: 'invert(1)',
+            opacity: 0.9,
+            zIndex: 0,
+          }}
+        />
+
         {/* Headline */}
-        <div className="flex items-center justify-center py-24 md:min-h-screen">
+        <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
           <h2 className="leading-snug text-center mx-auto text-[26px] md:text-[48px]" style={{ fontWeight: 400, maxWidth: '1100px' }}>
             Northern Mexican cooking, carrying tradition into new forms through seasonality, craft, and lived experience. Corima was awarded its first Michelin Star in the 2025 Michelin Guide USA.
           </h2>
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row" style={{ gap: '100px' }}>
+        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1 }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
             <div style={{ maxWidth: '80%' }}>
