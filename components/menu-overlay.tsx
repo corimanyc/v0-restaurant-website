@@ -228,7 +228,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 </p>
                 <div className="flex flex-col">
                   {group.items.map((item, i) => (
-                    <div key={i} className="flex items-start justify-between py-3" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
+                    <div key={i} className="flex items-start justify-between py-3">
                       <div style={{ maxWidth: '380px' }}>
                         <p className="text-black" style={base}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
