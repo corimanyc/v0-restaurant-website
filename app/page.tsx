@@ -243,7 +243,7 @@ export default function Home() {
         {/* Headline */}
         <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
           <img
-            src="/hero-text-v2.svg"
+            src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
             className="block mx-auto w-full h-auto"
             style={{ maxWidth: '1100px' }}
