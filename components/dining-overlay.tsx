@@ -13,12 +13,19 @@ interface DiningOverlayProps {
 export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOverlayProps) {
   useEffect(() => {
     if (isOpen) {
+      // Compensate for the disappearing scrollbar so fixed elements (the nav) don't shift
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
       document.body.style.overflow = 'hidden'
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`
+      }
     } else {
       document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
     }
     return () => {
       document.body.style.overflow = ''
+      document.body.style.paddingRight = ''
     }
   }, [isOpen])
 
