@@ -321,13 +321,29 @@ export default function Home() {
               />
             </div>
 
-            {/* Wine bottle image */}
-            <div style={{ marginTop: '36px', maxWidth: '35%' }}>
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
-                alt="Wine bottle with lamp"
-                className="w-full object-cover"
-              />
+            {/* Wine section */}
+            <div style={{ marginTop: '36px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
+              <div style={{ flex: '0 0 35%' }}>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
+                  alt="Wine bottle with lamp"
+                  className="w-full object-cover"
+                />
+              </div>
+              <div style={{ flex: '1' }}>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
+                </p>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
+                </p>
+                <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
+                </p>
+                <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -351,22 +367,6 @@ export default function Home() {
             </p>
           </div>
 
-        </div>
-
-        {/* Circle of Sharing — full-width block, breaks out of the two-column grid above */}
-        <div className="relative" style={{ zIndex: 1, marginTop: '100px', maxWidth: '900px' }}>
-          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-            Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
-          </p>
-          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-            Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
-          </p>
-          <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-            We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
-          </p>
-          <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-            Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
-          </p>
         </div>
       </section>
       {/* End dark section */}
