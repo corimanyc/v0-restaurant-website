@@ -207,7 +207,7 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none select-none absolute"
           style={{
-            top: '-50px',
+            top: '-30px',
             left: '50%',
             transform: 'translateX(-50%)',
             width: 'min(1800px, 140%)',
