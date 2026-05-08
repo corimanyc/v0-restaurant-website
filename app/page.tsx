@@ -115,7 +115,7 @@ export default function Home() {
           style={{
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
-            color: '#ffffff',
+            color: '#CBCBCB',
             transition: 'opacity 0.5s ease',
           }}
         >
@@ -141,9 +141,9 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden flex flex-col gap-1.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
-              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
-              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
             </button>
           </nav>
 
