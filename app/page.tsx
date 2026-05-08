@@ -208,7 +208,7 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Sketch overlay — inverted so black ink renders white over the dark grain */}
+        {/* Sketch overlay — black ink on top of dark grain */}
         <img
           src="/about-sketch-black.png"
           alt=""
@@ -220,8 +220,7 @@ export default function Home() {
             transform: 'translateX(-50%)',
             width: 'min(1800px, 140%)',
             height: 'auto',
-            filter: 'invert(1)',
-            opacity: 0.9,
+            opacity: 1,
             zIndex: 0,
           }}
         />
