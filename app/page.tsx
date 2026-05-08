@@ -115,8 +115,8 @@ export default function Home() {
           style={{
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
-            color: isAtTop ? '#ffffff' : '#000000',
-            transition: 'opacity 0.5s ease, color 0.2s ease',
+            color: '#ffffff',
+            transition: 'opacity 0.5s ease',
           }}
         >
           <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
@@ -126,10 +126,6 @@ export default function Home() {
                 src="/logo.svg"
                 alt="CORIMA"
                 className="w-full h-full object-contain"
-                style={{
-                  filter: isAtTop ? 'none' : 'brightness(0)',
-                  transition: 'filter 0.2s ease',
-                }}
               />
             </Link>
 
@@ -145,9 +141,9 @@ export default function Home() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden flex flex-col gap-1.5" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
-              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
-              <div className="w-6 h-0.5 transition-colors duration-200" style={{ backgroundColor: isAtTop ? '#ffffff' : '#000000' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
+              <div className="w-6 h-0.5" style={{ backgroundColor: '#ffffff' }}></div>
             </button>
           </nav>
 
