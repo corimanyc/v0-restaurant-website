@@ -52,7 +52,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         className="flex items-center justify-between flex-shrink-0"
         style={{ padding: '24px 24px 24px 24px' }}
       >
-        <h1 className="uppercase tracking-widest" style={{ fontSize: '20px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+        <h1 className="uppercase tracking-widest" style={{ fontSize: '28px', lineHeight: 1, letterSpacing: '-0.02em', fontWeight: 400, margin: 0 }}>
           Dining
         </h1>
         <button
