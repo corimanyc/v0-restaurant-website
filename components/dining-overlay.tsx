@@ -27,6 +27,9 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       className="fixed top-0 right-0 h-full flex flex-col"
       style={{
         backgroundColor: '#CACACA',
+        backgroundImage: 'url(/dining-bg.jpeg)',
+        backgroundRepeat: 'repeat',
+        backgroundSize: '512px 512px',
         color: '#000000',
         zIndex: 45,
         width: '50%',
@@ -50,9 +53,9 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       {/* Header — fixed at top */}
       <div
         className="flex items-center justify-between flex-shrink-0"
-        style={{ padding: '24px 24px 24px 24px', backgroundColor: '#CACACA' }}
+        style={{ padding: '24px 24px 24px 24px' }}
       >
-        <h1 className="uppercase tracking-widest" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
+        <h1 className="uppercase tracking-widest" style={{ fontSize: '20px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           Dining
         </h1>
         <button
@@ -76,7 +79,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Tasting Menu */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Tasting Menu
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -99,7 +102,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* A La Carte */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             A La Carte
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -119,7 +122,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Beverage */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -129,7 +132,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Wine */}
         <section>
-          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Wine
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
