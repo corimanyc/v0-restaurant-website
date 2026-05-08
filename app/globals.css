@@ -29,8 +29,8 @@ a.text-black, button.text-black, [role="button"].text-black,
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
-  padding-left: 48px;
-  padding-right: 48px;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 @media (max-width: 768px) {

@@ -219,7 +219,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="relative overflow-hidden"
+        className="px-5 md:px-12 relative overflow-hidden"
         style={{
           backgroundImage: 'url(/about-bg-v5.jpeg)',
           backgroundRepeat: 'repeat',
@@ -247,7 +247,7 @@ export default function Home() {
         />
 
         {/* Headline */}
-        <div className="px-5 flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
+        <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
           <img
             src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
@@ -256,67 +256,55 @@ export default function Home() {
           />
         </div>
 
-        {/* Editorial 12-col grid — mirrors the section underneath */}
+        {/* Two Column Layout — 36px gap, 60:40 split */}
+        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '160px' }}>
+          {/* Left Column - A La Carte */}
+          <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
+            <div style={{ maxWidth: '80%', marginBottom: '64px' }}>
+              <p className="leading-relaxed" style={{ fontSize: '16px' }}>
+                Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
+              </p>
+              <p className="leading-relaxed" style={{ fontSize: '16px', marginTop: '24px' }}>
+                Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
+              </p>
+            </div>
 
-        {/* Part 1: Intro paragraphs + Tasting Menu image */}
-        <div className="grid-12 mb-16 lg:mb-24 relative" style={{ alignItems: 'start', marginTop: '160px', zIndex: 1 }}>
-          {/* Intro text — desktop: cols 4–8 | mobile: full width */}
-          <div className="mb-6 lg:mb-0" style={{ gridColumn: '4 / 8' }}>
-            <p className="leading-relaxed" style={{ fontSize: '16px' }}>
-              Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
-            </p>
-            <p className="leading-relaxed" style={{ fontSize: '16px', marginTop: '24px' }}>
-              Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
-            </p>
-          </div>
-          {/* Tasting Menu image — desktop: cols 9–12 | mobile: full width */}
-          <div style={{ gridColumn: '9 / 12' }}>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
-              alt="Tasting menu dish"
-              className="w-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Part 2: Carousel + Our Story heading & paragraphs */}
-        <div className="grid-12 mb-16 lg:mb-24 relative" style={{ alignItems: 'start', zIndex: 1 }}>
-          {/* B&W / color carousel — desktop: cols 2–9 | mobile: full width */}
-          <div className="mb-6 lg:mb-0" style={{ gridColumn: '2 / 9' }}>
-            <div
-              className="relative overflow-hidden w-full bg-black"
-              style={{ paddingBottom: '81.87%', position: 'relative' }}
+            <div 
+              className="relative overflow-hidden w-full bg-black" 
+              style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
             >
-              {/* Black & White base layer */}
+              {/* Black & White Base Layer — always visible when current slide */}
               {aboutSectionImages.map((image, index) => (
                 <img
                   key={`bw-${index}`}
                   src={image.bw}
                   alt={image.alt}
                   className="absolute inset-0 w-full h-full transition-opacity duration-700"
-                  style={{
+                  style={{ 
                     opacity: index === aboutImgIndex ? 1 : 0,
                     objectFit: 'cover',
                     objectPosition: 'center',
                   }}
                 />
               ))}
-              {/* Color overlay layer */}
+              
+              {/* Color Overlay Layer — fades in on top of BW, no gap */}
               {aboutSectionImages.map((image, index) => (
                 <img
                   key={`color-${index}`}
                   src={image.color}
                   alt={image.alt}
                   className="absolute inset-0 w-full h-full transition-opacity duration-700"
-                  style={{
+                  style={{ 
                     opacity: (index === aboutImgIndex && isHovering) ? 1 : 0,
                     objectFit: 'cover',
                     objectPosition: 'center',
                   }}
                 />
               ))}
+              
               {/* Left half — previous image */}
               <button
                 onClick={prevAboutImg}
@@ -332,64 +320,53 @@ export default function Home() {
                 aria-label="Next image"
               />
             </div>
+
+            {/* Wine section */}
+            <div style={{ marginTop: '36px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
+              <div style={{ flex: '0 0 35%' }}>
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
+                  alt="Wine bottle with lamp"
+                  className="w-full object-cover"
+                />
+              </div>
+              <div style={{ flex: '1' }}>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
+                </p>
+                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
+                </p>
+                <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
+                </p>
+                <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                  Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+                </p>
+              </div>
+            </div>
           </div>
-          {/* Our Story heading + paragraphs — desktop: cols 9–12 | mobile: full width */}
-          <div style={{ gridColumn: '9 / 12', marginTop: '40px' }}>
+
+          {/* Right Column - Tasting Menu */}
+          <div style={{ flex: '0 0 calc(40% - 50px)' }} className="flex flex-col order-1 lg:order-2">
+            <img
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
+              alt="Tasting menu dish"
+              className="object-cover w-full"
+              style={{ marginBottom: '64px' }}
+            />
+
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Our Story</h3>
+
             <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
               The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City. Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
             </p>
+
             <p className="leading-relaxed" style={{ fontSize: '16px' }}>
               Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
             </p>
           </div>
-        </div>
 
-        {/* Part 2.5: Two vertical editorial photographs — brick wall & tattooed hand */}
-        <div className="grid-12 mb-16 lg:mb-24 relative" style={{ alignItems: 'start', zIndex: 1 }}>
-          {/* Brick wall portrait — desktop: cols 2–5 | mobile: full width */}
-          <div className="mb-6 lg:mb-0" style={{ gridColumn: '2 / 5' }}>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-w1LMMlTfQ3Im7wcUBseRwawVLlcHaC.png"
-              alt="Black-and-white photograph of a man with arm tattoos walking past a textured brick wall featuring decorative metalwork"
-              className="w-full object-cover"
-            />
-          </div>
-          {/* Tattooed hand on plate — desktop: cols 8–11 | mobile: full width */}
-          <div style={{ gridColumn: '8 / 11', marginTop: '80px' }}>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CorimaDec24_JovaniDemetrie_67_Original%203-bOdHHQ6GUPD9wjm1nSLr5B8tvLI94e.png"
-              alt="Black-and-white overhead shot of a heavily tattooed hand resting on a small white plate while another hand holds a small offset spatula"
-              className="w-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Part 3: Wine bottle + Circle of Sharing */}
-        <div className="grid-12 relative" style={{ alignItems: 'start', zIndex: 1 }}>
-          {/* Wine bottle image — desktop: cols 3–6 | mobile: full width */}
-          <div className="mb-6 lg:mb-0" style={{ gridColumn: '3 / 6' }}>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
-              alt="Wine bottle with lamp"
-              className="w-full object-cover"
-            />
-          </div>
-          {/* Circle of Sharing text — desktop: cols 7–11 | mobile: full width */}
-          <div style={{ gridColumn: '7 / 11' }}>
-            <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-              Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
-            </p>
-            <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-              Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
-            </p>
-            <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-              We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
-            </p>
-            <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-              Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
-            </p>
-          </div>
         </div>
       </section>
       {/* End dark section */}
