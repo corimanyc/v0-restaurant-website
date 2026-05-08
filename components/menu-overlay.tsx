@@ -175,7 +175,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         >
           {/* A La Carte */}
           <div ref={alaCarteRef} data-section="a-la-carte">
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               A La Carte
             </h2>
             <div className="flex flex-col">
@@ -195,7 +195,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-8" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Cocktail
             </h2>
             <div className="flex flex-col">
@@ -215,7 +215,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Wine */}
           <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
             <p className="text-black mb-6" style={{ ...base }}>
