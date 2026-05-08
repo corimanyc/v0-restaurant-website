@@ -26,8 +26,8 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
     <div
       className="fixed top-0 right-0 h-full flex flex-col"
       style={{
-        backgroundColor: '#333333',
-        color: '#d1d1d1',
+        backgroundColor: '#CACACA',
+        color: '#000000',
         zIndex: 45,
         width: '50%',
         transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
@@ -50,9 +50,9 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       {/* Header — fixed at top */}
       <div
         className="flex items-center justify-between flex-shrink-0"
-        style={{ padding: '24px 24px 24px 24px', backgroundColor: '#333333' }}
+        style={{ padding: '24px 24px 24px 24px', backgroundColor: '#CACACA' }}
       >
-        <h1 className="uppercase tracking-widest font-medium" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
+        <h1 className="uppercase tracking-widest" style={{ fontSize: '20px', letterSpacing: '-0.02em' }}>
           Dining
         </h1>
         <button
@@ -76,7 +76,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Tasting Menu */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             Tasting Menu
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -91,7 +91,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <Link
             href="mailto:info@corimanyc.com"
             className="hover:opacity-70 transition"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#d1d1d1' }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000' }}
           >
             <span className="mr-2">&bull;</span>Contact
           </Link>
@@ -99,7 +99,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* A La Carte */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             A La Carte
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -111,7 +111,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <button
             onClick={onViewMenu}
             className="hover:opacity-70 transition text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#d1d1d1' }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000' }}
           >
             <span className="mr-2">&bull;</span>View Menu
           </button>
@@ -119,7 +119,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Beverage */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -129,7 +129,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Wine */}
         <section>
-          <h2 className="uppercase font-medium mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <h2 className="uppercase mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             Wine
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
