@@ -12,11 +12,31 @@ interface DiningOverlayProps {
 
 export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOverlayProps) {
   useEffect(() => {
-    // scrollbar-gutter: stable on <html> reserves the scrollbar gutter
-    // permanently, so toggling overflow doesn't shift the layout.
-    document.body.style.overflow = isOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
+    // Lock scroll using position:fixed instead of overflow:hidden so the
+    // <html> scrollbar (and its gutter) is never touched. This keeps the
+    // viewport width constant, which means the fixed nav header / logo
+    // stay pinned to the exact same x-position when the panel opens.
+    if (isOpen) {
+      const scrollY = window.scrollY
+      const body = document.body
+      body.dataset.scrollLockY = String(scrollY)
+      body.style.position = 'fixed'
+      body.style.top = `-${scrollY}px`
+      body.style.left = '0'
+      body.style.right = '0'
+      body.style.width = '100%'
+    } else {
+      const body = document.body
+      const stored = body.dataset.scrollLockY
+      if (stored !== undefined) {
+        body.style.position = ''
+        body.style.top = ''
+        body.style.left = ''
+        body.style.right = ''
+        body.style.width = ''
+        delete body.dataset.scrollLockY
+        window.scrollTo(0, parseInt(stored, 10) || 0)
+      }
     }
   }, [isOpen])
 
