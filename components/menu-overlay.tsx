@@ -130,7 +130,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     return () => observer.disconnect()
   }, [isOpen])
 
-  const base: React.CSSProperties = { fontSize: '14px', letterSpacing: '-0.02em' }
+  const base: React.CSSProperties = { fontSize: '14px', letterSpacing: '-0.02em', fontWeight: 400 }
 
   return (
     <div
