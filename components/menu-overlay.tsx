@@ -218,7 +218,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
-            <p className="text-black mb-6" style={{ ...base }}>
+            <p className="text-black mb-10" style={{ ...base }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             {wineByGlass.map((group, gi) => (
