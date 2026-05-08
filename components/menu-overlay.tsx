@@ -222,8 +222,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             {wineByGlass.map((group, gi) => (
-              <div key={gi} style={{ marginBottom: '20px' }}>
-                <p className="text-black uppercase mb-3" style={{ ...base, fontSize: '11px', letterSpacing: '0.08em' }}>
+              <div key={gi} style={{ marginBottom: '32px' }}>
+                <p className="text-black uppercase mb-1" style={{ ...base, fontSize: '11px', letterSpacing: '0.08em' }}>
                   {group.category}
                 </p>
                 <div className="flex flex-col">
