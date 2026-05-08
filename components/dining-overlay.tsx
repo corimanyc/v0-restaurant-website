@@ -71,7 +71,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       <div
         className="dining-scroll flex-1 overflow-y-auto"
         style={{
-          padding: '56px 24px 64px 24px',
+          padding: '20px 24px 64px 24px',
           scrollbarWidth: 'none',
           msOverflowStyle: 'none',
         }}
