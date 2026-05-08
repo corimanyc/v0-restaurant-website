@@ -337,7 +337,7 @@ export default function Home() {
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
               alt="Tasting menu dish"
               className="object-cover w-full"
-              style={{ marginBottom: '64px' }}
+              style={{ marginBottom: '64px', aspectRatio: '1 / 1.228' }}
             />
 
             <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Tasting Menu</h3>
