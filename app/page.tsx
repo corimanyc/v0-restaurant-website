@@ -257,12 +257,8 @@ export default function Home() {
             <div style={{ maxWidth: '80%' }}>
               <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>A La Carte</h3>
 
-              <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-                Offered alongside our tasting menu, the &agrave; la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
-              </p>
-
               <p className="leading-relaxed mb-5" style={{ fontSize: '16px' }}>
-                While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
+                Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
               </p>
 
               <button
