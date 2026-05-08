@@ -146,7 +146,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
-        <h1 className="text-black uppercase font-medium" style={{ fontSize: '28px', letterSpacing: '-0.02em' }}>
+        <h1 className="text-black uppercase" style={{ fontSize: '28px', letterSpacing: '-0.02em' }}>
           Menu
         </h1>
         <button
@@ -175,16 +175,16 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         >
           {/* A La Carte */}
           <div ref={alaCarteRef} data-section="a-la-carte">
-            <h2 className="text-black uppercase font-medium mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
               A La Carte
             </h2>
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase font-medium" style={{ ...base, maxWidth: '420px' }}>
+                  <p className="text-black uppercase" style={{ ...base, maxWidth: '420px' }}>
                     {item.name}
                   </p>
-                  <p className="text-black flex-shrink-0 text-right font-medium" style={{ ...base, marginLeft: '16px' }}>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
@@ -195,15 +195,15 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase font-medium mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
               Cocktail
             </h2>
             <div className="flex flex-col">
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
                   <div style={{ maxWidth: '380px' }}>
-                    <p className="text-black uppercase font-medium" style={base}>{item.name}</p>
-                    <p className="text-black uppercase font-medium" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
+                    <p className="text-black uppercase" style={base}>{item.name}</p>
+                    <p className="text-black uppercase" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
                   </div>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
                     {item.price || '—'}
@@ -218,7 +218,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <p className="text-black mb-2" style={{ ...base }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
-            <h2 className="text-black uppercase font-medium mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <h2 className="text-black uppercase mt-8 mb-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
               Wine by the Glass
             </h2>
             {wineByGlass.map((group, gi) => (
@@ -230,7 +230,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                   {group.items.map((item, i) => (
                     <div key={i} className="flex items-start justify-between py-3" style={{ borderTop: '1px solid rgba(0,0,0,0.1)' }}>
                       <div style={{ maxWidth: '380px' }}>
-                        <p className="text-black font-medium" style={base}>{item.name}</p>
+                        <p className="text-black" style={base}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: '12px', marginTop: '2px' }}>{item.desc}</p>
                       </div>
                       <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
