@@ -109,29 +109,35 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Gradient blur layer — always visible at top of viewport. Sits below
+            the dining side panel (z-45) so the panel covers it on the right,
+            and below the nav header (z-46) so nav text stays sharp. */}
+        <div
+          aria-hidden
+          className="fixed top-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: '72px',
+            zIndex: 44,
+            backdropFilter: 'blur(1.5px)',
+            WebkitBackdropFilter: 'blur(1.5px)',
+            maskImage:
+              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+            WebkitMaskImage:
+              'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
+          }}
+        />
+
         {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
-          className="fixed top-0 left-0 right-0 z-40"
+          className="fixed top-0 left-0 right-0"
           style={{
+            zIndex: 46,
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#CBCBCB',
             transition: 'opacity 0.5s ease',
           }}
         >
-          {/* Gradient blur layer — full 1.5px blur held through most of the nav, fading only at the bottom edge */}
-          <div
-            aria-hidden
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              backdropFilter: 'blur(1.5px)',
-              WebkitBackdropFilter: 'blur(1.5px)',
-              maskImage:
-                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
-              WebkitMaskImage:
-                'linear-gradient(to bottom, #000 0%, #000 70%, rgba(0,0,0,0.6) 85%, rgba(0,0,0,0) 100%)',
-            }}
-          />
           <nav className="relative flex items-center justify-between" style={{ padding: '24px 48px 0 48px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
