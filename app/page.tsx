@@ -372,7 +372,15 @@ export default function Home() {
       {/* End dark section */}
       </div>
       {/* About Section — 12-col desktop grid, single-col mobile */}
-      <section style={{ backgroundColor: '#d1d1d1' }} className="py-16 lg:py-24">
+      <section
+        style={{
+          backgroundColor: '#d1d1d1',
+          backgroundImage: 'url(/dining-bg.webp)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '512px 512px',
+        }}
+        className="py-16 lg:py-24"
+      >
 
         <div className="px-5 md:px-20 mb-10">
           <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#000000' }}>OUR STORY</h2>
@@ -513,7 +521,16 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: '#d1d1d1', width: '100%', padding: '40px 24px 12px 24px' }}>
+      <footer
+        style={{
+          backgroundColor: '#d1d1d1',
+          backgroundImage: 'url(/dining-bg.webp)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '512px 512px',
+          width: '100%',
+          padding: '40px 24px 12px 24px',
+        }}
+      >
         <div className="flex w-full items-center gap-8 justify-between">
           <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
           <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
