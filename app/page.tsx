@@ -144,7 +144,17 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#about" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>About</Link>
+              <Link
+                href="#about"
+                className="nav-link tracking-wider"
+                style={{ color: 'inherit', fontSize: '16px' }}
+                onClick={(e) => {
+                  e.preventDefault()
+                  document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }}
+              >
+                About
+              </Link>
               <Link href="#reservations" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Reservations</Link>
               <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', padding: 0, fontSize: '16px' }}>Dining</button>
               <Link href="#events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
