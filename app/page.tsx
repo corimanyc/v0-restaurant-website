@@ -374,8 +374,8 @@ export default function Home() {
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section
         style={{
-          backgroundColor: '#d1d1d1',
-          backgroundImage: 'url(/dining-bg.webp)',
+          backgroundColor: '#1a1a1a',
+          backgroundImage: 'url(/main-bg.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
         }}
@@ -383,7 +383,7 @@ export default function Home() {
       >
 
         <div className="px-5 md:px-20 mb-10">
-          <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#000000' }}>OUR STORY</h2>
+          <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#CBCBCB' }}>OUR STORY</h2>
         </div>
 
         {/* Part 1: Corima Story */}
@@ -393,7 +393,7 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20name%20Corima%20comes%20from%20the%20Tarahumara%20word%20for%20%E2%80%9Ccircle%20of%20sharing.%E2%80%9D-YCtwkAUM4TNjBZdGk8w5lgYn8QoMOA.svg"
               alt="The name Corima comes from the Tarahumara word for circle of sharing."
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', filter: 'invert(1)' }}
             />
           </div>
           {/* Portrait image — desktop: cols 9–12, rows 1–3 | mobile: full width after SVG */}
@@ -407,10 +407,10 @@ export default function Home() {
           </div>
           {/* Body text — desktop: cols 4–7, row 2 | mobile: full width */}
           <div className="mb-6 lg:mb-0" style={{ gridColumn: '4 / 7', marginTop: '60px' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               The restaurant is built around gathering people at the table and sharing the culinary traditions of Northern Mexico&mdash;particularly Sonora and Chihuahua, regions rarely represented in New York City.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez and El Paso, where the food of the border region continues to shape his cooking. His perspective was further developed in the Basque Country at Mart&iacute;n Berasategui and in New York as sous chef at Contra, experiences that refined his approach while keeping it grounded in tradition.
             </p>
           </div>
@@ -441,7 +441,7 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20cooking%20is%20guided%20by%20a%20broad%20Mexican%20pantry%2C-EDZiNUXnZAkOvRkrUo8JtlYDLW1vZZ.svg"
               alt="The cooking is guided by a broad Mexican pantry,"
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', filter: 'invert(1)' }}
             />
           </div>
           {/* SVG line 2 — desktop: cols 5–9 indented | mobile: full width with left indent */}
@@ -449,7 +449,7 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shaped%20in%20practice%20by%20the%20seasons%20and%20conditions%20of%20the%20Northeast.-VPG1UrRBB5QVCjKBQNQw76eKsckRFc.svg"
               alt="shaped in practice by the seasons and conditions of the Northeast."
-              style={{ width: '100%', height: 'auto' }}
+              style={{ width: '100%', height: 'auto', filter: 'invert(1)' }}
             />
           </div>
         </div>
@@ -458,10 +458,10 @@ export default function Home() {
         <div className="grid-12 mb-16 lg:mb-24" style={{ alignItems: 'start' }}>
           {/* Body text — desktop: cols 5–8 | mobile: full width */}
           <div className="mb-6 lg:mb-0" style={{ gridColumn: '5 / 8' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               The menu follows a steady rhythm of change, adapting traditional foundations to reflect what is available at a given moment. This approach reflects what Fidel Caballero describes as Progressive Mexican cooking, rooted in tradition while remaining forward-looking. It draws from a broad Mexican pantry alongside ingredients from the Northeast. Familiar preparations shift over time, adjusting to seasonality while maintaining a clear sense of origin.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               The beverage program follows a similar direction, with a focus on Northern Mexico&apos;s distilling traditions and a particular emphasis on sotol from the Chihuahuan Desert. Selections are made with attention to origin and production, supporting a program that aligns closely with the structure of the menu.
             </p>
           </div>
@@ -483,7 +483,7 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/The%20idea%20of%20sharing%20extends%20beyond%20the%20dining%20room%2C%20shaping%20the%20relationships%20that%20support%20the%20kitchen%E2%80%99s%20work%2C-hB7zhSwk303icgfIRSHCgAX4r63jWa.svg"
               alt="The idea of sharing extends beyond the dining room, shaping the relationships that support the kitchen's work,"
-              style={{ width: '100%', height: 'auto', display: 'block' }}
+              style={{ width: '100%', height: 'auto', display: 'block', filter: 'invert(1)' }}
             />
           </div>
           {/* Second SVG — desktop: cols 4–8 indented | mobile: full width with left indent */}
@@ -491,7 +491,7 @@ export default function Home() {
             <img
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/from%20farmers%20and%20foragers%20to%20artisans%20and%20guests.-3VLH1UA8tsfp7qWlJNGSzjkYbLbVJM.svg"
               alt="from farmers and foragers to artisans and guests."
-              style={{ width: '100%', height: 'auto', display: 'block' }}
+              style={{ width: '100%', height: 'auto', display: 'block', filter: 'invert(1)' }}
             />
           </div>
         </div>
@@ -509,10 +509,10 @@ export default function Home() {
           </div>
           {/* Text — desktop: cols 7–10 | mobile: full width */}
           <div style={{ gridColumn: '7 / 10' }}>
-            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed mb-6" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               Corima works closely with farmers, foragers, and producers who follow seasonal growing practices and responsible stewardship. These relationships shape the menu as much as the kitchen itself, guiding how ingredients are sourced, used, and understood over time.
             </p>
-            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#000' }}>
+            <p className="leading-relaxed" style={{ fontSize: '15px', letterSpacing: '-0.01em', color: '#CBCBCB' }}>
               Within its first year, Corima earned a Michelin star, was named one of Bon Appétit&apos;s Best New Restaurants of 2024, and received a James Beard Award nomination. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
           </div>
@@ -523,8 +523,8 @@ export default function Home() {
       {/* Footer */}
       <footer
         style={{
-          backgroundColor: '#d1d1d1',
-          backgroundImage: 'url(/dining-bg.webp)',
+          backgroundColor: '#1a1a1a',
+          backgroundImage: 'url(/main-bg.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
@@ -532,11 +532,11 @@ export default function Home() {
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between">
-          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Contact</p>
-          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
-          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
-          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Instagram</p>
-          <p style={{ fontSize: '16px', color: '#000', margin: '0', fontWeight: '500' }}>Spotify</p>
+          <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Contact</p>
+          <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>3 Allen St. NY 10002</p>
+          <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
+          <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Instagram</p>
+          <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Spotify</p>
           <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
         </div>
       </footer>
