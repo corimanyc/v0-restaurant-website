@@ -352,23 +352,15 @@ export default function Home() {
               style={{ marginBottom: '64px' }}
             />
 
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Tasting Menu</h3>
-
-            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
-            </p>
-
-            <p className="leading-relaxed mb-3" style={{ fontSize: '16px' }}>
-              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
-            </p>
+            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Our Story</h3>
 
             <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
-              We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
+              The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City. Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
             </p>
 
-            <Link href="mailto:info@corimanyc.com" className="hover:opacity-70 transition" style={{ fontSize: '16px' }}>
-              <span className="mr-2">&bull;</span>Contact
-            </Link>
+            <p className="leading-relaxed" style={{ fontSize: '16px' }}>
+              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
+            </p>
           </div>
 
         </div>
