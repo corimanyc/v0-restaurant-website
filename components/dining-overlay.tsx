@@ -90,7 +90,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           </p>
           <Link
             href="mailto:info@corimanyc.com"
-            className="hover:opacity-70 transition"
+            className="nav-link"
             style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000' }}
           >
             <span className="mr-2">&bull;</span>Contact
@@ -110,8 +110,8 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           </p>
           <button
             onClick={onViewMenu}
-            className="hover:opacity-70 transition text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000' }}
+            className="nav-link text-left"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
             <span className="mr-2">&bull;</span>View Menu
           </button>
