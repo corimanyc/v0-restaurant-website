@@ -42,11 +42,8 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           height: 40px;
           font-size: 28px;
           background: transparent;
+          border: none;
           color: inherit;
-          transition: opacity 0.2s ease;
-        }
-        .dining-close-btn:hover {
-          opacity: 0.6;
         }
       `}</style>
 
@@ -60,7 +57,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         </h1>
         <button
           onClick={onClose}
-          className="dining-close-btn flex items-center justify-center cursor-pointer uppercase"
+          className="dining-close-btn nav-link flex items-center justify-center cursor-pointer uppercase"
           aria-label="Close dining panel"
         >
           X

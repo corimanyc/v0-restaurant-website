@@ -37,8 +37,8 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         </Link>
         <button
           onClick={onClose}
-          className="text-white hover:opacity-60 transition"
-          style={{ fontFamily: 'Satoshi, sans-serif', fontSize: '24px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1 }}
+          className="nav-link text-white"
+          style={{ fontFamily: 'Satoshi, sans-serif', fontSize: '24px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           aria-label="Close menu"
         >
           X
