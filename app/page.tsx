@@ -116,12 +116,12 @@ export default function Home() {
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#CBCBCB',
-            backdropFilter: 'blur(1px)',
-            WebkitBackdropFilter: 'blur(1px)',
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
             transition: 'opacity 0.5s ease',
           }}
         >
-          <nav className="flex items-center justify-between" style={{ padding: '24px 48px 12px 48px' }}>
+          <nav className="flex items-center justify-between" style={{ padding: '24px 48px 0 48px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
               <img
