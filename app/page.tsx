@@ -121,7 +121,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <nav className="flex items-center justify-between" style={{ padding: '24px 48px' }}>
+          <nav className="flex items-center justify-between" style={{ padding: '24px 48px 12px 48px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
               <img
