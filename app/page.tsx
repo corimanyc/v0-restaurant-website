@@ -131,12 +131,12 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <Link href="#about" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>About</Link>
-              <Link href="#reservations" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Reservations</Link>
-              <button onClick={() => setIsDiningOpen(true)} className="nav-link text-sm tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', padding: 0 }}>Dining</button>
-              <Link href="#events" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Events</Link>
-              <Link href="#press" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Press</Link>
-              <Link href="#shop" className="nav-link text-sm tracking-wider" style={{ color: 'inherit' }}>Shop</Link>
+              <Link href="#about" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>About</Link>
+              <Link href="#reservations" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Reservations</Link>
+              <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', padding: 0, fontSize: '16px' }}>Dining</button>
+              <Link href="#events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
+              <Link href="#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Press</Link>
+              <Link href="#shop" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Shop</Link>
             </div>
 
             {/* Mobile Menu Button */}
