@@ -245,11 +245,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
         </div>
 
-        {/* Right — scroll-aware image */}
+        {/* Right — scroll-aware image, top aligned with the "A La Carte" heading */}
         <div
           ref={imageRef}
           className="hidden lg:block flex-shrink-0 relative overflow-hidden"
-          style={{ marginRight: '24px', width: '550px' }}
+          style={{ marginRight: '24px', marginTop: '16px', width: '550px', alignSelf: 'flex-start', height: 'calc(100% - 16px)' }}
         >
           {Object.entries(sectionImages).map(([section, src]) => (
             <img
