@@ -190,7 +190,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="px-5 md:px-20 relative overflow-hidden"
+        className="px-5 md:px-6 relative overflow-hidden"
         style={{
           backgroundImage: 'url(/about-bg-v5.jpeg)',
           backgroundRepeat: 'repeat',
