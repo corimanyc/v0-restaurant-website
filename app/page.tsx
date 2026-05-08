@@ -119,7 +119,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <nav className="flex items-center justify-between" style={{ padding: '24px' }}>
+          <nav className="flex items-center justify-between" style={{ padding: '24px 48px' }}>
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
               <img
@@ -190,7 +190,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="px-5 md:px-6 relative overflow-hidden"
+        className="px-5 md:px-12 relative overflow-hidden"
         style={{
           backgroundImage: 'url(/about-bg-v5.jpeg)',
           backgroundRepeat: 'repeat',
