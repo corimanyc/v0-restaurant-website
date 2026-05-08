@@ -200,7 +200,7 @@ export default function Home() {
         id="about"
         className="px-5 md:px-20 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-bg-v5.jpeg)',
+          backgroundImage: 'url(/about-bg-v6.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
