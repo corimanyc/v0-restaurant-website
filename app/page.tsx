@@ -208,7 +208,7 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Sketch overlay — black ink on top of dark grain */}
+        {/* Sketch overlay — tinted to #CACACA to match the body text color */}
         <img
           src="/about-sketch-black.png"
           alt=""
@@ -220,6 +220,8 @@ export default function Home() {
             transform: 'translateX(-50%)',
             width: 'min(1800px, 140%)',
             height: 'auto',
+            // invert black -> white, then brightness(0.79) -> rgb(202,202,202) = #CACACA
+            filter: 'invert(1) brightness(0.79)',
             opacity: 1,
             zIndex: 0,
           }}
