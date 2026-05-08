@@ -236,7 +236,7 @@ export default function Home() {
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1 }}>
+        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '160px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
             <div style={{ maxWidth: '80%' }}>
