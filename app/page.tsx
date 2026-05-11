@@ -231,7 +231,7 @@ export default function Home() {
       >
         {/* Sketch overlay — original black ink layered over the dark grain */}
         <img
-          src="/about-sketch-black.png"
+          src="/about-sketch-polished.png"
           alt=""
           aria-hidden="true"
           className="pointer-events-none select-none absolute"
