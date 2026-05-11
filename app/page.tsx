@@ -231,13 +231,14 @@ export default function Home() {
       >
         {/* Sketch overlay — original black ink layered over the dark grain */}
         <img
-          src="/about-sketch-v10.png"
+          src="/about-sketch.png"
           alt=""
           aria-hidden="true"
           className="pointer-events-none select-none absolute"
           style={{
             top: '60px',
-            right: '-48px',
+            left: '50%',
+            transform: 'translateX(-50%)',
             width: 'min(850px, 65%)',
             height: 'auto',
             opacity: 1,
