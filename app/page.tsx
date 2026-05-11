@@ -239,7 +239,7 @@ export default function Home() {
             top: '-30px',
             left: '50%',
             transform: 'translateX(-50%)',
-            width: 'min(1600px, 120%)',
+            width: 'min(700px, 55%)',
             height: 'auto',
             opacity: 1,
             zIndex: 0,
