@@ -236,10 +236,10 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none select-none absolute"
           style={{
-            top: '-30px',
+            top: '60px',
             left: '50%',
             transform: 'translateX(-50%)',
-            width: 'min(700px, 55%)',
+            width: 'min(850px, 65%)',
             height: 'auto',
             opacity: 1,
             zIndex: 0,
