@@ -243,7 +243,6 @@ export default function Home() {
             height: 'auto',
             opacity: 1,
             zIndex: 0,
-            filter: 'invert(1)',
           }}
         />
 
