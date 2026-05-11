@@ -238,7 +238,7 @@ export default function Home() {
           style={{
             top: '60px',
             left: '50%',
-            transform: 'translateX(-50%)',
+            transform: 'translateX(-40%)',
             width: 'min(850px, 65%)',
             height: 'auto',
             opacity: 1,
