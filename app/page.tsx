@@ -237,8 +237,7 @@ export default function Home() {
           className="pointer-events-none select-none absolute"
           style={{
             top: '60px',
-            left: '50%',
-            transform: 'translateX(-40%)',
+            right: '48px',
             width: 'min(850px, 65%)',
             height: 'auto',
             opacity: 1,
