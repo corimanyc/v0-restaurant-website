@@ -138,7 +138,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <nav className="relative flex items-center justify-between" style={{ padding: '24px 48px 0 48px' }}>
+          <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 w-24 h-auto">
               <img
@@ -194,7 +194,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div style={{ padding: '24px 48px' }} className="flex items-center justify-between">
+          <div className="flex items-center justify-between px-5 md:px-12 py-6">
             {/* Address — fades out as soon as hero leaves viewport */}
             <p
               className="text-xs md:text-sm tracking-widest uppercase text-white"
