@@ -191,6 +191,14 @@ a.text-black, button.text-black, [role="button"].text-black,
 
 /* Animated underline for desktop nav links — slides in from left to right on hover */
 @layer utilities {
+  :root {
+    --gutter: 20px;
+  }
+  @media (min-width: 768px) {
+    :root {
+      --gutter: 48px;
+    }
+  }
   .nav-link {
     position: relative;
     display: inline-block;

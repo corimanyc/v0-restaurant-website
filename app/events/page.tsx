@@ -86,10 +86,12 @@ export default function EventsPage() {
       {/* Carousel — left edge aligned to nav gutter */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
         <div
-          className="flex gap-6 overflow-x-auto pb-4 w-full items-center events-carousel"
+          className="flex gap-6 overflow-x-auto pb-4 w-full items-center"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
+            paddingLeft: 'var(--gutter)',
+            paddingRight: 'var(--gutter)',
           }}
         >
           {posters.map((poster) => (
@@ -106,19 +108,6 @@ export default function EventsPage() {
           ))}
         </div>
       </main>
-
-      <style jsx>{`
-        .events-carousel {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-        @media (min-width: 768px) {
-          .events-carousel {
-            padding-left: 48px;
-            padding-right: 48px;
-          }
-        }
-      `}</style>
 
       {/* Footer — matches home (icon + address) */}
       <footer
