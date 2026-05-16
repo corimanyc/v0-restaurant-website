@@ -83,32 +83,27 @@ export default function EventsPage() {
         onMenuClick={() => setIsMenuOverlayOpen(true)}
       />
 
-      {/* Carousel — flush left gutter */}
+      {/* Carousel — flush left gutter, full posters (no cropping) */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
         <div
-          className="flex gap-6 overflow-x-auto pb-4 pl-5 md:pl-12 pr-5 md:pr-12 w-full"
+          className="flex gap-6 overflow-x-auto pb-4 pl-5 md:pl-12 pr-5 md:pr-12 w-full items-center"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
           }}
         >
           {posters.map((poster) => (
-            <div
+            <img
               key={poster.src}
-              className="flex-shrink-0"
+              src={poster.src}
+              alt={poster.alt}
+              className="block flex-shrink-0 w-auto"
               style={{
-                width: 'min(420px, 80vw)',
-                aspectRatio: poster.aspect,
+                height: 'min(70vh, 600px)',
                 scrollSnapAlign: 'start',
+                borderRadius: '2px',
               }}
-            >
-              <img
-                src={poster.src}
-                alt={poster.alt}
-                className="w-full h-full object-cover block"
-                style={{ borderRadius: '2px' }}
-              />
-            </div>
+            />
           ))}
         </div>
       </main>
