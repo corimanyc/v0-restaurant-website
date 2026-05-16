@@ -229,20 +229,26 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Headline + Sketch — text to left gutter, sketch to right gutter */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
-          <img
-            src="/hero-text-v3.svg"
-            alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
-            className="block w-full h-auto lg:flex-1"
-            style={{ maxWidth: '600px' }}
-          />
+        {/* Headline pinned to left gutter, sketch pinned to right gutter — original sizes preserved */}
+        <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
           <img
             src="/about-sketch.png"
             alt=""
             aria-hidden="true"
-            className="pointer-events-none select-none block w-full h-auto lg:flex-1"
-            style={{ maxWidth: '500px' }}
+            className="pointer-events-none select-none absolute"
+            style={{
+              top: '60px',
+              right: 0,
+              width: 'min(850px, 65%)',
+              height: 'auto',
+              zIndex: 0,
+            }}
+          />
+          <img
+            src="/hero-text-v3.svg"
+            alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
+            className="block w-full h-auto relative"
+            style={{ maxWidth: '1100px', zIndex: 1 }}
           />
         </div>
 
