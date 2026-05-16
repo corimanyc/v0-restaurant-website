@@ -82,31 +82,40 @@ export default function EventsPage() {
         onMenuClick={() => setIsMenuOverlayOpen(true)}
       />
 
-      {/* Carousel: full-width horizontal scroller. Left padding matches the nav gutter
-          so the FIRST poster's left edge aligns with the CORIMA logo. No right padding —
-          posters extend to the right viewport edge. Posters can scroll freely past both
-          edges (no clipping under any gutter). */}
+      {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
+          to the right of the nav gutter. No right padding/margin anywhere. */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
         <div
-          className="flex gap-6 overflow-x-auto pb-4 pl-12 md:pl-24 w-full"
+          className="overflow-x-auto w-full"
           style={{
-            scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
           }}
         >
-          {POSTERS.map((poster) => (
-            <img
-              key={poster.src}
-              src={poster.src}
-              alt={poster.alt}
-              className="block flex-shrink-0 w-auto select-none"
-              draggable={false}
-              style={{
-                height: 'min(70vh, 600px)',
-                scrollSnapAlign: 'start',
-              }}
-            />
-          ))}
+          <div
+            className="flex"
+            style={{
+              gap: '24px',
+              paddingLeft: '80px',
+              paddingRight: 0,
+              marginRight: 0,
+              width: 'max-content',
+            }}
+          >
+            {POSTERS.map((poster) => (
+              <img
+                key={poster.src}
+                src={poster.src}
+                alt={poster.alt}
+                className="block select-none"
+                draggable={false}
+                style={{
+                  height: 'min(70vh, 600px)',
+                  width: 'auto',
+                  flexShrink: 0,
+                }}
+              />
+            ))}
+          </div>
         </div>
       </main>
 
