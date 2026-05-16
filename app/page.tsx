@@ -248,7 +248,7 @@ export default function Home() {
             src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
             className="block w-full h-auto relative"
-            style={{ maxWidth: '1100px', zIndex: 1 }}
+            style={{ maxWidth: '1100px', zIndex: 1, marginTop: '120px' }}
           />
         </div>
 
