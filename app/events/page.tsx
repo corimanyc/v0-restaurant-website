@@ -6,14 +6,14 @@ import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 
-const posters = [
-  { src: '/events/contra.jpg', alt: 'Corima x Contra — January 20', aspect: '9 / 16' },
-  { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima — Circle of Sharing, December 16, presented by Resy', aspect: '4 / 5' },
-  { src: '/events/eliane.png', alt: 'Corima x Eliane — presented by Resy', aspect: '4 / 5' },
-  { src: '/events/oriole.jpg', alt: 'Oriole x Corima — April 15', aspect: '1 / 1' },
-  { src: '/events/osito.jpg', alt: 'Corima x Osito — 1 Year Anniversary Collab, January 15, 2025', aspect: '1 / 1' },
-  { src: '/events/reverie.jpg', alt: 'Corima x Reverie', aspect: '1 / 1' },
-  { src: '/events/lysee.jpg', alt: 'Lysée x Corima', aspect: '1 / 1' },
+const POSTERS = [
+  { src: '/events/contra.jpg', alt: 'Corima x Contra' },
+  { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima' },
+  { src: '/events/eliane.png', alt: 'Corima x Eliane' },
+  { src: '/events/oriole.jpg', alt: 'Oriole x Corima' },
+  { src: '/events/osito.jpg', alt: 'Corima x Osito' },
+  { src: '/events/reverie.jpg', alt: 'Corima x Reverie' },
+  { src: '/events/lysee.jpg', alt: 'Lysee x Corima' },
 ]
 
 export default function EventsPage() {
@@ -44,14 +44,13 @@ export default function EventsPage() {
         onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
       />
 
-      {/* Header — mirrors the home nav */}
+      {/* Header */}
       <header
         className="relative"
         style={{
           zIndex: 46,
           opacity: isDiningOpen ? 0 : 1,
           pointerEvents: isDiningOpen ? 'none' : 'all',
-          color: '#CBCBCB',
           transition: 'opacity 0.5s ease',
         }}
       >
@@ -83,33 +82,40 @@ export default function EventsPage() {
         onMenuClick={() => setIsMenuOverlayOpen(true)}
       />
 
-      {/* Carousel — left edge aligned to nav gutter */}
+      {/* Carousel: outer section provides the same px-5 md:px-12 gutter as the nav.
+          The inner scroller uses negative margins + matching padding to allow posters
+          to scroll past the right edge while the FIRST poster's left edge sits exactly
+          at the gutter (aligned with the CORIMA logo). */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
-        <div
-          className="flex gap-6 overflow-x-auto pb-4 w-full items-center"
-          style={{
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-            paddingLeft: 'var(--gutter)',
-            paddingRight: 'var(--gutter)',
-          }}
-        >
-          {posters.map((poster) => (
-            <img
-              key={poster.src}
-              src={poster.src}
-              alt={poster.alt}
-              className="block flex-shrink-0 w-auto"
-              style={{
-                height: 'min(70vh, 600px)',
-                scrollSnapAlign: 'start',
-              }}
-            />
-          ))}
-        </div>
+        <section className="w-full px-5 md:px-12">
+          <div
+            className="flex gap-6 overflow-x-auto pb-4"
+            style={{
+              marginRight: 'calc(var(--scroll-gutter) * -1)',
+              paddingRight: 'var(--scroll-gutter)',
+              scrollSnapType: 'x mandatory',
+              WebkitOverflowScrolling: 'touch',
+              ['--scroll-gutter' as string]: '20px',
+            }}
+          >
+            {POSTERS.map((poster) => (
+              <img
+                key={poster.src}
+                src={poster.src}
+                alt={poster.alt}
+                className="block flex-shrink-0 w-auto select-none"
+                draggable={false}
+                style={{
+                  height: 'min(70vh, 600px)',
+                  scrollSnapAlign: 'start',
+                }}
+              />
+            ))}
+          </div>
+        </section>
       </main>
 
-      {/* Footer — matches home (icon + address) */}
+      {/* Footer */}
       <footer
         style={{
           opacity: isDiningOpen ? 0 : 1,
