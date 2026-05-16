@@ -229,30 +229,20 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Sketch overlay — original black ink layered over the dark grain */}
-        <img
-          src="/about-sketch.png"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute"
-          style={{
-            top: '60px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: 'min(850px, 65%)',
-            height: 'auto',
-            opacity: 1,
-            zIndex: 0,
-          }}
-        />
-
-        {/* Headline */}
-        <div className="flex items-center justify-center py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
+        {/* Headline + Sketch — text to left gutter, sketch to right gutter */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 py-24 md:min-h-screen relative" style={{ zIndex: 1 }}>
           <img
             src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
-            className="block mx-auto w-full h-auto"
-            style={{ maxWidth: '1100px' }}
+            className="block w-full h-auto lg:flex-1"
+            style={{ maxWidth: '600px' }}
+          />
+          <img
+            src="/about-sketch.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none select-none block w-full h-auto lg:flex-1"
+            style={{ maxWidth: '500px' }}
           />
         </div>
 
