@@ -108,7 +108,7 @@ export default function EventsPage() {
                 className="block select-none"
                 draggable={false}
                 style={{
-                  height: 'min(70vh, 600px)',
+                  height: 'min(58vh, 500px)',
                   width: 'auto',
                   flexShrink: 0,
                 }}
