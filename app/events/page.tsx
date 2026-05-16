@@ -92,10 +92,9 @@ export default function EventsPage() {
           }}
         >
           <div
-            className="flex"
+            className="flex pl-5 md:pl-12"
             style={{
               gap: '24px',
-              paddingLeft: '80px',
               paddingRight: 0,
               marginRight: 0,
               width: 'max-content',
