@@ -84,7 +84,7 @@ export default function EventsPage() {
 
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
           to the right of the nav gutter. No right padding/margin anywhere. */}
-      <main className="flex-1 flex items-end pb-16 lg:pb-24">
+      <main className="flex-1 flex items-end pb-4 lg:pb-6">
         <div
           className="overflow-x-auto w-full"
           style={{
