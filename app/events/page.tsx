@@ -101,7 +101,6 @@ export default function EventsPage() {
               style={{
                 height: 'min(70vh, 600px)',
                 scrollSnapAlign: 'start',
-                borderRadius: '2px',
               }}
             />
           ))}
