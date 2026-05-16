@@ -88,7 +88,7 @@ export default function EventsPage() {
           edges (no clipping under any gutter). */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
         <div
-          className="flex gap-6 overflow-x-auto pb-4 pl-5 md:pl-12 w-full"
+          className="flex gap-6 overflow-x-auto pb-4 pl-12 md:pl-24 w-full"
           style={{
             scrollSnapType: 'x mandatory',
             WebkitOverflowScrolling: 'touch',
