@@ -82,37 +82,32 @@ export default function EventsPage() {
         onMenuClick={() => setIsMenuOverlayOpen(true)}
       />
 
-      {/* Carousel: outer section provides the same px-5 md:px-12 gutter as the nav.
-          The inner scroller uses negative margins + matching padding to allow posters
-          to scroll past the right edge while the FIRST poster's left edge sits exactly
-          at the gutter (aligned with the CORIMA logo). */}
+      {/* Carousel: full-width horizontal scroller. Left padding matches the nav gutter
+          so the FIRST poster's left edge aligns with the CORIMA logo. No right padding —
+          posters extend to the right viewport edge. Posters can scroll freely past both
+          edges (no clipping under any gutter). */}
       <main className="flex-1 flex items-center py-16 lg:py-24">
-        <section className="w-full px-5 md:px-12">
-          <div
-            className="flex gap-6 overflow-x-auto pb-4"
-            style={{
-              marginRight: 'calc(var(--scroll-gutter) * -1)',
-              paddingRight: 'var(--scroll-gutter)',
-              scrollSnapType: 'x mandatory',
-              WebkitOverflowScrolling: 'touch',
-              ['--scroll-gutter' as string]: '20px',
-            }}
-          >
-            {POSTERS.map((poster) => (
-              <img
-                key={poster.src}
-                src={poster.src}
-                alt={poster.alt}
-                className="block flex-shrink-0 w-auto select-none"
-                draggable={false}
-                style={{
-                  height: 'min(70vh, 600px)',
-                  scrollSnapAlign: 'start',
-                }}
-              />
-            ))}
-          </div>
-        </section>
+        <div
+          className="flex gap-6 overflow-x-auto pb-4 pl-5 md:pl-12 w-full"
+          style={{
+            scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: 'touch',
+          }}
+        >
+          {POSTERS.map((poster) => (
+            <img
+              key={poster.src}
+              src={poster.src}
+              alt={poster.alt}
+              className="block flex-shrink-0 w-auto select-none"
+              draggable={false}
+              style={{
+                height: 'min(70vh, 600px)',
+                scrollSnapAlign: 'start',
+              }}
+            />
+          ))}
+        </div>
       </main>
 
       {/* Footer */}
