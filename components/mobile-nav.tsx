@@ -51,7 +51,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
           { label: 'About', href: '#about', onClick: onClose },
           { label: 'Reservations', href: 'https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2', onClick: onClose },
           { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
-          { label: 'Events', href: '#events', onClick: onClose },
+          { label: 'Events', href: '/events', onClick: onClose },
           { label: 'Press', href: '#press', onClick: onClose },
           { label: 'Shop', href: 'https://corimanyc.bigcartel.com', onClick: onClose },
         ].map(({ label, href, onClick }) => (

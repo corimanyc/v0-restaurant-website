@@ -163,7 +163,7 @@ export default function Home() {
               </Link>
               <Link href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Reservations</Link>
               <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', fontSize: '16px', fontFamily: 'inherit', lineHeight: 'inherit', cursor: 'pointer' }}>Dining</button>
-              <Link href="#events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
+              <Link href="/events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
               <Link href="#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Press</Link>
               <Link href="https://corimanyc.bigcartel.com" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Shop</Link>
             </div>
@@ -367,56 +367,6 @@ export default function Home() {
       </section>
       {/* End dark section */}
       </div>
-
-      {/* Events Section — horizontal scroll carousel of past collab posters */}
-      <section
-        id="events"
-        style={{
-          backgroundColor: '#1a1a1a',
-          backgroundImage: 'url(/main-bg.jpeg)',
-          backgroundRepeat: 'repeat',
-          backgroundSize: '512px 512px',
-        }}
-        className="py-16 lg:py-24"
-      >
-        <div className="px-5 md:px-12 mb-8">
-          <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#CBCBCB', letterSpacing: '0.05em' }}>EVENTS</h2>
-        </div>
-        <div
-          className="flex gap-6 overflow-x-auto pb-4 pl-5 md:pl-12 pr-5 md:pr-12"
-          style={{
-            scrollSnapType: 'x mandatory',
-            WebkitOverflowScrolling: 'touch',
-          }}
-        >
-          {[
-            { src: '/events/contra.jpg', alt: 'Corima x Contra — January 20', aspect: '9 / 16' },
-            { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima — Circle of Sharing, December 16, presented by Resy', aspect: '4 / 5' },
-            { src: '/events/eliane.png', alt: 'Corima x Eliane — presented by Resy', aspect: '4 / 5' },
-            { src: '/events/oriole.jpg', alt: 'Oriole x Corima — April 15', aspect: '1 / 1' },
-            { src: '/events/osito.jpg', alt: 'Corima x Osito — 1 Year Anniversary Collab, January 15, 2025', aspect: '1 / 1' },
-            { src: '/events/reverie.jpg', alt: 'Corima x Reverie', aspect: '1 / 1' },
-            { src: '/events/lysee.jpg', alt: 'Lysée x Corima', aspect: '1 / 1' },
-          ].map((poster) => (
-            <div
-              key={poster.src}
-              className="flex-shrink-0"
-              style={{
-                width: 'min(360px, 75vw)',
-                aspectRatio: poster.aspect,
-                scrollSnapAlign: 'start',
-              }}
-            >
-              <img
-                src={poster.src}
-                alt={poster.alt}
-                className="w-full h-full object-cover block"
-                style={{ borderRadius: '2px' }}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* About Section — 12-col desktop grid, single-col mobile */}
       <section
