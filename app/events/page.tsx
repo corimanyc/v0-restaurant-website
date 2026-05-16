@@ -105,18 +105,26 @@ export default function EventsPage() {
                 key={poster.src}
                 src={poster.src}
                 alt={poster.alt}
-                className="block select-none"
+                className="block select-none poster-img"
                 draggable={false}
                 style={{
                   height: 'min(60.9vh, 525px)',
                   width: 'auto',
                   flexShrink: 0,
+                  transition: 'transform 0.3s ease',
+                  transformOrigin: 'center',
                 }}
               />
             ))}
           </div>
         </div>
       </main>
+
+      <style jsx>{`
+        .poster-img:hover {
+          transform: scale(0.96);
+        }
+      `}</style>
 
       {/* Footer removed on events page */}
     </div>
