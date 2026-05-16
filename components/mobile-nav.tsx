@@ -49,7 +49,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
       <nav className="flex flex-col" style={{ padding: '48px 24px', gap: '4px', flex: 1 }}>
         {[
           { label: 'About', href: '#about', onClick: onClose },
-          { label: 'Reservations', href: 'https://resy.com', onClick: onClose },
+          { label: 'Reservations', href: 'https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2', onClick: onClose },
           { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
           { label: 'Events', href: '#events', onClick: onClose },
           { label: 'Press', href: '#press', onClick: onClose },
