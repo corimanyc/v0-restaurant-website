@@ -24,7 +24,7 @@ export default function EventsPage() {
 
   return (
     <div
-      className="min-h-screen flex flex-col"
+      className="h-screen flex flex-col overflow-hidden"
       style={{
         backgroundColor: '#1a1a1a',
         backgroundImage: 'url(/main-bg.jpeg)',
@@ -118,21 +118,7 @@ export default function EventsPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer
-        style={{
-          opacity: isDiningOpen ? 0 : 1,
-          pointerEvents: isDiningOpen ? 'none' : 'all',
-          transition: 'opacity 0.5s ease',
-        }}
-      >
-        <div className="flex items-center justify-between px-5 md:px-12 py-6">
-          <p className="text-xs md:text-sm tracking-widest uppercase text-white">
-            {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
-          </p>
-          <img src="/footer-logo.png" alt="CORIMA" className="w-6 h-6 object-contain ml-auto" />
-        </div>
-      </footer>
+      {/* Footer removed on events page */}
     </div>
   )
 }
