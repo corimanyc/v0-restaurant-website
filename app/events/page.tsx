@@ -122,7 +122,7 @@ export default function EventsPage() {
 
       <style jsx>{`
         .poster-img:hover {
-          transform: scale(0.96);
+          transform: scale(0.97);
         }
       `}</style>
 
