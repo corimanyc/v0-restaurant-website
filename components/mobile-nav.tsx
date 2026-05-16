@@ -53,7 +53,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
           { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
           { label: 'Events', href: '#events', onClick: onClose },
           { label: 'Press', href: '#press', onClick: onClose },
-          { label: 'Shop', href: '#shop', onClick: onClose },
+          { label: 'Shop', href: 'https://corimanyc.bigcartel.com', onClick: onClose },
         ].map(({ label, href, onClick }) => (
           <Link
             key={label}

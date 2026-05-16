@@ -165,7 +165,7 @@ export default function Home() {
               <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', fontSize: '16px', fontFamily: 'inherit', lineHeight: 'inherit', cursor: 'pointer' }}>Dining</button>
               <Link href="#events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
               <Link href="#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Press</Link>
-              <Link href="#shop" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Shop</Link>
+              <Link href="https://corimanyc.bigcartel.com" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Shop</Link>
             </div>
 
             {/* Mobile Menu Button */}
