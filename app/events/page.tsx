@@ -21,6 +21,7 @@ export default function EventsPage() {
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [menuScrollTarget, setMenuScrollTarget] = useState<'a-la-carte' | 'cocktail' | 'wine' | undefined>(undefined)
   const [isDiningOpen, setIsDiningOpen] = useState(false)
+  const [expandedPoster, setExpandedPoster] = useState<{ src: string; alt: string } | null>(null)
 
   return (
     <div
@@ -105,7 +106,8 @@ export default function EventsPage() {
                 key={poster.src}
                 src={poster.src}
                 alt={poster.alt}
-                className="block select-none poster-img"
+                onClick={() => setExpandedPoster(poster)}
+                className="block select-none poster-img cursor-pointer"
                 draggable={false}
                 style={{
                   height: 'min(60.9vh, 525px)',
@@ -120,9 +122,66 @@ export default function EventsPage() {
         </div>
       </main>
 
+      {/* Expanded poster lightbox */}
+      {expandedPoster && (
+        <div
+          onClick={() => setExpandedPoster(null)}
+          className="fixed inset-0 flex items-center justify-center px-5 md:px-12 py-12"
+          style={{
+            zIndex: 100,
+            backgroundColor: 'rgba(0, 0, 0, 0.85)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            cursor: 'zoom-out',
+            animation: 'lightbox-fade 0.25s ease',
+          }}
+        >
+          <img
+            src={expandedPoster.src}
+            alt={expandedPoster.alt}
+            onClick={(e) => e.stopPropagation()}
+            className="block select-none"
+            draggable={false}
+            style={{
+              maxHeight: '90vh',
+              maxWidth: '90vw',
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              cursor: 'default',
+              animation: 'lightbox-zoom 0.3s cubic-bezier(0.2, 0.9, 0.3, 1)',
+            }}
+          />
+          <button
+            onClick={() => setExpandedPoster(null)}
+            aria-label="Close"
+            className="absolute top-6 right-6 md:top-8 md:right-12"
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: '#CBCBCB',
+              fontSize: '32px',
+              lineHeight: 1,
+              cursor: 'pointer',
+              padding: '8px',
+            }}
+          >
+            ×
+          </button>
+        </div>
+      )}
+
       <style jsx>{`
         .poster-img:hover {
           transform: scale(0.97);
+        }
+        @keyframes lightbox-fade {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        @keyframes lightbox-zoom {
+          from { opacity: 0; transform: scale(0.92); }
+          to { opacity: 1; transform: scale(1); }
         }
       `}</style>
 
