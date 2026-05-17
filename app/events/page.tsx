@@ -17,8 +17,8 @@ const POSTERS = [
 ]
 
 // Scale range: image at viewport center reaches MAX_SCALE; far from center returns to MIN_SCALE.
-const MIN_SCALE = 0.72
-const MAX_SCALE = 1.0
+const MIN_SCALE = 0.6
+const MAX_SCALE = 1.25
 
 export default function EventsPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -123,7 +123,7 @@ export default function EventsPage() {
       />
 
       {/* Vertical carousel — each poster scales up as it approaches viewport center */}
-      <main className="flex-1 flex flex-col items-center px-5 md:px-12 pt-12 pb-24" style={{ gap: '6vh' }}>
+      <main className="flex-1 flex flex-col items-center px-5 md:px-12 pt-12 pb-24" style={{ gap: '1.5vh' }}>
         {POSTERS.map((poster, i) => (
           <div
             key={poster.src}
