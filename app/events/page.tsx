@@ -85,7 +85,7 @@ export default function EventsPage() {
 
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
           to the right of the nav gutter. No right padding/margin anywhere. */}
-      <main className="flex-1 flex items-end pb-6 lg:pb-8">
+      <main className="flex-1 flex items-end pb-10 lg:pb-14">
         <div
           className="overflow-x-auto w-full"
           style={{
@@ -129,9 +129,9 @@ export default function EventsPage() {
           className="fixed inset-0 flex items-center justify-center px-5 md:px-12 py-12"
           style={{
             zIndex: 100,
-            backgroundColor: 'rgba(26, 26, 26, 0.15)',
-            backdropFilter: 'blur(6px)',
-            WebkitBackdropFilter: 'blur(6px)',
+            backgroundColor: 'rgba(0, 0, 0, 0.55)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
             cursor: 'zoom-out',
             animation: 'lightbox-fade 0.25s ease',
           }}
