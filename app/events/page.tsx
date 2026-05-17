@@ -103,33 +103,21 @@ export default function EventsPage() {
             }}
           >
             {POSTERS.map((poster) => (
-              <div key={poster.src} className="flex flex-col" style={{ flexShrink: 0 }}>
-                <img
-                  src={poster.src}
-                  alt={poster.alt}
-                  onClick={() => setExpandedPoster(poster)}
-                  className="block select-none poster-img"
-                  draggable={false}
-                  style={{
-                    height: 'min(60.9vh, 525px)',
-                    width: 'auto',
-                    transition: 'transform 0.3s ease',
-                    transformOrigin: 'center',
-                  }}
-                />
-                <span
-                  className="tracking-wider"
-                  style={{
-                    marginTop: '8px',
-                    fontSize: '16px',
-                    fontWeight: 400,
-                    color: '#CBCBCB',
-                    letterSpacing: '0.05em',
-                  }}
-                >
-                  {poster.label}
-                </span>
-              </div>
+              <img
+                key={poster.src}
+                src={poster.src}
+                alt={poster.alt}
+                onClick={() => setExpandedPoster(poster)}
+                className="block select-none poster-img"
+                draggable={false}
+                style={{
+                  height: 'min(60.9vh, 525px)',
+                  width: 'auto',
+                  flexShrink: 0,
+                  transition: 'transform 0.3s ease',
+                  transformOrigin: 'center',
+                }}
+              />
             ))}
           </div>
         </div>
