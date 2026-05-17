@@ -28,9 +28,10 @@ export default function EventsPage() {
       className="h-screen flex flex-col overflow-hidden"
       style={{
         backgroundColor: '#1a1a1a',
-        backgroundImage: 'url(/main-bg.jpeg)',
-        backgroundRepeat: 'repeat',
-        backgroundSize: '512px 512px',
+        backgroundImage: 'url(/events-bg.jpg)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
         color: '#CBCBCB',
       }}
     >
