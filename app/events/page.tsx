@@ -31,15 +31,18 @@ export default function EventsPage() {
         color: '#CBCBCB',
       }}
     >
-      {/* Background image — full bleed, no blur */}
+      {/* Background image — slightly blurred. Negative inset hides the blur fade
+          edges so the dark base color isn't revealed at the viewport edges. */}
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none"
+        className="absolute pointer-events-none"
         style={{
+          inset: '-40px',
           backgroundImage: 'url(/events-bg.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
+          filter: 'blur(3px)',
           zIndex: 0,
         }}
       />
