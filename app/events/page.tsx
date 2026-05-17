@@ -129,9 +129,9 @@ export default function EventsPage() {
           className="fixed inset-0 flex items-center justify-center px-5 md:px-12 py-12"
           style={{
             zIndex: 100,
-            backgroundColor: 'rgba(0, 0, 0, 0.85)',
-            backdropFilter: 'blur(8px)',
-            WebkitBackdropFilter: 'blur(8px)',
+            backgroundColor: 'rgba(26, 26, 26, 0.35)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
             cursor: 'zoom-out',
             animation: 'lightbox-fade 0.25s ease',
           }}
