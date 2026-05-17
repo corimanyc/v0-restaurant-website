@@ -146,7 +146,6 @@ export default function EventsPage() {
             backgroundColor: 'rgba(0, 0, 0, 0.55)',
             backdropFilter: 'blur(10px)',
             WebkitBackdropFilter: 'blur(10px)',
-            cursor: 'zoom-out',
             animation: 'lightbox-fade 0.25s ease',
           }}
         >
@@ -162,7 +161,6 @@ export default function EventsPage() {
               width: 'auto',
               height: 'auto',
               objectFit: 'contain',
-              cursor: 'default',
               animation: 'lightbox-zoom 0.3s cubic-bezier(0.2, 0.9, 0.3, 1)',
             }}
           />
@@ -173,7 +171,7 @@ export default function EventsPage() {
             style={{
               position: 'absolute',
               top: '24px',
-              right: '20px',
+              right: '48px',
               background: 'transparent',
               border: 'none',
               color: '#CBCBCB',
@@ -181,7 +179,6 @@ export default function EventsPage() {
               lineHeight: 1,
               fontWeight: 300,
               padding: '0 0 4px 0',
-              cursor: 'pointer',
               zIndex: 2,
             }}
           >
