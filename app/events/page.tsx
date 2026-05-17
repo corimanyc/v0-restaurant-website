@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -16,6 +16,10 @@ const POSTERS = [
   { src: '/events/lysee.jpg', alt: 'Lysee x Corima' },
 ]
 
+// Scale range: image at viewport center reaches MAX_SCALE; far from center returns to MIN_SCALE.
+const MIN_SCALE = 0.72
+const MAX_SCALE = 1.0
+
 export default function EventsPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
@@ -23,9 +27,44 @@ export default function EventsPage() {
   const [isDiningOpen, setIsDiningOpen] = useState(false)
   const [expandedPoster, setExpandedPoster] = useState<{ src: string; alt: string } | null>(null)
 
+  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    let frame = 0
+    const update = () => {
+      const vh = window.innerHeight
+      const center = vh / 2
+      itemRefs.current.forEach((el) => {
+        if (!el) return
+        const rect = el.getBoundingClientRect()
+        const itemCenter = rect.top + rect.height / 2
+        const distance = Math.abs(itemCenter - center)
+        // Normalize: 0 at viewport center, 1 at half viewport away.
+        const t = Math.min(1, distance / (vh / 2))
+        // Smooth easing — eased-in-out cosine.
+        const eased = (1 - Math.cos((1 - t) * Math.PI)) / 2
+        const scale = MIN_SCALE + (MAX_SCALE - MIN_SCALE) * eased
+        el.style.transform = `scale(${scale})`
+      })
+      frame = 0
+    }
+    const onScroll = () => {
+      if (frame) return
+      frame = requestAnimationFrame(update)
+    }
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
+  }, [])
+
   return (
     <div
-      className="h-screen flex flex-col overflow-hidden"
+      className="min-h-screen flex flex-col"
       style={{
         backgroundColor: '#1a1a1a',
         backgroundImage: 'url(/main-bg.jpeg)',
@@ -47,7 +86,7 @@ export default function EventsPage() {
 
       {/* Header */}
       <header
-        className="relative"
+        className="sticky top-0"
         style={{
           zIndex: 46,
           opacity: isDiningOpen ? 0 : 1,
@@ -55,7 +94,7 @@ export default function EventsPage() {
           transition: 'opacity 0.5s ease',
         }}
       >
-        <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
+        <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6 pb-4">
           <Link href="/" className="flex-shrink-0 w-24 h-auto">
             <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
           </Link>
@@ -83,43 +122,33 @@ export default function EventsPage() {
         onMenuClick={() => setIsMenuOverlayOpen(true)}
       />
 
-      {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
-          to the right of the nav gutter. No right padding/margin anywhere. */}
-      <main className="flex-1 flex items-end pb-10 lg:pb-14">
-        <div
-          className="overflow-x-auto w-full"
-          style={{
-            WebkitOverflowScrolling: 'touch',
-          }}
-        >
+      {/* Vertical carousel — each poster scales up as it approaches viewport center */}
+      <main className="flex-1 flex flex-col items-center px-5 md:px-12 pt-12 pb-24" style={{ gap: '6vh' }}>
+        {POSTERS.map((poster, i) => (
           <div
-            className="flex pl-5 md:pl-12"
+            key={poster.src}
+            ref={(el) => { itemRefs.current[i] = el }}
+            onClick={() => setExpandedPoster(poster)}
+            className="cursor-pointer"
             style={{
-              gap: '12px',
-              paddingRight: 0,
-              marginRight: 0,
-              width: 'max-content',
+              transform: `scale(${MIN_SCALE})`,
+              transformOrigin: 'center',
+              willChange: 'transform',
+              transition: 'transform 0.05s linear',
             }}
           >
-            {POSTERS.map((poster) => (
-              <img
-                key={poster.src}
-                src={poster.src}
-                alt={poster.alt}
-                onClick={() => setExpandedPoster(poster)}
-                className="block select-none poster-img cursor-pointer"
-                draggable={false}
-                style={{
-                  height: 'min(60.9vh, 525px)',
-                  width: 'auto',
-                  flexShrink: 0,
-                  transition: 'transform 0.3s ease',
-                  transformOrigin: 'center',
-                }}
-              />
-            ))}
+            <img
+              src={poster.src}
+              alt={poster.alt}
+              draggable={false}
+              className="block select-none"
+              style={{
+                height: 'min(75vh, 640px)',
+                width: 'auto',
+              }}
+            />
           </div>
-        </div>
+        ))}
       </main>
 
       {/* Expanded poster lightbox */}
@@ -172,9 +201,6 @@ export default function EventsPage() {
       )}
 
       <style jsx>{`
-        .poster-img:hover {
-          transform: scale(0.97);
-        }
         @keyframes lightbox-fade {
           from { opacity: 0; }
           to { opacity: 1; }
@@ -184,8 +210,6 @@ export default function EventsPage() {
           to { opacity: 1; transform: scale(1); }
         }
       `}</style>
-
-      {/* Footer removed on events page */}
     </div>
   )
 }
