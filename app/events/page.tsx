@@ -121,7 +121,8 @@ export default function EventsPage() {
                   className="tracking-wider"
                   style={{
                     marginTop: '12px',
-                    fontSize: '14px',
+                    fontSize: '16px',
+                    fontWeight: 400,
                     color: '#CBCBCB',
                     letterSpacing: '0.05em',
                   }}
