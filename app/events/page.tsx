@@ -107,7 +107,7 @@ export default function EventsPage() {
                 src={poster.src}
                 alt={poster.alt}
                 onClick={() => setExpandedPoster(poster)}
-                className="block select-none poster-img cursor-pointer"
+                className="block select-none poster-img"
                 draggable={false}
                 style={{
                   height: 'min(60.9vh, 525px)',
