@@ -25,16 +25,29 @@ export default function EventsPage() {
 
   return (
     <div
-      className="h-screen flex flex-col overflow-hidden"
+      className="h-screen flex flex-col overflow-hidden relative"
       style={{
         backgroundColor: '#1a1a1a',
-        backgroundImage: 'url(/events-bg.jpg)',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
         color: '#CBCBCB',
       }}
     >
+      {/* Blurred background — sits behind all content. Slightly oversized + negative
+          inset so the blur edges don't reveal the dark base color. */}
+      <div
+        aria-hidden
+        className="absolute pointer-events-none"
+        style={{
+          inset: '-40px',
+          backgroundImage: 'url(/events-bg.jpg)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          filter: 'blur(6px)',
+          zIndex: 0,
+        }}
+      />
+      {/* All content sits above the blurred bg */}
+      <div className="relative flex flex-col flex-1" style={{ zIndex: 1 }}>
       <MenuOverlay
         isOpen={isMenuOverlayOpen}
         onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }}
@@ -187,6 +200,7 @@ export default function EventsPage() {
       `}</style>
 
       {/* Footer removed on events page */}
+      </div>
     </div>
   )
 }
