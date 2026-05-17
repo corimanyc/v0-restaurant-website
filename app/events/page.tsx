@@ -7,13 +7,13 @@ import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 
 const POSTERS = [
-  { src: '/events/contra.jpg', alt: 'Corima x Contra' },
-  { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima' },
-  { src: '/events/eliane.png', alt: 'Corima x Eliane' },
-  { src: '/events/oriole.jpg', alt: 'Oriole x Corima' },
-  { src: '/events/osito.jpg', alt: 'Corima x Osito' },
-  { src: '/events/reverie.jpg', alt: 'Corima x Reverie' },
-  { src: '/events/lysee.jpg', alt: 'Lysee x Corima' },
+  { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
+  { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima', label: 'Sanchez' },
+  { src: '/events/eliane.png', alt: 'Corima x Eliane', label: 'Eliana' },
+  { src: '/events/oriole.jpg', alt: 'Oriole x Corima', label: 'Oriole' },
+  { src: '/events/osito.jpg', alt: 'Corima x Osito', label: 'Osito' },
+  { src: '/events/reverie.jpg', alt: 'Corima x Reverie', label: 'Drev' },
+  { src: '/events/lysee.jpg', alt: 'Lysee x Corima', label: 'Lysee' },
 ]
 
 export default function EventsPage() {
@@ -21,7 +21,7 @@ export default function EventsPage() {
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [menuScrollTarget, setMenuScrollTarget] = useState<'a-la-carte' | 'cocktail' | 'wine' | undefined>(undefined)
   const [isDiningOpen, setIsDiningOpen] = useState(false)
-  const [expandedPoster, setExpandedPoster] = useState<{ src: string; alt: string } | null>(null)
+  const [expandedPoster, setExpandedPoster] = useState<{ src: string; alt: string; label: string } | null>(null)
 
   return (
     <div
@@ -103,21 +103,32 @@ export default function EventsPage() {
             }}
           >
             {POSTERS.map((poster) => (
-              <img
-                key={poster.src}
-                src={poster.src}
-                alt={poster.alt}
-                onClick={() => setExpandedPoster(poster)}
-                className="block select-none poster-img"
-                draggable={false}
-                style={{
-                  height: 'min(60.9vh, 525px)',
-                  width: 'auto',
-                  flexShrink: 0,
-                  transition: 'transform 0.3s ease',
-                  transformOrigin: 'center',
-                }}
-              />
+              <div key={poster.src} className="flex flex-col" style={{ flexShrink: 0 }}>
+                <img
+                  src={poster.src}
+                  alt={poster.alt}
+                  onClick={() => setExpandedPoster(poster)}
+                  className="block select-none poster-img"
+                  draggable={false}
+                  style={{
+                    height: 'min(60.9vh, 525px)',
+                    width: 'auto',
+                    transition: 'transform 0.3s ease',
+                    transformOrigin: 'center',
+                  }}
+                />
+                <span
+                  className="tracking-wider"
+                  style={{
+                    marginTop: '12px',
+                    fontSize: '14px',
+                    color: '#CBCBCB',
+                    letterSpacing: '0.05em',
+                  }}
+                >
+                  {poster.label}
+                </span>
+              </div>
             ))}
           </div>
         </div>
