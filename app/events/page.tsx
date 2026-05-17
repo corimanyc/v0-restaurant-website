@@ -169,8 +169,11 @@ export default function EventsPage() {
           <button
             onClick={() => setExpandedPoster(null)}
             aria-label="Close"
-            className="nav-link uppercase absolute top-6 right-6 md:top-8 md:right-12"
+            className="nav-link uppercase"
             style={{
+              position: 'absolute',
+              top: '24px',
+              right: '20px',
               background: 'transparent',
               border: 'none',
               color: '#CBCBCB',
@@ -179,6 +182,7 @@ export default function EventsPage() {
               fontWeight: 300,
               padding: '0 0 4px 0',
               cursor: 'pointer',
+              zIndex: 2,
             }}
           >
             X
