@@ -42,7 +42,7 @@ export default function EventsPage() {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          filter: 'blur(6px)',
+          filter: 'blur(3px)',
           zIndex: 0,
         }}
       />
