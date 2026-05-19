@@ -230,19 +230,24 @@ export default function Home() {
         }}
       >
         {/* Full-width vase image — full natural aspect ratio, with the bottom edge masked so it fades into the dark section background instead of dominating vertically. */}
-        <img
-          src="/about-bg.jpg"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute top-0 left-0 w-full h-auto"
+        <div
+          aria-hidden
+          className="pointer-events-none select-none absolute top-0 left-1/2 -translate-x-1/2 w-full"
           style={{
+            maxWidth: '1600px',
             zIndex: 0,
             WebkitMaskImage:
               'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%)',
             maskImage:
               'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%)',
           }}
-        />
+        >
+          <img
+            src="/about-bg.jpg"
+            alt=""
+            className="block w-full h-auto"
+          />
+        </div>
         {/* Headline pinned to left gutter */}
         <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
           <img
