@@ -221,29 +221,17 @@ export default function Home() {
         id="about"
         className="px-5 md:px-12 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-bg-v5.jpeg)',
-          backgroundRepeat: 'repeat',
-          backgroundSize: '512px 512px',
+          backgroundImage: 'url(/about-bg.jpg)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
           paddingBottom: '100px',
         }}
       >
-        {/* Headline pinned to left gutter, sketch pinned to right gutter — original sizes preserved */}
+        {/* Headline pinned to left gutter — sketch removed in favor of full-bleed bg */}
         <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
-          <img
-            src="/about-bg.jpg"
-            alt=""
-            aria-hidden="true"
-            className="pointer-events-none select-none absolute"
-            style={{
-              top: '60px',
-              right: 0,
-              width: 'min(850px, 65%)',
-              height: 'auto',
-              zIndex: 0,
-            }}
-          />
           <img
             src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
