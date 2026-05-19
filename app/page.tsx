@@ -221,15 +221,24 @@ export default function Home() {
         id="about"
         className="px-5 md:px-12 relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-bg.jpg)',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
           paddingBottom: '60px',
         }}
       >
+        {/* Background image — capped to viewport height so it doesn't dominate the section vertically */}
+        <img
+          src="/about-bg.jpg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute top-0 left-0 w-full"
+          style={{
+            height: '100vh',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            zIndex: 0,
+          }}
+        />
         {/* Headline pinned to left gutter — sketch removed in favor of full-bleed bg */}
         <div className="relative py-16 md:py-24" style={{ zIndex: 1 }}>
           <img
