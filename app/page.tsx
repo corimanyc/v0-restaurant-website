@@ -232,7 +232,7 @@ export default function Home() {
         {/* Headline pinned to left gutter, sketch pinned to right gutter — original sizes preserved */}
         <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
           <img
-            src="/about-sketch.png"
+            src="/about-bg.jpg"
             alt=""
             aria-hidden="true"
             className="pointer-events-none select-none absolute"
