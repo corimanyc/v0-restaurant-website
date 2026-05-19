@@ -8,7 +8,7 @@ import MobileNav from '@/components/mobile-nav'
 
 const heroImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5160%202-9rUNzC6kmRQxuPNwa5oZORQycZa9Nr.png',
+    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/corima_carousel-ud1JMifr4LEWSaRzmOBrGEnict94W2.png',
     alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
   },
   {
