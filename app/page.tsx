@@ -223,8 +223,8 @@ export default function Home() {
         style={{
           backgroundImage: 'url(/about-bg.jpg)',
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
+          backgroundPosition: 'right center',
+          backgroundSize: 'auto 80%',
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
           paddingBottom: '40px',
