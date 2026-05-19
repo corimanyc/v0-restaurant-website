@@ -249,7 +249,7 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter */}
-        <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
+        <div className="relative py-16" style={{ zIndex: 1 }}>
           <img
             src="/hero-text-v3.svg?v=white"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
@@ -259,7 +259,7 @@ export default function Home() {
         </div>
 
         {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '160px' }}>
+        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '80px' }}>
           {/* Left Column - A La Carte */}
           <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
             <div style={{ maxWidth: '80%', marginBottom: '64px' }}>
