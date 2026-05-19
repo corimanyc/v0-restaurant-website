@@ -229,13 +229,13 @@ export default function Home() {
           paddingBottom: '100px',
         }}
       >
-        {/* Full-width vase image — spans the entire section width while preserving its aspect ratio */}
+        {/* Full-width vase image — spans the entire section width; height is capped so it doesn't take over vertically (image is cropped via object-fit). */}
         <img
           src="/about-bg.jpg"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute top-0 left-0 w-full h-auto"
-          style={{ zIndex: 0 }}
+          className="pointer-events-none select-none absolute top-0 left-0 w-full"
+          style={{ height: '60vh', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
         />
         {/* Headline pinned to left gutter */}
         <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
