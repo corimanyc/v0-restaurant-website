@@ -31,8 +31,20 @@ export default function EventsPage() {
         color: '#CBCBCB',
       }}
     >
-      {/* Background image — slightly blurred. Negative inset hides the blur fade
-          edges so the dark base color isn't revealed at the viewport edges. */}
+      {/* Sharp background (bottom layer) */}
+      <div
+        aria-hidden
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(/events-bg.jpg)',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          zIndex: 0,
+        }}
+      />
+      {/* Blurred copy on top, masked so the blur is strongest at the top of
+          the viewport and fades to fully transparent (= sharp) near the bottom. */}
       <div
         aria-hidden
         className="absolute pointer-events-none"
@@ -42,7 +54,11 @@ export default function EventsPage() {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          filter: 'blur(4px)',
+          filter: 'blur(3px)',
+          WebkitMaskImage:
+            'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 85%)',
+          maskImage:
+            'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 85%)',
           zIndex: 0,
         }}
       />
