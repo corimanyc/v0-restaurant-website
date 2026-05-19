@@ -221,31 +221,34 @@ export default function Home() {
         id="about"
         className="px-5 md:px-12 relative overflow-hidden"
         style={{
+          backgroundImage: 'url(/about-bg-v5.jpeg)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
-          paddingBottom: '60px',
+          paddingBottom: '100px',
         }}
       >
-        {/* Background image — capped to viewport height so it doesn't dominate the section vertically */}
-        <img
-          src="/about-bg.jpg"
-          alt=""
-          aria-hidden="true"
-          className="pointer-events-none select-none absolute top-0 left-0 w-full"
-          style={{
-            height: '100vh',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            zIndex: 0,
-          }}
-        />
-        {/* Headline pinned to left gutter — sketch removed in favor of full-bleed bg */}
-        <div className="relative py-16 md:py-24" style={{ zIndex: 1 }}>
+        {/* Headline pinned to left gutter, sketch pinned to right gutter — original sizes preserved */}
+        <div className="relative py-24 md:min-h-screen" style={{ zIndex: 1 }}>
+          <img
+            src="/about-sketch.png"
+            alt=""
+            aria-hidden="true"
+            className="pointer-events-none select-none absolute"
+            style={{
+              top: '60px',
+              right: 0,
+              width: 'min(850px, 65%)',
+              height: 'auto',
+              zIndex: 0,
+            }}
+          />
           <img
             src="/hero-text-v3.svg"
             alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
             className="block w-full h-auto relative"
-            style={{ maxWidth: '1100px', zIndex: 1, marginTop: '40px' }}
+            style={{ maxWidth: '1100px', zIndex: 1, marginTop: '120px' }}
           />
         </div>
 
