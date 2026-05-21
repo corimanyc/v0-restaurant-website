@@ -234,7 +234,7 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none select-none absolute top-0 left-1/2 -translate-x-1/2 w-full"
           style={{
-            maxWidth: '1600px',
+            maxWidth: '1200px',
             zIndex: 0,
             WebkitMaskImage:
               'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%)',
