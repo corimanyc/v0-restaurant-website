@@ -53,8 +53,8 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hide as soon as the hero leaves the viewport; reappear as soon as it enters.
-      setIsAtTop(window.scrollY < window.innerHeight - 1)
+      // Show only while sitting on the landing/hero; hide as soon as the user scrolls away.
+      setIsAtTop(window.scrollY < 80)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
