@@ -17,6 +17,8 @@ type SiteNavProps = {
   onToggleMobileMenu: () => void
   /** Optional font size for desktop nav links (defaults to 15). */
   linkFontSize?: number
+  /** Optional override color for desktop nav links and the mobile burger bars. */
+  linkColor?: string
 }
 
 /**
@@ -31,8 +33,10 @@ export default function SiteNav({
   onOpenDining,
   onToggleMobileMenu,
   linkFontSize = 15,
+  linkColor,
 }: SiteNavProps) {
-  const linkStyle = { color: 'inherit', fontSize: `${linkFontSize}px` }
+  const linkStyle = { color: linkColor ?? 'inherit', fontSize: `${linkFontSize}px` }
+  const burgerColor = linkColor ?? '#CBCBCB'
 
   return (
     <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
@@ -106,9 +110,9 @@ export default function SiteNav({
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
       >
-        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
-        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
-        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+        <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
+        <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
+        <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
       </button>
     </nav>
   )
