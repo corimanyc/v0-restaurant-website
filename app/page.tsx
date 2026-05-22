@@ -556,7 +556,7 @@ export default function Home() {
             Contact
           </a>
           <a
-            href="https://www.instagram.com/corimanyc"
+            href="https://www.instagram.com/corima.nyc/"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link tracking-wider"
