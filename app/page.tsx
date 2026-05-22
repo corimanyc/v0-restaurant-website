@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -38,6 +38,23 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
+  const heroRef = useRef<HTMLElement | null>(null)
+  const [heroVisible, setHeroVisible] = useState(true)
+
+  useEffect(() => {
+    // The address sits at the bottom of the viewport (~48px above the bottom).
+    // Only show it while the hero element actually intersects that line. We use
+    // a negative bottom rootMargin so the observer's effective bottom edge is
+    // ~48px above the viewport bottom — exactly where the address text lives.
+    const el = heroRef.current
+    if (!el) return
+    const io = new IntersectionObserver(
+      ([entry]) => setHeroVisible(entry.isIntersecting),
+      { rootMargin: '0px 0px -48px 0px', threshold: 0 },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
@@ -73,19 +90,7 @@ export default function Home() {
         </Link>
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
-      <section className="relative h-screen overflow-hidden w-full">
-        {/* Address — lives inside the hero, absolute-positioned at the bottom.
-            Because it scrolls with the hero, it's only visible while the hero
-            intersects the viewport, and reappears the instant the hero re-enters. */}
-        <p
-          className="absolute bottom-6 left-5 md:left-12 text-xs md:text-sm tracking-widest uppercase text-white z-30 pointer-events-none"
-          style={{
-            opacity: isDiningOpen ? 0 : 1,
-            transition: 'opacity 0.5s ease',
-          }}
-        >
-          {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
-        </p>
+      <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
@@ -222,9 +227,19 @@ export default function Home() {
           }}
         >
           <div className="flex items-center justify-between px-5 md:px-12 py-6">
-            {/* Persistent logo — stays white regardless of scroll. Address has been
-                moved into the hero section so it's only visible while the hero
-                intersects the viewport. */}
+            {/* Address — visible only while the hero is intersecting the viewport.
+                Driven by IntersectionObserver on the hero ref below. */}
+            <p
+              className="text-xs md:text-sm tracking-widest uppercase text-white"
+              style={{
+                opacity: heroVisible ? 1 : 0,
+                pointerEvents: 'none',
+                transition: 'opacity 0.2s ease',
+              }}
+            >
+              {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
+            </p>
+            {/* Persistent logo — stays white regardless of scroll */}
             <img
               src="/footer-logo.png"
               alt="CORIMA"
