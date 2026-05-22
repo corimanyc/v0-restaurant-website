@@ -534,7 +534,11 @@ export default function Home() {
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
-          padding: '40px 24px 12px 24px',
+          // Left padding matches the CORIMA wordmark (48px) at the top of the page.
+          // Bottom padding is tuned so the row of links is vertically centered with
+          // the fixed white footer icon (24px tall, 24px from viewport bottom -> center at 36px from bottom).
+          // Content line-height is ~16px, so paddingBottom = 36 - 8 = 28px.
+          padding: '40px 48px 28px 48px',
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between">
@@ -543,7 +547,6 @@ export default function Home() {
           <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
           <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Instagram</p>
           <p style={{ fontSize: '16px', color: '#CBCBCB', margin: '0', fontWeight: '500' }}>Spotify</p>
-          <img src="/footer-logo.png" alt="Corima" style={{ width: '24px', height: '24px', objectFit: 'contain', filter: 'invert(1)' }} />
         </div>
       </footer>
     </div>
