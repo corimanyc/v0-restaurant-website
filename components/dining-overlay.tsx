@@ -23,18 +23,36 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
   }, [isOpen])
 
   return (
-    <div
-      className="fixed top-0 right-0 h-full flex flex-col"
-      style={{
-        backgroundColor: '#7b7b7b',
-        color: '#000000',
-        zIndex: 45,
-        width: '50%',
-        transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
-        transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
-        pointerEvents: isOpen ? 'all' : 'none',
-      }}
-    >
+    <>
+      {/* Click-outside backdrop — invisible, fills the area to the LEFT of the panel.
+          Clicking anywhere outside the side panel closes it. */}
+      <div
+        onClick={onClose}
+        aria-hidden="true"
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          bottom: 0,
+          width: '50%',
+          zIndex: 44,
+          background: 'transparent',
+          pointerEvents: isOpen ? 'auto' : 'none',
+        }}
+      />
+
+      <div
+        className="fixed top-0 right-0 h-full flex flex-col"
+        style={{
+          backgroundColor: '#7b7b7b',
+          color: '#000000',
+          zIndex: 45,
+          width: '50%',
+          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+          pointerEvents: isOpen ? 'all' : 'none',
+        }}
+      >
       <style>{`
         .dining-scroll::-webkit-scrollbar { display: none; }
         .dining-close-btn {
@@ -146,5 +164,6 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         </section>
       </div>
     </div>
+    </>
   )
 }
