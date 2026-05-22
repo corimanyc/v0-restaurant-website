@@ -62,7 +62,9 @@ export default function Home() {
     if (!el) return
     const io = new IntersectionObserver(
       ([entry]) => setIsAtTop(entry.isIntersecting),
-      { threshold: 0.5 },
+      // threshold 0 -> show while ANY pixel of the hero is in view, hide the
+      // moment it's fully scrolled past. Matches the landing-page boundary.
+      { threshold: 0 },
     )
     io.observe(el)
     return () => io.disconnect()
