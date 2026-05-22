@@ -119,17 +119,17 @@ export default function Home() {
         <div
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{ height: '72px', zIndex: 44 }}
+          style={{ height: '88px', zIndex: 44 }}
         >
           {[
             // Lightest layer extends almost the full band, providing the soft tail.
-            { blur: 1, stops: '1 0%, 1 60%, 0 90%' },
+            { blur: 0.75, stops: '1 0%, 1 60%, 0 90%' },
             // Mid layer holds opacity longer through the upper-middle so the middle-top
             // area accumulates more blur, then eases out smoothly.
-            { blur: 2, stops: '1 0%, 1 35%, 0.6 55%, 0 75%' },
+            { blur: 1.5, stops: '1 0%, 1 35%, 0.6 55%, 0 75%' },
             // Strongest layer concentrated at the top with a soft eased tail rather
             // than a hard stop so it doesn't read as a band edge.
-            { blur: 4, stops: '1 0%, 1 20%, 0.5 40%, 0 55%' },
+            { blur: 3, stops: '1 0%, 1 20%, 0.5 40%, 0 55%' },
           ].map((layer, i) => {
             const mask = `linear-gradient(to bottom, ${layer.stops
               .split(',')
