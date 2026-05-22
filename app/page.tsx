@@ -12,12 +12,12 @@ const heroImages = [
     alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/23961C38-CBF4-4307-AC90-345364EE350F_1_201_a-SFVhjEpDnwUKeJfiFk7bZkfnLc0ZV6.jpeg',
-    alt: 'CORIMA kitchen — 9:34 PM service in progress',
+    src: '/hero-kitchen-934.jpeg',
+    alt: 'CORIMA kitchen — 9:34 PM, chef\u2019s shadow across the line during service',
   },
   {
-    src: '/hero-interior-brick.jpeg',
-    alt: 'CORIMA dining room — exposed brick wall with pendant lantern at low light',
+    src: '/hero-dining-nook.jpeg',
+    alt: 'CORIMA dining nook — wooden chairs and table against slatted wainscoting',
   },
 ]
 
