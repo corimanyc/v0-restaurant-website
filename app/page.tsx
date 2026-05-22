@@ -232,7 +232,7 @@ export default function Home() {
             <p
               className="tracking-wider text-white"
               style={{
-                fontSize: '14px',
+                fontSize: '16px',
                 opacity: heroVisible ? 1 : 0,
                 pointerEvents: 'none',
                 transition: 'opacity 0.2s ease',
