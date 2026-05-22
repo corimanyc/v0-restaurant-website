@@ -44,6 +44,14 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false)
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setHasScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     // The address sits at the bottom of the viewport (~48px above the bottom).
@@ -128,7 +136,12 @@ export default function Home() {
         <div
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{ height: '88px', zIndex: 44 }}
+          style={{
+            height: '88px',
+            zIndex: 44,
+            opacity: hasScrolled ? 1 : 0,
+            transition: 'opacity 0.25s ease',
+          }}
         >
           {[
             // Lightest layer extends almost the full band, providing the soft tail.
