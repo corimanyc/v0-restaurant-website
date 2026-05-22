@@ -346,16 +346,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Counter image (cols 3–6) + intro copy (cols 7–9) */}
+            {/* Counter image (cols 3–8, right edge aligned with SVG above) + intro copy (cols 9–11) */}
             <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'start' }}>
-              <div className="col-start-3 col-end-7">
+              <div className="col-start-3 col-end-9">
                 <img
                   src="/hero-counter-service.jpeg"
                   alt="Corima chef's counter during service — diners watching the line"
                   className="w-full h-auto block"
                 />
               </div>
-              <div className="col-start-7 col-end-10" style={{ paddingTop: '120px' }}>
+              <div className="col-start-9 col-end-12" style={{ paddingTop: '120px' }}>
                 <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                 </p>
