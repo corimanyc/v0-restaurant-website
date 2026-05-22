@@ -374,22 +374,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom paired images — square chef (cols 6–10) + narrow portrait (cols 10–12) */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '160px', alignItems: 'end' }}>
-              <div className="col-start-6 col-end-10">
+            {/* Bottom paired images — equal width, equal height, cols 5–12, 100px below text above */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'stretch' }}>
+              <div className="col-start-5 col-end-9" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
                   alt="Chef Fidel Caballero plating in the kitchen"
-                  className="w-full h-auto block"
-                  style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
+                  className="w-full h-full block"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
-              <div className="col-start-10 col-end-12">
+              <div className="col-start-9 col-end-13" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="/hero-interior-brick.jpeg"
                   alt="Corima dining room — exposed brick wall at low light"
-                  className="w-full h-auto block"
-                  style={{ aspectRatio: '3 / 4', objectFit: 'cover' }}
+                  className="w-full h-full block"
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </div>
