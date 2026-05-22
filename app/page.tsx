@@ -335,22 +335,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Staircase headline */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '120px' }}>
-              <div
-                className="col-start-2 col-end-11"
-                style={{
-                  fontSize: '32px',
-                  lineHeight: 1.35,
-                  color: '#E8E8E8',
-                  fontWeight: 400,
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                <div>Working with the roughness, yet simplicity of</div>
-                <div>the desert as inspiration,</div>
-                <div style={{ paddingLeft: '15%' }}>Corima takes what is familiar to some</div>
-                <div style={{ paddingLeft: '30%' }}>and makes it sensible to all.</div>
+            {/* Staircase headline (SVG) — col 2 → right edge of col 8, 100px below label */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px' }}>
+              <div className="col-start-2 col-end-9">
+                <img
+                  src="/our-story-headline.svg"
+                  alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
+                  className="w-full h-auto block"
+                />
               </div>
             </div>
 
