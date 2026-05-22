@@ -15,6 +15,10 @@ const heroImages = [
     src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/23961C38-CBF4-4307-AC90-345364EE350F_1_201_a-SFVhjEpDnwUKeJfiFk7bZkfnLc0ZV6.jpeg',
     alt: 'CORIMA kitchen — 9:34 PM service in progress',
   },
+  {
+    src: '/hero-interior-brick.jpeg',
+    alt: 'CORIMA dining room — exposed brick wall with pendant lantern at low light',
+  },
 ]
 
 const aboutSectionImages = [
