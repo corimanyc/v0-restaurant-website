@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -40,7 +40,6 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false)
 
   const [isAtTop, setIsAtTop] = useState(true)
-  const heroRef = useRef<HTMLElement | null>(null)
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
@@ -53,21 +52,13 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    // Visibility is driven by a sentinel element pinned to the bottom of the
-    // hero at exactly the same y-position as the address. The sentinel scrolls
-    // with the page (it lives inside the hero), and IntersectionObserver fires
-    // as soon as the sentinel passes above the bottom of the viewport — which
-    // is precisely when the address line exits the hero region.
-    const el = heroRef.current
-    if (!el) return
-    const sentinel = el.querySelector('[data-address-sentinel]')
-    if (!sentinel) return
-    const io = new IntersectionObserver(
-      ([entry]) => setIsAtTop(entry.isIntersecting),
-      { threshold: 0 },
-    )
-    io.observe(sentinel)
-    return () => io.disconnect()
+    const handleScroll = () => {
+      // Switch when the hero (full viewport) scrolls past the nav line (~80px)
+      setIsAtTop(window.scrollY < window.innerHeight - 80)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
@@ -94,16 +85,7 @@ export default function Home() {
         </Link>
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
-        {/* Sentinel: 1px element at the same y-position as the fixed address line.
-            IntersectionObserver watches it to drive isAtTop — when the user scrolls
-            past, the sentinel exits the viewport and the address hides. */}
-        <div
-          data-address-sentinel
-          aria-hidden
-          className="absolute left-0 w-px h-px pointer-events-none"
-          style={{ bottom: '48px' }}
-        />
+      <section className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
