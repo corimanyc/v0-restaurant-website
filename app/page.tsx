@@ -53,25 +53,21 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    // The address sits at the bottom of the viewport, so its visibility should
-    // be tied to whether the hero still extends down to that line — not whether
-    // the hero's top edge is in view. We check if the hero's bottom edge is
-    // still below the address's y-position; once it scrolls above, hide.
-    const handleScroll = () => {
-      const el = heroRef.current
-      if (!el) return
-      const heroBottom = el.getBoundingClientRect().bottom
-      // Address line ~= viewport bottom minus its own offset (py-6 = 24px + ~14px text)
-      const addressLine = window.innerHeight - 48
-      setIsAtTop(heroBottom > addressLine)
-    }
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
-    }
+    // Visibility is driven by a sentinel element pinned to the bottom of the
+    // hero at exactly the same y-position as the address. The sentinel scrolls
+    // with the page (it lives inside the hero), and IntersectionObserver fires
+    // as soon as the sentinel passes above the bottom of the viewport — which
+    // is precisely when the address line exits the hero region.
+    const el = heroRef.current
+    if (!el) return
+    const sentinel = el.querySelector('[data-address-sentinel]')
+    if (!sentinel) return
+    const io = new IntersectionObserver(
+      ([entry]) => setIsAtTop(entry.isIntersecting),
+      { threshold: 0 },
+    )
+    io.observe(sentinel)
+    return () => io.disconnect()
   }, [])
 
   return (
@@ -99,6 +95,15 @@ export default function Home() {
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
       <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
+        {/* Sentinel: 1px element at the same y-position as the fixed address line.
+            IntersectionObserver watches it to drive isAtTop — when the user scrolls
+            past, the sentinel exits the viewport and the address hides. */}
+        <div
+          data-address-sentinel
+          aria-hidden
+          className="absolute left-0 w-px h-px pointer-events-none"
+          style={{ bottom: '48px' }}
+        />
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
