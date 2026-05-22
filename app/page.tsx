@@ -230,8 +230,9 @@ export default function Home() {
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below. */}
             <p
-              className="text-sm md:text-base tracking-wider text-white"
+              className="tracking-wider text-white"
               style={{
+                fontSize: '14px',
                 opacity: heroVisible ? 1 : 0,
                 pointerEvents: 'none',
                 transition: 'opacity 0.2s ease',
