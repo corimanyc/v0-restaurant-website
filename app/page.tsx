@@ -112,20 +112,37 @@ export default function Home() {
         {/* Gradient blur layer — always visible at top of viewport. Sits below
             the dining side panel (z-45) so the panel covers it on the right,
             and below the nav header (z-46) so nav text stays sharp. */}
+        {/* Progressive blur — stacked layers each with greater blur radius
+            and a higher start position. Because each layer fully covers from
+            its start to the top, blurs accumulate downward, which the eye
+            reads as a smooth, edge-less gradient blur. */}
         <div
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: '80px',
-            zIndex: 44,
-            backdropFilter: 'blur(1.5px)',
-            WebkitBackdropFilter: 'blur(1.5px)',
-            maskImage:
-              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
-          }}
-        />
+          style={{ height: '120px', zIndex: 44 }}
+        >
+          {[
+            { blur: 0.5, start: 0 },
+            { blur: 1, start: 16 },
+            { blur: 2, start: 32 },
+            { blur: 4, start: 48 },
+            { blur: 8, start: 64 },
+          ].map((layer, i) => {
+            const mask = `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) ${layer.start}%, rgba(0,0,0,0) 100%)`
+            return (
+              <div
+                key={i}
+                className="absolute inset-0"
+                style={{
+                  backdropFilter: `blur(${layer.blur}px)`,
+                  WebkitBackdropFilter: `blur(${layer.blur}px)`,
+                  maskImage: mask,
+                  WebkitMaskImage: mask,
+                }}
+              />
+            )
+          })}
+        </div>
 
         {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
