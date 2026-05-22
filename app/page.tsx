@@ -374,8 +374,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom paired images — equal width, equal height, cols 5–12, 100px below text above */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'stretch' }}>
+            {/* Bottom paired images — right edge aligned to nav (48px viewport inset). Wrapper has 36px outer padding, so add 12px extra right padding to match. */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'stretch', paddingRight: '12px' }}>
               <div className="col-start-5 col-end-9" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
