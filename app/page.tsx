@@ -122,11 +122,22 @@ export default function Home() {
           style={{ height: '72px', zIndex: 44 }}
         >
           {[
-            { blur: 1, fadeEnd: 75 },
-            { blur: 2, fadeEnd: 50 },
-            { blur: 4, fadeEnd: 25 },
+            // Lightest layer extends almost the full band, providing the soft tail.
+            { blur: 1, stops: '1 0%, 1 60%, 0 90%' },
+            // Mid layer holds opacity longer through the upper-middle so the middle-top
+            // area accumulates more blur, then eases out smoothly.
+            { blur: 2, stops: '1 0%, 1 35%, 0.6 55%, 0 75%' },
+            // Strongest layer concentrated at the top with a soft eased tail rather
+            // than a hard stop so it doesn't read as a band edge.
+            { blur: 4, stops: '1 0%, 1 20%, 0.5 40%, 0 55%' },
           ].map((layer, i) => {
-            const mask = `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) ${layer.fadeEnd}%)`
+            const mask = `linear-gradient(to bottom, ${layer.stops
+              .split(',')
+              .map((s) => {
+                const [a, p] = s.trim().split(' ')
+                return `rgba(0,0,0,${a}) ${p}`
+              })
+              .join(', ')})`
             return (
               <div
                 key={i}
