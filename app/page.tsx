@@ -165,7 +165,7 @@ export default function Home() {
             zIndex: 46,
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
-            color: '#CBCBCB',
+            color: '#FFFFFF',
             transition: 'opacity 0.5s ease',
           }}
         >
