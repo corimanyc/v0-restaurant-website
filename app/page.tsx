@@ -331,12 +331,12 @@ export default function Home() {
             {/* Section label — col 2 */}
             <div className="grid grid-cols-12 gap-5">
               <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '20px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
+                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
               </div>
             </div>
 
-            {/* Staircase headline (SVG) — col 2 → right edge of col 8, 100px below label */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px' }}>
+            {/* Staircase headline (SVG) — col 2 → right edge of col 8, 50px below label */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '50px' }}>
               <div className="col-start-2 col-end-9">
                 <img
                   src="/our-story-headline.svg"
@@ -399,7 +399,7 @@ export default function Home() {
           <section style={{ paddingTop: '200px' }}>
             <div className="grid grid-cols-12 gap-5">
               <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '20px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
+                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
