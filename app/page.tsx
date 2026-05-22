@@ -172,6 +172,10 @@ export default function Home() {
           style={{
             zIndex: 46,
             color: '#FFFFFF',
+            // Header itself must not block clicks/hover on what's beneath
+            // (e.g. the dining panel's X button). SiteNav re-enables pointer
+            // events on the actual interactive children.
+            pointerEvents: 'none',
           }}
         >
           <SiteNav
