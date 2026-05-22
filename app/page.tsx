@@ -422,8 +422,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Body copy (cols 4–7) + large dining-nook image (cols 7–13) */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '80px', alignItems: 'start' }}>
+            {/* Body copy (cols 4–7) + large dining-nook image (cols 7–13, full to last column edge), 60px below ethos SVG */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '60px', alignItems: 'start' }}>
               <div className="col-start-4 col-end-7" style={{ paddingTop: '220px' }}>
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
