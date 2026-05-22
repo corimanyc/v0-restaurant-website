@@ -367,7 +367,7 @@ export default function Home() {
 
             {/* Chef bio — cols 4–7, indented */}
             <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px' }}>
-              <div className="col-start-3 col-end-7">
+              <div className="col-start-3 col-end-6">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
                 </p>
