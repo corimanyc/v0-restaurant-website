@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -40,6 +40,7 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false)
 
   const [isAtTop, setIsAtTop] = useState(true)
+  const heroRef = useRef<HTMLElement | null>(null)
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
@@ -53,13 +54,19 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hero is exactly h-screen (100vh). Show address while still inside the hero,
-      // hide as soon as the user scrolls past it.
-      setIsAtTop(window.scrollY < window.innerHeight)
+      // Use the actual hero section's bottom edge (measured from viewport top) so
+      // the toggle fires at the real hero/about boundary regardless of viewport
+      // quirks (mobile URL bar, scrollbars, dynamic h-screen, etc.).
+      const heroBottom = heroRef.current?.getBoundingClientRect().bottom ?? window.innerHeight
+      setIsAtTop(heroBottom > 0)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('resize', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   return (
@@ -86,7 +93,7 @@ export default function Home() {
         </Link>
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
-      <section className="relative h-screen overflow-hidden w-full">
+      <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
