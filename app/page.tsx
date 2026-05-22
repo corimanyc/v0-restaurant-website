@@ -53,9 +53,9 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Toggle right around the hero/about boundary — hide once half the hero
-      // has scrolled past, reappear as soon as the user scrolls back into it.
-      setIsAtTop(window.scrollY < window.innerHeight * 0.5)
+      // Hero is exactly h-screen (100vh). Show address while still inside the hero,
+      // hide as soon as the user scrolls past it.
+      setIsAtTop(window.scrollY < window.innerHeight)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
