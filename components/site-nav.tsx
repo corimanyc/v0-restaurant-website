@@ -42,14 +42,23 @@ export default function SiteNav({
   const burgerColor = linkColor ?? '#CBCBCB'
   const hideStyle: React.CSSProperties = {
     opacity: hideLinks ? 0 : 1,
+    // Re-enable pointer events on the interactive group (parent <nav> has them
+    // disabled so empty space doesn't block the dining panel beneath).
     pointerEvents: hideLinks ? 'none' : 'auto',
     transition: 'opacity 0.5s ease',
   }
 
   return (
-    <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
+    <nav
+      className="relative flex items-center justify-between px-5 md:px-9 pt-6"
+      style={{ pointerEvents: 'none' }}
+    >
       {/* Logo — fixed width + position across all pages */}
-      <Link href="/" className="flex-shrink-0 h-auto block" style={{ width: '88px' }}>
+      <Link
+        href="/"
+        className="flex-shrink-0 h-auto block"
+        style={{ width: '88px', pointerEvents: 'auto' }}
+      >
         <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
       </Link>
 
