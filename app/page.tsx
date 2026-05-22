@@ -92,17 +92,17 @@ export default function Home() {
         onClose={() => setIsDiningOpen(false)}
         onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
       />
-      {/* Persistent logo when dining overlay is open */}
+      {/* Persistent logo when dining overlay is open — must exactly match SiteNav (md:px-9 = 36px, pt-6 = 24px, logo width 88px) */}
       <div
         className="fixed top-0 left-0 transition-opacity duration-500"
         style={{
-          padding: '24px 48px',
+          padding: '24px 36px 0 36px',
           zIndex: 50,
           opacity: isDiningOpen ? 1 : 0,
           pointerEvents: isDiningOpen ? 'all' : 'none',
         }}
       >
-        <Link href="/" className="flex-shrink-0 w-24 h-auto block">
+        <Link href="/" className="flex-shrink-0 h-auto block" style={{ width: '88px' }}>
           <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
         </Link>
       </div>
