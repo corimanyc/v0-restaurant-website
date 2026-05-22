@@ -171,7 +171,7 @@ export default function Home() {
         >
           <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 w-24 h-auto">
+            <Link href="/" className="flex-shrink-0 w-20 h-auto">
               <img
                 src="/logo.svg"
                 alt="CORIMA"
@@ -245,7 +245,7 @@ export default function Home() {
             <img
               src="/footer-logo.png"
               alt="CORIMA"
-              className="w-7 h-7 object-contain ml-auto"
+              className="w-6 h-6 object-contain ml-auto"
               style={{ pointerEvents: isDiningOpen ? 'none' : 'auto' }}
             />
           </div>
