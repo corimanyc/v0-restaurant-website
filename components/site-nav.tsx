@@ -1,0 +1,115 @@
+'use client'
+
+import Link from 'next/link'
+
+type SiteNavProps = {
+  /** Anchors that point to home-page sections. On the events (or other) pages,
+   *  use absolute "/#about", "/#press". On the home page, leave as "#about" / "#press"
+   *  so we can intercept and smooth-scroll. */
+  aboutHref?: string
+  pressHref?: string
+  /** Whether to attach the smooth-scroll handler for the About link.
+   *  Should be true only on pages where the #about element exists in the same document. */
+  smoothScrollAbout?: boolean
+  /** Open the dining overlay. */
+  onOpenDining: () => void
+  /** Toggle the mobile menu. */
+  onToggleMobileMenu: () => void
+  /** Optional font size for desktop nav links (defaults to 15). */
+  linkFontSize?: number
+}
+
+/**
+ * Single source of truth for the top navigation across all pages.
+ * Outer wrapper, padding (md:px-9), and logo size/position MUST stay identical
+ * across pages — change them here only.
+ */
+export default function SiteNav({
+  aboutHref = '#about',
+  pressHref = '#press',
+  smoothScrollAbout = false,
+  onOpenDining,
+  onToggleMobileMenu,
+  linkFontSize = 15,
+}: SiteNavProps) {
+  const linkStyle = { color: 'inherit', fontSize: `${linkFontSize}px` }
+
+  return (
+    <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
+      {/* Logo — fixed width + position across all pages */}
+      <Link href="/" className="flex-shrink-0 h-auto block" style={{ width: '88px' }}>
+        <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
+      </Link>
+
+      {/* Desktop nav */}
+      <div className="hidden md:flex items-center gap-8">
+        <Link
+          href={aboutHref}
+          className="nav-link tracking-wider"
+          style={linkStyle}
+          onClick={
+            smoothScrollAbout
+              ? (e) => {
+                  e.preventDefault()
+                  document
+                    .getElementById('about')
+                    ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              : undefined
+          }
+        >
+          About
+        </Link>
+        <Link
+          href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-link tracking-wider"
+          style={linkStyle}
+        >
+          Reservations
+        </Link>
+        <button
+          onClick={onOpenDining}
+          className="nav-link tracking-wider text-left"
+          style={{
+            ...linkStyle,
+            background: 'transparent',
+            border: 'none',
+            fontFamily: 'inherit',
+            lineHeight: 'inherit',
+            cursor: 'pointer',
+          }}
+        >
+          Dining
+        </button>
+        <Link href="/events" className="nav-link tracking-wider" style={linkStyle}>
+          Events
+        </Link>
+        <Link href={pressHref} className="nav-link tracking-wider" style={linkStyle}>
+          Press
+        </Link>
+        <Link
+          href="https://corimanyc.bigcartel.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-link tracking-wider"
+          style={linkStyle}
+        >
+          Shop
+        </Link>
+      </div>
+
+      {/* Mobile burger */}
+      <button
+        className="md:hidden flex flex-col gap-1.5"
+        onClick={onToggleMobileMenu}
+        aria-label="Open menu"
+      >
+        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+        <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
+      </button>
+    </nav>
+  )
+}

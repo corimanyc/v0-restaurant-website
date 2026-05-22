@@ -5,6 +5,7 @@ import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
+import SiteNav from '@/components/site-nav'
 
 const POSTERS = [
   { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
@@ -85,26 +86,13 @@ export default function EventsPage() {
           transition: 'opacity 0.5s ease',
         }}
       >
-        <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
-          <Link href="/" className="flex-shrink-0 h-auto" style={{ width: '88px' }}>
-            <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
-          </Link>
-
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="/#about" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '14px' }}>About</Link>
-            <Link href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '14px' }}>Reservations</Link>
-            <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', fontSize: '14px', fontFamily: 'inherit', lineHeight: 'inherit', cursor: 'pointer' }}>Dining</button>
-            <Link href="/events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '14px' }}>Events</Link>
-            <Link href="/#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '14px' }}>Press</Link>
-            <Link href="https://corimanyc.bigcartel.com" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '14px' }}>Shop</Link>
-          </div>
-
-          <button className="md:hidden flex flex-col gap-1.5" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Open menu">
-            <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
-            <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
-            <div className="w-6 h-0.5" style={{ backgroundColor: '#CBCBCB' }}></div>
-          </button>
-        </nav>
+        <SiteNav
+          aboutHref="/#about"
+          pressHref="/#press"
+          onOpenDining={() => setIsDiningOpen(true)}
+          onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
+          linkFontSize={14}
+        />
       </header>
 
       <MobileNav
