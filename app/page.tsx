@@ -212,17 +212,12 @@ export default function Home() {
           }}
         >
           <div className="flex items-center justify-between px-5 md:px-12 py-6">
-            {/* Address — fades out as soon as hero leaves viewport */}
-            <p
-              className="text-xs md:text-sm tracking-widest uppercase text-white"
-              style={{
-                opacity: isAtTop ? 1 : 0,
-                pointerEvents: 'none',
-                transition: 'opacity 0.08s linear',
-              }}
-            >
-              {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
-            </p>
+            {/* Address — only rendered while on the landing/hero */}
+            {isAtTop && (
+              <p className="text-xs md:text-sm tracking-widest uppercase text-white">
+                {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
+              </p>
+            )}
             {/* Persistent logo — stays white regardless of scroll */}
             <img
               src="/footer-logo.png"
