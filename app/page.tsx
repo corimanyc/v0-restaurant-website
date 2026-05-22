@@ -331,7 +331,7 @@ export default function Home() {
             {/* Section label — col 2 */}
             <div className="grid grid-cols-12 gap-5">
               <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '14px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
+                <p style={{ fontSize: '20px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
               </div>
             </div>
 
@@ -407,7 +407,7 @@ export default function Home() {
           <section style={{ paddingTop: '200px' }}>
             <div className="grid grid-cols-12 gap-5">
               <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '14px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
+                <p style={{ fontSize: '20px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
