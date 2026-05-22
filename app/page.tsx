@@ -245,7 +245,7 @@ export default function Home() {
             <img
               src="/footer-logo.png"
               alt="CORIMA"
-              className="w-6 h-6 object-contain ml-auto"
+              className="w-8 h-8 object-contain ml-auto"
               style={{ pointerEvents: isDiningOpen ? 'none' : 'auto' }}
             />
           </div>
