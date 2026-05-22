@@ -374,17 +374,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom paired images — right edge flush with nav (36px from viewport). */}
-            <div
-              style={{
-                marginTop: '100px',
-                paddingRight: '36px',
-                display: 'flex',
-                justifyContent: 'flex-end',
-                gap: '20px',
-              }}
-            >
-              <div style={{ width: '32%', aspectRatio: '1 / 1' }}>
+            {/* Bottom paired images — cols 6–11, equal width, equal height squares */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'stretch' }}>
+              <div className="col-start-6 col-end-9" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
                   alt="Chef Fidel Caballero plating in the kitchen"
@@ -392,7 +384,7 @@ export default function Home() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <div style={{ width: '32%', aspectRatio: '1 / 1' }}>
+              <div className="col-start-9 col-end-12" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="/hero-interior-brick.jpeg"
                   alt="Corima dining room — exposed brick wall at low light"
