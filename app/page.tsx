@@ -580,12 +580,12 @@ export default function Home() {
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between">
-          <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>3 Allen St. NY 10002</p>
-          <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
+          <p className="tracking-wider" style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}>3 Allen St. NY 10002</p>
+          <p className="tracking-wider" style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
           <a
             href="mailto:info@corimanyc.com"
             className="nav-link tracking-wider"
-            style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}
+            style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}
           >
             Contact
           </a>
@@ -594,14 +594,14 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             className="nav-link tracking-wider"
-            style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}
+            style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}
           >
             Instagram
           </a>
           <a
             href="#"
             className="nav-link tracking-wider"
-            style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}
+            style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}
           >
             Spotify
           </a>
