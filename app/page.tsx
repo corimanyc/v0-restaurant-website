@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -40,7 +40,6 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false)
 
   const [isAtTop, setIsAtTop] = useState(true)
-  const heroRef = useRef<HTMLElement | null>(null)
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
@@ -54,19 +53,12 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Use the actual hero section's bottom edge (measured from viewport top) so
-      // the toggle fires at the real hero/about boundary regardless of viewport
-      // quirks (mobile URL bar, scrollbars, dynamic h-screen, etc.).
-      const heroBottom = heroRef.current?.getBoundingClientRect().bottom ?? window.innerHeight
-      setIsAtTop(heroBottom > 0)
+      // Switch when the hero (full viewport) scrolls past the nav line (~80px)
+      setIsAtTop(window.scrollY < window.innerHeight - 80)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
-    window.addEventListener('resize', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleScroll)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
@@ -93,7 +85,7 @@ export default function Home() {
         </Link>
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
-      <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
+      <section className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
@@ -219,12 +211,17 @@ export default function Home() {
           }}
         >
           <div className="flex items-center justify-between px-5 md:px-12 py-6">
-            {/* Address — only rendered while on the landing/hero */}
-            {isAtTop && (
-              <p className="text-xs md:text-sm tracking-widest uppercase text-white">
-                {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
-              </p>
-            )}
+            {/* Address — fades out as soon as hero leaves viewport */}
+            <p
+              className="text-xs md:text-sm tracking-widest uppercase text-white"
+              style={{
+                opacity: isAtTop ? 1 : 0,
+                pointerEvents: 'none',
+                transition: 'opacity 0.2s ease',
+              }}
+            >
+              {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
+            </p>
             {/* Persistent logo — stays white regardless of scroll */}
             <img
               src="/footer-logo.png"
