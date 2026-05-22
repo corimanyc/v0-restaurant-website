@@ -12,6 +12,10 @@ const heroImages = [
     alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
   },
   {
+    src: '/hero-counter-service.jpeg',
+    alt: 'CORIMA chef\u2019s counter — diners watching the line during service',
+  },
+  {
     src: '/hero-kitchen-934.jpeg',
     alt: 'CORIMA kitchen — 9:34 PM, chef\u2019s shadow across the line during service',
   },
@@ -120,7 +124,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: index === 1 ? 'center 20%' : 'center',
+                objectPosition: index === 2 ? 'center 20%' : 'center',
               }}
             />
           ))}
