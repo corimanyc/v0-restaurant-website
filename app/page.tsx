@@ -39,8 +39,6 @@ export default function Home() {
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
 
-  const [isAtTop, setIsAtTop] = useState(true)
-
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
 
@@ -49,16 +47,6 @@ export default function Home() {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length)
     }, 5000)
     return () => clearInterval(interval)
-  }, [])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Switch when the hero (full viewport) scrolls past the nav line (~80px)
-      setIsAtTop(window.scrollY < window.innerHeight - 80)
-    }
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
@@ -86,6 +74,18 @@ export default function Home() {
       </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
       <section className="relative h-screen overflow-hidden w-full">
+        {/* Address — lives inside the hero, absolute-positioned at the bottom.
+            Because it scrolls with the hero, it's only visible while the hero
+            intersects the viewport, and reappears the instant the hero re-enters. */}
+        <p
+          className="absolute bottom-6 left-5 md:left-12 text-xs md:text-sm tracking-widest uppercase text-white z-30 pointer-events-none"
+          style={{
+            opacity: isDiningOpen ? 0 : 1,
+            transition: 'opacity 0.5s ease',
+          }}
+        >
+          {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
+        </p>
         {/* Hero images compress when dining open */}
         <div
           className="absolute top-0 left-0 h-full"
@@ -222,18 +222,9 @@ export default function Home() {
           }}
         >
           <div className="flex items-center justify-between px-5 md:px-12 py-6">
-            {/* Address — fades out as soon as hero leaves viewport */}
-            <p
-              className="text-xs md:text-sm tracking-widest uppercase text-white"
-              style={{
-                opacity: isAtTop ? 1 : 0,
-                pointerEvents: 'none',
-                transition: 'opacity 0.2s ease',
-              }}
-            >
-              {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
-            </p>
-            {/* Persistent logo — stays white regardless of scroll */}
+            {/* Persistent logo — stays white regardless of scroll. Address has been
+                moved into the hero section so it's only visible while the hero
+                intersects the viewport. */}
             <img
               src="/footer-logo.png"
               alt="CORIMA"
