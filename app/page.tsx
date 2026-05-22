@@ -184,7 +184,7 @@ export default function Home() {
               <Link
                 href="#about"
                 className="nav-link tracking-wider"
-                style={{ color: 'inherit', fontSize: '16px' }}
+                style={{ color: 'inherit', fontSize: '15px' }}
                 onClick={(e) => {
                   e.preventDefault()
                   document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -192,11 +192,11 @@ export default function Home() {
               >
                 About
               </Link>
-              <Link href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Reservations</Link>
-              <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', fontSize: '16px', fontFamily: 'inherit', lineHeight: 'inherit', cursor: 'pointer' }}>Dining</button>
-              <Link href="/events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Events</Link>
-              <Link href="#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Press</Link>
-              <Link href="https://corimanyc.bigcartel.com" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '16px' }}>Shop</Link>
+              <Link href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '15px' }}>Reservations</Link>
+              <button onClick={() => setIsDiningOpen(true)} className="nav-link tracking-wider text-left" style={{ color: 'inherit', background: 'transparent', border: 'none', fontSize: '15px', fontFamily: 'inherit', lineHeight: 'inherit', cursor: 'pointer' }}>Dining</button>
+              <Link href="/events" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '15px' }}>Events</Link>
+              <Link href="#press" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '15px' }}>Press</Link>
+              <Link href="https://corimanyc.bigcartel.com" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ color: 'inherit', fontSize: '15px' }}>Shop</Link>
             </div>
 
             {/* Mobile Menu Button */}
