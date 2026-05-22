@@ -53,8 +53,9 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show only while sitting on the landing/hero; hide as soon as the user scrolls away.
-      setIsAtTop(window.scrollY < 80)
+      // Toggle right around the hero/about boundary — hide once half the hero
+      // has scrolled past, reappear as soon as the user scrolls back into it.
+      setIsAtTop(window.scrollY < window.innerHeight * 0.5)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
