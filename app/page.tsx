@@ -190,7 +190,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
+          <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
             {/* Logo */}
             <Link href="/" className="flex-shrink-0 h-auto" style={{ width: '88px' }}>
               <img
@@ -247,7 +247,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="flex items-center justify-between px-5 md:px-12 py-6">
+          <div className="flex items-center justify-between px-5 md:px-9 py-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below. */}
             <p
@@ -276,7 +276,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="px-5 md:px-12 relative overflow-hidden"
+          className="relative overflow-hidden"
         style={{
           backgroundImage: 'url(/about-bg-v5.jpeg)',
           backgroundRepeat: 'repeat',
@@ -324,7 +324,7 @@ export default function Home() {
             12 columns, 20px gutter (grid-cols-12 gap-5)
             vertical placement in absolute pixels
         */}
-        <div style={{ paddingLeft: '36px', paddingRight: '36px', position: 'relative', zIndex: 1 }}>
+        <div style={{ position: 'relative', zIndex: 1 }}>
 
           {/* ===== OUR STORY ===== */}
           <section style={{ paddingTop: '160px' }}>
@@ -374,11 +374,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom paired images — right edge flush with nav (nav uses md:px-12 = 48px; wrapper has 36px outer padding, so add 12px right inset). Two equal-size squares, fixed width. */}
+            {/* Bottom paired images — right edge flush with nav (36px from viewport). */}
             <div
               style={{
                 marginTop: '100px',
-                paddingRight: '12px',
+                paddingRight: '36px',
                 display: 'flex',
                 justifyContent: 'flex-end',
                 gap: '20px',
@@ -472,7 +472,7 @@ export default function Home() {
         className="py-16 lg:py-24"
       >
 
-        <div className="px-5 md:px-20 mb-10">
+        <div className="px-5 md:px-9 mb-10">
           <h2 style={{ fontSize: '16px', fontWeight: 500, color: '#CBCBCB' }}>OUR STORY</h2>
         </div>
 
