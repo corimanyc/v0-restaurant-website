@@ -171,7 +171,7 @@ export default function Home() {
         >
           <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0 w-20 h-auto">
+            <Link href="/" className="flex-shrink-0 h-auto" style={{ width: '88px' }}>
               <img
                 src="/logo.svg"
                 alt="CORIMA"
