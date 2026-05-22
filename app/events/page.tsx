@@ -85,8 +85,8 @@ export default function EventsPage() {
           transition: 'opacity 0.5s ease',
         }}
       >
-        <nav className="relative flex items-center justify-between px-5 md:px-12 pt-6">
-          <Link href="/" className="flex-shrink-0 w-24 h-auto">
+        <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
+          <Link href="/" className="flex-shrink-0 h-auto" style={{ width: '88px' }}>
             <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
           </Link>
 
