@@ -112,20 +112,37 @@ export default function Home() {
         {/* Gradient blur layer — always visible at top of viewport. Sits below
             the dining side panel (z-45) so the panel covers it on the right,
             and below the nav header (z-46) so nav text stays sharp. */}
+        {/* Progressive blur — multiple stacked layers each with increasing blur radius
+            and offset mask windows. The eye reads the cumulative effect as a smooth
+            continuous gradient with no perceptible mask edge. Pattern from progressive-blur. */}
         <div
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{
-            height: '80px',
-            zIndex: 44,
-            backdropFilter: 'blur(1.5px)',
-            WebkitBackdropFilter: 'blur(1.5px)',
-            maskImage:
-              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.35) 75%, rgba(0,0,0,0.1) 88%, rgba(0,0,0,0) 100%)',
-          }}
-        />
+          style={{ height: '120px', zIndex: 44 }}
+        >
+          {[
+            { blur: 0.5, from: '0%', mid: '12.5%', fade: '25%' },
+            { blur: 1, from: '12.5%', mid: '25%', fade: '37.5%' },
+            { blur: 2, from: '25%', mid: '37.5%', fade: '50%' },
+            { blur: 4, from: '37.5%', mid: '50%', fade: '62.5%' },
+            { blur: 8, from: '50%', mid: '62.5%', fade: '75%' },
+            { blur: 16, from: '62.5%', mid: '75%', fade: '87.5%' },
+          ].map((layer, i) => {
+            const mask = `linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) ${layer.from}, rgba(0,0,0,1) ${layer.mid}, rgba(0,0,0,1) ${layer.fade}, rgba(0,0,0,0) 100%)`
+            return (
+              <div
+                key={i}
+                className="absolute inset-0"
+                style={{
+                  backdropFilter: `blur(${layer.blur}px)`,
+                  WebkitBackdropFilter: `blur(${layer.blur}px)`,
+                  maskImage: mask,
+                  WebkitMaskImage: mask,
+                }}
+              />
+            )
+          })}
+        </div>
 
         {/* Header/Navigation — fixed, hidden only when dining overlay open */}
         <header
