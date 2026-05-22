@@ -544,9 +544,9 @@ export default function Home() {
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between">
-          <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Contact</p>
           <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>3 Allen St. NY 10002</p>
           <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Tuesday - Saturday &nbsp; 5:30PM - 10PM</p>
+          <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Contact</p>
           <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Instagram</p>
           <p className="tracking-wider" style={{ fontSize: '14px', color: '#CBCBCB', margin: '0', fontWeight: 400 }}>Spotify</p>
         </div>
