@@ -91,7 +91,6 @@ export default function EventsPage() {
           pressHref="/#press"
           onOpenDining={() => setIsDiningOpen(true)}
           onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
-          linkFontSize={14}
         />
       </header>
 
