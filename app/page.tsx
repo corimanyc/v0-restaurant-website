@@ -427,7 +427,7 @@ export default function Home() {
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
-              <div className="col-start-7 col-end-12">
+              <div className="col-start-7 col-end-13" style={{ paddingRight: '36px' }}>
                 <img
                   src="/hero-dining-nook.jpeg"
                   alt="Corima dining nook — wooden chairs and table against slatted wainscoting"
