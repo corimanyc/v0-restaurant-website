@@ -404,31 +404,21 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section style={{ paddingTop: '200px' }}>
+          <section style={{ paddingTop: '120px' }}>
             <div className="grid grid-cols-12 gap-5">
               <div className="col-start-2 col-end-4">
                 <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
-            {/* Staircase headline */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '120px' }}>
-              <div
-                className="col-start-2 col-end-9"
-                style={{
-                  fontSize: '32px',
-                  lineHeight: 1.35,
-                  color: '#E8E8E8',
-                  fontWeight: 400,
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                <div>Circle of Sharing does not just</div>
-                <div>apply to our cuisine, it&apos;s a living</div>
-                <div>exchange between</div>
-                <div style={{ paddingLeft: '20%' }}>our kitchen, our guests, farmers,</div>
-                <div style={{ paddingLeft: '30%' }}>foragers, and artisans who</div>
-                <div style={{ paddingLeft: '40%' }}>shape how we cook.</div>
+            {/* Staircase headline (SVG) — col 2 → right edge of col 6, 50px below label */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '50px' }}>
+              <div className="col-start-2 col-end-7">
+                <img
+                  src="/ethos-headline.svg"
+                  alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
+                  className="w-full h-auto block"
+                />
               </div>
             </div>
 
