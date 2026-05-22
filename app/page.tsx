@@ -53,8 +53,8 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Switch when the hero (full viewport) scrolls past the nav line (~80px)
-      setIsAtTop(window.scrollY < window.innerHeight - 80)
+      // Hide as soon as the hero leaves the viewport; reappear as soon as it enters.
+      setIsAtTop(window.scrollY < window.innerHeight - 1)
     }
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -217,7 +217,7 @@ export default function Home() {
               style={{
                 opacity: isAtTop ? 1 : 0,
                 pointerEvents: 'none',
-                transition: 'opacity 0.2s ease',
+                transition: 'opacity 0.08s linear',
               }}
             >
               {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
