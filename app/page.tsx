@@ -538,7 +538,9 @@ export default function Home() {
           // Bottom padding is tuned so the row of links is vertically centered with
           // the fixed white footer icon (24px tall, 24px from viewport bottom -> center at 36px from bottom).
           // Content line-height is ~16px, so paddingBottom = 36 - 8 = 28px.
-          padding: '40px 48px 28px 48px',
+          // Right padding leaves room for the persistent fixed white logo
+          // (24px icon + 48px right offset = ~72px reserved, plus ~32px gap).
+          padding: '40px 104px 28px 48px',
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between">
