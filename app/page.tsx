@@ -122,13 +122,11 @@ export default function Home() {
           style={{ height: '72px', zIndex: 44 }}
         >
           {[
-            { blur: 0.5, start: 0 },
-            { blur: 1, start: 16 },
-            { blur: 2, start: 32 },
-            { blur: 4, start: 48 },
-            { blur: 8, start: 64 },
+            { blur: 0.5, fadeEnd: 55 },
+            { blur: 1.5, fadeEnd: 35 },
+            { blur: 3, fadeEnd: 18 },
           ].map((layer, i) => {
-            const mask = `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) ${layer.start}%, rgba(0,0,0,0) 100%)`
+            const mask = `linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) ${layer.fadeEnd}%)`
             return (
               <div
                 key={i}
