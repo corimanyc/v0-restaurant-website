@@ -19,6 +19,10 @@ const heroImages = [
     src: '/hero-interior-brick.jpeg',
     alt: 'CORIMA dining room — exposed brick wall with pendant lantern at low light',
   },
+  {
+    src: '/hero-dining-nook.jpeg',
+    alt: 'CORIMA dining nook — wooden chairs and table against slatted wainscoting',
+  },
 ]
 
 const aboutSectionImages = [
