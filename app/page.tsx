@@ -53,21 +53,25 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    // Drive the address visibility from the hero element itself rather than a
-    // scrollY threshold. IntersectionObserver fires exactly when the hero
-    // crosses ~50% of the viewport, so the toggle stays in sync with the real
-    // hero/about boundary regardless of mobile URL bars, viewport resizes, or
-    // the dining side panel collapsing the layout.
-    const el = heroRef.current
-    if (!el) return
-    const io = new IntersectionObserver(
-      ([entry]) => setIsAtTop(entry.isIntersecting),
-      // threshold 0 -> show while ANY pixel of the hero is in view, hide the
-      // moment it's fully scrolled past. Matches the landing-page boundary.
-      { threshold: 0 },
-    )
-    io.observe(el)
-    return () => io.disconnect()
+    // The address sits at the bottom of the viewport, so its visibility should
+    // be tied to whether the hero still extends down to that line — not whether
+    // the hero's top edge is in view. We check if the hero's bottom edge is
+    // still below the address's y-position; once it scrolls above, hide.
+    const handleScroll = () => {
+      const el = heroRef.current
+      if (!el) return
+      const heroBottom = el.getBoundingClientRect().bottom
+      // Address line ~= viewport bottom minus its own offset (py-6 = 24px + ~14px text)
+      const addressLine = window.innerHeight - 48
+      setIsAtTop(heroBottom > addressLine)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('resize', handleScroll)
+    }
   }, [])
 
   return (
