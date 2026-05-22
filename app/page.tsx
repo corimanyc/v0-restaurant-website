@@ -230,14 +230,15 @@ export default function Home() {
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below. */}
             <p
-              className="text-xs md:text-sm tracking-widest uppercase text-white"
+              className="text-xs md:text-sm tracking-wider text-white"
               style={{
                 opacity: heroVisible ? 1 : 0,
                 pointerEvents: 'none',
                 transition: 'opacity 0.2s ease',
+                fontWeight: 400,
               }}
             >
-              {'3 ALLEN ST NY 10002   TUESDAY -  SATURDAY  5:30PM - 10PM'}
+              3 Allen St. NY 10002 &nbsp;&nbsp;&nbsp; Tuesday - Saturday &nbsp; 5:30PM - 10PM
             </p>
             {/* Persistent logo — stays white regardless of scroll */}
             <img
