@@ -121,9 +121,10 @@ export default function Home() {
               key={image.src}
               src={image.src}
               alt={image.alt}
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+              className="absolute inset-0 w-full h-full object-contain transition-opacity duration-1000"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
+                backgroundColor: '#000000',
                 objectPosition: index === 1 ? 'center 20%' : 'center',
               }}
             />
