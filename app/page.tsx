@@ -318,116 +318,153 @@ export default function Home() {
           />
         </div>
 
-        {/* Two Column Layout — 36px gap, 60:40 split */}
-        <div className="flex flex-col lg:flex-row relative" style={{ gap: '100px', zIndex: 1, marginTop: '40px' }}>
-          {/* Left Column - A La Carte */}
-          <div style={{ flex: '0 0 calc(60% - 50px)' }} className="flex flex-col order-2 lg:order-1">
-            <div style={{ maxWidth: '80%', marginBottom: '64px' }}>
-              <p className="leading-relaxed" style={{ fontSize: '16px' }}>
-                Corima&apos;s cuisine is inspired by the northern region of Mexico, highlighting local Northeast ingredients, Asian technique and flavor profiles, along with a wide Mexican pantry to create what Chef Fidel Caballero refers to as Progressive Mexican Cuisine.
-              </p>
-              <p className="leading-relaxed" style={{ fontSize: '16px', marginTop: '24px' }}>
-                Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
-              </p>
+        {/*
+          Our Story + Ethos — built on the locked grid spec:
+            outer margin 36px (inline padding on the wrapper)
+            12 columns, 20px gutter (grid-cols-12 gap-5)
+            vertical placement in absolute pixels
+        */}
+        <div style={{ paddingLeft: '36px', paddingRight: '36px', position: 'relative', zIndex: 1 }}>
+
+          {/* ===== OUR STORY ===== */}
+          <section style={{ paddingTop: '160px' }}>
+            {/* Section label — col 2 */}
+            <div className="grid grid-cols-12 gap-5">
+              <div className="col-start-2 col-end-4">
+                <p style={{ fontSize: '14px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
+              </div>
             </div>
 
-            <div 
-              className="relative overflow-hidden w-full bg-black" 
-              style={{ maxWidth: '905px', paddingBottom: '81.87%', position: 'relative' }}
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              {/* Black & White Base Layer — always visible when current slide */}
-              {aboutSectionImages.map((image, index) => (
-                <img
-                  key={`bw-${index}`}
-                  src={image.bw}
-                  alt={image.alt}
-                  className="absolute inset-0 w-full h-full transition-opacity duration-700"
-                  style={{ 
-                    opacity: index === aboutImgIndex ? 1 : 0,
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                  }}
-                />
-              ))}
-              
-              {/* Color Overlay Layer — fades in on top of BW, no gap */}
-              {aboutSectionImages.map((image, index) => (
-                <img
-                  key={`color-${index}`}
-                  src={image.color}
-                  alt={image.alt}
-                  className="absolute inset-0 w-full h-full transition-opacity duration-700"
-                  style={{ 
-                    opacity: (index === aboutImgIndex && isHovering) ? 1 : 0,
-                    objectFit: 'cover',
-                    objectPosition: 'center',
-                  }}
-                />
-              ))}
-              
-              {/* Left half — previous image */}
-              <button
-                onClick={prevAboutImg}
-                className="absolute left-0 top-0 h-full z-10"
-                style={{ width: '50%', cursor: 'w-resize' }}
-                aria-label="Previous image"
-              />
-              {/* Right half — next image */}
-              <button
-                onClick={nextAboutImg}
-                className="absolute right-0 top-0 h-full z-10"
-                style={{ width: '50%', cursor: 'e-resize' }}
-                aria-label="Next image"
-              />
+            {/* Staircase headline */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '120px' }}>
+              <div
+                className="col-start-2 col-end-11"
+                style={{
+                  fontSize: '32px',
+                  lineHeight: 1.35,
+                  color: '#E8E8E8',
+                  fontWeight: 400,
+                  letterSpacing: '-0.01em',
+                }}
+              >
+                <div>Working with the roughness, yet simplicity of</div>
+                <div>the desert as inspiration,</div>
+                <div style={{ paddingLeft: '15%' }}>Corima takes what is familiar to some</div>
+                <div style={{ paddingLeft: '30%' }}>and makes it sensible to all.</div>
+              </div>
             </div>
 
-            {/* Wine section */}
-            <div style={{ marginTop: '36px', display: 'flex', gap: '36px', alignItems: 'flex-start' }}>
-              <div style={{ flex: '0 0 35%' }}>
+            {/* Counter image (cols 3–10) + intro copy (cols 10–13) */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '140px', alignItems: 'start' }}>
+              <div className="col-start-3 col-end-10">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/EFCCDF8B-84EF-4A20-AC24-C05E7DB2DA6A_1_201_a-YYbbLS597HJP5xsPLqQGq2rHOwJi8K.jpeg"
-                  alt="Wine bottle with lamp"
-                  className="w-full object-cover"
+                  src="/hero-counter-service.jpeg"
+                  alt="Corima chef's counter during service — diners watching the line"
+                  className="w-full h-auto block"
                 />
               </div>
-              <div style={{ flex: '1' }}>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
-                  Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
+              <div className="col-start-10 col-end-13" style={{ paddingTop: '120px' }}>
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                  The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                 </p>
-                <p className="leading-relaxed mb-4" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '28px' }}>
+                  Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
+                </p>
+              </div>
+            </div>
+
+            {/* Chef bio — cols 4–7, indented */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px' }}>
+              <div className="col-start-4 col-end-7">
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                  Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom paired images — square chef (cols 6–10) + narrow portrait (cols 10–12) */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '160px', alignItems: 'end' }}>
+              <div className="col-start-6 col-end-10">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
+                  alt="Chef Fidel Caballero plating in the kitchen"
+                  className="w-full h-auto block"
+                  style={{ aspectRatio: '1 / 1', objectFit: 'cover' }}
+                />
+              </div>
+              <div className="col-start-10 col-end-12">
+                <img
+                  src="/hero-interior-brick.jpeg"
+                  alt="Corima dining room — exposed brick wall at low light"
+                  className="w-full h-auto block"
+                  style={{ aspectRatio: '3 / 4', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* ===== ETHOS ===== */}
+          <section style={{ paddingTop: '200px' }}>
+            <div className="grid grid-cols-12 gap-5">
+              <div className="col-start-2 col-end-4">
+                <p style={{ fontSize: '14px', color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
+              </div>
+            </div>
+
+            {/* Staircase headline */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '120px' }}>
+              <div
+                className="col-start-2 col-end-9"
+                style={{
+                  fontSize: '32px',
+                  lineHeight: 1.35,
+                  color: '#E8E8E8',
+                  fontWeight: 400,
+                  letterSpacing: '-0.01em',
+                }}
+              >
+                <div>Circle of Sharing does not just</div>
+                <div>apply to our cuisine, it&apos;s a living</div>
+                <div>exchange between</div>
+                <div style={{ paddingLeft: '20%' }}>our kitchen, our guests, farmers,</div>
+                <div style={{ paddingLeft: '30%' }}>foragers, and artisans who</div>
+                <div style={{ paddingLeft: '40%' }}>shape how we cook.</div>
+              </div>
+            </div>
+
+            {/* Body copy (cols 4–7) + large dining-nook image (cols 7–13) */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '80px', alignItems: 'start' }}>
+              <div className="col-start-4 col-end-7" style={{ paddingTop: '220px' }}>
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
-                <p className="leading-relaxed mb-6" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '28px' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p className="leading-relaxed" style={{ fontSize: '16px', color: '#CBCBCB' }}>
+                <p style={{ fontSize: '14px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '80px' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
+              <div className="col-start-7 col-end-13">
+                <img
+                  src="/hero-dining-nook.jpeg"
+                  alt="Corima dining nook — wooden chairs and table against slatted wainscoting"
+                  className="w-full h-auto block"
+                />
+              </div>
             </div>
-          </div>
 
-          {/* Right Column - Tasting Menu */}
-          <div style={{ flex: '0 0 calc(40% - 50px)' }} className="flex flex-col order-1 lg:order-2">
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5248%201-nkuaJEhn3Fi6iA6AWdhayUKFF2iNDH.png"
-              alt="Tasting menu dish"
-              className="object-cover w-full"
-              style={{ marginBottom: '64px' }}
-            />
-
-            <h3 className="uppercase tracking-widest mb-4" style={{ fontSize: '20px', fontWeight: 500 }}>Our Story</h3>
-
-            <p className="leading-relaxed mb-6" style={{ fontSize: '16px' }}>
-              The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City. Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
-            </p>
-
-            <p className="leading-relaxed" style={{ fontSize: '16px' }}>
-              Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
-            </p>
-          </div>
+            {/* Bottom kitchen action image — cols 3–9 */}
+            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '140px' }}>
+              <div className="col-start-3 col-end-9">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
+                  alt="Corima kitchen line during service"
+                  className="w-full h-auto block"
+                />
+              </div>
+            </div>
+          </section>
 
         </div>
       </section>
