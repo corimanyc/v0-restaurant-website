@@ -429,8 +429,8 @@ export default function Home() {
               </div>
               <div className="col-start-7 col-end-13" style={{ paddingRight: '36px' }}>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
-                  alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
+                  src="/hero-dining-nook.jpeg"
+                  alt="Corima dining nook — wooden chairs and table against slatted wainscoting"
                   className="w-full h-auto block"
                 />
               </div>
@@ -440,8 +440,8 @@ export default function Home() {
             <div className="grid grid-cols-12 gap-5" style={{ marginTop: '140px' }}>
               <div className="col-start-3 col-end-9">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/622368293_18070748996628283_84941654303889225_n%20%281%29%205-jj4VRg7UvADc1NfSYvY494CRI8A1g8.png"
-                  alt="Corima kitchen line during service"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
+                  alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
                   className="w-full h-auto block"
                 />
               </div>
