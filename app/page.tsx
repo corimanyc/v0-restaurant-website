@@ -92,20 +92,6 @@ export default function Home() {
         onClose={() => setIsDiningOpen(false)}
         onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
       />
-      {/* Persistent logo when dining overlay is open — must exactly match SiteNav (md:px-9 = 36px, pt-6 = 24px, logo width 88px) */}
-      <div
-        className="fixed top-0 left-0 transition-opacity duration-500"
-        style={{
-          padding: '24px 36px 0 36px',
-          zIndex: 50,
-          opacity: isDiningOpen ? 1 : 0,
-          pointerEvents: isDiningOpen ? 'all' : 'none',
-        }}
-      >
-        <Link href="/" className="flex-shrink-0 h-auto block" style={{ width: '88px' }}>
-          <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
-        </Link>
-      </div>
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
       <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
         {/* Hero images compress when dining open */}
@@ -180,15 +166,12 @@ export default function Home() {
           })}
         </div>
 
-        {/* Header/Navigation — fixed, hidden only when dining overlay open */}
+        {/* Header/Navigation — fixed; logo stays put always, only links/burger fade when dining opens */}
         <header
           className="fixed top-0 left-0 right-0"
           style={{
             zIndex: 46,
-            opacity: isDiningOpen ? 0 : 1,
-            pointerEvents: isDiningOpen ? 'none' : 'all',
             color: '#FFFFFF',
-            transition: 'opacity 0.5s ease',
           }}
         >
           <SiteNav
@@ -197,6 +180,7 @@ export default function Home() {
             smoothScrollAbout
             onOpenDining={() => setIsDiningOpen(true)}
             onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
+            hideLinks={isDiningOpen}
           />
 
         </header>

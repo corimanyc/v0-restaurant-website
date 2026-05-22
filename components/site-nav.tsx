@@ -19,6 +19,8 @@ type SiteNavProps = {
   linkFontSize?: number
   /** Optional override color for desktop nav links and the mobile burger bars. */
   linkColor?: string
+  /** When true, fade the right-side nav links and burger but keep the logo fully visible. */
+  hideLinks?: boolean
 }
 
 /**
@@ -34,9 +36,15 @@ export default function SiteNav({
   onToggleMobileMenu,
   linkFontSize = 15,
   linkColor,
+  hideLinks = false,
 }: SiteNavProps) {
   const linkStyle = { color: linkColor ?? 'inherit', fontSize: `${linkFontSize}px` }
   const burgerColor = linkColor ?? '#CBCBCB'
+  const hideStyle: React.CSSProperties = {
+    opacity: hideLinks ? 0 : 1,
+    pointerEvents: hideLinks ? 'none' : 'auto',
+    transition: 'opacity 0.5s ease',
+  }
 
   return (
     <nav className="relative flex items-center justify-between px-5 md:px-9 pt-6">
@@ -46,7 +54,7 @@ export default function SiteNav({
       </Link>
 
       {/* Desktop nav */}
-      <div className="hidden md:flex items-center gap-8">
+      <div className="hidden md:flex items-center gap-8" style={hideStyle}>
         <Link
           href={aboutHref}
           className="nav-link tracking-wider"
@@ -109,6 +117,7 @@ export default function SiteNav({
         className="md:hidden flex flex-col gap-1.5"
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
+        style={hideStyle}
       >
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
