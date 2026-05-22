@@ -118,8 +118,8 @@ export default function Home() {
             reads as a smooth, edge-less gradient blur. */}
         <div
           aria-hidden
-          className="fixed top-0 left-0 right-0 pointer-events-none"
-          style={{ height: '120px', zIndex: 44 }}
+          className="fixed left-0 right-0 pointer-events-none"
+          style={{ top: '64px', height: '60px', zIndex: 44 }}
         >
           {[
             { blur: 0.5, start: 0 },
