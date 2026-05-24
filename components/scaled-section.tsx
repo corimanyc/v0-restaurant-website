@@ -78,15 +78,18 @@ export default function ScaledSection({
         ref={innerRef}
         style={
           enabled
-            ? {
+            ? ({
                 position: 'absolute',
                 top: 0,
                 left: 0,
                 width: `${designWidth}px`,
                 transform: `scale(${scale})`,
                 transformOrigin: 'top left',
-              }
-            : undefined
+                // Expose the current scale so children can counter-scale (e.g.
+                // body text that should stay at its natural on-screen size).
+                ['--scale' as string]: scale,
+              } as CSSProperties)
+            : ({ ['--scale' as string]: 1 } as CSSProperties)
         }
       >
         {children}
