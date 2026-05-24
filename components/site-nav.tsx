@@ -50,7 +50,7 @@ export default function SiteNav({
 
   return (
     <nav
-      className="relative flex items-center justify-between px-5 md:px-9 pt-6"
+      className="relative flex items-center justify-between px-9 pt-6"
       style={{ pointerEvents: 'none' }}
     >
       {/* Logo — fixed width + position across all pages */}
