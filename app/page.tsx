@@ -486,7 +486,7 @@ export default function Home() {
                 position: 'absolute',
                 bottom: 'calc(100% + 12px)',
                 right: 0,
-                width: '380px',
+                width: '420px',
                 opacity: 0,
                 pointerEvents: 'none',
                 transform: 'translateY(8px)',
@@ -507,16 +507,46 @@ export default function Home() {
                   height: '12px',
                 }}
               />
-              <iframe
-                data-testid="embed-iframe"
-                title="Corima Spotify playlist"
-                style={{ borderRadius: '12px', display: 'block', width: '100%', height: '352px', border: 0 }}
-                src="https://open.spotify.com/embed/playlist/31bCtQZ5iDh34anUn9elz0?utm_source=generator&theme=0"
-                width="100%"
-                height="352"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              />
+              {/* Card: photo background with the Spotify embed centered on top */}
+              <div
+                style={{
+                  position: 'relative',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  padding: '20px',
+                  backgroundImage: 'url(/hero-counter-service.jpeg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+                }}
+              >
+                {/* Dark scrim for legibility over the photo */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%)',
+                  }}
+                />
+                <iframe
+                  data-testid="embed-iframe"
+                  title="Corima Spotify playlist"
+                  style={{
+                    position: 'relative',
+                    borderRadius: '12px',
+                    display: 'block',
+                    width: '100%',
+                    height: '352px',
+                    border: 0,
+                  }}
+                  src="https://open.spotify.com/embed/playlist/31bCtQZ5iDh34anUn9elz0?utm_source=generator&theme=0"
+                  width="100%"
+                  height="352"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </span>
         </div>
