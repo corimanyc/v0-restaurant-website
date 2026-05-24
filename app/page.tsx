@@ -487,6 +487,19 @@ export default function Home() {
                 zIndex: 60,
               }}
             >
+              {/* Invisible hover bridge so the cursor can cross the 12px gap
+                  from the "Spotify" label to the iframe without triggering
+                  mouseleave on the parent span. */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  right: 0,
+                  bottom: '-12px',
+                  height: '12px',
+                }}
+              />
               <iframe
                 data-testid="embed-iframe"
                 title="Corima Spotify playlist"
