@@ -6,6 +6,7 @@ import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
+import ScaledSection from '@/components/scaled-section'
 
 const heroImages = [
   {
@@ -284,6 +285,7 @@ export default function Home() {
             vertical placement in absolute pixels
         */}
         <div style={{ position: 'relative', zIndex: 1 }}>
+        <ScaledSection designWidth={1440} mobileBreakpoint={1024}>
 
           {/* ===== OUR STORY ===== */}
           <section style={{ paddingTop: '160px' }}>
@@ -407,6 +409,7 @@ export default function Home() {
             </div>
           </section>
 
+        </ScaledSection>
         </div>
       </section>
       {/* End dark section */}
