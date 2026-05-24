@@ -449,13 +449,57 @@ export default function Home() {
           >
             Instagram
           </a>
-          <a
-            href="#"
+          <span
             className="nav-link tracking-wider"
-            style={{ fontSize: '14px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}
+            style={{
+              fontSize: '14px',
+              color: '#FFFFFF',
+              margin: '0',
+              fontWeight: 400,
+              position: 'relative',
+              cursor: 'pointer',
+            }}
+            onMouseEnter={(e) => {
+              const popover = e.currentTarget.querySelector<HTMLDivElement>('[data-spotify-popover]')
+              if (popover) popover.style.opacity = '1'
+              if (popover) popover.style.pointerEvents = 'auto'
+              if (popover) popover.style.transform = 'translateY(0)'
+            }}
+            onMouseLeave={(e) => {
+              const popover = e.currentTarget.querySelector<HTMLDivElement>('[data-spotify-popover]')
+              if (popover) popover.style.opacity = '0'
+              if (popover) popover.style.pointerEvents = 'none'
+              if (popover) popover.style.transform = 'translateY(8px)'
+            }}
           >
             Spotify
-          </a>
+            <div
+              data-spotify-popover
+              style={{
+                position: 'absolute',
+                bottom: 'calc(100% + 12px)',
+                right: 0,
+                width: '320px',
+                opacity: 0,
+                pointerEvents: 'none',
+                transform: 'translateY(8px)',
+                transition: 'opacity 0.2s ease, transform 0.2s ease',
+                zIndex: 60,
+              }}
+            >
+              <iframe
+                data-testid="embed-iframe"
+                title="Corima Spotify playlist"
+                style={{ borderRadius: '12px', display: 'block' }}
+                src="https://open.spotify.com/embed/playlist/31bCtQZ5iDh34anUn9elz0?utm_source=generator&theme=0"
+                width="100%"
+                height="152"
+                frameBorder="0"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              />
+            </div>
+          </span>
         </div>
       </footer>
     </div>
