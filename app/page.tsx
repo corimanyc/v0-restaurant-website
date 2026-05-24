@@ -472,7 +472,14 @@ export default function Home() {
               if (popover) popover.style.transform = 'translateY(8px)'
             }}
           >
-            Spotify
+            <a
+              href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              Spotify
+            </a>
             <div
               data-spotify-popover
               style={{
