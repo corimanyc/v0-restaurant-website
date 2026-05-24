@@ -429,7 +429,7 @@ export default function Home() {
       <footer
         style={{
           backgroundColor: '#1a1a1a',
-          backgroundImage: 'url(/main-bg.jpeg)',
+          backgroundImage: 'url(/about-bg-v5.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
