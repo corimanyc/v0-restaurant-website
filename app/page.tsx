@@ -207,7 +207,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="flex items-center justify-between px-5 md:px-9 py-6">
+          <div className="flex items-center justify-between px-9 py-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below. */}
             <p
@@ -433,13 +433,11 @@ export default function Home() {
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
-          // Left padding matches the CORIMA wordmark (48px) at the top of the page.
-          // Bottom padding is tuned so the row of links is vertically centered with
-          // the fixed white footer icon (24px tall, 24px from viewport bottom -> center at 36px from bottom).
-          // Content line-height is ~16px, so paddingBottom = 36 - 8 = 28px.
-          // Right padding leaves room for the persistent fixed white logo
-          // (24px icon + 48px right offset = ~72px reserved, plus ~32px gap).
-          padding: '40px 144px 24px 48px',
+          // Horizontal padding matches the SiteNav (36px) for a consistent
+          // left/right edge across the whole site. Right padding adds extra
+          // room so footer links don't sit underneath the persistent
+          // fixed white CORIMA icon at the bottom-right.
+          padding: '40px 132px 24px 36px',
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>
