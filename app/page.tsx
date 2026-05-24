@@ -207,7 +207,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="flex items-center justify-between px-9 py-6">
+          <div className="flex items-center justify-between px-6 lg:px-9 py-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below. */}
             <p
@@ -288,7 +288,7 @@ export default function Home() {
         <ScaledSection designWidth={1440} mobileBreakpoint={1024}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-20 lg:pt-[160px] px-9 lg:px-0">
+          <section className="pt-20 lg:pt-[160px] px-6 lg:px-0">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
@@ -361,7 +361,7 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section className="pt-20 lg:pt-[120px] px-9 lg:px-0">
+          <section className="pt-20 lg:pt-[120px] px-6 lg:px-0">
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
                 <p className="text-base" style={{ fontSize: 'calc(20px / var(--scale, 1))', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
@@ -433,11 +433,14 @@ export default function Home() {
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
-          // Horizontal padding matches the SiteNav (36px) for a consistent
-          // left/right edge across the whole site. Right padding adds extra
-          // room so footer links don't sit underneath the persistent
+          // Horizontal padding matches the SiteNav (24px on mobile, 36px ≥1024px)
+          // for a consistent left/right edge across the whole site. Right padding
+          // adds extra room so footer links don't sit underneath the persistent
           // fixed white CORIMA icon at the bottom-right.
-          padding: '40px 132px 24px 36px',
+          paddingTop: '40px',
+          paddingBottom: '24px',
+          paddingLeft: 'var(--site-pad-x, 24px)',
+          paddingRight: '132px',
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>

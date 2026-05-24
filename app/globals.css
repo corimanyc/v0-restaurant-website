@@ -1,6 +1,18 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Site-wide horizontal padding token: matches Tailwind px-6 (24px) on mobile,
+   and px-9 (36px) at lg+ (≥1024px). Used by the footer and any element
+   that can't easily express both via Tailwind utilities. */
+:root {
+  --site-pad-x: 24px;
+}
+@media (min-width: 1024px) {
+  :root {
+    --site-pad-x: 36px;
+  }
+}
+
 /* Always reserve vertical scrollbar space so locking body overflow
    when overlays open doesn't shift the fixed nav / logo. */
 html {
