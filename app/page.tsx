@@ -388,7 +388,7 @@ export default function Home() {
                 <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p className="mt-10 lg:mt-20" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="hidden lg:block mt-10 lg:mt-20" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
@@ -400,6 +400,11 @@ export default function Home() {
                 />
               </div>
             </div>
+
+            {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
+            <p className="lg:hidden mt-10" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+              Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+            </p>
 
             {/* Bottom kitchen action image */}
             <div className="mt-16 lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
