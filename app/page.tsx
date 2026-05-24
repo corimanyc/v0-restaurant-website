@@ -486,7 +486,7 @@ export default function Home() {
                 position: 'absolute',
                 bottom: 'calc(100% + 12px)',
                 right: 0,
-                width: '320px',
+                width: '380px',
                 opacity: 0,
                 pointerEvents: 'none',
                 transform: 'translateY(8px)',
@@ -510,11 +510,10 @@ export default function Home() {
               <iframe
                 data-testid="embed-iframe"
                 title="Corima Spotify playlist"
-                style={{ borderRadius: '12px', display: 'block' }}
+                style={{ borderRadius: '12px', display: 'block', width: '100%', height: '352px', border: 0 }}
                 src="https://open.spotify.com/embed/playlist/31bCtQZ5iDh34anUn9elz0?utm_source=generator&theme=0"
                 width="100%"
-                height="152"
-                frameBorder="0"
+                height="352"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
               />
