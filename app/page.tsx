@@ -288,7 +288,7 @@ export default function Home() {
         <ScaledSection designWidth={1440} mobileBreakpoint={1024}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-20 lg:pt-[160px] px-5 lg:px-0">
+          <section className="pt-20 lg:pt-[160px] px-5 md:px-9 lg:px-0">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
@@ -361,7 +361,7 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section className="pt-20 lg:pt-[120px] px-5 lg:px-0">
+          <section className="pt-20 lg:pt-[120px] px-5 md:px-9 lg:px-0">
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
                 <p className="text-base" style={{ fontSize: 'calc(20px / var(--scale, 1))', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
