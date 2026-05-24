@@ -288,17 +288,17 @@ export default function Home() {
         <ScaledSection designWidth={1440} mobileBreakpoint={1024}>
 
           {/* ===== OUR STORY ===== */}
-          <section style={{ paddingTop: '160px' }}>
-            {/* Section label — col 2 */}
-            <div className="grid grid-cols-12 gap-5">
-              <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
+          <section className="pt-20 lg:pt-[160px] px-5 lg:px-0">
+            {/* Section label */}
+            <div className="lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-2 lg:col-end-4">
+                <p className="text-base lg:text-[20px]" style={{ fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
               </div>
             </div>
 
-            {/* Staircase headline (SVG) — col 2 → right edge of col 8, 50px below label */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '50px' }}>
-              <div className="col-start-2 col-end-9">
+            {/* Staircase headline (SVG) */}
+            <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-2 lg:col-end-9">
                 <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
@@ -307,37 +307,41 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Counter image (cols 3–8, right edge aligned with SVG above) + intro copy (cols 9–11) */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'center' }}>
-              <div className="col-start-3 col-end-9">
+            {/* Counter image + intro copy */}
+            <div className="mt-12 lg:mt-[100px] flex flex-col gap-8 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-center">
+              <div className="lg:col-start-3 lg:col-end-9">
                 <img
                   src="/hero-counter-service.jpeg"
                   alt="Corima chef's counter during service — diners watching the line"
                   className="w-full h-auto block"
                 />
               </div>
-              <div className="col-start-9 col-end-12">
+              <div className="lg:col-start-9 lg:col-end-12">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                 </p>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '28px' }}>
+                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
                 </p>
               </div>
             </div>
 
-            {/* Chef bio — cols 4–7, indented */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px' }}>
-              <div className="col-start-4 col-end-8" style={{ paddingRight: 'calc((100% - 60px) / 8 + 10px)' }}>
+            {/* Chef bio */}
+            <div className="mt-12 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div
+                className="lg:col-start-4 lg:col-end-8"
+                style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
+              >
+                <style>{`@media (min-width: 1024px) { :root { --bio-right-pad: calc((100% - 60px) / 8 + 10px); } }`}</style>
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
                 </p>
               </div>
             </div>
 
-            {/* Bottom paired images — cols 6–11, equal width, equal height squares */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '100px', alignItems: 'stretch' }}>
-              <div className="col-start-6 col-end-9" style={{ aspectRatio: '1 / 1' }}>
+            {/* Bottom paired images */}
+            <div className="mt-12 lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
+              <div className="lg:col-start-6 lg:col-end-9" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
                   alt="Chef Fidel Caballero plating in the kitchen"
@@ -345,7 +349,7 @@ export default function Home() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <div className="col-start-9 col-end-12" style={{ aspectRatio: '1 / 1' }}>
+              <div className="lg:col-start-9 lg:col-end-12" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="/hero-interior-brick.jpeg"
                   alt="Corima dining room — exposed brick wall at low light"
@@ -357,16 +361,16 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section style={{ paddingTop: '120px' }}>
-            <div className="grid grid-cols-12 gap-5">
-              <div className="col-start-2 col-end-4">
-                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
+          <section className="pt-20 lg:pt-[120px] px-5 lg:px-0">
+            <div className="lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-2 lg:col-end-4">
+                <p className="text-base lg:text-[20px]" style={{ fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
-            {/* Staircase headline (SVG) — col 2 → right edge of col 6, 50px below label */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '50px' }}>
-              <div className="col-start-2 col-end-7">
+            {/* Staircase headline (SVG) */}
+            <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-2 lg:col-end-7">
                 <img
                   src="/ethos-headline.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
@@ -375,20 +379,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Body copy (cols 4–7) + large dining-nook image (cols 7–13, full to last column edge), 60px below ethos SVG */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '60px', alignItems: 'start' }}>
-              <div className="col-start-3 col-end-6" style={{ paddingTop: '230px' }}>
+            {/* Body copy + dining-nook image */}
+            <div className="mt-10 lg:mt-[60px] flex flex-col gap-10 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
+              <div className="lg:col-start-3 lg:col-end-6 lg:pt-[230px]">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '28px' }}>
+                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB', marginTop: '80px' }}>
+                <p className="mt-10 lg:mt-20" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
-              <div className="col-start-7 col-end-13" style={{ paddingRight: '36px' }}>
+              <div className="lg:col-start-7 lg:col-end-13 lg:pr-9">
                 <img
                   src="/hero-dining-nook.jpeg"
                   alt="Corima dining nook — wooden chairs and table against slatted wainscoting"
@@ -397,9 +401,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Bottom kitchen action image — cols 3–9 */}
-            <div className="grid grid-cols-12 gap-5" style={{ marginTop: '140px' }}>
-              <div className="col-start-3 col-end-9">
+            {/* Bottom kitchen action image */}
+            <div className="mt-16 lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-3 lg:col-end-9">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
                   alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
