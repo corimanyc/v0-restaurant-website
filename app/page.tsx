@@ -333,7 +333,7 @@ export default function Home() {
             {/* Chef bio */}
             <div className="mt-12 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div
-                className="lg:col-start-4 lg:col-end-8"
+                className="lg:col-start-3 lg:col-end-7"
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
               >
                 <style>{`@media (min-width: 1024px) { :root { --bio-right-pad: calc((100% - 60px) / 8 + 10px); } }`}</style>
