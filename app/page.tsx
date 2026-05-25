@@ -51,9 +51,25 @@ export default function Home() {
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
+  const [navVisible, setNavVisible] = useState(true)
 
   useEffect(() => {
-    const onScroll = () => setHasScrolled(window.scrollY > 8)
+    let lastY = typeof window !== 'undefined' ? window.scrollY : 0
+    const onScroll = () => {
+      const y = window.scrollY
+      setHasScrolled(y > 8)
+      // Always show near the top of the page; otherwise show only when
+      // scrolling up, hide when scrolling down past a small delta.
+      const delta = y - lastY
+      if (y < 80) {
+        setNavVisible(true)
+      } else if (delta > 4) {
+        setNavVisible(false)
+      } else if (delta < -4) {
+        setNavVisible(true)
+      }
+      lastY = y
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -177,6 +193,11 @@ export default function Home() {
             // (e.g. the dining panel's X button). SiteNav re-enables pointer
             // events on the actual interactive children.
             pointerEvents: 'none',
+            // Slide the nav up out of view when the user scrolls down; it
+            // re-enters as soon as they scroll up. Keep it visible while the
+            // dining panel is open so the close affordance stays reachable.
+            transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(-110%)',
+            transition: 'transform 0.35s ease',
           }}
         >
           <SiteNav
