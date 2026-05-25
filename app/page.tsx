@@ -307,22 +307,26 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Counter image + intro copy */}
-            <div className="mt-12 lg:mt-[100px] flex flex-col gap-8 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-center">
-              <div className="lg:col-start-3 lg:col-end-9">
-                <img
-                  src="/hero-counter-service.jpeg"
-                  alt="Corima chef's counter during service — diners watching the line"
-                  className="w-full h-auto block"
-                />
-              </div>
-              <div className="lg:col-start-9 lg:col-end-12">
+            {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
+            <div className="mt-10 lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-6 lg:col-end-9">
                 <p style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
                   The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                 </p>
                 <p className="mt-7" style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
                 </p>
+              </div>
+            </div>
+
+            {/* Counter image — under the intro copy, 100px below it */}
+            <div className="mt-10 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-3 lg:col-end-9">
+                <img
+                  src="/hero-counter-service.jpeg"
+                  alt="Corima chef's counter during service — diners watching the line"
+                  className="w-full h-auto block"
+                />
               </div>
             </div>
 
