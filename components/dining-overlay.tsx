@@ -51,6 +51,9 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
           pointerEvents: isOpen ? 'all' : 'none',
+          // Force regular weight for all text inside the panel; individual
+          // headings/buttons override only what they need (e.g. tracking).
+          fontWeight: 400,
         }}
       >
       <style>{`
@@ -60,7 +63,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           height: 40px;
           font-size: 32px;
           line-height: 1;
-          font-weight: 300;
+          font-weight: 400;
           background: transparent;
           border: none;
           color: inherit;
