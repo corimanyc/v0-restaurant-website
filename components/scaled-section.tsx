@@ -46,7 +46,10 @@ export default function ScaledSection({
   useEffect(() => {
     const recompute = () => {
       const vw = typeof window !== 'undefined' ? window.innerWidth : designWidth
-      const shouldScale = vw > mobileBreakpoint
+      // Use `>=` so this matches Tailwind's `lg:` (min-width: 1024px) exactly:
+      // both turn on at the same viewport width, eliminating a 1px band where
+      // the section has `lg:px-0` but scaling hasn't kicked in yet.
+      const shouldScale = vw >= mobileBreakpoint
       setEnabled(shouldScale)
       // Lock `paddingX` design px to `paddingX` screen px on both edges; scale
       // only the content area between the two anchors. This keeps the inner
