@@ -365,7 +365,7 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section className="pt-20 lg:pt-[120px] px-6 lg:px-9">
+          <section className="pt-20 lg:pt-[140px] px-6 lg:px-9">
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
                 <p className="text-base" style={{ fontSize: 'calc(20px / var(--scale, 1))', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
