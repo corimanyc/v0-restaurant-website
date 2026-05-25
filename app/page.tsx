@@ -319,9 +319,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Counter image — under the intro copy, 100px below it */}
+            {/* Counter image — under the intro copy, 100px below it, left edge aligned with the text above */}
             <div className="mt-10 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-3 lg:col-end-9">
+              <div className="lg:col-start-6 lg:col-end-12">
                 <img
                   src="/hero-counter-service.jpeg"
                   alt="Corima chef's counter during service — diners watching the line"
