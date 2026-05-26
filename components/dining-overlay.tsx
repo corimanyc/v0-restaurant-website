@@ -7,7 +7,7 @@ import Link from 'next/link'
 interface DiningOverlayProps {
   isOpen: boolean
   onClose: () => void
-  onViewMenu: () => void
+  onViewMenu: (section?: 'a-la-carte' | 'cocktail' | 'wine') => void
 }
 
 export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOverlayProps) {
@@ -135,7 +135,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
             While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
           </p>
           <button
-            onClick={onViewMenu}
+            onClick={() => onViewMenu('a-la-carte')}
             className="nav-link text-left"
             style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
@@ -148,9 +148,16 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <h2 className="uppercase mb-6" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
           </h2>
-          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The beverage program consists of a collection of cocktails that mirror the essence of Corima. Sotol is heavily featured as an ode to the Northern region of Mexico.
           </p>
+          <button
+            onClick={() => onViewMenu('cocktail')}
+            className="nav-link text-left"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+          >
+            <span className="mr-2">&bull;</span>View Beverage
+          </button>
         </section>
 
         {/* Wine */}
@@ -164,6 +171,13 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
           </p>
+          <button
+            onClick={() => onViewMenu('wine')}
+            className="nav-link text-left"
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+          >
+            <span className="mr-2">&bull;</span>View Wine
+          </button>
         </section>
       </div>
     </div>

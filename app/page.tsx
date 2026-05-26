@@ -107,7 +107,7 @@ export default function Home() {
       <DiningOverlay
         isOpen={isDiningOpen}
         onClose={() => setIsDiningOpen(false)}
-        onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
+        onViewMenu={(section) => { setIsDiningOpen(false); setMenuScrollTarget(section); setIsMenuOverlayOpen(true) }}
       />
       {/* Hero Section — full screen container, nav/footer sit on top via fixed positioning */}
       <section ref={heroRef} className="relative h-screen overflow-hidden w-full">
