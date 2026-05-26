@@ -48,7 +48,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 300, backgroundColor: '#1f1c18' }}>
+      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 400, backgroundColor: '#1f1c18' }}>
         {children}
         <Analytics />
       </body>
