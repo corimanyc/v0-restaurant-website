@@ -6,7 +6,6 @@ import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
-import ScaledSection from '@/components/scaled-section'
 
 const heroImages = [
   {
@@ -306,14 +305,13 @@ export default function Home() {
             vertical placement in absolute pixels
         */}
         <div style={{ position: 'relative', zIndex: 1 }}>
-        <ScaledSection designWidth={1440} mobileBreakpoint={1024}>
 
           {/* ===== OUR STORY ===== */}
           <section className="pt-20 lg:pt-[160px] px-6 lg:px-9">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
-                <p className="text-base" style={{ fontSize: 'calc(20px / var(--scale, 1))', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
+                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
               </div>
             </div>
 
@@ -331,10 +329,10 @@ export default function Home() {
             {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
             <div className="mt-10 lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-6 lg:col-end-9">
-                <p style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                 </p>
-                <p className="mt-7" style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
                 </p>
               </div>
@@ -358,7 +356,7 @@ export default function Home() {
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
               >
                 <style>{`@media (min-width: 1024px) { :root { --bio-right-pad: calc((100% - 60px) / 8 + 10px); } }`}</style>
-                <p style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
                 </p>
               </div>
@@ -389,7 +387,7 @@ export default function Home() {
           <section className="pt-20 lg:pt-[140px] px-6 lg:px-9">
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
-                <p className="text-base" style={{ fontSize: 'calc(20px / var(--scale, 1))', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
+                <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
@@ -407,13 +405,13 @@ export default function Home() {
             {/* Body copy + dining-nook image */}
             <div className="mt-10 lg:mt-[60px] flex flex-col gap-10 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
-                <p style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
-                <p className="mt-7" style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p className="hidden lg:block mt-10 lg:mt-20" style={{ fontSize: 'calc(16px / var(--scale, 1))', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="hidden lg:block mt-10 lg:mt-20" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
@@ -443,7 +441,6 @@ export default function Home() {
             </div>
           </section>
 
-        </ScaledSection>
         </div>
       </section>
       {/* End dark section */}
