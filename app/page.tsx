@@ -326,26 +326,32 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
-            <div className="mt-[50px] lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-6 lg:col-end-9">
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
-                  The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
-                </p>
-                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
-                  Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
-                </p>
+            {/* On mobile, image appears above the intro copy. On desktop (lg+),
+                lg:contents promotes both children back to normal flow so document
+                order (copy, then image) is restored. */}
+            <div className="flex flex-col lg:contents">
+              {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
+              <div className="order-2 lg:order-none mt-[50px] lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
+                <div className="lg:col-start-6 lg:col-end-9">
+                  <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                    The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
+                  </p>
+                  <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                    Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            {/* Counter image — under the intro copy, 100px below it, left edge aligned with the text above */}
-            <div className="mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-6 lg:col-end-12">
-                <img
-                  src="/hero-counter-service.jpeg"
-                  alt="Corima chef's counter during service — diners watching the line"
-                  className="w-full h-auto block"
-                />
+              {/* Counter image — desktop: under the intro copy, 100px below.
+                  Mobile: rendered before the copy via order-1, with 50px gap above. */}
+              <div className="order-1 lg:order-none mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+                <div className="lg:col-start-6 lg:col-end-12">
+                  <img
+                    src="/hero-counter-service.jpeg"
+                    alt="Corima chef's counter during service — diners watching the line"
+                    className="w-full h-auto block"
+                  />
+                </div>
               </div>
             </div>
 
