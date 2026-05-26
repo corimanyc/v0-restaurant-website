@@ -315,13 +315,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Staircase headline (SVG) */}
+            {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-9">
                 <img
+                  src="/our-story-headline-mobile.svg"
+                  alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
+                  className="w-full h-auto block lg:hidden"
+                />
+                <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto block"
+                  className="w-full h-auto hidden lg:block"
                 />
               </div>
             </div>
