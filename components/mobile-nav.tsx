@@ -38,7 +38,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         <button
           onClick={onClose}
           className="nav-link text-white"
-          style={{ fontFamily: 'Switzer, sans-serif', fontSize: '24px', fontWeight: 500, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+          style={{ fontFamily: 'Switzer, sans-serif', fontSize: '24px', fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           aria-label="Close menu"
         >
           X
@@ -63,7 +63,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             style={{
               fontFamily: 'Switzer, sans-serif',
               fontSize: '24px',
-              fontWeight: 500,
+              fontWeight: 400,
               letterSpacing: '-0.01em',
               lineHeight: '1.8',
             }}
