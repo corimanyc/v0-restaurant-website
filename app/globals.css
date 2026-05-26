@@ -196,7 +196,7 @@ a.text-black, button.text-black, [role="button"].text-black,
   html, body {
     @apply bg-background text-foreground;
     font-family: 'Switzer', 'Geist', system-ui, -apple-system, sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -0.02em;
   }
 }
