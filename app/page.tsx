@@ -372,7 +372,7 @@ export default function Home() {
                   style={{ objectFit: 'cover' }}
                 />
               </div>
-              <div className="lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '1 / 1' }}>
+              <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="/hero-interior-brick.jpeg"
                   alt="Corima dining room — exposed brick wall at low light"
