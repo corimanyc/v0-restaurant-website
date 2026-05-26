@@ -39,7 +39,9 @@ export default function SiteNav({
   hideLinks = false,
 }: SiteNavProps) {
   const linkStyle = { color: linkColor ?? 'inherit', fontSize: `${linkFontSize}px` }
-  const burgerColor = linkColor ?? '#CBCBCB'
+  // Burger bars always render white for consistent contrast against the
+  // dark background, regardless of the desktop link color.
+  const burgerColor = '#FFFFFF'
   const hideStyle: React.CSSProperties = {
     opacity: hideLinks ? 0 : 1,
     // Re-enable pointer events on the interactive group (parent <nav> has them
