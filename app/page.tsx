@@ -327,7 +327,7 @@ export default function Home() {
             </div>
 
             {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
-            <div className="mt-10 lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-[50px] lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-6 lg:col-end-9">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
@@ -339,7 +339,7 @@ export default function Home() {
             </div>
 
             {/* Counter image — under the intro copy, 100px below it, left edge aligned with the text above */}
-            <div className="mt-10 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-6 lg:col-end-12">
                 <img
                   src="/hero-counter-service.jpeg"
@@ -350,7 +350,7 @@ export default function Home() {
             </div>
 
             {/* Chef bio */}
-            <div className="mt-12 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div
                 className="lg:col-start-2 lg:col-end-6"
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
@@ -363,7 +363,7 @@ export default function Home() {
             </div>
 
             {/* Bottom paired images */}
-            <div className="mt-12 lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
+            <div className="mt-[50px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
               <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
@@ -403,7 +403,7 @@ export default function Home() {
             </div>
 
             {/* Body copy + dining-nook image */}
-            <div className="mt-10 lg:mt-[60px] flex flex-col gap-10 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
+            <div className="mt-[50px] lg:mt-[60px] flex flex-col gap-[50px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
@@ -425,12 +425,12 @@ export default function Home() {
             </div>
 
             {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
-            <p className="lg:hidden mt-10" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+            <p className="lg:hidden mt-[50px]" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
               Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
 
             {/* Bottom kitchen action image */}
-            <div className="mt-16 lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-[50px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-3 lg:col-end-9">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
