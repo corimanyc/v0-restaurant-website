@@ -294,7 +294,7 @@ export default function Home() {
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
         <div className="relative py-16 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-2 lg:col-end-10">
+            <div className="lg:col-start-1 lg:col-end-10">
               <p
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
