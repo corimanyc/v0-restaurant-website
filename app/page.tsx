@@ -304,7 +304,7 @@ export default function Home() {
                   fontSize: '40px',
                   fontWeight: 300,
                   lineHeight: 1.2,
-                  letterSpacing: '-0.02em',
+                  letterSpacing: '0em',
                   color: '#CBCBCB',
                 }}
               >
