@@ -111,7 +111,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
           </p>
-          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.7 }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.7 }}>
             We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
           </p>
           <Link
