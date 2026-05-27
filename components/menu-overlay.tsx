@@ -186,10 +186,10 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase" style={{ ...base, maxWidth: '420px' }}>
+                  <p className="text-black uppercase flex-1 min-w-0" style={{ ...base, maxWidth: '480px' }}>
                     {item.name}
                   </p>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '32px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
@@ -206,11 +206,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <div style={{ maxWidth: '380px' }}>
+                  <div className="flex-1 min-w-0" style={{ maxWidth: '480px' }}>
                     <p className="text-black uppercase" style={base}>{item.name}</p>
                     <p className="text-black uppercase" style={{ ...base, fontSize: '14px', marginTop: '2px' }}>{item.desc}</p>
                   </div>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '32px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
@@ -234,11 +234,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 <div className="flex flex-col">
                   {group.items.map((item, i) => (
                     <div key={i} className="flex items-start justify-between py-3">
-                      <div style={{ maxWidth: '380px' }}>
+                      <div className="flex-1 min-w-0" style={{ maxWidth: '480px' }}>
                         <p className="text-black" style={base}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: '14px', marginTop: '2px' }}>{item.desc}</p>
                       </div>
-                      <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '16px' }}>
+                      <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '32px' }}>
                         {item.price}
                       </p>
                     </div>
