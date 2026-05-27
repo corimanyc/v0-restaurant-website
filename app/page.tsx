@@ -286,7 +286,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/about-sketch.png"
+            src="/flower-sketch.png"
             alt=""
             className="block w-full h-auto"
           />
