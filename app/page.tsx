@@ -292,13 +292,26 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative py-16 min-h-screen flex items-center" style={{ zIndex: 1 }}>
-          <img
-            src="/hero-text-v3.svg?v=white"
-            alt='Corima (ko-ree-ma) is a cornerstone principle of Tarahumara / Raramuri society. Literally translated, it means "circle of sharing." In Tarahumara culture, it is the community, rather than the individual, the owner of pretty much everything.'
-            className="block w-full h-auto relative"
-            style={{ maxWidth: '1100px', zIndex: 1 }}
-          />
+        <div className="relative py-16 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
+          <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="lg:col-start-2 lg:col-end-10">
+              <p
+                style={{
+                  fontFamily: "'Switzer', system-ui, sans-serif",
+                  fontSize: '40px',
+                  fontWeight: 400,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.02em',
+                  color: '#CBCBCB',
+                }}
+              >
+                Corima (ko-ree-ma) is a cornerstone principle of Tarahumara society. Literally translated, it means &ldquo;circle of sharing.&rdquo;
+                <br />
+                <br />
+                In Tarahumara culture, the community, rather than the individual, owns pretty much everything. Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/*
