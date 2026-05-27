@@ -83,23 +83,18 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
       {/* Footer */}
       <div style={{ padding: '24px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
         <div className="flex items-start justify-between" style={{ marginBottom: '12px' }}>
+          <p
+            className="text-white uppercase"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+          >
+            3 Allen St NY 10002
+          </p>
           <a
-            href="https://instagram.com/corimanyc"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:info@corimanyc.com"
             className="text-white uppercase hover:opacity-60 transition"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
-            Instagram
-          </a>
-          <a
-            href="https://open.spotify.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white uppercase hover:opacity-60 transition"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
-          >
-            Spotify
+            Contact
           </a>
         </div>
         <div className="flex items-start justify-between">
@@ -107,14 +102,17 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             className="text-white uppercase"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
-            3 Allen St NY 10002
-          </p>
-          <p
-            className="text-white uppercase text-right"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
-          >
             Tue&nbsp;&ndash;&nbsp;Sat 5:30PM&nbsp;&ndash;&nbsp;10PM
           </p>
+          <a
+            href="https://instagram.com/corimanyc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white uppercase text-right hover:opacity-60 transition"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+          >
+            Instagram
+          </a>
         </div>
       </div>
     </div>
