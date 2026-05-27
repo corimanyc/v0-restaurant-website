@@ -61,7 +61,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         .dining-close-btn {
           width: 40px;
           height: 40px;
-          font-size: 32px;
+          font-size: 28px;
           line-height: 1;
           font-weight: 400;
           background: transparent;

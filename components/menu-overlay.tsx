@@ -156,7 +156,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         <button
           onClick={onClose}
           className="nav-link text-black uppercase"
-          style={{ fontSize: '32px', lineHeight: '1', fontWeight: '300', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+          style={{ fontSize: '28px', lineHeight: '1', fontWeight: '300', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           aria-label="Close menu"
         >
           X
