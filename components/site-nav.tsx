@@ -55,11 +55,13 @@ export default function SiteNav({
       className="relative flex items-center justify-between px-6 lg:px-9 pt-6"
       style={{ pointerEvents: 'none' }}
     >
-      {/* Logo — fixed width + position across all pages */}
+      {/* Logo — 100px on mobile, 88px on desktop. Logo SVG aspect is 1070:302
+          (~3.543:1), so the rendered height is ~28.2px on mobile and ~24.8px
+          on desktop. The mobile burger below matches the mobile logo height. */}
       <Link
         href="/"
-        className="flex-shrink-0 h-auto block"
-        style={{ width: '92px', pointerEvents: 'auto' }}
+        className="flex-shrink-0 h-auto block w-[100px] lg:w-[88px]"
+        style={{ pointerEvents: 'auto' }}
       >
         <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
       </Link>
@@ -123,12 +125,15 @@ export default function SiteNav({
         </Link>
       </div>
 
-      {/* Mobile burger */}
+      {/* Mobile burger — total height locked to ~28px so the top of the top
+          bar and the bottom of the bottom bar align with the top and bottom
+          edges of the 100px-wide CORIMA logo (logo aspect 1070:302 ≈ 3.54:1
+          → ~28.2px tall). Bars are distributed evenly via space-between. */}
       <button
-        className="md:hidden flex flex-col gap-1.5"
+        className="md:hidden flex flex-col items-stretch"
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
-        style={hideStyle}
+        style={{ ...hideStyle, height: '28px', justifyContent: 'space-between' }}
       >
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
