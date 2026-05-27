@@ -299,7 +299,7 @@ export default function Home() {
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontSize: '40px',
-                  fontWeight: 400,
+                  fontWeight: 300,
                   lineHeight: 1.2,
                   letterSpacing: '-0.02em',
                   color: '#CBCBCB',
