@@ -38,7 +38,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         <button
           onClick={onClose}
           className="nav-link text-white"
-          style={{ fontFamily: 'Switzer, sans-serif', fontSize: '24px', fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+          style={{ fontFamily: 'Switzer, sans-serif', fontSize: '32px', fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           aria-label="Close menu"
         >
           X
@@ -81,7 +81,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             target="_blank"
             rel="noopener noreferrer"
             className="text-white uppercase hover:opacity-60 transition"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400 }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Instagram
           </a>
@@ -90,7 +90,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             target="_blank"
             rel="noopener noreferrer"
             className="text-white uppercase hover:opacity-60 transition"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400 }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Spotify
           </a>
@@ -98,13 +98,13 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         <div className="flex items-start justify-between">
           <p
             className="text-white uppercase"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400 }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             3 Allen St NY 10002
           </p>
           <p
             className="text-white uppercase text-right"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400 }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Tue&nbsp;&ndash;&nbsp;Sat 5:30PM&nbsp;&ndash;&nbsp;10PM
           </p>
