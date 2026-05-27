@@ -261,7 +261,7 @@ export default function Home() {
         id="about"
           className="relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-bg-v4.jpeg)',
+          backgroundImage: 'url(/about-bg-v8.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
@@ -470,7 +470,7 @@ export default function Home() {
       <footer
         style={{
           backgroundColor: '#1a1a1a',
-          backgroundImage: 'url(/about-bg-v4.jpeg)',
+          backgroundImage: 'url(/about-bg-v8.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
