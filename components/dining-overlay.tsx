@@ -72,7 +72,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
       {/* Header — fixed at top */}
       <div
-        className="flex items-center justify-between flex-shrink-0"
+        className="flex items-start justify-between flex-shrink-0"
         style={{ padding: '24px 24px 24px 24px' }}
       >
         <h1
