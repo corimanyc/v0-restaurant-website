@@ -228,9 +228,12 @@ export default function Home() {
         >
           <div className="flex items-center justify-between px-6 lg:px-9 py-6">
             {/* Address — visible only while the hero is intersecting the viewport.
-                Driven by IntersectionObserver on the hero ref below. */}
-            <p
-              className="tracking-wider text-white"
+                Driven by IntersectionObserver on the hero ref below.
+                Two whitespace-nowrap spans inside a flex-wrap container so they
+                stay inline on wide viewports and stack (left-aligned) when
+                they would otherwise wrap mid-line. */}
+            <div
+              className="tracking-wider text-white flex flex-wrap gap-x-3"
               style={{
                 fontSize: '16px',
                 opacity: heroVisible ? 1 : 0,
@@ -239,8 +242,9 @@ export default function Home() {
                 fontWeight: 400,
               }}
             >
-              3 Allen St. NY 10002 &nbsp;&nbsp;&nbsp; Tuesday - Saturday &nbsp; 5:30PM - 10PM
-            </p>
+              <span className="whitespace-nowrap">3 Allen St. NY 10002</span>
+              <span className="whitespace-nowrap">Tuesday - Saturday &nbsp; 5:30PM - 10PM</span>
+            </div>
             {/* Persistent logo — stays white regardless of scroll */}
             <img
               src="/footer-logo.png"
