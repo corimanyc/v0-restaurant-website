@@ -125,15 +125,15 @@ export default function SiteNav({
         </Link>
       </div>
 
-      {/* Mobile burger — total height locked to ~28px so the top of the top
-          bar and the bottom of the bottom bar align with the top and bottom
-          edges of the 100px-wide CORIMA logo (logo aspect 1070:302 ≈ 3.54:1
-          → ~28.2px tall). Bars are distributed evenly via space-between. */}
+      {/* Mobile burger — fixed gap (5px) between bars for a tighter stack.
+          Total visual height ≈ 16px (3 × 2px bars + 2 × 5px gaps), kept
+          vertically centered against the 28px-tall logo via items-center on
+          the parent nav. */}
       <button
-        className="md:hidden flex flex-col items-stretch"
+        className="md:hidden flex flex-col gap-[5px]"
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
-        style={{ ...hideStyle, height: '28px', justifyContent: 'space-between' }}
+        style={hideStyle}
       >
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
         <div className="w-6 h-0.5" style={{ backgroundColor: burgerColor }}></div>
