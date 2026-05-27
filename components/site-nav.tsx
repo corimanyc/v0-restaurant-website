@@ -60,7 +60,7 @@ export default function SiteNav({
           on desktop. The mobile burger below matches the mobile logo height. */}
       <Link
         href="/"
-        className="flex-shrink-0 h-auto block w-[100px] lg:w-[88px]"
+        className="flex-shrink-0 h-auto block w-[114px] lg:w-[102px]"
         style={{ pointerEvents: 'auto' }}
       >
         <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
