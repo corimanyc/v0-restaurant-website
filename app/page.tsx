@@ -323,7 +323,7 @@ export default function Home() {
         <div style={{ position: 'relative', zIndex: 1 }}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-20 lg:pt-[160px] px-6 lg:px-9">
+          <section className="pt-40 lg:pt-[280px] px-6 lg:px-9">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
