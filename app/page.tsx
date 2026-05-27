@@ -272,7 +272,7 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute -top-4 sm:-top-4 md:-top-2 lg:top-0 right-0 w-[95%] sm:w-[85%] md:w-[78%] lg:w-[70%]"
+          className="pointer-events-none select-none absolute -top-4 sm:-top-4 md:-top-2 lg:top-0 right-[8.33%] w-[95%] sm:w-[85%] md:w-[78%] lg:w-[70%]"
           style={{
             maxWidth: '900px',
             zIndex: 0,
@@ -294,7 +294,7 @@ export default function Home() {
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
         <div className="relative py-16 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-1 lg:col-end-10">
+            <div className="lg:col-start-1 lg:col-end-9">
               <p
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
