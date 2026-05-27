@@ -69,7 +69,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             className="text-white hover:opacity-50 transition-opacity"
             style={{
               fontFamily: 'Switzer, sans-serif',
-              fontSize: '24px',
+              fontSize: '28px',
               fontWeight: 400,
               letterSpacing: '-0.01em',
               lineHeight: '1.8',
