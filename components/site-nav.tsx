@@ -59,7 +59,7 @@ export default function SiteNav({
       <Link
         href="/"
         className="flex-shrink-0 h-auto block"
-        style={{ width: '88px', pointerEvents: 'auto' }}
+        style={{ width: '100px', pointerEvents: 'auto' }}
       >
         <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
       </Link>
