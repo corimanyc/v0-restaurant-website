@@ -102,7 +102,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Tasting Menu */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+          <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Tasting Menu
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -125,7 +125,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* A La Carte */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+          <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             A La Carte
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -145,7 +145,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Beverage */}
         <section style={{ marginBottom: '80px' }}>
-          <h2 className="uppercase mb-6" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+          <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
           </h2>
           <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
@@ -162,7 +162,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
         {/* Wine */}
         <section>
-          <h2 className="uppercase mb-6" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+          <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Wine
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
