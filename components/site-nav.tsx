@@ -125,11 +125,11 @@ export default function SiteNav({
         </Link>
       </div>
 
-      {/* Mobile burger — 6px gap between bars. Total visual height ≈ 18px
-          (3 × 2px bars + 2 × 6px gaps), kept vertically centered against the
+      {/* Mobile burger — 8px gap between bars. Total visual height ≈ 22px
+          (3 × 2px bars + 2 × 8px gaps), kept vertically centered against the
           28px-tall logo via items-center on the parent nav. */}
       <button
-        className="md:hidden flex flex-col gap-[6.5px]"
+        className="md:hidden flex flex-col gap-[8px]"
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
         style={hideStyle}
