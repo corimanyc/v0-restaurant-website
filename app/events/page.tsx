@@ -45,8 +45,8 @@ export default function EventsPage() {
           zIndex: 0,
         }}
       />
-      {/* Blurred copy on top, masked so the blur is strongest at the top of
-          the viewport and fades to fully transparent (= sharp) near the bottom. */}
+      {/* Blurred copy on top — covers the entire viewport (no fade mask) so
+          the blur is uniform across the whole screen. */}
       <div
         aria-hidden
         className="absolute pointer-events-none"
@@ -57,10 +57,6 @@ export default function EventsPage() {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           filter: 'blur(3px)',
-          WebkitMaskImage:
-            'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 85%)',
-          maskImage:
-            'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 85%)',
           zIndex: 0,
         }}
       />
