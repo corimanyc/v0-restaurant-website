@@ -57,12 +57,11 @@ export default function Home() {
     const onScroll = () => {
       const y = window.scrollY
       setHasScrolled(y > 8)
-      // Always show near the top of the page; otherwise show only when
-      // scrolling up, hide when scrolling down past a small delta.
+      // Pure scroll-direction behavior: hide on downward scroll, show on
+      // upward scroll. The nav starts visible (initial state above) and only
+      // hides once the user actually scrolls downward.
       const delta = y - lastY
-      if (y < 80) {
-        setNavVisible(true)
-      } else if (delta > 4) {
+      if (delta > 4) {
         setNavVisible(false)
       } else if (delta < -4) {
         setNavVisible(true)
