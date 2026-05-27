@@ -10,19 +10,26 @@ interface MobileNavProps {
 }
 
 export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavProps) {
-  // Prevent body scroll when open
+  // Prevent body + html scroll when open
   useEffect(() => {
+    const html = document.documentElement
+    const body = document.body
     if (isOpen) {
-      document.body.style.overflow = 'hidden'
+      html.style.overflow = 'hidden'
+      body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = ''
+      html.style.overflow = ''
+      body.style.overflow = ''
     }
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      html.style.overflow = ''
+      body.style.overflow = ''
+    }
   }, [isOpen])
 
   return (
     <div
-      className="fixed inset-0 z-50 flex flex-col"
+      className="fixed inset-0 z-50 flex flex-col overflow-hidden"
       style={{
         backgroundColor: '#1f1c18',
         transform: isOpen ? 'translateY(0)' : 'translateY(-100%)',
