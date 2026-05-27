@@ -72,18 +72,18 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
 
       {/* Header — fixed at top */}
       <div
-        className="flex items-start justify-between flex-shrink-0"
-        style={{ padding: '20px 24px 24px 24px' }}
+        className="flex items-center justify-between flex-shrink-0"
+        style={{ padding: '24px 24px 24px 24px' }}
       >
         <h1
-          className="uppercase tracking-widest"
-          style={{ fontSize: '24px', lineHeight: 1, letterSpacing: '-0.02em', fontWeight: 400, margin: 0 }}
+          className="uppercase tracking-widest flex items-center"
+          style={{ fontSize: '24px', lineHeight: 1, letterSpacing: '-0.02em', fontWeight: 400, margin: 0, height: '40px' }}
         >
           Dining
         </h1>
         <button
           onClick={onClose}
-          className="dining-close-btn nav-link flex items-start justify-center cursor-pointer uppercase"
+          className="dining-close-btn nav-link flex items-center justify-center cursor-pointer uppercase"
           aria-label="Close dining panel"
         >
           X
