@@ -172,6 +172,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
           className="overflow-y-auto w-full lg:w-1/2"
           style={{
             padding: '16px 24px 48px 24px',
+            paddingRight: '8px',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             letterSpacing: '-0.02em',
