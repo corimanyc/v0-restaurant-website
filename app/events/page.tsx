@@ -99,8 +99,11 @@ export default function EventsPage() {
       />
 
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
-          to the right of the nav gutter. No right padding/margin anywhere. */}
-      <main className="flex-1 flex items-end pb-10 lg:pb-14">
+          to the right of the nav gutter. No right padding/margin anywhere.
+          Bottom padding is fixed across breakpoints so the bottom edge of the
+          posters stays anchored at the same vertical position when the layout
+          flips between mobile and desktop. */}
+      <main className="flex-1 flex items-end" style={{ paddingBottom: '56px' }}>
         <div
           className="overflow-x-auto w-full"
           style={{
