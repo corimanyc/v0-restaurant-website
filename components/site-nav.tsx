@@ -129,7 +129,7 @@ export default function SiteNav({
           (3 × 2px bars + 2 × 6px gaps), kept vertically centered against the
           28px-tall logo via items-center on the parent nav. */}
       <button
-        className="md:hidden flex flex-col gap-[6px]"
+        className="md:hidden flex flex-col gap-[6.5px]"
         onClick={onToggleMobileMenu}
         aria-label="Open menu"
         style={hideStyle}
