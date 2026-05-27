@@ -169,10 +169,9 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         {/* Left — scrollable list */}
         <div
           ref={scrollRef}
-          className="overflow-y-auto w-full lg:w-1/2"
+          className="overflow-y-auto w-full lg:w-1/2 pr-6 lg:pr-0"
           style={{
             padding: '16px 24px 48px 24px',
-            paddingRight: '0',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             letterSpacing: '-0.02em',
