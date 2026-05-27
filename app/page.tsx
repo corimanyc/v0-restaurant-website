@@ -220,7 +220,6 @@ export default function Home() {
         <footer
           className="fixed bottom-0 left-0 right-0 z-40"
           style={{
-            opacity: isDiningOpen ? 0 : 1,
             // Wrapper itself never blocks clicks; only the icon below opts back into pointer events.
             pointerEvents: 'none',
             transition: 'opacity 0.5s ease',
@@ -250,7 +249,11 @@ export default function Home() {
               src="/footer-logo.png"
               alt="CORIMA"
               className="w-6 h-6 object-contain ml-auto"
-              style={{ pointerEvents: isDiningOpen ? 'none' : 'auto' }}
+              style={{
+                pointerEvents: isDiningOpen ? 'none' : 'auto',
+                opacity: isDiningOpen ? 0 : 1,
+                transition: 'opacity 0.5s ease',
+              }}
             />
           </div>
         </footer>
