@@ -26,10 +26,11 @@ export default function EventsPage() {
 
   return (
     <div
-      className="h-screen flex flex-col overflow-hidden relative"
+      className="h-screen min-h-screen flex flex-col overflow-hidden relative"
       style={{
         backgroundColor: '#1a1a1a',
         color: '#CBCBCB',
+        height: '100dvh',
       }}
     >
       {/* Sharp background (bottom layer) */}
@@ -111,7 +112,7 @@ export default function EventsPage() {
           }}
         >
           <div
-            className="flex pl-5 md:pl-12"
+            className="flex pl-6 lg:pl-9"
             style={{
               gap: '12px',
               paddingRight: 0,
@@ -128,7 +129,7 @@ export default function EventsPage() {
                 className="block select-none poster-img"
                 draggable={false}
                 style={{
-                  height: 'min(60.9vh, 525px)',
+                  height: 'min(50vh, 420px)',
                   width: 'auto',
                   flexShrink: 0,
                   transition: 'transform 0.3s ease',
@@ -194,6 +195,12 @@ export default function EventsPage() {
       <style jsx>{`
         .poster-img:hover {
           transform: scale(0.97);
+        }
+        /* Restore the larger desktop poster size on lg+ viewports. */
+        @media (min-width: 1024px) {
+          .poster-img {
+            height: min(60.9vh, 525px) !important;
+          }
         }
         @keyframes lightbox-fade {
           from { opacity: 0; }
