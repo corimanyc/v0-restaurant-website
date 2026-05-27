@@ -117,7 +117,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <Link
             href="mailto:info@corimanyc.com"
             className="nav-link"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', fontWeight: 500 }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000' }}
           >
             <span className="mr-2">&bull;</span>Contact
           </Link>
@@ -137,7 +137,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <button
             onClick={() => onViewMenu('a-la-carte')}
             className="nav-link text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', fontWeight: 500, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
             <span className="mr-2">&bull;</span>A La Carte Menu
           </button>
@@ -154,7 +154,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <button
             onClick={() => onViewMenu('cocktail')}
             className="nav-link text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', fontWeight: 500, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
             <span className="mr-2">&bull;</span>Beverage Menu
           </button>
@@ -174,7 +174,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <button
             onClick={() => onViewMenu('wine')}
             className="nav-link text-left"
-            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', fontWeight: 500, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
+            style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
             <span className="mr-2">&bull;</span>Wine List
           </button>
