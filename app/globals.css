@@ -214,7 +214,8 @@ a.text-black, button.text-black, [role="button"].text-black,
   .nav-link {
     position: relative;
     display: inline-block;
-    padding-bottom: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     font-weight: 400 !important;
   }
   .nav-link::after {
