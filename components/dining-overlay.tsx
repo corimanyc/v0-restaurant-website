@@ -131,7 +131,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             Offered alongside our tasting menu, the à la carte selection provides a more open, self-directed way to experience Corima. Rather than a structured progression, this menu invites guests to explore individual dishes at their own pace.
           </p>
-          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
           </p>
           <button
@@ -148,7 +148,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
             Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
           </h2>
-          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The beverage program consists of a collection of cocktails that mirror the essence of Corima. Sotol is heavily featured as an ode to the Northern region of Mexico.
           </p>
           <button
@@ -168,7 +168,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The wine program focuses on producer-driven bottles from Mexico and Europe. Selections are guided by origin and production, forming a list that moves easily across the menu.
           </p>
-          <p className="leading-relaxed mb-8" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The list remains concise and continuously evolving, reflecting both availability and the direction of the kitchen.
           </p>
           <button
