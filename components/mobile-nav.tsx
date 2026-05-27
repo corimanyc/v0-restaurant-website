@@ -82,7 +82,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
 
       {/* Footer */}
       <div style={{ padding: '24px', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <div className="flex items-start justify-between" style={{ marginBottom: '12px' }}>
+        <div className="flex items-start justify-between" style={{ marginBottom: '20px' }}>
           <p
             className="text-white uppercase"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
