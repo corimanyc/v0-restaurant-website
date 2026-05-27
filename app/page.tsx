@@ -272,9 +272,9 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute top-0 left-1/2 -translate-x-1/2 w-[140%] sm:w-[130%] md:w-[125%] lg:w-full"
+          className="pointer-events-none select-none absolute top-0 left-1/2 -translate-x-1/2 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]"
           style={{
-            maxWidth: '1200px',
+            maxWidth: '720px',
             zIndex: 0,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
             WebkitMaskImage:
