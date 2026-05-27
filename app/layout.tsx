@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/icon.svg?v=2',
+        url: '/icon.svg?v=3',
         type: 'image/svg+xml',
       },
     ],
