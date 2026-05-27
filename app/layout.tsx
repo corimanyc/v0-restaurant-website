@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'CORIMA - Fine Dining Restaurant',
+  title: 'CORIMA',
   description: 'Experience exceptional cuisine at CORIMA',
   generator: 'v0.app',
   icons: {
