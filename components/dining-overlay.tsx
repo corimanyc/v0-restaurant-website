@@ -139,7 +139,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
             className="nav-link text-left"
             style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
-            <span className="mr-2">&bull;</span>View a la carte menu
+            <span className="mr-2">&bull;</span>View A La Carte Menu
           </button>
         </section>
 
@@ -156,7 +156,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
             className="nav-link text-left"
             style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
-            <span className="mr-2">&bull;</span>View beverage menu
+            <span className="mr-2">&bull;</span>View Beverage Menu
           </button>
         </section>
 
@@ -176,7 +176,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
             className="nav-link text-left"
             style={{ fontSize: '16px', letterSpacing: '-0.02em', color: '#000000', background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           >
-            <span className="mr-2">&bull;</span>View wine list
+            <span className="mr-2">&bull;</span>View Wine List
           </button>
         </section>
       </div>
