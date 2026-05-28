@@ -307,7 +307,7 @@ export default function Home() {
                 aria-hidden
                 className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-[55%] right-0 mr-4"
                 style={{
-                  zIndex: 2,
+                  zIndex: -1,
                   WebkitMaskImage:
                     'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 100%)',
                   maskImage:
