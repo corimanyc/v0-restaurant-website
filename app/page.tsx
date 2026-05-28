@@ -295,11 +295,11 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative pt-[200px] md:pt-32 pb-16 lg:pt-48 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
-          <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-2 lg:col-end-9">
+        <div className="relative pt-[200px] md:pt-48 pb-16 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
+          <div className="w-full md:grid md:grid-cols-12 md:gap-5">
+            <div className="md:col-start-2 md:col-end-9">
               <p
-                className="text-[24px] lg:text-[36px]"
+                className="text-[24px] md:text-[36px]"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontWeight: 300,
