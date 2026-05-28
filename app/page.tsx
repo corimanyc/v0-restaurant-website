@@ -275,7 +275,7 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute right-0 md:right-[8.33%] z-[5] md:z-0"
+          className="pointer-events-none select-none absolute right-0 md:right-[8.33%] z-[5] md:z-0 hidden md:block"
           style={{
             // Smooth fluid sizing between mobile (~62vw) and desktop (cap 800px).
             // Linear interp: at 360px viewport ≈ 224px wide; at 1280px viewport ≈ 793px wide.
@@ -317,6 +317,19 @@ export default function Home() {
                 <br />
                 In Tarahumara culture, the community, rather than the individual, owns pretty much everything. Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
               </p>
+              {/* Mobile-only flower, anchored to the bottom-right of the paragraph block. Hidden from md+ where the absolute version above is used instead. */}
+              <div
+                aria-hidden
+                className="md:hidden pointer-events-none select-none flex justify-end -mr-6"
+                style={{ marginTop: '24px' }}
+              >
+                <img
+                  src="/flower-sketch.png"
+                  alt=""
+                  className="block h-auto"
+                  style={{ width: 'clamp(200px, 62vw, 360px)' }}
+                />
+              </div>
             </div>
           </div>
         </div>
