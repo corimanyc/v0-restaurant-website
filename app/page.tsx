@@ -280,8 +280,8 @@ export default function Home() {
             // Smooth fluid sizing between mobile (~86vw) and desktop (cap 800px).
             // Linear interp: at 360px viewport ≈ 310px wide; at 1280px viewport ≈ 793px wide.
             width: 'clamp(280px, 53vw + 119px, 800px)',
-            // Top offset also fluidly interpolates: ~24px on mobile down to ~12px around md, back to ~20px on lg.
-            top: 'clamp(12px, 0.6vw + 16px, 24px)',
+            // Top offset fluidly interpolates: ~200px lower on mobile so the flower sits below the lifted Corima paragraph and reduces overlap, easing back to ~12-24px from md and up.
+            top: 'clamp(12px, -29vw + 412px, 220px)',
             maxWidth: '800px',
             zIndex: 0,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
