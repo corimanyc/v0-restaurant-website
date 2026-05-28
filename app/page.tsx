@@ -275,7 +275,7 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute -top-4 sm:-top-4 md:-top-2 lg:top-0 right-[4%] w-[86%] sm:w-[77%] md:w-[70%] lg:w-[62%]"
+          className="pointer-events-none select-none absolute -top-4 sm:-top-4 md:-top-2 lg:top-0 right-0 w-[86%] sm:w-[77%] md:w-[70%] lg:w-[62%]"
           style={{
             maxWidth: '800px',
             zIndex: 0,
