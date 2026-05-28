@@ -305,7 +305,7 @@ export default function Home() {
               {/* Mobile-only flower, anchored to the vertical middle of the paragraph block, right edge bleeding past the section padding. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
               <div
                 aria-hidden
-                className="md:hidden pointer-events-none select-none absolute top-[15%] -translate-y-1/2 right-0 -mr-6"
+                className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-1/4 right-0 -mr-6"
                 style={{ zIndex: -1 }}
               >
                 <img
