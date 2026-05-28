@@ -301,9 +301,22 @@ export default function Home() {
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
         <div className="relative pt-[100px] md:pt-48 pb-16 min-h-screen flex items-start md:items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full md:grid md:grid-cols-12 md:gap-5">
-            <div className="md:col-start-2 md:col-end-9">
+            <div className="md:col-start-2 md:col-end-9 relative">
+              {/* Mobile-only flower, anchored to the vertical middle of the paragraph block, right edge bleeding past the section padding. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
+              <div
+                aria-hidden
+                className="md:hidden pointer-events-none select-none absolute top-1/2 -translate-y-1/2 right-0 -mr-6"
+                style={{ zIndex: -1 }}
+              >
+                <img
+                  src="/flower-sketch.png"
+                  alt=""
+                  className="block h-auto"
+                  style={{ width: 'clamp(200px, 62vw, 360px)' }}
+                />
+              </div>
               <p
-                className="text-[24px] md:text-[36px]"
+                className="text-[24px] md:text-[36px] relative"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontWeight: 300,
@@ -317,19 +330,6 @@ export default function Home() {
                 <br />
                 In Tarahumara culture, the community, rather than the individual, owns pretty much everything. Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
               </p>
-              {/* Mobile-only flower, anchored to the bottom-right of the paragraph block with slight overlap into the last lines. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version above is used instead. */}
-              <div
-                aria-hidden
-                className="md:hidden pointer-events-none select-none flex justify-end -mr-6 relative"
-                style={{ marginTop: '-170px', zIndex: -1 }}
-              >
-                <img
-                  src="/flower-sketch.png"
-                  alt=""
-                  className="block h-auto"
-                  style={{ width: 'clamp(200px, 62vw, 360px)' }}
-                />
-              </div>
             </div>
           </div>
         </div>
@@ -343,7 +343,7 @@ export default function Home() {
         <div style={{ position: 'relative', zIndex: 1 }}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-12 lg:pt-[200px] px-6 lg:px-9">
+          <section className="pt-0 lg:pt-[200px] px-6 lg:px-9">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
