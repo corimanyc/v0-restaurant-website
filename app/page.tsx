@@ -277,9 +277,9 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none select-none absolute right-0 md:right-[8.33%]"
           style={{
-            // Smooth fluid sizing between mobile (~86vw) and desktop (cap 800px).
-            // Linear interp: at 360px viewport ≈ 310px wide; at 1280px viewport ≈ 793px wide.
-            width: 'clamp(280px, 53vw + 119px, 800px)',
+            // Smooth fluid sizing between mobile (~62vw) and desktop (cap 800px).
+            // Linear interp: at 360px viewport ≈ 224px wide; at 1280px viewport ≈ 793px wide.
+            width: 'clamp(200px, 62vw + 0px, 800px)',
             // Top offset fluidly interpolates: ~180px lower on mobile so the flower sits below the lifted Corima paragraph but not too far, easing back to ~12-24px from md and up.
             top: 'clamp(12px, -29vw + 372px, 180px)',
             maxWidth: '800px',
