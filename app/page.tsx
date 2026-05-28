@@ -283,7 +283,7 @@ export default function Home() {
             // Top offset fluidly interpolates: ~180px lower on mobile so the flower sits below the lifted Corima paragraph but not too far, easing back to ~12-24px from md and up.
             top: 'clamp(12px, -29vw + 372px, 180px)',
             maxWidth: '800px',
-            zIndex: 0,
+            zIndex: 5,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
             WebkitMaskImage:
               'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 100%)',
