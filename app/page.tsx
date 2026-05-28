@@ -317,11 +317,11 @@ export default function Home() {
                 <br />
                 In Tarahumara culture, the community, rather than the individual, owns pretty much everything. Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
               </p>
-              {/* Mobile-only flower, anchored to the bottom-right of the paragraph block with slight overlap into the last lines. Hidden from md+ where the absolute version above is used instead. */}
+              {/* Mobile-only flower, anchored to the bottom-right of the paragraph block with slight overlap into the last lines. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version above is used instead. */}
               <div
                 aria-hidden
                 className="md:hidden pointer-events-none select-none flex justify-end -mr-6 relative"
-                style={{ marginTop: '-140px' }}
+                style={{ marginTop: '-170px', zIndex: -1 }}
               >
                 <img
                   src="/flower-sketch.png"
