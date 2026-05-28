@@ -305,7 +305,7 @@ export default function Home() {
               {/* Mobile-only flower, anchored to the vertical middle of the paragraph block, right edge bleeding past the section padding. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
               <div
                 aria-hidden
-                className="md:hidden pointer-events-none select-none absolute top-1/2 -translate-y-1/2 right-0 -mr-6"
+                className="md:hidden pointer-events-none select-none absolute top-[25%] -translate-y-1/2 right-0 -mr-6"
                 style={{ zIndex: -1 }}
               >
                 <img
@@ -343,7 +343,7 @@ export default function Home() {
         <div style={{ position: 'relative', zIndex: 1 }}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-0 lg:pt-[200px] px-6 lg:px-9">
+          <section className="pt-16 lg:pt-[200px] px-6 lg:px-9">
             {/* Section label */}
             <div className="lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-4">
