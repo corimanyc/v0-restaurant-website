@@ -277,7 +277,7 @@ export default function Home() {
           aria-hidden
           className="pointer-events-none select-none absolute -top-4 sm:-top-4 md:-top-2 lg:top-0 right-[8.33%] w-[86%] sm:w-[77%] md:w-[70%] lg:w-[62%]"
           style={{
-            maxWidth: '900px',
+            maxWidth: '800px',
             zIndex: 0,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
             WebkitMaskImage:
