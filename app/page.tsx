@@ -295,7 +295,7 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative pt-32 pb-16 lg:pt-48 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
+        <div className="relative pt-[200px] pb-16 lg:pt-48 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
               <p
