@@ -299,7 +299,7 @@ export default function Home() {
           <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
               <p
-                className="text-[24px] lg:text-[40px]"
+                className="text-[24px] lg:text-[36px]"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontWeight: 300,
