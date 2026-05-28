@@ -302,7 +302,7 @@ export default function Home() {
                 className="text-[24px] lg:text-[40px]"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 300,
                   lineHeight: 1.2,
                   letterSpacing: '-0.02em',
                   color: '#CBCBCB',
