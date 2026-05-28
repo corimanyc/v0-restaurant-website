@@ -275,7 +275,7 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute right-0 md:right-[8.33%] z-[5] md:z-0 hidden md:block"
+          className="pointer-events-none select-none absolute right-0 md:right-[8.33%] hidden md:block"
           style={{
             // Smooth fluid sizing between mobile (~62vw) and desktop (cap 800px).
             // Linear interp: at 360px viewport ≈ 224px wide; at 1280px viewport ≈ 793px wide.
@@ -321,7 +321,7 @@ export default function Home() {
               <div
                 aria-hidden
                 className="md:hidden pointer-events-none select-none flex justify-end -mr-6 relative"
-                style={{ marginTop: '-80px' }}
+                style={{ marginTop: '-140px' }}
               >
                 <img
                   src="/flower-sketch.png"
