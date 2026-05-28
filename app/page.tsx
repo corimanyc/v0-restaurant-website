@@ -302,11 +302,19 @@ export default function Home() {
         <div className="relative pt-[100px] md:pt-48 pb-16 min-h-screen md:min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full md:grid md:grid-cols-12 md:gap-5">
             <div className="md:col-start-2 md:col-end-9 relative">
-              {/* Mobile-only flower, anchored to the vertical middle of the paragraph block, right edge bleeding past the section padding. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
+              {/* Mobile-only flower, anchored just below the paragraph's bottom-right corner with the same bottom + side fade masks as the desktop version. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
               <div
                 aria-hidden
-                className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-1/4 right-0 -mr-6"
-                style={{ zIndex: -1 }}
+                className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-[40%] right-0 -mr-6"
+                style={{
+                  zIndex: -1,
+                  WebkitMaskImage:
+                    'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 100%)',
+                  maskImage:
+                    'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 100%)',
+                  WebkitMaskComposite: 'source-in',
+                  maskComposite: 'intersect',
+                }}
               >
                 <img
                   src="/flower-sketch.png"
