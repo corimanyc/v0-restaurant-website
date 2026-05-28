@@ -190,8 +190,10 @@ export default function EventsPage() {
       )}
 
       <style jsx>{`
-        .poster-img:hover {
-          transform: scale(0.97);
+        @media (hover: hover) {
+          .poster-img:hover {
+            transform: scale(0.97);
+          }
         }
         /* Restore the larger desktop poster size on lg+ viewports. */
         @media (min-width: 1024px) {
