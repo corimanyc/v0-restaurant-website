@@ -275,8 +275,13 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute top-6 sm:top-6 md:top-3 lg:top-5 right-[8.33%] w-[86%] sm:w-[77%] md:w-[70%] lg:w-[62%]"
+          className="pointer-events-none select-none absolute right-[8.33%]"
           style={{
+            // Smooth fluid sizing between mobile (~86vw) and desktop (cap 800px).
+            // Linear interp: at 360px viewport ≈ 310px wide; at 1280px viewport ≈ 793px wide.
+            width: 'clamp(280px, 53vw + 119px, 800px)',
+            // Top offset also fluidly interpolates: ~24px on mobile down to ~12px around md, back to ~20px on lg.
+            top: 'clamp(12px, 0.6vw + 16px, 24px)',
             maxWidth: '800px',
             zIndex: 0,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
