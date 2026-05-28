@@ -297,7 +297,7 @@ export default function Home() {
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
         <div className="relative pt-32 pb-16 lg:pt-48 min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
           <div className="w-full lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-2 lg:col-end-9">
+            <div className="lg:col-start-1 lg:col-end-9">
               <p
                 className="text-[24px] lg:text-[40px]"
                 style={{
@@ -336,7 +336,7 @@ export default function Home() {
 
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-1 lg:col-end-9">
+            <div className="lg:col-start-2 lg:col-end-9">
                 <img
                   src="/our-story-headline-mobile.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
