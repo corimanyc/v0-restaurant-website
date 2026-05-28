@@ -275,7 +275,7 @@ export default function Home() {
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
         <div
           aria-hidden
-          className="pointer-events-none select-none absolute right-0 md:right-[8.33%]"
+          className="pointer-events-none select-none absolute right-0 md:right-[8.33%] z-[5] md:z-0"
           style={{
             // Smooth fluid sizing between mobile (~62vw) and desktop (cap 800px).
             // Linear interp: at 360px viewport ≈ 224px wide; at 1280px viewport ≈ 793px wide.
@@ -283,7 +283,6 @@ export default function Home() {
             // Top offset fluidly interpolates: ~180px lower on mobile so the flower sits below the lifted Corima paragraph but not too far, easing back to ~12-24px from md and up.
             top: 'clamp(12px, -29vw + 372px, 180px)',
             maxWidth: '800px',
-            zIndex: 5,
             // Combine vertical (bottom fade) and horizontal (left/right fade) masks; both must be visible -> use intersect by composing two gradients.
             WebkitMaskImage:
               'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55%, rgba(0,0,0,0) 100%), linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 100%)',
