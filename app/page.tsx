@@ -305,7 +305,7 @@ export default function Home() {
               {/* Mobile-only flower, anchored just below the paragraph's bottom-right corner with the same bottom + side fade masks as the desktop version. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
               <div
                 aria-hidden
-                className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-[40%] right-0 -mr-6"
+                className="md:hidden pointer-events-none select-none absolute bottom-0 translate-y-[55%] right-0 -mr-6"
                 style={{
                   zIndex: -1,
                   WebkitMaskImage:
