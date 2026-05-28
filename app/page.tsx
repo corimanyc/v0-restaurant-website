@@ -316,7 +316,7 @@ export default function Home() {
                 />
               </div>
               <p
-                className="text-[24px] md:text-[36px] relative"
+                className="text-[28px] md:text-[36px] relative"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontWeight: 300,
