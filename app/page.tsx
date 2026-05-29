@@ -483,10 +483,10 @@ export default function Home() {
                     maxWidth: 'clamp(300px, 78vw, 480px)',
                   }}
                 >
-                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 360px)' }}>
+                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
                     Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
                   </p>
-                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 360px)', marginLeft: 'auto' }}>
+                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 380px)', marginLeft: 'auto' }}>
                     our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
                   </p>
                 </div>
