@@ -185,7 +185,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase flex-1 min-w-0" style={{ ...base, maxWidth: '420px' }}>
+                  <p className="text-black uppercase flex-1 min-w-0 max-w-[230px] lg:max-w-[420px]" style={base}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
