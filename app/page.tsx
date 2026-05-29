@@ -535,7 +535,7 @@ export default function Home() {
             </div>
 
             {/* Body copy + dining-nook image */}
-            <div className="mt-[62px] lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
+            <div className="mt-[62px] mb-[76px] lg:mb-0 lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
@@ -557,7 +557,7 @@ export default function Home() {
             </div>
 
             {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
-            <p className="lg:hidden mt-[50px]" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+            <p className="lg:hidden mt-0" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
               Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
 
