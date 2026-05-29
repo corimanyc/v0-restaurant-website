@@ -239,3 +239,13 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     transform: scaleX(1);
   }
 }
+
+/* The menu close button has no hover affordance on touch/mobile, so drop the
+   animated underline below the lg breakpoint where the full-width underline
+   made the glyph look misaligned with the right edge. Unlayered so it reliably
+   overrides the layered .nav-link::after rule. */
+@media (max-width: 1023px) {
+  .menu-close.nav-link::after {
+    display: none !important;
+  }
+}

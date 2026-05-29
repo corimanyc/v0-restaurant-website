@@ -155,7 +155,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         </h1>
         <button
           onClick={onClose}
-          className="nav-link text-black uppercase flex items-center justify-end lg:justify-center cursor-pointer"
+          className="menu-close nav-link text-black uppercase flex items-center justify-end lg:justify-center cursor-pointer"
           style={{ width: '40px', height: '40px', fontSize: '28px', lineHeight: '1', fontWeight: 400, background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
           aria-label="Close menu"
         >
