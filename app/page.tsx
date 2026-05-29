@@ -364,7 +364,7 @@ export default function Home() {
             <div className="lg:col-start-2 lg:col-end-9">
                 {/* Mobile: real text broken into two staircased clauses (left- then right-aligned), joined as one continuous block */}
                 <div
-                  className="block md:hidden"
+                  className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
@@ -385,7 +385,7 @@ export default function Home() {
                 <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto hidden md:block"
+                  className="w-full h-auto hidden min-[620px]:block"
                 />
               </div>
             </div>
