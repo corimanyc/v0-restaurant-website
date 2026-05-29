@@ -729,11 +729,18 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Below 880px (where the single row begins to wrap): a 2-column x 3-row
-            grid with thin white borders. Cell order fills row by row. */}
+        {/* Below 880px (where the single row begins to wrap): a 3-column x 2-row
+            grid with thin white borders. Negative margins break the grid out of
+            the footer's padding so it sits flush to the bottom and side edges. */}
         <div
-          className="grid grid-cols-2 min-[880px]:hidden w-full border-t border-l border-white/20"
-          style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}
+          className="grid grid-cols-3 min-[880px]:hidden border-t border-l border-white/20"
+          style={{
+            fontFamily: "'Switzer', system-ui, sans-serif",
+            marginTop: '40px',
+            marginLeft: 'calc(-1 * var(--site-pad-x, 24px))',
+            marginRight: '-132px',
+            marginBottom: '-24px',
+          }}
         >
           <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
             <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
