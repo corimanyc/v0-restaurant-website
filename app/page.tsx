@@ -441,7 +441,7 @@ export default function Home() {
             </div>
 
             {/* Chef bio */}
-            <div className="mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-7 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div
                 className="lg:col-start-2 lg:col-end-6"
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
