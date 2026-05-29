@@ -374,7 +374,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
-                    maxWidth: 'clamp(300px, 68vw, 500px)',
+                    maxWidth: '440px',
                   }}
                 >
                   Working with the roughness, yet simplicity of the desert as inspiration
