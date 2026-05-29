@@ -31,7 +31,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
     <div
       className="fixed inset-0 z-50 flex flex-col overflow-hidden"
       style={{
-        backgroundColor: '#2f2f2f',
+        backgroundColor: '#222222',
         transform: isOpen ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',
