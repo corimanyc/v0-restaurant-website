@@ -373,6 +373,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
+                    maxWidth: '480px',
                   }}
                 >
                   Working with the roughness, yet simplicity of the desert as inspiration Corima takes what is familiar to some and makes it sensible to all
@@ -470,6 +471,7 @@ export default function Home() {
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
+                    maxWidth: '480px',
                   }}
                 >
                   <p style={{ textAlign: 'left' }}>
