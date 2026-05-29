@@ -362,8 +362,8 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
-                {/* Mobile: real text — first clause left-aligned, remainder right-aligned, matching the SVG staircase */}
-                <div
+                {/* Mobile: two separate text elements — first clause left-aligned, second right-aligned, matching the SVG staircase */}
+                <p
                   className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
@@ -373,17 +373,29 @@ export default function Home() {
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
-                    width: '100%',
-                    maxWidth: 'clamp(300px, 78vw, 480px)',
+                    textAlign: 'left',
+                    maxWidth: 'clamp(225px, 58vw, 380px)',
                   }}
                 >
-                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
-                    Working with the roughness, yet simplicity of the desert as inspiration
-                  </p>
-                  <p style={{ textAlign: 'right' }}>
-                    Corima takes what is familiar to some and makes it sensible to all
-                  </p>
-                </div>
+                  Working with the roughness, yet simplicity of the desert as inspiration
+                </p>
+                <p
+                  className="block min-[620px]:hidden"
+                  style={{
+                    fontFamily: "'Switzer', system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: 'clamp(22px, 6.6vw, 41px)',
+                    lineHeight: 1.3,
+                    letterSpacing: '-0.02em',
+                    color: '#CBCBCB',
+                    textAlign: 'right',
+                    width: 'clamp(300px, 78vw, 480px)',
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                  }}
+                >
+                  Corima takes what is familiar to some and makes it sensible to all
+                </p>
                 {/* Tablet (620px–lg): mobile SVG variant — shares the same 557px inherent width as the ethos mobile SVG so both headlines scale consistently */}
                 <img
                   src="/our-story-headline-mobile.svg"
@@ -473,8 +485,8 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-7">
-                {/* Mobile: real text — first clause left-aligned, remainder right-aligned, matching the SVG staircase */}
-                <div
+                {/* Mobile: two separate text elements — first clause left-aligned, second right-aligned, matching the SVG staircase */}
+                <p
                   className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
@@ -484,17 +496,29 @@ export default function Home() {
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
-                    width: '100%',
-                    maxWidth: 'clamp(300px, 78vw, 480px)',
+                    textAlign: 'left',
+                    maxWidth: 'clamp(225px, 58vw, 380px)',
                   }}
                 >
-                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
-                    Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
-                  </p>
-                  <p style={{ textAlign: 'right' }}>
-                    our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
-                  </p>
-                </div>
+                  Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
+                </p>
+                <p
+                  className="block min-[620px]:hidden"
+                  style={{
+                    fontFamily: "'Switzer', system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: 'clamp(22px, 6.6vw, 41px)',
+                    lineHeight: 1.3,
+                    letterSpacing: '-0.02em',
+                    color: '#CBCBCB',
+                    textAlign: 'right',
+                    width: 'clamp(300px, 78vw, 480px)',
+                    maxWidth: '100%',
+                    marginLeft: 'auto',
+                  }}
+                >
+                  our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
+                </p>
                 {/* Tablet (620px–lg): mobile SVG variant — shares the same 557px inherent width as the our-story mobile SVG so both headlines scale consistently */}
                 <img
                   src="/ethos-headline-mobile.svg"
