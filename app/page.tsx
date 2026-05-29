@@ -104,7 +104,7 @@ export default function Home() {
         className="text-white flex-1"
         style={{
           backgroundColor: '#1a1a1a',
-          backgroundImage: "url('/grain-texture-v2.jpeg')",
+          backgroundImage: "url('/grain-texture-v3.jpeg')",
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
         }}
@@ -272,7 +272,7 @@ export default function Home() {
         id="about"
           className="relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/grain-texture-v2.jpeg)',
+          backgroundImage: 'url(/grain-texture-v3.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
@@ -591,7 +591,7 @@ export default function Home() {
       <footer
         style={{
           backgroundColor: '#1a1a1a',
-          backgroundImage: 'url(/grain-texture-v2.jpeg)',
+          backgroundImage: 'url(/grain-texture-v3.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
