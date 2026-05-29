@@ -149,13 +149,13 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       <style>{`*::-webkit-scrollbar{display:none}`}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between flex-shrink-0" style={{ padding: '24px' }}>
+      <div className="flex items-center justify-between flex-shrink-0 p-6 pr-[60px] lg:pr-6">
         <h1 className="text-black uppercase" style={{ fontSize: '24px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           Menu
         </h1>
         <button
           onClick={onClose}
-          className="nav-link text-black uppercase flex items-center justify-center cursor-pointer"
+          className="nav-link text-black uppercase flex items-center justify-end lg:justify-center cursor-pointer"
           style={{ width: '40px', height: '40px', fontSize: '28px', lineHeight: '1', fontWeight: 400, background: 'transparent', border: 'none', padding: 0, cursor: 'pointer' }}
           aria-label="Close menu"
         >
