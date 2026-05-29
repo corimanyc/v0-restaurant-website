@@ -597,7 +597,7 @@ export default function Home() {
           paddingRight: '132px',
         }}
       >
-        <div className="flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>
+        <div className="hidden min-[880px]:flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>
           <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400, paddingTop: '3px', paddingBottom: '1px' }}>3 Allen St. NY 10002</p>
           <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400, paddingTop: '3px', paddingBottom: '1px' }}>Tue-Sat 5:30PM - 10PM</p>
           {/* Small white "O" from the CORIMA wordmark, sized to the footer text cap height */}
@@ -727,6 +727,38 @@ export default function Home() {
               </div>
             </div>
           </span>
+        </div>
+
+        {/* Below 880px (where the single row begins to wrap): a 2-column x 3-row
+            grid with thin white borders. Cell order fills row by row. */}
+        <div
+          className="grid grid-cols-2 min-[880px]:hidden w-full border-t border-l border-white/20"
+          style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}
+        >
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
+          </div>
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
+          </div>
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
+          </div>
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
+          </div>
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
+          </div>
+          <div className="flex items-center justify-center text-center px-4 py-6 border-r border-b border-white/20">
+            {/* CORIMA wordmark "O" as a small brand mark */}
+            <svg viewBox="153 15 283 272" aria-hidden="true" style={{ height: '13px', width: 'auto', display: 'block' }}>
+              <path
+                fill="#FFFFFF"
+                d="M294.5,286.1c-39.7,0-75.7-14-101.6-39.4c-25.3-24.9-39.3-58.9-39.3-95.6c0-37.3,13.1-71.2,36.7-95.4c25.5-26,61.5-39.7,104.2-39.7c42.7,0,78.7,13.7,104.2,39.7c23.7,24.2,36.7,58,36.7,95.4c0,36.8-14,70.7-39.3,95.6C370.2,272.1,334.1,286.1,294.5,286.1 M294.5,56.4c-31.6,0-57.6,9.5-75.3,27.6c-16.5,16.8-25.2,40-25.2,67c0,54.8,42.2,94.6,100.4,94.6c58.2,0,100.4-39.8,100.4-94.6c0-27.1-8.7-50.2-25.2-67C352,65.9,326,56.4,294.5,56.4"
+              />
+            </svg>
+          </div>
         </div>
       </footer>
     </div>
