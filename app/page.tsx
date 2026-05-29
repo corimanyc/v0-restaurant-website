@@ -733,7 +733,7 @@ export default function Home() {
             grid with thin white borders. Negative margins break the grid out of
             the footer's padding so it sits flush to the bottom and side edges. */}
         <div
-          className="grid grid-cols-[auto_1fr_auto] grid-rows-2 grid-flow-col min-[880px]:hidden border-t border-l border-white/20"
+          className="grid grid-cols-[minmax(max-content,1fr)_1fr_1fr] grid-rows-2 grid-flow-col min-[880px]:hidden border-t border-l border-white/20"
           style={{
             fontFamily: "'Switzer', system-ui, sans-serif",
             marginTop: '40px',
