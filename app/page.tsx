@@ -225,7 +225,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="relative flex items-end justify-between px-6 lg:px-9 py-6">
+          <div className="relative flex items-end justify-between px-6 lg:px-9 pt-6 pb-2 min-[880px]:pb-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below.
                 Two whitespace-nowrap spans inside a flex-wrap container so they
@@ -761,7 +761,7 @@ export default function Home() {
           <div className="flex items-center justify-end py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
             <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
           </div>
-          <div className="flex items-center justify-end py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
+          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
             {/* CORIMA wordmark "O" as a small brand mark */}
             <svg viewBox="153 15 283 272" aria-hidden="true" style={{ height: '13px', width: 'auto', display: 'block' }}>
               <path
