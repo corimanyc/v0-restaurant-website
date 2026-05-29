@@ -185,7 +185,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase flex-1 min-w-0 max-w-[230px] md:max-w-[420px]" style={base}>
+                  <p className="text-black uppercase flex-1 min-w-0 max-w-[320px] md:max-w-[550px]" style={base}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
@@ -222,7 +222,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
-            <p className="text-black mb-10" style={{ ...base, fontSize: '14px', maxWidth: '520px' }}>
+            <p className="text-black mb-10" style={{ ...base, fontSize: '14px', maxWidth: '540px' }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             {wineByGlass.map((group, gi) => (
