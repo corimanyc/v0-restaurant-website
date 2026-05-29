@@ -471,6 +471,7 @@ export default function Home() {
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
+                    width: '100%',
                     maxWidth: '480px',
                   }}
                 >
