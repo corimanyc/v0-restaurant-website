@@ -100,7 +100,16 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="text-white flex-1" style={{ backgroundColor: '#1f1c18' }}>
+      <div
+        className="text-white flex-1"
+        style={{
+          backgroundColor: '#1f1c18',
+          backgroundImage: "url('/panel-texture.jpeg')",
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+        }}
+      >
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }} scrollToSection={menuScrollTarget} />
       <DiningOverlay
         isOpen={isDiningOpen}
