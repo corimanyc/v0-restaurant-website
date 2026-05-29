@@ -374,7 +374,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
-                    maxWidth: '440px',
+                    maxWidth: 'clamp(300px, 68vw, 500px)',
                   }}
                 >
                   Working with the roughness, yet simplicity of the desert as inspiration
@@ -497,7 +497,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
-                    maxWidth: '440px',
+                    maxWidth: 'clamp(300px, 68vw, 500px)',
                   }}
                 >
                   Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
