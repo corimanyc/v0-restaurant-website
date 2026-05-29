@@ -460,11 +460,25 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-2 lg:col-end-7">
-                <img
-                  src="/ethos-headline-mobile.svg"
-                  alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
-                  className="w-full h-auto block lg:hidden"
-                />
+                {/* Mobile: real text — first clause left-aligned, remainder right-aligned, matching the SVG staircase */}
+                <div
+                  className="block lg:hidden"
+                  style={{
+                    fontFamily: "'Switzer', system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: '26px',
+                    lineHeight: 1.3,
+                    letterSpacing: '-0.02em',
+                    color: '#CBCBCB',
+                  }}
+                >
+                  <p style={{ textAlign: 'left' }}>
+                    Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
+                  </p>
+                  <p style={{ textAlign: 'right' }}>
+                    our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
+                  </p>
+                </div>
                 <img
                   src="/ethos-headline.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
