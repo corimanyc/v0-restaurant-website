@@ -379,11 +379,17 @@ export default function Home() {
                 >
                   Working with the roughness, yet simplicity of the desert as inspiration Corima takes what is familiar to some and makes it sensible to all
                 </p>
-                {/* Desktop: original staircase SVG */}
+                {/* Tablet (620px–lg): mobile SVG variant — shares the same 557px inherent width as the ethos mobile SVG so both headlines scale consistently */}
+                <img
+                  src="/our-story-headline-mobile.svg"
+                  alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
+                  className="w-full h-auto hidden min-[620px]:block lg:hidden"
+                />
+                {/* Desktop (lg+): wide staircase SVG */}
                 <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto hidden min-[620px]:block"
+                  className="w-full h-auto hidden lg:block"
                 />
               </div>
             </div>
@@ -484,10 +490,17 @@ export default function Home() {
                     our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
                   </p>
                 </div>
+                {/* Tablet (620px–lg): mobile SVG variant — shares the same 557px inherent width as the our-story mobile SVG so both headlines scale consistently */}
+                <img
+                  src="/ethos-headline-mobile.svg"
+                  alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
+                  className="w-full h-auto hidden min-[620px]:block lg:hidden"
+                />
+                {/* Desktop (lg+): staircase SVG */}
                 <img
                   src="/ethos-headline.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
-                  className="w-full h-auto hidden min-[620px]:block"
+                  className="w-full h-auto hidden lg:block"
                 />
               </div>
             </div>
