@@ -362,25 +362,21 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
-                {/* Mobile: real text broken into two staircased clauses (left- then right-aligned), joined as one continuous block */}
-                <div
+                {/* Mobile: real text as one left-aligned block */}
+                <p
                   className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
-                    fontSize: '24px',
+                    fontSize: '28px',
                     lineHeight: 1.2,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
+                    textAlign: 'left',
                   }}
                 >
-                  <p style={{ textAlign: 'left' }}>
-                    Working with the roughness, yet simplicity of the desert as inspiration
-                  </p>
-                  <p style={{ textAlign: 'right' }}>
-                    Corima takes what is familiar to some and makes it sensible to all
-                  </p>
-                </div>
+                  Working with the roughness, yet simplicity of the desert as inspiration Corima takes what is familiar to some and makes it sensible to all
+                </p>
                 {/* Desktop: original staircase SVG */}
                 <img
                   src="/our-story-headline.svg"
