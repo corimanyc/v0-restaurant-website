@@ -368,12 +368,13 @@ export default function Home() {
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
-                    fontSize: '26px',
+                    // Fluidly scales with viewport up to the 620px swap point (~26px at 390px, ~41px near 620px)
+                    fontSize: 'clamp(22px, 6.6vw, 41px)',
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
-                    maxWidth: '480px',
+                    maxWidth: 'clamp(300px, 78vw, 480px)',
                   }}
                 >
                   Working with the roughness, yet simplicity of the desert as inspiration Corima takes what is familiar to some and makes it sensible to all
@@ -467,18 +468,19 @@ export default function Home() {
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
-                    fontSize: '26px',
+                    // Fluidly scales with viewport up to the 620px swap point (~26px at 390px, ~41px near 620px)
+                    fontSize: 'clamp(22px, 6.6vw, 41px)',
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     width: '100%',
-                    maxWidth: '480px',
+                    maxWidth: 'clamp(300px, 78vw, 480px)',
                   }}
                 >
-                  <p style={{ textAlign: 'left', maxWidth: '360px' }}>
+                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 360px)' }}>
                     Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
                   </p>
-                  <p style={{ textAlign: 'right', maxWidth: '360px', marginLeft: 'auto' }}>
+                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 360px)', marginLeft: 'auto' }}>
                     our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
                   </p>
                 </div>
