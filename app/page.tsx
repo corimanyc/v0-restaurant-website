@@ -733,7 +733,7 @@ export default function Home() {
             grid with thin white borders. Negative margins break the grid out of
             the footer's padding so it sits flush to the bottom and side edges. */}
         <div
-          className="grid grid-cols-3 grid-rows-2 grid-flow-col min-[880px]:hidden border-t border-l border-white/20"
+          className="grid grid-cols-[auto_1fr_auto] grid-rows-2 grid-flow-col min-[880px]:hidden border-t border-l border-white/20"
           style={{
             fontFamily: "'Switzer', system-ui, sans-serif",
             marginTop: '40px',
@@ -744,11 +744,11 @@ export default function Home() {
         >
           {/* Col 1: left-aligned, respecting the page left padding */}
           <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
-            <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
+            <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
           </div>
           {/* Col 1, row 2: hours under the address, left-aligned */}
           <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
-            <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
+            <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
           </div>
           {/* Col 2: centered */}
           <div className="flex items-center justify-center px-4 py-2 border-r border-b border-white/20">
