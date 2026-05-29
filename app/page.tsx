@@ -604,7 +604,7 @@ export default function Home() {
           <svg
             viewBox="153 15 283 272"
             aria-hidden="true"
-            style={{ height: '12px', width: 'auto', flex: 'none', display: 'block' }}
+            style={{ height: '11px', width: 'auto', flex: 'none', display: 'block', position: 'relative', top: '2px' }}
           >
             <path
               fill="#FFFFFF"
