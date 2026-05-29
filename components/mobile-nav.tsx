@@ -31,7 +31,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
     <div
       className="fixed inset-0 z-50 flex flex-col overflow-hidden"
       style={{
-        backgroundColor: '#1f1c18',
+        backgroundColor: '#2f2f2f',
         transform: isOpen ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.45s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',
@@ -40,11 +40,11 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
       {/* Top bar — logo + close */}
       <div className="flex items-center justify-between" style={{ padding: '24px' }}>
         <Link href="/" onClick={onClose}>
-          <img src="/logo.svg" alt="CORIMA" style={{ width: '120px', height: 'auto' }} />
+          <img src="/logo.svg" alt="CORIMA" style={{ width: '120px', height: 'auto', filter: 'brightness(0)' }} />
         </Link>
         <button
           onClick={onClose}
-          className="nav-link text-white"
+          className="nav-link text-black"
           style={{ fontFamily: 'Switzer, sans-serif', fontSize: '32px', fontWeight: 400, letterSpacing: '-0.01em', lineHeight: 1, background: 'transparent', border: 'none', padding: '0 0 4px 0', cursor: 'pointer' }}
           aria-label="Close menu"
         >
@@ -66,7 +66,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             key={label}
             href={href}
             onClick={onClick}
-            className="text-white hover:opacity-50 transition-opacity"
+            className="text-black hover:opacity-50 transition-opacity"
             style={{
               fontFamily: 'Switzer, sans-serif',
               fontSize: '28px',
@@ -84,14 +84,14 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
       <div style={{ padding: '24px' }}>
         <div className="flex items-start justify-between" style={{ marginBottom: '20px' }}>
           <p
-            className="text-white uppercase"
+            className="text-black uppercase"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             3 Allen St NY 10002
           </p>
           <a
             href="mailto:info@corimanyc.com"
-            className="text-white uppercase hover:opacity-60 transition"
+            className="text-black uppercase hover:opacity-60 transition"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Contact
@@ -99,7 +99,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         </div>
         <div className="flex items-start justify-between">
           <p
-            className="text-white uppercase"
+            className="text-black uppercase"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Tue&nbsp;&ndash;&nbsp;Sat 5:30PM&nbsp;&ndash;&nbsp;10PM
@@ -108,7 +108,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             href="https://instagram.com/corimanyc"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white uppercase text-right hover:opacity-60 transition"
+            className="text-black uppercase text-right hover:opacity-60 transition"
             style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Instagram
