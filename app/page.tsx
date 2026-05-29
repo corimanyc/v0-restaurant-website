@@ -429,7 +429,7 @@ export default function Home() {
 
               {/* Counter image — desktop: under the intro copy, 100px below.
                   Mobile: rendered before the copy via order-1, with 50px gap above. */}
-              <div className="order-1 lg:order-none mt-[50px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="order-1 lg:order-none mt-[76px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
                 <div className="lg:col-start-6 lg:col-end-12">
                   <img
                     src="/hero-counter-service.jpeg"
@@ -454,7 +454,7 @@ export default function Home() {
             </div>
 
             {/* Bottom paired images */}
-            <div className="mt-[50px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
+            <div className="mt-[96px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
               <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '1 / 1' }}>
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
@@ -535,7 +535,7 @@ export default function Home() {
             </div>
 
             {/* Body copy + dining-nook image */}
-            <div className="mt-[50px] lg:mt-[60px] flex flex-col gap-[50px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
+            <div className="mt-[76px] lg:mt-[60px] flex flex-col gap-[76px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
@@ -562,7 +562,7 @@ export default function Home() {
             </p>
 
             {/* Bottom kitchen action image */}
-            <div className="mt-[50px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-[76px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-3 lg:col-end-9">
                 <img
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
