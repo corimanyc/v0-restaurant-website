@@ -733,7 +733,7 @@ export default function Home() {
             grid with thin white borders. Negative margins break the grid out of
             the footer's padding so it sits flush to the bottom and side edges. */}
         <div
-          className="grid grid-cols-[minmax(max-content,1fr)_1fr_1fr] grid-rows-2 grid-flow-col min-[880px]:hidden border-t border-l border-white/20"
+          className="grid grid-cols-[minmax(max-content,1fr)_1fr_1fr] grid-rows-2 grid-flow-col min-[880px]:hidden"
           style={{
             fontFamily: "'Switzer', system-ui, sans-serif",
             marginTop: '40px',
@@ -743,32 +743,23 @@ export default function Home() {
           }}
         >
           {/* Col 1: left-aligned, respecting the page left padding */}
-          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
+          <div className="flex items-center justify-start py-2" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
             <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
           </div>
           {/* Col 1, row 2: hours under the address, left-aligned */}
-          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
+          <div className="flex items-center justify-start py-2" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
             <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
           </div>
           {/* Col 2: centered */}
-          <div className="flex items-center justify-center px-4 py-2 border-r border-b border-white/20">
+          <div className="flex items-center justify-center px-4 py-2">
             <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
           </div>
-          <div className="flex items-center justify-center px-4 py-2 border-r border-b border-white/20">
+          <div className="flex items-center justify-center px-4 py-2">
             <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
           </div>
           {/* Col 3: right-aligned, respecting the page right padding */}
-          <div className="flex items-center justify-end py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
+          <div className="flex items-center justify-end py-2" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
             <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
-          </div>
-          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
-            {/* CORIMA wordmark "O" as a small brand mark */}
-            <svg viewBox="153 15 283 272" aria-hidden="true" style={{ height: '13px', width: 'auto', display: 'block' }}>
-              <path
-                fill="#FFFFFF"
-                d="M294.5,286.1c-39.7,0-75.7-14-101.6-39.4c-25.3-24.9-39.3-58.9-39.3-95.6c0-37.3,13.1-71.2,36.7-95.4c25.5-26,61.5-39.7,104.2-39.7c42.7,0,78.7,13.7,104.2,39.7c23.7,24.2,36.7,58,36.7,95.4c0,36.8-14,70.7-39.3,95.6C370.2,272.1,334.1,286.1,294.5,286.1 M294.5,56.4c-31.6,0-57.6,9.5-75.3,27.6c-16.5,16.8-25.2,40-25.2,67c0,54.8,42.2,94.6,100.4,94.6c58.2,0,100.4-39.8,100.4-94.6c0-27.1-8.7-50.2-25.2-67C352,65.9,326,56.4,294.5,56.4"
-              />
-            </svg>
           </div>
         </div>
       </footer>
