@@ -149,7 +149,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       <style>{`*::-webkit-scrollbar{display:none}`}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between flex-shrink-0 p-6 pr-[60px] lg:pr-6">
+      <div className="flex items-center justify-between flex-shrink-0 p-6">
         <h1 className="text-black uppercase" style={{ fontSize: '24px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           Menu
         </h1>
