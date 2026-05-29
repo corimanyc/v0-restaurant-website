@@ -743,24 +743,24 @@ export default function Home() {
           }}
         >
           {/* Col 1: left-aligned, respecting the page left padding */}
-          <div className="flex items-center justify-start py-3 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
+          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
             <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
           </div>
           {/* Col 2: centered */}
-          <div className="flex items-center justify-center px-4 py-3 border-r border-b border-white/20">
+          <div className="flex items-center justify-center px-4 py-2 border-r border-b border-white/20">
             <span className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
           </div>
           {/* Col 3: right-aligned, respecting the page right padding */}
-          <div className="flex items-center justify-end py-3 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
+          <div className="flex items-center justify-end py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
             <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
           </div>
-          <div className="flex items-center justify-start py-3 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
+          <div className="flex items-center justify-start py-2 border-r border-b border-white/20" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
             <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
           </div>
-          <div className="flex items-center justify-center px-4 py-3 border-r border-b border-white/20">
+          <div className="flex items-center justify-center px-4 py-2 border-r border-b border-white/20">
             <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
           </div>
-          <div className="flex items-center justify-end py-3 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
+          <div className="flex items-center justify-end py-2 border-r border-b border-white/20" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
             {/* CORIMA wordmark "O" as a small brand mark */}
             <svg viewBox="153 15 283 272" aria-hidden="true" style={{ height: '13px', width: 'auto', display: 'block' }}>
               <path
