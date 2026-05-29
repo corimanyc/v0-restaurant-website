@@ -362,11 +362,37 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
-                <img
-                  src="/our-story-headline-mobile.svg"
-                  alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto block lg:hidden"
-                />
+                {/* Mobile: real text broken into two staircased clauses (left- then right-aligned) */}
+                <div className="block lg:hidden">
+                  <p
+                    style={{
+                      fontFamily: "'Switzer', system-ui, sans-serif",
+                      fontWeight: 400,
+                      fontSize: '28px',
+                      lineHeight: 1.2,
+                      letterSpacing: '-0.02em',
+                      color: '#CBCBCB',
+                      textAlign: 'left',
+                    }}
+                  >
+                    Working with the roughness, yet simplicity of the desert as inspiration
+                  </p>
+                  <p
+                    className="mt-6"
+                    style={{
+                      fontFamily: "'Switzer', system-ui, sans-serif",
+                      fontWeight: 400,
+                      fontSize: '28px',
+                      lineHeight: 1.2,
+                      letterSpacing: '-0.02em',
+                      color: '#CBCBCB',
+                      textAlign: 'right',
+                    }}
+                  >
+                    Corima takes what is familiar to some and makes it sensible to all
+                  </p>
+                </div>
+                {/* Desktop: original staircase SVG */}
                 <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
