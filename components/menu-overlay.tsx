@@ -138,7 +138,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
   return (
     <div
-      className="fixed inset-0 bg-[#515151] flex flex-col"
+      className="fixed inset-0 bg-[#222222] flex flex-col"
       style={{
         zIndex: 60,
         transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
