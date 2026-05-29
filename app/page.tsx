@@ -598,8 +598,8 @@ export default function Home() {
         }}
       >
         <div className="flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>
-          <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}>3 Allen St. NY 10002</p>
-          <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</p>
+          <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400, position: 'relative', top: '2px' }}>3 Allen St. NY 10002</p>
+          <p className="tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', margin: '0', fontWeight: 400, position: 'relative', top: '2px' }}>Tue-Sat 5:30PM - 10PM</p>
           <a
             href="mailto:info@corimanyc.com"
             className="nav-link tracking-wider"
