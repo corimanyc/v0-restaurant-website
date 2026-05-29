@@ -380,7 +380,7 @@ export default function Home() {
                   <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
                     Working with the roughness, yet simplicity of the desert as inspiration
                   </p>
-                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 380px)', marginLeft: 'auto' }}>
+                  <p style={{ textAlign: 'right' }}>
                     Corima takes what is familiar to some and makes it sensible to all
                   </p>
                 </div>
@@ -491,7 +491,7 @@ export default function Home() {
                   <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
                     Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
                   </p>
-                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 380px)', marginLeft: 'auto' }}>
+                  <p style={{ textAlign: 'right' }}>
                     our kitchen, our guests, farmers, foragers, and artisans who shape how we cook.
                   </p>
                 </div>
