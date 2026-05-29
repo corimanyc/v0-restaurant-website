@@ -512,7 +512,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'right',
-                    width: 'clamp(320px, 82vw, 540px)',
+                    width: 'clamp(320px, 82vw, 560px)',
                     maxWidth: '100%',
                     marginLeft: 'auto',
                   }}
