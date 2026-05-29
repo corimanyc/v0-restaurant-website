@@ -362,8 +362,8 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
-                {/* Mobile: real text as one left-aligned block */}
-                <p
+                {/* Mobile: real text — first clause left-aligned, remainder right-aligned, matching the SVG staircase */}
+                <div
                   className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
@@ -373,12 +373,17 @@ export default function Home() {
                     lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
-                    textAlign: 'left',
+                    width: '100%',
                     maxWidth: 'clamp(300px, 78vw, 480px)',
                   }}
                 >
-                  Working with the roughness, yet simplicity of the desert as inspiration Corima takes what is familiar to some and makes it sensible to all
-                </p>
+                  <p style={{ textAlign: 'left', maxWidth: 'clamp(225px, 58vw, 380px)' }}>
+                    Working with the roughness, yet simplicity of the desert as inspiration
+                  </p>
+                  <p style={{ textAlign: 'right', maxWidth: 'clamp(225px, 58vw, 380px)', marginLeft: 'auto' }}>
+                    Corima takes what is familiar to some and makes it sensible to all
+                  </p>
+                </div>
                 {/* Tablet (620px–lg): mobile SVG variant — shares the same 557px inherent width as the ethos mobile SVG so both headlines scale consistently */}
                 <img
                   src="/our-story-headline-mobile.svg"
