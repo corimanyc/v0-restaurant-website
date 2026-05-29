@@ -105,9 +105,9 @@ export default function Home() {
         style={{
           backgroundColor: '#1f1c18',
           backgroundImage: "url('/panel-texture.jpeg')",
-          backgroundSize: 'cover',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '512px 512px',
           backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
         }}
       >
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }} scrollToSection={menuScrollTarget} />
