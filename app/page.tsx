@@ -103,11 +103,10 @@ export default function Home() {
       <div
         className="text-white flex-1"
         style={{
-          backgroundColor: '#1f1c18',
-          backgroundImage: "url('/panel-texture.jpeg')",
+          backgroundColor: '#1a1a1a',
+          backgroundImage: "url('/grain-texture.jpeg')",
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
-          backgroundAttachment: 'fixed',
         }}
       >
       <MenuOverlay isOpen={isMenuOverlayOpen} onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }} scrollToSection={menuScrollTarget} />
@@ -273,7 +272,7 @@ export default function Home() {
         id="about"
           className="relative overflow-hidden"
         style={{
-          backgroundImage: 'url(/about-bg-v13.jpeg)',
+          backgroundImage: 'url(/grain-texture.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           backgroundColor: '#1a1a1a',
@@ -592,7 +591,7 @@ export default function Home() {
       <footer
         style={{
           backgroundColor: '#1a1a1a',
-          backgroundImage: 'url(/about-bg-v13.jpeg)',
+          backgroundImage: 'url(/grain-texture.jpeg)',
           backgroundRepeat: 'repeat',
           backgroundSize: '512px 512px',
           width: '100%',
