@@ -497,7 +497,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
-                    maxWidth: 'clamp(300px, 68vw, 500px)',
+                    maxWidth: 'clamp(340px, 80vw, 580px)',
                   }}
                 >
                   Circle of Sharing does not just apply to our cuisine, it&apos;s a living exchange between
@@ -512,7 +512,7 @@ export default function Home() {
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'right',
-                    width: 'clamp(300px, 78vw, 480px)',
+                    width: 'clamp(340px, 88vw, 580px)',
                     maxWidth: '100%',
                     marginLeft: 'auto',
                   }}
