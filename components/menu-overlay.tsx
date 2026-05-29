@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const sectionImages: Record<string, string> = {
-  'a-la-carte': 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2895%201-Tmb6eaZVQ9G8kNFzemEMMwG5Y8llGL.png',
+  'a-la-carte': '/a-la-carte.jpg',
   cocktail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5644C25E-6307-4E8C-BD3A-2B954A8A2C73_1_201_a-ZGlZqzedBBSS7ErdSvQPfaVA2HjFZI.jpeg',
   wine: '/wine-list.jpeg',
   }
