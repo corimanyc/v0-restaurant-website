@@ -535,7 +535,7 @@ export default function Home() {
             </div>
 
             {/* Body copy + dining-nook image */}
-            <div className="mt-[62px] mb-[76px] lg:mb-0 lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
+            <div className="mt-[62px] mb-[62px] lg:mb-0 lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
                 <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
