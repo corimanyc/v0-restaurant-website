@@ -368,8 +368,8 @@ export default function Home() {
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
-                    fontSize: '28px',
-                    lineHeight: 1.2,
+                    fontSize: '26px',
+                    lineHeight: 1.3,
                     letterSpacing: '-0.02em',
                     color: '#CBCBCB',
                     textAlign: 'left',
