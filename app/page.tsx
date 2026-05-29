@@ -362,33 +362,22 @@ export default function Home() {
             {/* Staircase headline (SVG) — mobile and desktop variants */}
             <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
             <div className="lg:col-start-2 lg:col-end-9">
-                {/* Mobile: real text broken into two staircased clauses (left- then right-aligned) */}
-                <div className="block lg:hidden">
-                  <p
-                    style={{
-                      fontFamily: "'Switzer', system-ui, sans-serif",
-                      fontWeight: 400,
-                      fontSize: '28px',
-                      lineHeight: 1.2,
-                      letterSpacing: '-0.02em',
-                      color: '#CBCBCB',
-                      textAlign: 'left',
-                    }}
-                  >
+                {/* Mobile: real text broken into two staircased clauses (left- then right-aligned), joined as one continuous block */}
+                <div
+                  className="block lg:hidden"
+                  style={{
+                    fontFamily: "'Switzer', system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: '24px',
+                    lineHeight: 1.2,
+                    letterSpacing: '-0.02em',
+                    color: '#CBCBCB',
+                  }}
+                >
+                  <p style={{ textAlign: 'left' }}>
                     Working with the roughness, yet simplicity of the desert as inspiration
                   </p>
-                  <p
-                    className="mt-6"
-                    style={{
-                      fontFamily: "'Switzer', system-ui, sans-serif",
-                      fontWeight: 400,
-                      fontSize: '28px',
-                      lineHeight: 1.2,
-                      letterSpacing: '-0.02em',
-                      color: '#CBCBCB',
-                      textAlign: 'right',
-                    }}
-                  >
+                  <p style={{ textAlign: 'right' }}>
                     Corima takes what is familiar to some and makes it sensible to all
                   </p>
                 </div>
