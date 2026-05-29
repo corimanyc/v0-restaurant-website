@@ -462,7 +462,7 @@ export default function Home() {
               <div className="lg:col-start-2 lg:col-end-7">
                 {/* Mobile: real text — first clause left-aligned, remainder right-aligned, matching the SVG staircase */}
                 <div
-                  className="block lg:hidden"
+                  className="block min-[620px]:hidden"
                   style={{
                     fontFamily: "'Switzer', system-ui, sans-serif",
                     fontWeight: 400,
@@ -482,7 +482,7 @@ export default function Home() {
                 <img
                   src="/ethos-headline.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
-                  className="w-full h-auto hidden lg:block"
+                  className="w-full h-auto hidden min-[620px]:block"
                 />
               </div>
             </div>
