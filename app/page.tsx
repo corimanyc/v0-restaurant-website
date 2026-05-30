@@ -26,6 +26,27 @@ const heroImages = [
   },
 ]
 
+// Mobile (portrait) carousel images — shown below the `md` breakpoint where
+// the nav collapses to the hamburger. These crops are framed for tall screens.
+const heroImagesMobile = [
+  {
+    src: '/hero-mobile1.jpg',
+    alt: 'CORIMA fine dining interior',
+  },
+  {
+    src: '/hero-mobile2.jpg',
+    alt: 'CORIMA fine dining interior',
+  },
+  {
+    src: '/hero-mobile3.jpg',
+    alt: 'CORIMA fine dining interior',
+  },
+  {
+    src: '/hero-mobile4.jpg',
+    alt: 'CORIMA fine dining interior',
+  },
+]
+
 const aboutSectionImages = [
   {
     bw: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
@@ -144,15 +165,29 @@ export default function Home() {
             overflow: 'hidden',
           }}
         >
+          {/* Desktop (md+) landscape carousel */}
           {heroImages.map((image, index) => (
             <img
               key={image.src}
               src={image.src}
               alt={image.alt}
-              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 hidden md:block"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
                 objectPosition: index === 0 ? 'center 60%' : 'center',
+              }}
+            />
+          ))}
+          {/* Mobile (below md) portrait carousel — paired to the hamburger nav breakpoint */}
+          {heroImagesMobile.map((image, index) => (
+            <img
+              key={image.src}
+              src={image.src}
+              alt={image.alt}
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 md:hidden"
+              style={{
+                opacity: index === currentIndex ? 1 : 0,
+                objectPosition: 'center',
               }}
             />
           ))}
