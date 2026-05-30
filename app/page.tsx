@@ -79,6 +79,19 @@ const interiorImages = [
   },
 ]
 
+const ethosImages = [
+  {
+    bw: '/ethos-brick-wall.jpg',
+    color: '/ethos-brick-wall-color.jpg',
+    alt: 'Corima dining room — exposed brick wall with a candle-lit niche, a ribbed globe pendant, and dark tables below',
+  },
+  {
+    bw: '/ethos-kitchen.jpg',
+    color: '/ethos-kitchen-color.jpg',
+    alt: 'Corima kitchen during service — a chef searing over an open flame beside bamboo steamers and stockpots',
+  },
+]
+
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -89,6 +102,8 @@ export default function Home() {
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
   const [interiorIndex, setInteriorIndex] = useState(0)
   const interiorTouchStartX = useRef<number | null>(null)
+  const [ethosIndex, setEthosIndex] = useState(0)
+  const ethosTouchStartX = useRef<number | null>(null)
   const [isHovering, setIsHovering] = useState(false)
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
@@ -146,6 +161,20 @@ export default function Home() {
       dx < 0 ? nextInterior() : prevInterior()
     }
     interiorTouchStartX.current = null
+  }
+
+  const nextEthos = () => setEthosIndex((i) => (i + 1) % ethosImages.length)
+  const prevEthos = () => setEthosIndex((i) => (i - 1 + ethosImages.length) % ethosImages.length)
+  const onEthosTouchStart = (e: React.TouchEvent) => {
+    ethosTouchStartX.current = e.touches[0].clientX
+  }
+  const onEthosTouchEnd = (e: React.TouchEvent) => {
+    if (ethosTouchStartX.current === null) return
+    const dx = e.changedTouches[0].clientX - ethosTouchStartX.current
+    if (Math.abs(dx) > 40) {
+      dx < 0 ? nextEthos() : prevEthos()
+    }
+    ethosTouchStartX.current = null
   }
 
 
@@ -682,19 +711,34 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-start-7 lg:col-end-13">
-                <div className="group relative w-full">
-                  <img
-                    src="/ethos-brick-wall.jpg"
-                    alt="Corima dining room — exposed brick wall with a candle-lit niche, a ribbed globe pendant, and dark tables below"
-                    className="w-full h-auto block"
-                  />
-                  <img
-                    src="/ethos-brick-wall-color.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-                  />
-                </div>
+                <button
+                  type="button"
+                  onClick={nextEthos}
+                  onTouchStart={onEthosTouchStart}
+                  onTouchEnd={onEthosTouchEnd}
+                  aria-label="Show next photo"
+                  className="group relative block w-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                  style={{ aspectRatio: '3 / 2' }}
+                >
+                  {ethosImages.map((img, i) => (
+                    <div
+                      key={img.bw}
+                      className={`absolute inset-0 transition-opacity duration-500 ease-out ${i === ethosIndex ? 'opacity-100' : 'opacity-0'}`}
+                    >
+                      <img
+                        src={img.bw || "/placeholder.svg"}
+                        alt={img.alt}
+                        className="absolute inset-0 w-full h-full object-cover block"
+                      />
+                      <img
+                        src={img.color || "/placeholder.svg"}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                      />
+                    </div>
+                  ))}
+                </button>
               </div>
             </div>
 
