@@ -752,12 +752,21 @@ export default function Home() {
             marginRight: 'calc(-132px + var(--site-pad-x, 24px))',
           }}
         >
-          {/* Links row: spread evenly across the available width */}
-          <div className="flex items-center justify-between gap-x-4" style={{ fontSize: '15px' }}>
-            <a href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Reservations</a>
-            <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
-            <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
-            <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
+          {/* Links row with rounded-dash dividers above and below. SVG is used
+              (instead of border-dashed) so the dashes can have rounded caps. */}
+          <div className="flex flex-col" style={{ gap: '20px' }}>
+            <svg width="100%" height="2" aria-hidden="true" style={{ display: 'block' }}>
+              <line x1="1" y1="1" x2="100%" y2="1" stroke="#FEFEFE" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 6" />
+            </svg>
+            <div className="flex items-center justify-between gap-x-4" style={{ fontSize: '15px' }}>
+              <a href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Reservations</a>
+              <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
+              <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
+              <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
+            </div>
+            <svg width="100%" height="2" aria-hidden="true" style={{ display: 'block' }}>
+              <line x1="1" y1="1" x2="100%" y2="1" stroke="#FEFEFE" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 6" />
+            </svg>
           </div>
           {/* Hours, then address — stacked and left-aligned */}
           <div className="flex flex-col" style={{ gap: '12px' }}>
