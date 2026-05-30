@@ -13,15 +13,15 @@ const heroImages = [
     alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
   },
   {
-    src: '/hero-counter-service.jpeg',
-    alt: 'CORIMA chef\u2019s counter — diners watching the line during service',
+    src: '/hero-landing2.jpg',
+    alt: 'CORIMA open kitchen — diners at the counter watching the line during service',
   },
   {
     src: '/hero-kitchen-934.jpeg',
     alt: 'CORIMA kitchen — 9:34 PM, chef\u2019s shadow across the line during service',
   },
   {
-    src: '/hero-dining-nook.jpeg',
+    src: '/hero-landing3.jpg',
     alt: 'CORIMA dining nook — wooden chairs and table against slatted wainscoting',
   },
 ]
