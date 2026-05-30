@@ -138,9 +138,13 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
   return (
     <div
-      className="fixed inset-0 bg-[#2f2f2f] flex flex-col"
+      className="fixed inset-0 flex flex-col"
       style={{
         zIndex: 60,
+        backgroundColor: '#cfcfcf',
+        backgroundImage: 'url(/menu-texture.jpeg)',
+        backgroundRepeat: 'repeat',
+        backgroundSize: '512px 512px',
         transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
         transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',
