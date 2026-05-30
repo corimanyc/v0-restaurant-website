@@ -92,6 +92,11 @@ const ethosImages = [
     position: 'top',
   },
   {
+    bw: '/ethos-chefs.jpg',
+    color: '/ethos-chefs-color.jpg',
+    alt: 'Corima cooks working the line at the pass, with a tall floral arrangement and prep tools in the foreground',
+  },
+  {
     bw: '/ethos-kitchen.jpg',
     color: '/ethos-kitchen-color.jpg',
     alt: 'Corima kitchen during service — a chef searing over an open flame beside bamboo steamers and stockpots',
