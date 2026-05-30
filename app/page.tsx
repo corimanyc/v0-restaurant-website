@@ -256,7 +256,7 @@ export default function Home() {
             <img
               src="/footer-logo.png"
               alt="CORIMA"
-              className="w-7 h-7 min-[880px]:w-6 min-[880px]:h-6 object-contain ml-auto"
+              className="w-6 h-6 object-contain ml-auto"
               style={{
                 pointerEvents: isDiningOpen ? 'none' : 'auto',
                 opacity: isDiningOpen ? 0 : 1,
