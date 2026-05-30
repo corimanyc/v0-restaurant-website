@@ -60,6 +60,13 @@ const aboutSectionImages = [
   },
 ]
 
+const interiorImages = [
+  { src: '/bio-interior-1.jpg', alt: 'Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche' },
+  { src: '/bio-interior-1-color.jpg', alt: 'Corima wine bar in warm light — backlit shelving with natural wine and a lit arched niche' },
+  { src: '/bio-interior-2.jpg', alt: 'Corima dining nook — banquette and table beneath a pendant light beside a wine shelf' },
+  { src: '/bio-interior-2-color.jpg', alt: 'Corima dining nook in warm light — banquette and table beneath a pendant light beside a wine shelf' },
+]
+
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -68,6 +75,8 @@ export default function Home() {
   const [isDiningOpen, setIsDiningOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
+  const [interiorIndex, setInteriorIndex] = useState(0)
+  const interiorTouchStartX = useRef<number | null>(null)
   const [isHovering, setIsHovering] = useState(false)
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
@@ -112,6 +121,20 @@ export default function Home() {
 
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
+
+  const nextInterior = () => setInteriorIndex((i) => (i + 1) % interiorImages.length)
+  const prevInterior = () => setInteriorIndex((i) => (i - 1 + interiorImages.length) % interiorImages.length)
+  const onInteriorTouchStart = (e: React.TouchEvent) => {
+    interiorTouchStartX.current = e.touches[0].clientX
+  }
+  const onInteriorTouchEnd = (e: React.TouchEvent) => {
+    if (interiorTouchStartX.current === null) return
+    const dx = e.changedTouches[0].clientX - interiorTouchStartX.current
+    if (Math.abs(dx) > 40) {
+      dx < 0 ? nextInterior() : prevInterior()
+    }
+    interiorTouchStartX.current = null
+  }
 
 
   useEffect(() => {
@@ -533,34 +556,30 @@ export default function Home() {
             {/* Bottom paired images */}
             <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
               <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '4 / 5' }}>
-                <div className="group relative w-full h-full overflow-hidden">
-                  <img
-                    src="/bio-interior-1.jpg"
-                    alt="Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche"
-                    className="absolute inset-0 w-full h-full object-cover block"
-                  />
-                  <img
-                    src="/bio-interior-1-color.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-                  />
-                </div>
+                <img
+                  src="/bio-chef-1.jpg"
+                  alt="Chef Fidel Caballero plating a dish at the kitchen pass"
+                  className="w-full h-full object-cover block"
+                />
               </div>
               <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '4 / 5' }}>
-                <div className="group relative w-full h-full overflow-hidden">
-                  <img
-                    src="/bio-interior-2.jpg"
-                    alt="Corima dining nook — banquette and table beneath a pendant light beside a wine shelf"
-                    className="absolute inset-0 w-full h-full object-cover block"
-                  />
-                  <img
-                    src="/bio-interior-2-color.jpg"
-                    alt=""
-                    aria-hidden="true"
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-                  />
-                </div>
+                <button
+                  type="button"
+                  onClick={nextInterior}
+                  onTouchStart={onInteriorTouchStart}
+                  onTouchEnd={onInteriorTouchEnd}
+                  aria-label="Show next photo"
+                  className="group relative block w-full h-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                >
+                  {interiorImages.map((img, i) => (
+                    <img
+                      key={img.src}
+                      src={img.src || "/placeholder.svg"}
+                      alt={img.alt}
+                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out ${i === interiorIndex ? 'opacity-100' : 'opacity-0'}`}
+                    />
+                  ))}
+                </button>
               </div>
             </div>
           </section>
