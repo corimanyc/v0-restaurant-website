@@ -49,14 +49,14 @@ const heroImagesMobile = [
 
 const aboutSectionImages = [
   {
-    bw: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
-    color: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B6767198-A11A-4F32-8C93-F2AA3ACA83CA%202-crfmYdcYcAwg7v0h4lBf6ZfINvBH7E.png',
-    alt: 'Chef preparing service with traditional pottery',
+    bw: '/our-story-kitchen.jpg',
+    color: '/our-story-kitchen-color.jpg',
+    alt: 'Corima open kitchen during service — chefs plating at the pass',
   },
   {
-    bw: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1305D7C9-5A98-4D73-B74E-1A6F046A1C86_1_201_a-EFAUCGZA4GiiJzrPF2Ko0f5bV7IVns.jpeg',
-    color: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/09484B47-6D79-4A3E-9592-DC2DA3694214_1_201_a-v2N8UXXtfZelqKLdLmnZWGboCvDhfU.jpeg',
-    alt: 'CORIMA chef cooking on wood-fire grill',
+    bw: '/our-story-grilling.jpg',
+    color: '/our-story-grilling-color.jpg',
+    alt: 'Corima cook grilling on the line during service',
   },
 ]
 
@@ -492,19 +492,24 @@ export default function Home() {
                   Mobile: rendered before the copy via order-1, with 50px gap above. */}
               <div className="order-1 lg:order-none mt-[62px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
                 <div className="lg:col-start-6 lg:col-end-12">
-                  <div className="group relative">
+                  <button
+                    type="button"
+                    onClick={nextAboutImg}
+                    aria-label="Show next photo"
+                    className="group relative block w-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                  >
                     <img
-                      src="/our-story-kitchen.jpg"
-                      alt="Corima open kitchen during service — chefs plating at the pass"
+                      src={aboutSectionImages[aboutImgIndex].bw || "/placeholder.svg"}
+                      alt={aboutSectionImages[aboutImgIndex].alt}
                       className="w-full h-auto block"
                     />
                     <img
-                      src="/our-story-kitchen-color.jpg"
+                      src={aboutSectionImages[aboutImgIndex].color || "/placeholder.svg"}
                       alt=""
                       aria-hidden="true"
                       className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
                     />
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
