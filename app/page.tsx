@@ -103,6 +103,17 @@ const ethosImages = [
   },
 ]
 
+const endingImages = [
+  {
+    src: '/ending-image.jpg',
+    alt: "Corima chef's counter — leather bar stools along a tiled wall with a single spotlit floral arrangement on the counter",
+  },
+  {
+    src: '/ending-bar.jpg',
+    alt: 'Corima bar — a long counter with stools and backlit shelves of bottles against an exposed brick wall, looking toward the lit dining room',
+  },
+]
+
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -115,6 +126,8 @@ export default function Home() {
   const interiorTouchStartX = useRef<number | null>(null)
   const [ethosIndex, setEthosIndex] = useState(0)
   const ethosTouchStartX = useRef<number | null>(null)
+  const [endingIndex, setEndingIndex] = useState(0)
+  const endingTouchStartX = useRef<number | null>(null)
   const [isHovering, setIsHovering] = useState(false)
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
@@ -186,6 +199,20 @@ export default function Home() {
       dx < 0 ? nextEthos() : prevEthos()
     }
     ethosTouchStartX.current = null
+  }
+
+  const nextEnding = () => setEndingIndex((i) => (i + 1) % endingImages.length)
+  const prevEnding = () => setEndingIndex((i) => (i - 1 + endingImages.length) % endingImages.length)
+  const onEndingTouchStart = (e: React.TouchEvent) => {
+    endingTouchStartX.current = e.touches[0].clientX
+  }
+  const onEndingTouchEnd = (e: React.TouchEvent) => {
+    if (endingTouchStartX.current === null) return
+    const dx = e.changedTouches[0].clientX - endingTouchStartX.current
+    if (Math.abs(dx) > 40) {
+      dx < 0 ? nextEnding() : prevEnding()
+    }
+    endingTouchStartX.current = null
   }
 
 
@@ -763,11 +790,24 @@ export default function Home() {
             {/* Bottom kitchen action image */}
             <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-3 lg:col-end-9">
-                <img
-                  src="/ending-image.jpg"
-                  alt="Corima chef's counter — leather bar stools along a tiled wall with a single spotlit floral arrangement on the counter"
-                  className="w-full h-auto block"
-                />
+                <button
+                  type="button"
+                  onClick={nextEnding}
+                  onTouchStart={onEndingTouchStart}
+                  onTouchEnd={onEndingTouchEnd}
+                  aria-label="Show next photo"
+                  className="relative block w-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                  style={{ aspectRatio: '3 / 2' }}
+                >
+                  {endingImages.map((img, i) => (
+                    <img
+                      key={img.src}
+                      src={img.src || "/placeholder.svg"}
+                      alt={img.alt}
+                      className={`absolute inset-0 w-full h-full object-cover block transition-opacity duration-500 ease-out ${i === endingIndex ? 'opacity-100' : 'opacity-0'}`}
+                    />
+                  ))}
+                </button>
               </div>
             </div>
           </section>
