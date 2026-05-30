@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 const sectionImages: Record<string, string> = {
   'a-la-carte': '/a-la-carte-v2.jpg',
   cocktail: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5644C25E-6307-4E8C-BD3A-2B954A8A2C73_1_201_a-ZGlZqzedBBSS7ErdSvQPfaVA2HjFZI.jpeg',
-  wine: '/wine-list.jpeg',
+  wine: '/wine-list-v2.jpeg',
   }
 
 const alaCarteItems = [
