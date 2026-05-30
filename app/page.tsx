@@ -9,7 +9,7 @@ import SiteNav from '@/components/site-nav'
 
 const heroImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/corima_carousel-ud1JMifr4LEWSaRzmOBrGEnict94W2.png',
+    src: '/hero-landing1.jpg',
     alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
   },
   {
