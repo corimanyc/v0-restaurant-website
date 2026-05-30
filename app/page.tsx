@@ -754,7 +754,7 @@ export default function Home() {
         >
           {/* Links row with rounded-dash dividers above and below. SVG is used
               (instead of border-dashed) so the dashes can have rounded caps. */}
-          <div className="flex flex-col" style={{ gap: '8px' }}>
+          <div className="flex flex-col" style={{ gap: '12px' }}>
             <svg width="100%" height="2" aria-hidden="true" style={{ display: 'block' }}>
               <line x1="1" y1="1" x2="100%" y2="1" stroke="#FEFEFE" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 6" />
             </svg>
