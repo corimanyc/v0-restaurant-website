@@ -682,22 +682,6 @@ export default function Home() {
                 </p>
               </div>
               <div className="lg:col-start-7 lg:col-end-13">
-                <img
-                  src="/hero-dining-nook.jpeg"
-                  alt="Corima dining nook — wooden chairs and table against slatted wainscoting"
-                  className="w-full h-auto block"
-                />
-              </div>
-            </div>
-
-            {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
-            <p className="body-copy lg:hidden mt-0" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
-              Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
-            </p>
-
-            {/* Bottom kitchen action image */}
-            <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-3 lg:col-end-9">
                 <div className="group relative w-full">
                   <img
                     src="/ethos-kitchen.jpg"
@@ -711,6 +695,22 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
                   />
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
+            <p className="body-copy lg:hidden mt-0" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
+              Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
+            </p>
+
+            {/* Bottom kitchen action image */}
+            <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
+              <div className="lg:col-start-3 lg:col-end-9">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
+                  alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
+                  className="w-full h-auto block"
+                />
               </div>
             </div>
           </section>
