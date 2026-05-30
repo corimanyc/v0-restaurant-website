@@ -754,8 +754,8 @@ export default function Home() {
             <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-3 lg:col-end-9">
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
-                  alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
+                  src="/ending-image.jpg"
+                  alt="Corima chef's counter — leather bar stools along a tiled wall with a single spotlit floral arrangement on the counter"
                   className="w-full h-auto block"
                 />
               </div>
