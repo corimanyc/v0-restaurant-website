@@ -9,16 +9,20 @@ import SiteNav from '@/components/site-nav'
 
 const heroImages = [
   {
-    src: '/hero-landing1.jpg',
-    alt: 'CORIMA fine dining — a dry-aged cut of beef presented tableside',
+    src: '/hero-carousel1.avif',
+    alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-landing2.jpg',
-    alt: 'CORIMA open kitchen — diners at the counter watching the line during service',
+    src: '/hero-carousel2.avif',
+    alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-landing3.jpg',
-    alt: 'CORIMA dining nook — wooden chairs and table against slatted wainscoting',
+    src: '/hero-carousel3.avif',
+    alt: 'CORIMA fine dining interior',
+  },
+  {
+    src: '/hero-carousel4.avif',
+    alt: 'CORIMA fine dining interior',
   },
 ]
 
@@ -148,7 +152,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: index === 0 ? 'center 58%' : 'center',
+                objectPosition: 'center',
               }}
             />
           ))}
