@@ -61,10 +61,16 @@ const aboutSectionImages = [
 ]
 
 const interiorImages = [
-  { src: '/bio-interior-1.jpg', alt: 'Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche' },
-  { src: '/bio-interior-1-color.jpg', alt: 'Corima wine bar in warm light — backlit shelving with natural wine and a lit arched niche' },
-  { src: '/bio-interior-2.jpg', alt: 'Corima dining nook — banquette and table beneath a pendant light beside a wine shelf' },
-  { src: '/bio-interior-2-color.jpg', alt: 'Corima dining nook in warm light — banquette and table beneath a pendant light beside a wine shelf' },
+  {
+    bw: '/bio-interior-1.jpg',
+    color: '/bio-interior-1-color.jpg',
+    alt: 'Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche',
+  },
+  {
+    bw: '/bio-interior-2.jpg',
+    color: '/bio-interior-2-color.jpg',
+    alt: 'Corima dining nook — banquette and table beneath a pendant light beside a wine shelf',
+  },
 ]
 
 
@@ -571,15 +577,25 @@ export default function Home() {
                   aria-label="Show next photo"
                   className="group relative block w-full h-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                 >
-                  {interiorImages.map((img, i) => (
-                    <img
-                      key={img.src}
-                      src={img.src || "/placeholder.svg"}
-                      alt={img.alt}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-out ${i === interiorIndex ? 'opacity-100' : 'opacity-0'}`}
-                    />
-                  ))}
-                </button>
+  {interiorImages.map((img, i) => (
+  <div
+  key={img.bw}
+  className={`absolute inset-0 transition-opacity duration-500 ease-out ${i === interiorIndex ? 'opacity-100' : 'opacity-0'}`}
+  >
+  <img
+  src={img.bw || "/placeholder.svg"}
+  alt={img.alt}
+  className="absolute inset-0 w-full h-full object-cover block"
+  />
+  <img
+  src={img.color || "/placeholder.svg"}
+  alt=""
+  aria-hidden="true"
+  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+  />
+  </div>
+  ))}
+  </button>
               </div>
             </div>
           </section>
