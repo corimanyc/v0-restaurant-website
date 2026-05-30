@@ -147,6 +147,10 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
   const bump = isMobile ? 2 : 0
   const base: React.CSSProperties = { fontSize: `${16 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }
+  // On strictly mobile, every section's item text shares one (narrower) max
+  // width; on larger screens each section keeps its own wider value.
+  const alaCarteNameMax = isMobile ? '220px' : '550px'
+  const itemNameMax = isMobile ? '220px' : '420px'
 
   return (
     <div
@@ -198,7 +202,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black flex-1 min-w-0 max-w-[400px] md:max-w-[550px]" style={base}>
+                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax }}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
@@ -218,7 +222,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <div className="flex-1 min-w-0" style={{ maxWidth: '420px' }}>
+                  <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
                       <p className="text-black" style={base}>{item.name}</p>
                       <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                   </div>
@@ -246,7 +250,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 <div className="flex flex-col">
                   {group.items.map((item, i) => (
                     <div key={i} className="flex items-start justify-between py-3">
-                      <div className="flex-1 min-w-0" style={{ maxWidth: '420px' }}>
+                      <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
                         <p className="text-black" style={base}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                       </div>
