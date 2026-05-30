@@ -570,12 +570,19 @@ export default function Home() {
   </button>
   </div>
               <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '1 / 1' }}>
-                <img
-                  src="/hero-interior-brick.jpeg"
-                  alt="Corima dining room — exposed brick wall at low light"
-                  className="w-full h-full block"
-                  style={{ objectFit: 'cover' }}
-                />
+                <div className="group relative w-full h-full overflow-hidden">
+                  <img
+                    src="/bio-fish-wall.jpg"
+                    alt="Cook walking past a wall of dried, cured flatfish at Corima"
+                    className="absolute inset-0 w-full h-full object-cover block"
+                  />
+                  <img
+                    src="/bio-fish-wall-color.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                  />
+                </div>
               </div>
             </div>
           </section>
