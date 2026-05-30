@@ -77,6 +77,11 @@ const interiorImages = [
     alt: 'Corima banquette — framed landscape prints on a wood-panel and exposed-brick wall with a candle niche above the tables',
     position: 'top',
   },
+  {
+    bw: '/bio-plating.jpg',
+    color: '/bio-plating-color.jpg',
+    alt: 'A Corima cook spooning sauce and garnish onto speckled ceramic plates at the pass',
+  },
 ]
 
 const ethosImages = [
