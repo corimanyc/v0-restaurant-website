@@ -17,10 +17,6 @@ const heroImages = [
     alt: 'CORIMA open kitchen — diners at the counter watching the line during service',
   },
   {
-    src: '/hero-kitchen-934.jpeg',
-    alt: 'CORIMA kitchen — 9:34 PM, chef\u2019s shadow across the line during service',
-  },
-  {
     src: '/hero-landing3.jpg',
     alt: 'CORIMA dining nook — wooden chairs and table against slatted wainscoting',
   },
@@ -152,7 +148,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: index === 2 ? 'center 20%' : index === 0 ? 'center 70%' : 'center',
+                objectPosition: index === 0 ? 'center 70%' : 'center',
               }}
             />
           ))}
