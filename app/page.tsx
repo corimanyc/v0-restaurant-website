@@ -71,6 +71,11 @@ const interiorImages = [
     color: '/bio-interior-2-color.jpg',
     alt: 'Corima dining nook — banquette and table beneath a pendant light beside a wine shelf',
   },
+  {
+    bw: '/bio-interior-3.jpg',
+    color: '/bio-interior-3-color.jpg',
+    alt: 'Corima banquette — framed landscape prints on a wood-panel and exposed-brick wall with a candle niche above the tables',
+  },
 ]
 
 
