@@ -233,7 +233,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="relative flex items-end justify-between px-6 lg:px-9 pt-6 pb-3 min-[880px]:pb-6">
+          <div className="relative flex items-end justify-between px-6 lg:px-9 pt-6 pb-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below.
                 Two whitespace-nowrap spans inside a flex-wrap container so they
