@@ -64,7 +64,7 @@ const interiorImages = [
   {
     bw: '/bio-interior-1.jpg',
     color: '/bio-interior-1-color.jpg',
-    alt: 'Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche',
+    alt: 'Chefs plating blue-corn tostadas at the Corima pass',
   },
   {
     bw: '/bio-interior-2.jpg',
