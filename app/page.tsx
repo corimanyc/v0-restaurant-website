@@ -698,11 +698,19 @@ export default function Home() {
             {/* Bottom kitchen action image */}
             <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
               <div className="lg:col-start-3 lg:col-end-9">
-                <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DSCF0787%202-BbH3Aw6sCJRs6RYSsDvMKhThMDXGav.png"
-                  alt="Corima open kitchen during service — Chef Caballero plating with the line and chef's counter behind"
-                  className="w-full h-auto block"
-                />
+                <div className="group relative w-full">
+                  <img
+                    src="/ethos-kitchen.jpg"
+                    alt="Corima kitchen during service — a chef searing over an open flame beside bamboo steamers and stockpots"
+                    className="w-full h-auto block"
+                  />
+                  <img
+                    src="/ethos-kitchen-color.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                  />
+                </div>
               </div>
             </div>
           </section>
