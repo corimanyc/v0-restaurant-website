@@ -496,18 +496,19 @@ export default function Home() {
                     type="button"
                     onClick={nextAboutImg}
                     aria-label="Show next photo"
-                    className="group relative block w-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    className="group relative block w-full cursor-pointer overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                    style={{ aspectRatio: '2048 / 1118' }}
                   >
                     <img
                       src={aboutSectionImages[aboutImgIndex].bw || "/placeholder.svg"}
                       alt={aboutSectionImages[aboutImgIndex].alt}
-                      className="w-full h-auto block"
+                      className="absolute inset-0 w-full h-full object-cover object-top block"
                     />
                     <img
                       src={aboutSectionImages[aboutImgIndex].color || "/placeholder.svg"}
                       alt=""
                       aria-hidden="true"
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                      className="absolute inset-0 w-full h-full object-cover object-top opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
                     />
                   </button>
                 </div>
