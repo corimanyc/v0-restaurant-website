@@ -493,8 +493,8 @@ export default function Home() {
               <div className="order-1 lg:order-none mt-[62px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
                 <div className="lg:col-start-6 lg:col-end-12">
                   <img
-                    src="/hero-counter-service.jpeg"
-                    alt="Corima chef's counter during service — diners watching the line"
+                    src="/our-story-kitchen.jpg"
+                    alt="Corima open kitchen during service — chefs plating at the pass"
                     className="w-full h-auto block"
                   />
                 </div>
@@ -518,8 +518,8 @@ export default function Home() {
             <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
               <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '1 / 1' }}>
                 <img
-                  src="/our-story-kitchen.jpg"
-                  alt="Corima open kitchen during service — chefs plating at the pass"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
+                  alt="Chef Fidel Caballero plating in the kitchen"
                   className="w-full h-full block"
                   style={{ objectFit: 'cover' }}
                 />
