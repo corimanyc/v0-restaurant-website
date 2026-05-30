@@ -98,6 +98,24 @@ export default function Home() {
     return () => clearInterval(interval)
   }, [])
 
+  // Scroll to the #about / #press section when arriving with a hash in the URL
+  // (e.g. navigating here from the events page). App Router doesn't reliably
+  // scroll to a hash after a cross-route navigation, so we handle it on mount
+  // and on subsequent hashchange events.
+  useEffect(() => {
+    const scrollToHash = () => {
+      const id = window.location.hash.replace('#', '')
+      if (!id) return
+      // Defer to the next frame so the target section is mounted/laid out.
+      requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
+    scrollToHash()
+    window.addEventListener('hashchange', scrollToHash)
+    return () => window.removeEventListener('hashchange', scrollToHash)
+  }, [])
+
   return (
     <div className="flex flex-col min-h-screen">
       <div

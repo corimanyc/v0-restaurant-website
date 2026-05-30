@@ -96,6 +96,8 @@ export default function EventsPage() {
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         onMenuClick={() => setIsMenuOverlayOpen(true)}
+        aboutHref="/#about"
+        pressHref="/#press"
       />
 
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster

@@ -7,9 +7,14 @@ interface MobileNavProps {
   isOpen: boolean
   onClose: () => void
   onMenuClick: () => void
+  /** Anchors for the About/Press links. On the home page leave as "#about" /
+   *  "#press"; on other pages (e.g. events) pass "/#about" / "/#press" so the
+   *  link routes home first, where a hash handler scrolls to the section. */
+  aboutHref?: string
+  pressHref?: string
 }
 
-export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavProps) {
+export default function MobileNav({ isOpen, onClose, onMenuClick, aboutHref = '#about', pressHref = '#press' }: MobileNavProps) {
   // Prevent body + html scroll when open
   useEffect(() => {
     const html = document.documentElement
@@ -55,11 +60,11 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
       {/* Nav links */}
       <nav className="flex flex-col" style={{ padding: '48px 24px', gap: '4px', flex: 1 }}>
         {[
-          { label: 'About', href: '#about', onClick: onClose },
+          { label: 'About', href: aboutHref, onClick: onClose },
           { label: 'Reservations', href: 'https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2', onClick: onClose },
           { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
           { label: 'Events', href: '/events', onClick: onClose },
-          { label: 'Press', href: '#press', onClick: onClose },
+          { label: 'Press', href: pressHref, onClick: onClose },
           { label: 'Shop', href: 'https://corimanyc.bigcartel.com', onClick: onClose },
         ].map(({ label, href, onClick }) => (
           <Link
