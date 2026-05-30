@@ -492,11 +492,19 @@ export default function Home() {
                   Mobile: rendered before the copy via order-1, with 50px gap above. */}
               <div className="order-1 lg:order-none mt-[62px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
                 <div className="lg:col-start-6 lg:col-end-12">
-                  <img
-                    src="/our-story-kitchen.jpg"
-                    alt="Corima open kitchen during service — chefs plating at the pass"
-                    className="w-full h-auto block"
-                  />
+                  <div className="group relative">
+                    <img
+                      src="/our-story-kitchen.jpg"
+                      alt="Corima open kitchen during service — chefs plating at the pass"
+                      className="w-full h-auto block"
+                    />
+                    <img
+                      src="/our-story-kitchen-color.jpg"
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
