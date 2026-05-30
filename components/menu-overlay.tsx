@@ -51,18 +51,18 @@ const wineByGlass = [
 ]
 
 const cocktailItems = [
-  { name: 'SAN PEDRO', desc: 'SOTOL, LIME, BITTER ORANGE AGAVE, NOPALES', price: '18' },
-  { name: 'PUNTILLA', desc: 'TEQUILA REPOSADO, RED WINE, CINNAMON, GRAPEFRUIT', price: '18' },
-  { name: 'ORITO', desc: 'TEQUILA BLANCO, BERGAMOT, SQUIRT, YELLOW CHARTREUSE, FENNEL SEED', price: '19' },
-  { name: 'DUST DEVIL', desc: 'BOURBON, BEET, PASILLA, APEROL', price: '18' },
-  { name: 'HIERBA MORA', desc: 'VODKA, POBLANO BRINE, EMPIRICAL CILANTRO, DRY VERMOUTH', price: '18' },
-  { name: 'SIX FEET', desc: 'SOTOL DESIERTO, MARIGOLD, BLANC VERMOUTH, BONAL QUINQUINA', price: '18' },
-  { name: 'CARAJILLO DE LA CASA', desc: 'AGED RUM, LICOR 43, FORTHAVE BROWN, CAFÉ INTEGRAL COFFEE', price: '18' },
-  { name: 'PELIRROJA', desc: 'CARTA BLANCA, PERSIMMON, HABANERO, PEPPERCORN', price: '14' },
-  { name: 'JAMAICA COOLER (NON-ALCOHOLIC)', desc: 'HIBISCUS, LICORICE', price: '10' },
-  { name: 'TEPACHE SPRITZ (NON-ALCOHOLIC)', desc: 'TEPACHE, PENTIRE SEAWARD, SODA', price: '10' },
-  { name: 'MUGICHA ICED TEA', desc: 'MUGICHA, VER JUS, COCONUT', price: '10' },
-  { name: 'CHUCHUPASTE', desc: 'ALOE VERA, CHUCHUPASTE ROOT, GENTIAN, AVOCADO LEAF', price: '10' },
+  { name: 'San Pedro', desc: 'Sotol, Lime, Bitter Orange Agave, Nopales', price: '18' },
+  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '18' },
+  { name: 'Orito', desc: 'Tequila Blanco, Bergamot, Squirt, Yellow Chartreuse, Fennel Seed', price: '19' },
+  { name: 'Dust Devil', desc: 'Bourbon, Beet, Pasilla, Aperol', price: '18' },
+  { name: 'Hierba Mora', desc: 'Vodka, Poblano Brine, Empirical Cilantro, Dry Vermouth', price: '18' },
+  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '18' },
+  { name: 'Carajillo de la Casa', desc: 'Aged Rum, Licor 43, Forthave Brown, Café Integral Coffee', price: '18' },
+  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '14' },
+  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '10' },
+  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '10' },
+  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '10' },
+  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '10' },
 ]
 
 interface MenuOverlayProps {
@@ -219,8 +219,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
                   <div className="flex-1 min-w-0" style={{ maxWidth: '420px' }}>
-                    <p className="text-black uppercase" style={base}>{item.name}</p>
-                    <p className="text-black uppercase" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
+                      <p className="text-black" style={base}>{item.name}</p>
+                      <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                   </div>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
                     {item.price || '—'}
