@@ -60,9 +60,6 @@ const aboutSectionImages = [
   },
 ]
 
-const bioImages = [
-  { src: '/bio-chef-1.jpg', alt: 'Chef plating a dish at the kitchen pass' },
-]
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -71,8 +68,6 @@ export default function Home() {
   const [isDiningOpen, setIsDiningOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [aboutImgIndex, setAboutImgIndex] = useState(0)
-  const [bioImgIndex, setBioImgIndex] = useState(0)
-  const bioTouchStartX = useRef<number | null>(null)
   const [isHovering, setIsHovering] = useState(false)
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
@@ -118,19 +113,6 @@ export default function Home() {
   const prevAboutImg = () => setAboutImgIndex((i) => (i - 1 + aboutSectionImages.length) % aboutSectionImages.length)
   const nextAboutImg = () => setAboutImgIndex((i) => (i + 1) % aboutSectionImages.length)
 
-  const nextBioImg = () => setBioImgIndex((i) => (i + 1) % bioImages.length)
-  const prevBioImg = () => setBioImgIndex((i) => (i - 1 + bioImages.length) % bioImages.length)
-  const onBioTouchStart = (e: React.TouchEvent) => {
-    bioTouchStartX.current = e.touches[0].clientX
-  }
-  const onBioTouchEnd = (e: React.TouchEvent) => {
-    if (bioTouchStartX.current === null) return
-    const dx = e.changedTouches[0].clientX - bioTouchStartX.current
-    if (Math.abs(dx) > 40) {
-      dx < 0 ? nextBioImg() : prevBioImg()
-    }
-    bioTouchStartX.current = null
-  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -550,34 +532,30 @@ export default function Home() {
 
             {/* Bottom paired images */}
             <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
-  <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '4 / 5' }}>
-  <button
-  type="button"
-  onClick={nextBioImg}
-  onTouchStart={onBioTouchStart}
-  onTouchEnd={onBioTouchEnd}
-  aria-label="Show next photo"
-  className="relative block w-full h-full overflow-hidden cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-  >
-  {bioImages.map((img, i) => (
-  <img
-  key={img.src}
-  src={img.src || "/placeholder.svg"}
-  alt={img.alt}
-  className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500 ease-out ${i === bioImgIndex ? 'opacity-100' : 'opacity-0'}`}
-  />
-  ))}
-  </button>
-  </div>
-              <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '1 / 1' }}>
+              <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '4 / 5' }}>
                 <div className="group relative w-full h-full overflow-hidden">
                   <img
-                    src="/bio-fish-wall.jpg"
-                    alt="Cook walking past a wall of dried, cured flatfish at Corima"
+                    src="/bio-interior-1.jpg"
+                    alt="Corima wine bar — backlit shelving with natural wine, stemware, and a lit arched niche"
                     className="absolute inset-0 w-full h-full object-cover block"
                   />
                   <img
-                    src="/bio-fish-wall-color.jpg"
+                    src="/bio-interior-1-color.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                  />
+                </div>
+              </div>
+              <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '4 / 5' }}>
+                <div className="group relative w-full h-full overflow-hidden">
+                  <img
+                    src="/bio-interior-2.jpg"
+                    alt="Corima dining nook — banquette and table beneath a pendant light beside a wine shelf"
+                    className="absolute inset-0 w-full h-full object-cover block"
+                  />
+                  <img
+                    src="/bio-interior-2-color.jpg"
                     alt=""
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
