@@ -518,8 +518,8 @@ export default function Home() {
             <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
               <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '1 / 1' }}>
                 <img
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2781%204-AhmiUqGR3K9yrP5KneeCueYQcdD5aE.png"
-                  alt="Chef Fidel Caballero plating in the kitchen"
+                  src="/our-story-kitchen.jpg"
+                  alt="Corima open kitchen during service — chefs plating at the pass"
                   className="w-full h-full block"
                   style={{ objectFit: 'cover' }}
                 />
