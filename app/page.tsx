@@ -746,6 +746,10 @@ export default function Home() {
             fontFamily: "'Switzer', system-ui, sans-serif",
             marginTop: '40px',
             gap: '28px',
+            // Cancel the container's extra right padding (132px, reserved for the
+            // fixed corner icon) down to the standard horizontal padding so the
+            // links row spans the full width edge-to-edge.
+            marginRight: 'calc(-132px + var(--site-pad-x, 24px))',
           }}
         >
           {/* Links row: spread evenly across the available width */}
