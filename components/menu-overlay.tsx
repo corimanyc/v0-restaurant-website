@@ -149,8 +149,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   const base: React.CSSProperties = { fontSize: `${16 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }
   // On strictly mobile, every section's item text shares one (narrower) max
   // width; on larger screens each section keeps its own wider value.
-  const alaCarteNameMax = isMobile ? '220px' : '550px'
-  const itemNameMax = isMobile ? '220px' : '420px'
+  const alaCarteNameMax = isMobile ? '380px' : '550px'
+  const itemNameMax = isMobile ? '380px' : '420px'
 
   return (
     <div
