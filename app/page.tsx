@@ -737,37 +737,28 @@ export default function Home() {
           </span>
         </div>
 
-        {/* Below 880px (where the single row begins to wrap): a 3-column x 2-row
-            grid with thin white borders. Negative margins break the grid out of
-            the footer's padding so it sits flush to the bottom and side edges. */}
+        {/* Below 880px (where the single row begins to wrap): links spread across
+            the top in a single row, then hours and address stacked left-aligned
+            beneath them. */}
         <div
-          className="grid grid-cols-[minmax(220px,1fr)_1fr_1fr] grid-rows-2 grid-flow-col min-[880px]:hidden"
+          className="flex flex-col min-[880px]:hidden"
           style={{
             fontFamily: "'Switzer', system-ui, sans-serif",
             marginTop: '40px',
-            marginLeft: 'calc(-1 * var(--site-pad-x, 24px))',
-            marginRight: '-132px',
-            marginBottom: '-24px',
+            gap: '28px',
           }}
         >
-          {/* Col 1: left-aligned, respecting the page left padding */}
-          <div className="flex items-center justify-start py-2" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
-            <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
+          {/* Links row: spread evenly across the available width */}
+          <div className="flex items-center justify-between gap-x-4" style={{ fontSize: '15px' }}>
+            <a href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Reservations</a>
+            <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
+            <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
+            <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
           </div>
-          {/* Col 1, row 2: hours under the address, left-aligned */}
-          <div className="flex items-center justify-start py-2" style={{ paddingLeft: 'var(--site-pad-x, 24px)', paddingRight: '16px' }}>
+          {/* Hours, then address — stacked and left-aligned */}
+          <div className="flex flex-col" style={{ gap: '12px' }}>
             <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Tue-Sat 5:30PM - 10PM</span>
-          </div>
-          {/* Col 2: centered */}
-          <div className="flex items-center justify-center px-4 py-2">
-            <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
-          </div>
-          <div className="flex items-center justify-center px-4 py-2">
-            <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
-          </div>
-          {/* Col 3: right-aligned, respecting the page right padding */}
-          <div className="flex items-center justify-end py-2" style={{ paddingLeft: '16px', paddingRight: 'var(--site-pad-x, 24px)' }}>
-            <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
+            <span className="tracking-wider whitespace-nowrap" style={{ fontSize: '15px', color: '#FFFFFF', fontWeight: 400 }}>3 Allen St. NY 10002</span>
           </div>
         </div>
       </footer>
