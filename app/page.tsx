@@ -684,12 +684,12 @@ export default function Home() {
               <div className="lg:col-start-7 lg:col-end-13">
                 <div className="group relative w-full">
                   <img
-                    src="/ethos-kitchen.jpg"
-                    alt="Corima kitchen during service — a chef searing over an open flame beside bamboo steamers and stockpots"
+                    src="/ethos-brick-wall.jpg"
+                    alt="Corima dining room — exposed brick wall with a candle-lit niche, a ribbed globe pendant, and dark tables below"
                     className="w-full h-auto block"
                   />
                   <img
-                    src="/ethos-kitchen-color.jpg"
+                    src="/ethos-brick-wall-color.jpg"
                     alt=""
                     aria-hidden="true"
                     className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
