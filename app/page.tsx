@@ -13,11 +13,11 @@ const heroImages = [
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel2.avif',
+    src: '/hero-carousel3.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel3.avif',
+    src: '/hero-carousel2.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
@@ -152,7 +152,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: 'center',
+                objectPosition: index === 0 ? 'center 60%' : 'center',
               }}
             />
           ))}
