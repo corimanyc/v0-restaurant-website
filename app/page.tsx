@@ -84,6 +84,7 @@ const ethosImages = [
     bw: '/ethos-brick-wall.jpg',
     color: '/ethos-brick-wall-color.jpg',
     alt: 'Corima dining room — exposed brick wall with a candle-lit niche, a ribbed globe pendant, and dark tables below',
+    position: 'top',
   },
   {
     bw: '/ethos-kitchen.jpg',
@@ -728,12 +729,14 @@ export default function Home() {
                       <img
                         src={img.bw || "/placeholder.svg"}
                         alt={img.alt}
+                        style={{ objectPosition: img.position ?? 'center' }}
                         className="absolute inset-0 w-full h-full object-cover block"
                       />
                       <img
                         src={img.color || "/placeholder.svg"}
                         alt=""
                         aria-hidden="true"
+                        style={{ objectPosition: img.position ?? 'center' }}
                         className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
                       />
                     </div>
