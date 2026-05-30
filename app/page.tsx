@@ -62,7 +62,6 @@ const aboutSectionImages = [
 
 const bioImages = [
   { src: '/bio-chef-1.jpg', alt: 'Chef plating a dish at the kitchen pass' },
-  { src: '/bio-chef-2.jpg', alt: 'Chef plating a delicate dish beside fresh flowers at the counter' },
 ]
 
 export default function Home() {
