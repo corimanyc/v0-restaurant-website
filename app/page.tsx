@@ -551,7 +551,7 @@ export default function Home() {
 
             {/* Bottom paired images */}
             <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
-  <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '1 / 1' }}>
+  <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '4 / 5' }}>
   <button
   type="button"
   onClick={nextBioImg}
