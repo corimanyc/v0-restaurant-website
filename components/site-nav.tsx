@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 type SiteNavProps = {
   /** Anchors that point to home-page sections. On the events (or other) pages,
@@ -38,6 +39,7 @@ export default function SiteNav({
   linkColor,
   hideLinks = false,
 }: SiteNavProps) {
+  const pathname = usePathname()
   const linkStyle = { color: linkColor ?? 'inherit', fontSize: `${linkFontSize}px` }
   // Burger bars always render white for consistent contrast against the
   // dark background, regardless of the desktop link color.
@@ -62,6 +64,14 @@ export default function SiteNav({
         href="/"
         className="flex-shrink-0 h-auto block w-[110px] md:w-[100px]"
         style={{ pointerEvents: 'auto' }}
+        onClick={
+          pathname === '/'
+            ? (e) => {
+                e.preventDefault()
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }
+            : undefined
+        }
       >
         <img src="/logo.svg" alt="CORIMA" className="w-full h-full object-contain" />
       </Link>
