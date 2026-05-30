@@ -75,6 +75,7 @@ const interiorImages = [
     bw: '/bio-interior-3.jpg',
     color: '/bio-interior-3-color.jpg',
     alt: 'Corima banquette — framed landscape prints on a wood-panel and exposed-brick wall with a candle niche above the tables',
+    position: 'top',
   },
 ]
 
@@ -587,17 +588,19 @@ export default function Home() {
   key={img.bw}
   className={`absolute inset-0 transition-opacity duration-500 ease-out ${i === interiorIndex ? 'opacity-100' : 'opacity-0'}`}
   >
-  <img
-  src={img.bw || "/placeholder.svg"}
-  alt={img.alt}
-  className="absolute inset-0 w-full h-full object-cover block"
-  />
-  <img
-  src={img.color || "/placeholder.svg"}
-  alt=""
-  aria-hidden="true"
-  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
-  />
+                  <img
+                    src={img.bw || "/placeholder.svg"}
+                    alt={img.alt}
+                    style={{ objectPosition: img.position ?? 'center' }}
+                    className="absolute inset-0 w-full h-full object-cover block"
+                  />
+                  <img
+                    src={img.color || "/placeholder.svg"}
+                    alt=""
+                    aria-hidden="true"
+                    style={{ objectPosition: img.position ?? 'center' }}
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100"
+                  />
   </div>
   ))}
   </button>
