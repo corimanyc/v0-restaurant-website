@@ -9,15 +9,15 @@ const sectionImages: Record<string, string> = {
   }
 
 const alaCarteItems = [
-  { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: '29' },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: '33' },
-  { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: '24' },
-  { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: '23' },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: '23' },
-  { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: '13' },
-  { name: 'SOURDOUGH FLOUR TORTILLA, RECADO NEGRO BUTTER', price: '32' },
-  { name: 'BEEF CECINA TLAYUDA, SALSA VERACRUZANA, EDAMAME GUACAMOLE, CHAPULINES', price: '40' },
-  { name: 'KAMPACHI, TOREADOS, KOHLRABI, HOJA SANTA', price: '' },
+  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '29' },
+  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '33' },
+  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '24' },
+  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '23' },
+  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '23' },
+  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '13' },
+  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '32' },
+  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '40' },
+  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '' },
 ]
 
 const wineByGlass = [
@@ -198,7 +198,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black uppercase flex-1 min-w-0 max-w-[400px] md:max-w-[550px]" style={base}>
+                  <p className="text-black flex-1 min-w-0 max-w-[400px] md:max-w-[550px]" style={base}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
