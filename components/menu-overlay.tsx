@@ -73,6 +73,9 @@ interface MenuOverlayProps {
 
 export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOverlayProps) {
   const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
+  // Strictly mobile = below the md (768px) breakpoint, where the nav becomes a
+  // hamburger. On mobile every listed text gets +2px.
+  const [isMobile, setIsMobile] = useState(false)
   const wineRef = useRef<HTMLDivElement>(null)
   const alaCarteRef = useRef<HTMLDivElement>(null)
   const cocktailRef = useRef<HTMLDivElement>(null)
@@ -134,7 +137,16 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     return () => observer.disconnect()
   }, [isOpen])
 
-  const base: React.CSSProperties = { fontSize: '16px', letterSpacing: '-0.02em', fontWeight: 400 }
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)')
+    const update = () => setIsMobile(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+
+  const bump = isMobile ? 2 : 0
+  const base: React.CSSProperties = { fontSize: `${16 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }
 
   return (
     <div
@@ -180,7 +192,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
         >
           {/* A La Carte */}
           <div ref={alaCarteRef} data-section="a-la-carte">
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               A La Carte
             </h2>
             <div className="flex flex-col">
@@ -200,7 +212,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Cocktail
             </h2>
             <div className="flex flex-col">
@@ -208,7 +220,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 <div key={i} className="flex items-start justify-between py-4">
                   <div className="flex-1 min-w-0" style={{ maxWidth: '420px' }}>
                     <p className="text-black uppercase" style={base}>{item.name}</p>
-                    <p className="text-black uppercase" style={{ ...base, fontSize: '14px', marginTop: '2px' }}>{item.desc}</p>
+                    <p className="text-black uppercase" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                   </div>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
                     {item.price || '—'}
@@ -220,15 +232,15 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
 
           {/* Wine */}
           <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
-            <p className="text-black mb-10" style={{ ...base, fontSize: '14px', maxWidth: '540px' }}>
+            <p className="text-black mb-10" style={{ ...base, fontSize: `${14 + bump}px`, maxWidth: '540px' }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             {wineByGlass.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '32px' }}>
-                <p className="text-black uppercase mb-1" style={{ ...base, fontSize: '12px', letterSpacing: '0.08em' }}>
+                <p className="text-black uppercase mb-1" style={{ ...base, fontSize: `${12 + bump}px`, letterSpacing: '0.08em' }}>
                   {group.category}
                 </p>
                 <div className="flex flex-col">
@@ -236,7 +248,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                     <div key={i} className="flex items-start justify-between py-3">
                       <div className="flex-1 min-w-0" style={{ maxWidth: '420px' }}>
                         <p className="text-black" style={base}>{item.name}</p>
-                        <p className="text-black" style={{ ...base, fontSize: '14px', marginTop: '2px' }}>{item.desc}</p>
+                        <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                       </div>
                       <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
                         {item.price}

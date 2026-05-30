@@ -426,10 +426,10 @@ export default function Home() {
               {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
               <div className="order-2 lg:order-none mt-[50px] lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
                 <div className="lg:col-start-6 lg:col-end-9">
-                  <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                  <p className="body-copy" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                     The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                   </p>
-                  <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                  <p className="body-copy mt-7" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                     Until now, &ldquo;Mexican cuisine&rdquo; in NYC has been limited to specific regions and types of food. Chef Caballero draws from the monumental perception and never-ending exploration of Mexican land and distills it into a type of Mexican cuisine that has yet to be expressed in this country.
                   </p>
                 </div>
@@ -455,7 +455,7 @@ export default function Home() {
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
               >
                 <style>{`@media (min-width: 1024px) { :root { --bio-right-pad: calc((100% - 60px) / 8 + 10px); } }`}</style>
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="body-copy" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   Chef Fidel Caballero was raised between Ciudad Ju&aacute;rez, Chihuahua, and El Paso, Texas, shaped by the rhythms, flavors, and realities of the border. That perspective continues to guide his cooking.
                 </p>
               </div>
@@ -545,13 +545,13 @@ export default function Home() {
             {/* Body copy + dining-nook image */}
             <div className="mt-[62px] mb-[62px] lg:mb-0 lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
               <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
-                <p style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="body-copy" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
-                <p className="mt-7" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="body-copy mt-7" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p className="hidden lg:block mt-10 lg:mt-20" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="body-copy hidden lg:block mt-10 lg:mt-20" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
@@ -565,7 +565,7 @@ export default function Home() {
             </div>
 
             {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
-            <p className="lg:hidden mt-0" style={{ fontSize: '16px', lineHeight: 1.6, color: '#CBCBCB' }}>
+            <p className="body-copy lg:hidden mt-0" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
               Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
 

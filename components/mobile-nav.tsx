@@ -69,7 +69,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             className="text-black hover:opacity-50 transition-opacity"
             style={{
               fontFamily: 'Switzer, sans-serif',
-              fontSize: '28px',
+              fontSize: '30px',
               fontWeight: 400,
               letterSpacing: '-0.01em',
               lineHeight: '1.8',
@@ -85,14 +85,14 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         <div className="flex items-start justify-between" style={{ marginBottom: '20px' }}>
           <p
             className="text-black uppercase"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '18px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             3 Allen St NY 10002
           </p>
           <a
             href="mailto:info@corimanyc.com"
             className="text-black uppercase hover:opacity-60 transition"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '18px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Contact
           </a>
@@ -100,7 +100,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
         <div className="flex items-start justify-between">
           <p
             className="text-black uppercase"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '18px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Tue&nbsp;&ndash;&nbsp;Sat 5:30PM&nbsp;&ndash;&nbsp;10PM
           </p>
@@ -109,7 +109,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick }: MobileNavPro
             target="_blank"
             rel="noopener noreferrer"
             className="text-black uppercase text-right hover:opacity-60 transition"
-            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '18px', fontWeight: 400, letterSpacing: '-0.02em' }}
           >
             Instagram
           </a>
