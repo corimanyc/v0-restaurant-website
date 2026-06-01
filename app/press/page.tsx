@@ -126,30 +126,18 @@ export default function PressPage() {
           pressHref="/press"
         />
 
-        {/* Main content — numbered editorial press grid */}
+        {/* Main content — editorial press grid */}
         <main className="flex-1 overflow-y-auto">
-          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-8 pb-12 lg:pt-10">
+          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-16 pb-12 lg:pt-24">
             <ul className="grid grid-cols-1 gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
-              {PRESS_ITEMS.map((item, index) => (
+              {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-start gap-4"
+                    className="group flex items-start"
                   >
-                    <span
-                      className="font-sans shrink-0 tabular-nums transition-colors duration-300"
-                      style={{
-                        color: 'rgba(255,255,255,0.35)',
-                        fontSize: 14,
-                        lineHeight: 1.6,
-                        fontWeight: 400,
-                        letterSpacing: '0.08em',
-                      }}
-                    >
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
                     <span className="flex flex-col gap-1.5">
                       <span
                         className="font-sans text-balance underline-offset-4 transition-all duration-300 group-hover:underline"
