@@ -152,9 +152,9 @@ export default function PressPage() {
                       </span>
                       <span className="flex items-center gap-2">
                         <span
-                          className="font-sans"
+                          className="font-sans underline-offset-4 transition-all duration-300 group-hover:underline"
                           style={{
-                            color: 'rgba(255,255,255,0.6)',
+                            color: '#FFFFFF',
                             fontSize: 15,
                             lineHeight: 1.4,
                             fontWeight: 400,
