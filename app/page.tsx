@@ -903,7 +903,7 @@ export default function Home() {
                 position: 'absolute',
                 bottom: 'calc(100% + 12px)',
                 right: 0,
-                width: '440px',
+                width: '420px',
                 opacity: 0,
                 pointerEvents: 'none',
                 transform: 'translateY(8px)',
