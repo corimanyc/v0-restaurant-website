@@ -17,7 +17,7 @@ const heroImages = [
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel2.avif',
+    src: '/hero-carousel3new.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
@@ -219,7 +219,7 @@ export default function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length)
-    }, 12000)
+    }, 14000)
     return () => clearInterval(interval)
   }, [])
 
