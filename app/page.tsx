@@ -890,7 +890,7 @@ export default function Home() {
             }}
           >
             <a
-              href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0"
+              href="https://open.spotify.com/playlist/5oMsfRzrZzZXaSBQ9obYry"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: 'inherit', textDecoration: 'none' }}
@@ -957,7 +957,7 @@ export default function Home() {
                     height: '352px',
                     border: 0,
                   }}
-                  src="https://open.spotify.com/embed/playlist/31bCtQZ5iDh34anUn9elz0?utm_source=generator&theme=0"
+                  src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator&theme=0"
                   width="100%"
                   height="352"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -993,7 +993,7 @@ export default function Home() {
               <a href="https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Reservations</a>
               <a href="mailto:info@corimanyc.com" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Contact</a>
               <a href="https://www.instagram.com/corima.nyc/" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Instagram</a>
-              <a href="https://open.spotify.com/playlist/31bCtQZ5iDh34anUn9elz0" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
+              <a href="https://open.spotify.com/playlist/5oMsfRzrZzZXaSBQ9obYry" target="_blank" rel="noopener noreferrer" className="nav-link tracking-wider whitespace-nowrap" style={{ color: '#FFFFFF', fontWeight: 400 }}>Spotify</a>
             </div>
             <svg width="100%" height="2" aria-hidden="true" style={{ display: 'block' }}>
               <line x1="1" y1="1" x2="100%" y2="1" stroke="#FEFEFE" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 6" />
