@@ -6,6 +6,37 @@ import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
 
+const PRESS_ITEMS = [
+  {
+    title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
+    date: 'March 31, 2026',
+  },
+  {
+    title: 'The New York Times: Is This the Mexican Restaurant New York Has Been Waiting For?',
+    date: 'March 3, 2026',
+  },
+  {
+    title: 'The Best Chef Awards',
+    date: 'October 2025',
+  },
+  {
+    title: 'The 8 Must-Visit Restaurants to Try This Fall',
+    date: 'September 22, 2025',
+  },
+  {
+    title: "North America's 50 Best Restaurants",
+    date: 'May 28, 2025',
+  },
+  {
+    title: 'The New York Times: The 100 Best Restaurants in New York City',
+    date: 'May 10, 2025',
+  },
+  {
+    title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
+    date: 'January 21, 2025',
+  },
+]
+
 export default function PressPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
@@ -89,7 +120,38 @@ export default function PressPage() {
         />
 
         {/* Main content */}
-        <main className="flex-1" />
+        <main className="flex-1 overflow-y-auto">
+          <div className="pl-6 lg:pl-9 pr-6 pt-12 pb-24 lg:pt-16">
+            <ul className="flex flex-col" style={{ maxWidth: 520, gap: 40 }}>
+              {PRESS_ITEMS.map((item) => (
+                <li key={item.title} className="flex flex-col">
+                  <span
+                    className="font-sans text-pretty"
+                    style={{
+                      color: '#FFFFFF',
+                      fontSize: 15,
+                      lineHeight: 1.4,
+                      fontWeight: 400,
+                    }}
+                  >
+                    {item.title}
+                  </span>
+                  <span
+                    className="font-sans mt-1"
+                    style={{
+                      color: '#9A9A9A',
+                      fontSize: 15,
+                      lineHeight: 1.4,
+                      fontWeight: 400,
+                    }}
+                  >
+                    {item.date}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </main>
       </div>
     </div>
   )
