@@ -957,9 +957,10 @@ export default function Home() {
                     height: '352px',
                     border: 0,
                   }}
-                  src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator&theme=0"
+                  src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator"
                   width="100%"
                   height="352"
+                  allowFullScreen
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
