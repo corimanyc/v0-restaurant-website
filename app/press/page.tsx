@@ -64,7 +64,7 @@ export default function PressPage() {
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: 'url(/events-bg.jpg)',
+          backgroundImage: 'url(/press-bg.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -78,7 +78,7 @@ export default function PressPage() {
         className="absolute pointer-events-none"
         style={{
           inset: '-40px',
-          backgroundImage: 'url(/events-bg.jpg)',
+          backgroundImage: 'url(/press-bg.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
