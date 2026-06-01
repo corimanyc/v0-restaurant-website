@@ -954,12 +954,12 @@ export default function Home() {
                     borderRadius: '12px',
                     display: 'block',
                     width: '100%',
-                    height: '232px',
+                    height: '352px',
                     border: 0,
                   }}
                   src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator&theme=0"
                   width="100%"
-                  height="232"
+                  height="352"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
