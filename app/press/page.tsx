@@ -126,51 +126,50 @@ export default function PressPage() {
           pressHref="/press"
         />
 
-        {/* Main content — editorial press grid */}
+        {/* Main content — full-width editorial press index */}
         <main className="flex flex-1 items-center overflow-y-auto">
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 py-16">
-            <ul className="grid grid-cols-1 gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
+            <ul className="flex flex-col" style={{ rowGap: 28 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-start"
+                    className="group flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between md:gap-8"
                   >
-                    <span className="flex flex-col gap-1.5">
+                    <span className="flex items-baseline gap-3">
                       <span
-                        className="font-sans text-balance underline-offset-4 transition-all duration-300 group-hover:underline"
+                        className="font-sans text-pretty underline-offset-4 transition-all duration-300 group-hover:underline"
                         style={{
                           color: '#FFFFFF',
-                          fontSize: 22,
+                          fontSize: 24,
                           lineHeight: 1.3,
                           fontWeight: 400,
                         }}
                       >
                         {item.title}
                       </span>
-                      <span className="flex items-center gap-2">
-                        <span
-                          className="font-sans underline-offset-4 transition-all duration-300 group-hover:underline"
-                          style={{
-                            color: '#FFFFFF',
-                            fontSize: 15,
-                            lineHeight: 1.4,
-                            fontWeight: 400,
-                            letterSpacing: '0.02em',
-                          }}
-                        >
-                          {item.date}
-                        </span>
-                        <span
-                          aria-hidden
-                          className="-translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
-                          style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}
-                        >
-                          &#8599;
-                        </span>
+                      <span
+                        aria-hidden
+                        className="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+                        style={{ color: '#FFFFFF', fontSize: 18, lineHeight: 1.3 }}
+                      >
+                        &#8599;
                       </span>
+                    </span>
+                    <span
+                      className="font-sans shrink-0 underline-offset-4 transition-all duration-300 group-hover:underline md:text-right"
+                      style={{
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        lineHeight: 1.3,
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      {item.date}
                     </span>
                   </a>
                 </li>
