@@ -128,8 +128,8 @@ export default function PressPage() {
 
         {/* Main content */}
         <main className="flex-1 overflow-y-auto">
-          <div className="pl-6 lg:pl-9 pr-6 pt-12 pb-24 lg:pt-16">
-            <ul className="flex flex-col" style={{ maxWidth: 520, gap: 40 }}>
+          <div className="pl-6 lg:pl-9 pr-6 pt-8 pb-10 lg:pt-10">
+            <ul className="flex flex-col" style={{ maxWidth: 520, gap: 26 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title} className="flex flex-col">
                   <a
