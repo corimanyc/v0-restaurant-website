@@ -14,7 +14,7 @@ interface MobileNavProps {
   pressHref?: string
 }
 
-export default function MobileNav({ isOpen, onClose, onMenuClick, aboutHref = '#about', pressHref = '#press' }: MobileNavProps) {
+export default function MobileNav({ isOpen, onClose, onMenuClick, aboutHref = '#about', pressHref = '/press' }: MobileNavProps) {
   // Prevent body + html scroll when open
   useEffect(() => {
     const html = document.documentElement

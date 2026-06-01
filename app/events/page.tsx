@@ -85,7 +85,7 @@ export default function EventsPage() {
       >
         <SiteNav
           aboutHref="/#about"
-          pressHref="/#press"
+          pressHref="/press"
           onOpenDining={() => setIsDiningOpen(true)}
           onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
           linkColor="#FFFFFF"
@@ -97,7 +97,7 @@ export default function EventsPage() {
         onClose={() => setIsMenuOpen(false)}
         onMenuClick={() => setIsMenuOverlayOpen(true)}
         aboutHref="/#about"
-        pressHref="/#press"
+        pressHref="/press"
       />
 
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster

@@ -31,7 +31,7 @@ type SiteNavProps = {
  */
 export default function SiteNav({
   aboutHref = '#about',
-  pressHref = '#press',
+  pressHref = '/press',
   smoothScrollAbout = false,
   onOpenDining,
   onToggleMobileMenu,

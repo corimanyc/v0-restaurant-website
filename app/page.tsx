@@ -365,7 +365,7 @@ export default function Home() {
         >
           <SiteNav
             aboutHref="#about"
-            pressHref="#press"
+            pressHref="/press"
             smoothScrollAbout
             onOpenDining={() => setIsDiningOpen(true)}
             onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
