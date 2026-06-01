@@ -126,57 +126,63 @@ export default function PressPage() {
           pressHref="/press"
         />
 
-        {/* Main content — full-width editorial press index */}
+        {/* Main content — numbered editorial press grid */}
         <main className="flex-1 overflow-y-auto">
-          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-8 pb-10 lg:pt-10">
-            <ul
-              className="flex flex-col border-t"
-              style={{ borderColor: 'rgba(255,255,255,0.18)' }}
-            >
-              {PRESS_ITEMS.map((item) => (
-                <li
-                  key={item.title}
-                  className="border-b"
-                  style={{ borderColor: 'rgba(255,255,255,0.18)' }}
-                >
+          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-8 pb-12 lg:pt-10">
+            <ul className="grid grid-cols-1 gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
+              {PRESS_ITEMS.map((item, index) => (
+                <li key={item.title}>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-2 py-5 transition-[padding] duration-300 ease-out hover:pl-3 md:flex-row md:items-baseline md:justify-between md:gap-8"
+                    className="group flex items-start gap-4"
                   >
-                    <span className="flex items-baseline gap-3 md:flex-1">
+                    <span
+                      className="font-sans shrink-0 tabular-nums transition-colors duration-300"
+                      style={{
+                        color: 'rgba(255,255,255,0.35)',
+                        fontSize: 14,
+                        lineHeight: 1.6,
+                        fontWeight: 400,
+                        letterSpacing: '0.08em',
+                      }}
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="flex flex-col gap-1.5">
                       <span
-                        className="font-sans text-pretty underline-offset-4 group-hover:underline"
+                        className="font-sans text-balance underline-offset-4 transition-all duration-300 group-hover:underline"
                         style={{
                           color: '#FFFFFF',
-                          fontSize: 24,
+                          fontSize: 22,
                           lineHeight: 1.3,
                           fontWeight: 400,
                         }}
                       >
                         {item.title}
                       </span>
-                      <span
-                        aria-hidden
-                        className="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
-                        style={{ color: '#FFFFFF', fontSize: 20, lineHeight: 1.3 }}
-                      >
-                        &#8599;
+                      <span className="flex items-center gap-2">
+                        <span
+                          className="font-sans"
+                          style={{
+                            color: 'rgba(255,255,255,0.6)',
+                            fontSize: 15,
+                            lineHeight: 1.4,
+                            fontWeight: 400,
+                            letterSpacing: '0.02em',
+                          }}
+                        >
+                          {item.date}
+                        </span>
+                        <span
+                          aria-hidden
+                          className="-translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+                          style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14 }}
+                        >
+                          &#8599;
+                        </span>
                       </span>
-                    </span>
-                    <span
-                      className="font-sans shrink-0 underline-offset-4 group-hover:underline md:text-right"
-                      style={{
-                        color: 'rgba(255,255,255,0.7)',
-                        fontSize: 16,
-                        lineHeight: 1.3,
-                        fontWeight: 400,
-                        letterSpacing: '0.02em',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {item.date}
                     </span>
                   </a>
                 </li>
