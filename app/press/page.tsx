@@ -162,7 +162,7 @@ export default function PressPage() {
                       className="font-sans shrink-0 md:text-right"
                       style={{
                         color: '#FFFFFF',
-                        fontSize: 16,
+                        fontSize: 24,
                         lineHeight: 1.3,
                         fontWeight: 400,
                         letterSpacing: '0.02em',
