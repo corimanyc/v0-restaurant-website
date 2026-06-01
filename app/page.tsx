@@ -903,7 +903,7 @@ export default function Home() {
                 position: 'absolute',
                 bottom: 'calc(100% + 12px)',
                 right: 0,
-                width: '470px',
+                width: '520px',
                 opacity: 0,
                 pointerEvents: 'none',
                 transform: 'translateY(8px)',
@@ -930,7 +930,7 @@ export default function Home() {
                   position: 'relative',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  padding: '20px',
+                  padding: '14px',
                   backgroundImage: 'url(/hero-counter-service.jpeg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
@@ -954,12 +954,12 @@ export default function Home() {
                     borderRadius: '12px',
                     display: 'block',
                     width: '100%',
-                    height: '300px',
+                    height: '280px',
                     border: 0,
                   }}
                   src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator&theme=0"
                   width="100%"
-                  height="300"
+                  height="280"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                 />
