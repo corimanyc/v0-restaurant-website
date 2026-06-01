@@ -136,7 +136,7 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="press-link block"
+                    className="press-link flex items-baseline justify-between gap-6"
                   >
                     <span
                       className="press-underline font-sans text-pretty"
@@ -147,22 +147,20 @@ export default function PressPage() {
                         fontWeight: 400,
                       }}
                     >
-                      <span
-                        className="press-underline font-sans"
-                        style={{
-                          float: 'right',
-                          position: 'relative',
-                          top: 7,
-                          marginLeft: 24,
-                          fontSize: 16,
-                          lineHeight: 1.4,
-                          letterSpacing: '0.02em',
-                          whiteSpace: 'nowrap',
-                        }}
-                      >
-                        {item.date}
-                      </span>
                       {item.title}
+                    </span>
+                    <span
+                      className="press-underline font-sans shrink-0"
+                      style={{
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        lineHeight: 1.4,
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      {item.date}
                     </span>
                   </a>
                 </li>
