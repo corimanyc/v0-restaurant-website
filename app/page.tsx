@@ -641,7 +641,7 @@ export default function Home() {
                   className="w-full h-full object-cover block"
                 />
               </div>
-              <div className="hidden lg:block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '4 / 5' }}>
+              <div className="block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '4 / 5' }}>
                 <button
                   type="button"
                   onClick={nextInterior}
