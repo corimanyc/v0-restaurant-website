@@ -127,8 +127,8 @@ export default function PressPage() {
         />
 
         {/* Main content — editorial press grid */}
-        <main className="flex-1 overflow-y-auto">
-          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-16 pb-12 lg:pt-24">
+        <main className="flex flex-1 items-center overflow-y-auto">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 py-16">
             <ul className="grid grid-cols-1 gap-x-10 gap-y-9 md:grid-cols-2 xl:grid-cols-3">
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
