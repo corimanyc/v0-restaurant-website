@@ -930,7 +930,7 @@ export default function Home() {
                   position: 'relative',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  padding: '20px',
+                  padding: '0',
                   backgroundImage: 'url(/hero-counter-service.jpeg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
