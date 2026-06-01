@@ -9,7 +9,7 @@ import SiteNav from '@/components/site-nav'
 
 const heroImages = [
   {
-    src: '/hero-carousel1.avif',
+    src: '/hero-carousel1new.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
