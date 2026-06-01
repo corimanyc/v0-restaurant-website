@@ -136,40 +136,22 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-1 border-b border-transparent pb-1 hover:border-white md:flex-row md:items-baseline md:justify-between md:gap-8"
+                    className="group block"
                   >
-                    <span className="flex items-baseline gap-3">
-                      <span
-                        className="font-sans text-pretty"
-                        style={{
-                          color: '#FFFFFF',
-                          fontSize: 24,
-                          lineHeight: 1.3,
-                          fontWeight: 400,
-                        }}
-                      >
-                        {item.title}
-                      </span>
-                      <span
-                        aria-hidden
-                        className="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
-                        style={{ color: '#FFFFFF', fontSize: 18, lineHeight: 1.3 }}
-                      >
-                        &#8599;
-                      </span>
-                    </span>
                     <span
-                      className="font-sans shrink-0 md:text-right"
+                      className="font-sans text-pretty underline-offset-4 group-hover:underline"
                       style={{
                         color: '#FFFFFF',
-                        fontSize: 16,
-                        lineHeight: 1.3,
+                        fontSize: 24,
+                        lineHeight: 1.4,
                         fontWeight: 400,
-                        letterSpacing: '0.02em',
-                        whiteSpace: 'nowrap',
                       }}
                     >
-                      {item.date}
+                      {item.title}
+                      <span style={{ fontSize: 16, letterSpacing: '0.02em' }}>
+                        {' \u2014 '}
+                        {item.date}
+                      </span>
                     </span>
                   </a>
                 </li>
