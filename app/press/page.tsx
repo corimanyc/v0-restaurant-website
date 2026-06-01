@@ -129,7 +129,7 @@ export default function PressPage() {
                     className="font-sans text-pretty"
                     style={{
                       color: '#FFFFFF',
-                      fontSize: 15,
+                      fontSize: 24,
                       lineHeight: 1.4,
                       fontWeight: 400,
                     }}
@@ -139,8 +139,8 @@ export default function PressPage() {
                   <span
                     className="font-sans mt-1"
                     style={{
-                      color: '#9A9A9A',
-                      fontSize: 15,
+                      color: '#FFFFFF',
+                      fontSize: 16,
                       lineHeight: 1.4,
                       fontWeight: 400,
                     }}
