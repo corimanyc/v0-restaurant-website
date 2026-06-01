@@ -255,7 +255,7 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     right: 0;
     bottom: 0;
     height: 1px;
-    background-color: currentColor;
+    background-color: #ffffff;
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.35s ease;
