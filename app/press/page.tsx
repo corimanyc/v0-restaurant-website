@@ -8,6 +8,11 @@ import SiteNav from '@/components/site-nav'
 
 const PRESS_ITEMS = [
   {
+    title: 'The New York Times: The 100 Best Restaurants in New York City',
+    date: 'May 10, 2026',
+    href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
+  },
+  {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     date: 'March 31, 2026',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
@@ -31,11 +36,6 @@ const PRESS_ITEMS = [
     title: "North America's 50 Best Restaurants",
     date: 'May 28, 2025',
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
-  },
-  {
-    title: 'The New York Times: The 100 Best Restaurants in New York City',
-    date: 'May 10, 2025',
-    href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
   },
   {
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
