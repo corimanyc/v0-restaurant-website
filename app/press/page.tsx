@@ -136,10 +136,10 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block"
+                    className="group flex flex-col gap-1 border-b border-transparent pb-1 hover:border-white md:flex-row md:items-baseline md:justify-between md:gap-8"
                   >
                     <span
-                      className="font-sans text-pretty underline-offset-4 group-hover:underline"
+                      className="font-sans text-pretty"
                       style={{
                         color: '#FFFFFF',
                         fontSize: 24,
@@ -148,10 +148,19 @@ export default function PressPage() {
                       }}
                     >
                       {item.title}
-                      <span style={{ fontSize: 16, letterSpacing: '0.02em' }}>
-                        {' \u2014 '}
-                        {item.date}
-                      </span>
+                    </span>
+                    <span
+                      className="font-sans shrink-0 md:text-right"
+                      style={{
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        lineHeight: 1.4,
+                        fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        whiteSpace: 'nowrap',
+                      }}
+                    >
+                      {item.date}
                     </span>
                   </a>
                 </li>
