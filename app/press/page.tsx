@@ -151,9 +151,11 @@ export default function PressPage() {
                         className="press-underline font-sans"
                         style={{
                           float: 'right',
+                          position: 'relative',
+                          top: 7,
                           marginLeft: 24,
                           fontSize: 16,
-                          lineHeight: 1.5,
+                          lineHeight: 1.4,
                           letterSpacing: '0.02em',
                           whiteSpace: 'nowrap',
                         }}
