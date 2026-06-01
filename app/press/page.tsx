@@ -126,36 +126,54 @@ export default function PressPage() {
           pressHref="/press"
         />
 
-        {/* Main content */}
+        {/* Main content — full-width editorial press index */}
         <main className="flex-1 overflow-y-auto">
-          <div className="pl-6 lg:pl-9 pr-6 pt-8 pb-10 lg:pt-10">
-            <ul className="flex flex-col" style={{ maxWidth: 520, gap: 26 }}>
+          <div className="pl-6 lg:pl-9 pr-6 lg:pr-9 pt-8 pb-10 lg:pt-10">
+            <ul
+              className="flex flex-col border-t"
+              style={{ borderColor: 'rgba(255,255,255,0.18)' }}
+            >
               {PRESS_ITEMS.map((item) => (
-                <li key={item.title} className="flex flex-col">
+                <li
+                  key={item.title}
+                  className="border-b"
+                  style={{ borderColor: 'rgba(255,255,255,0.18)' }}
+                >
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col"
+                    className="group flex flex-col gap-2 py-5 transition-[padding] duration-300 ease-out hover:pl-3 md:flex-row md:items-baseline md:justify-between md:gap-8"
                   >
-                    <span
-                      className="font-sans text-pretty group-hover:underline"
-                      style={{
-                        color: '#FFFFFF',
-                        fontSize: 24,
-                        lineHeight: 1.4,
-                        fontWeight: 400,
-                      }}
-                    >
-                      {item.title}
+                    <span className="flex items-baseline gap-3 md:flex-1">
+                      <span
+                        className="font-sans text-pretty underline-offset-4 group-hover:underline"
+                        style={{
+                          color: '#FFFFFF',
+                          fontSize: 24,
+                          lineHeight: 1.3,
+                          fontWeight: 400,
+                        }}
+                      >
+                        {item.title}
+                      </span>
+                      <span
+                        aria-hidden
+                        className="shrink-0 -translate-x-1 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+                        style={{ color: '#FFFFFF', fontSize: 20, lineHeight: 1.3 }}
+                      >
+                        &#8599;
+                      </span>
                     </span>
                     <span
-                      className="font-sans mt-1 group-hover:underline"
+                      className="font-sans shrink-0 underline-offset-4 group-hover:underline md:text-right"
                       style={{
-                        color: '#FFFFFF',
+                        color: 'rgba(255,255,255,0.7)',
                         fontSize: 16,
-                        lineHeight: 1.4,
+                        lineHeight: 1.3,
                         fontWeight: 400,
+                        letterSpacing: '0.02em',
+                        whiteSpace: 'nowrap',
                       }}
                     >
                       {item.date}
