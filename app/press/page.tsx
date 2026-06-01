@@ -136,7 +136,7 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-1 pb-1 md:flex-row md:items-baseline md:justify-between md:gap-8"
+                    className="group flex flex-col gap-1 border-b border-transparent pb-1 transition-colors duration-300 md:flex-row md:items-baseline md:justify-between md:gap-8 md:group-hover:border-white md:hover:border-white"
                   >
                     <span className="flex items-baseline gap-3">
                       <span
@@ -159,7 +159,7 @@ export default function PressPage() {
                       </span>
                     </span>
                     <span
-                      className="font-sans shrink-0 underline-offset-4 transition-all duration-300 group-hover:underline md:text-right"
+                      className="font-sans shrink-0 underline-offset-4 transition-all duration-300 group-hover:underline md:text-right md:group-hover:no-underline"
                       style={{
                         color: '#FFFFFF',
                         fontSize: 16,
