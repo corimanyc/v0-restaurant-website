@@ -930,7 +930,7 @@ export default function Home() {
                   position: 'relative',
                   borderRadius: '16px',
                   overflow: 'hidden',
-                  padding: '0',
+                  padding: '20px',
                   backgroundImage: 'url(/hero-counter-service.jpeg)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
@@ -954,12 +954,12 @@ export default function Home() {
                     borderRadius: '12px',
                     display: 'block',
                     width: '100%',
-                    height: '317px',
+                    height: '352px',
                     border: 0,
                   }}
                   src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator"
                   width="100%"
-                  height="317"
+                  height="352"
                   allowFullScreen
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
