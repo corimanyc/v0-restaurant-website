@@ -64,7 +64,7 @@ export default function PressPage() {
         aria-hidden
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: 'url(/press-bg.jpg)',
+          backgroundImage: 'url(/press-interior.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -78,7 +78,7 @@ export default function PressPage() {
         className="absolute pointer-events-none"
         style={{
           inset: '-40px',
-          backgroundImage: 'url(/press-bg.jpg)',
+          backgroundImage: 'url(/press-interior.jpg)',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
@@ -136,10 +136,10 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block"
+                    className="press-link block"
                   >
                     <span
-                      className="font-sans text-pretty underline-offset-4 group-hover:underline"
+                      className="press-underline font-sans text-pretty"
                       style={{
                         color: '#FFFFFF',
                         fontSize: 24,
@@ -148,7 +148,7 @@ export default function PressPage() {
                       }}
                     >
                       <span
-                        className="font-sans group-hover:underline"
+                        className="press-underline font-sans"
                         style={{
                           float: 'right',
                           marginLeft: 24,

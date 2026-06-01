@@ -243,6 +243,15 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
   .nav-link:focus-visible::after {
     transform: scaleX(1);
   }
+  /* Press rows: hovering the link underlines the title (every wrapped line, via
+     real text-decoration) AND the right-floated date — explicit rule so it does
+     not depend on Tailwind's group-hover generation. */
+  .press-link:hover .press-underline,
+  .press-link:focus-visible .press-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
 }
 
 /* The menu close button has no hover affordance on touch/mobile, so drop the
