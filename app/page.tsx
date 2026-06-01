@@ -903,7 +903,7 @@ export default function Home() {
                 position: 'absolute',
                 bottom: 'calc(100% + 12px)',
                 right: 0,
-                width: '420px',
+                width: '560px',
                 opacity: 0,
                 pointerEvents: 'none',
                 transform: 'translateY(8px)',
@@ -954,12 +954,12 @@ export default function Home() {
                     borderRadius: '12px',
                     display: 'block',
                     width: '100%',
-                    height: '352px',
+                    height: '152px',
                     border: 0,
                   }}
                   src="https://open.spotify.com/embed/playlist/5oMsfRzrZzZXaSBQ9obYry?utm_source=generator"
                   width="100%"
-                  height="352"
+                  height="152"
                   allowFullScreen
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
