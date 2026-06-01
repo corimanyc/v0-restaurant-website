@@ -136,7 +136,7 @@ export default function PressPage() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col gap-1 border-b border-transparent pb-1 transition-colors duration-300 hover:border-white md:flex-row md:items-baseline md:justify-between md:gap-8"
+                    className="press-link group flex flex-col gap-1 pb-1 md:flex-row md:items-baseline md:justify-between md:gap-8"
                   >
                     <span className="flex items-baseline gap-3">
                       <span
