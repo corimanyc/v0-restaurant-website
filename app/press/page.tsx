@@ -10,30 +10,37 @@ const PRESS_ITEMS = [
   {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     date: 'March 31, 2026',
+    href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
   },
   {
     title: 'The New York Times: Is This the Mexican Restaurant New York Has Been Waiting For?',
     date: 'March 3, 2026',
+    href: 'https://www.nytimes.com/2026/03/03/dining/corima-chinatown-restaurant-review.html',
   },
   {
     title: 'The Best Chef Awards',
     date: 'October 2025',
+    href: 'https://thebestchefawards.com/chefs/fidel-caballero/',
   },
   {
     title: 'The 8 Must-Visit Restaurants to Try This Fall',
     date: 'September 22, 2025',
+    href: 'https://www.bonappetit.com/story/best-new-restaurant-openings-fall-2025',
   },
   {
     title: "North America's 50 Best Restaurants",
     date: 'May 28, 2025',
+    href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
   },
   {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
     date: 'May 10, 2025',
+    href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
   },
   {
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
     date: 'January 21, 2025',
+    href: 'https://guide.michelin.com/us/en/article/dining-out/michelin-guide-star-spotlight-corima-fidel-caballero-new-york-city',
   },
 ]
 
@@ -125,28 +132,35 @@ export default function PressPage() {
             <ul className="flex flex-col" style={{ maxWidth: 520, gap: 40 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title} className="flex flex-col">
-                  <span
-                    className="font-sans text-pretty"
-                    style={{
-                      color: '#FFFFFF',
-                      fontSize: 24,
-                      lineHeight: 1.4,
-                      fontWeight: 400,
-                    }}
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col"
                   >
-                    {item.title}
-                  </span>
-                  <span
-                    className="font-sans mt-1"
-                    style={{
-                      color: '#FFFFFF',
-                      fontSize: 16,
-                      lineHeight: 1.4,
-                      fontWeight: 400,
-                    }}
-                  >
-                    {item.date}
-                  </span>
+                    <span
+                      className="font-sans text-pretty group-hover:underline"
+                      style={{
+                        color: '#FFFFFF',
+                        fontSize: 24,
+                        lineHeight: 1.4,
+                        fontWeight: 400,
+                      }}
+                    >
+                      {item.title}
+                    </span>
+                    <span
+                      className="font-sans mt-1 group-hover:underline"
+                      style={{
+                        color: '#FFFFFF',
+                        fontSize: 16,
+                        lineHeight: 1.4,
+                        fontWeight: 400,
+                      }}
+                    >
+                      {item.date}
+                    </span>
+                  </a>
                 </li>
               ))}
             </ul>
