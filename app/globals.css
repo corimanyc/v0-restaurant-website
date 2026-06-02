@@ -253,8 +253,10 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     position: relative;
     padding-bottom: 4px;
   }
-  /* Flat (single-line) rows: one continuous full-width line via a pseudo-element
-     so it is unaffected by Tailwind's border reset. */
+  /* Flat (single-line) rows: one continuous full-width line from the title to
+     the right-aligned date via a pseudo-element (unaffected by Tailwind's
+     border reset). Only used on desktop, where title + date share one row;
+     the mobile stacked layout is always classified .is-wrapped in JS. */
   .press-link.is-flat::after {
     content: "";
     position: absolute;
@@ -270,7 +272,8 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
   .press-link.is-flat:focus-visible::after {
     opacity: 1;
   }
-  /* Wrapped rows: real text-decoration so every wrapped line gets underlined. */
+  /* Wrapped rows (and all mobile rows): real text-decoration so every line of
+     the title — and the date — gets its own underline. */
   .press-link.is-wrapped:hover .press-underline,
   .press-link.is-wrapped:focus-visible .press-underline {
     text-decoration: underline;

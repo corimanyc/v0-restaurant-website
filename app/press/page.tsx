@@ -52,8 +52,16 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
     const el = titleRef.current
     if (!el) return
     const measure = () => {
-      // Count the actual rendered text lines: a Range over the title's text
-      // returns one client rect per line, so >1 rect means it has wrapped.
+      // Below md the title and date are stacked, so the flat full-width line
+      // (which sits under the date) would never underline the title. Always
+      // treat mobile rows as "wrapped" so they use per-text underlines.
+      if (window.innerWidth < 768) {
+        setWrapped(true)
+        return
+      }
+      // Desktop: count the actual rendered text lines — a Range over the
+      // title's text returns one client rect per line, so >1 rect means the
+      // title has wrapped.
       const range = document.createRange()
       range.selectNodeContents(el)
       setWrapped(range.getClientRects().length > 1)
@@ -232,7 +240,7 @@ export default function PressPage() {
         {/* Main content — full-width editorial press index */}
         <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 pb-60 md:pb-20">
-            <ul className="flex flex-col" style={{ rowGap: 28 }}>
+              <ul className="flex flex-col gap-10 md:gap-7">
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
                   <PressRow item={item} />
