@@ -390,7 +390,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="relative flex items-end justify-between px-6 lg:px-9 pt-6 pb-6">
+          <div className="relative flex items-end justify-between px-6 md:px-9 pt-6 pb-6">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below.
                 Two whitespace-nowrap spans inside a flex-wrap container so they
@@ -464,7 +464,7 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative pt-[100px] md:pt-48 pb-[104px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 lg:px-9" style={{ zIndex: 1 }}>
+        <div className="relative pt-[100px] md:pt-48 pb-[104px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 md:px-9" style={{ zIndex: 1 }}>
           <div className="w-full md:grid md:grid-cols-12 md:gap-5">
             <div className="md:col-start-2 md:col-end-9 relative">
               {/* Mobile-only flower, anchored just below the paragraph's bottom-right corner with the same bottom + side fade masks as the desktop version. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
@@ -516,17 +516,17 @@ export default function Home() {
         <div style={{ position: 'relative', zIndex: 1 }}>
 
           {/* ===== OUR STORY ===== */}
-          <section className="pt-16 lg:pt-[200px] px-6 lg:px-9">
+          <section className="pt-16 md:pt-[200px] px-6 md:px-9">
             {/* Section label */}
-            <div className="lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-2 lg:col-end-4">
+            <div className="md:grid md:grid-cols-12 md:gap-5">
+              <div className="md:col-start-2 md:col-end-4">
                 <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Our Story</p>
               </div>
             </div>
 
             {/* Staircase headline (SVG) — mobile and desktop variants */}
-            <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
-            <div className="lg:col-start-2 lg:col-end-9">
+            <div className="mt-8 md:mt-[50px] md:grid md:grid-cols-12 md:gap-5">
+            <div className="md:col-start-2 md:col-end-9">
                 {/* Mobile: two separate text elements — first clause left-aligned, second right-aligned, matching the SVG staircase */}
                 <p
                   className="block min-[620px]:hidden"
@@ -565,24 +565,24 @@ export default function Home() {
                 <img
                   src="/our-story-headline-mobile.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto hidden min-[620px]:block lg:hidden"
+                  className="w-full h-auto hidden min-[620px]:block md:hidden"
                 />
                 {/* Desktop (lg+): wide staircase SVG */}
                 <img
                   src="/our-story-headline.svg"
                   alt="Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all."
-                  className="w-full h-auto hidden lg:block"
+                  className="w-full h-auto hidden md:block"
                 />
               </div>
             </div>
 
             {/* On mobile, image appears above the intro copy. On desktop (lg+),
-                lg:contents promotes both children back to normal flow so document
+                md:contents promotes both children back to normal flow so document
                 order (copy, then image) is restored. */}
-            <div className="flex flex-col lg:contents">
+            <div className="flex flex-col md:contents">
               {/* Intro copy — right-aligned to the SVG's right edge (col-end-9), 80px below the SVG */}
-              <div className="order-2 lg:order-none mt-[50px] lg:mt-[80px] lg:grid lg:grid-cols-12 lg:gap-5">
-                <div className="lg:col-start-6 lg:col-end-9">
+              <div className="order-2 md:order-none mt-[50px] md:mt-[80px] md:grid md:grid-cols-12 md:gap-5">
+                <div className="md:col-start-6 md:col-end-9">
                   <p className="body-copy" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                     The concept of Corima was born out of a gap Chef Caballero identified in the Mexican culinary landscape expressed in New York City.
                   </p>
@@ -594,8 +594,8 @@ export default function Home() {
 
               {/* Counter image — desktop: under the intro copy, 100px below.
                   Mobile: rendered before the copy via order-1, with 50px gap above. */}
-              <div className="order-1 lg:order-none mt-[62px] lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
-                <div className="lg:col-start-6 lg:col-end-12">
+              <div className="order-1 md:order-none mt-[62px] md:mt-[100px] md:grid md:grid-cols-12 md:gap-5">
+                <div className="md:col-start-6 md:col-end-12">
                   <button
                     type="button"
                     onClick={nextAboutImg}
@@ -620,9 +620,9 @@ export default function Home() {
             </div>
 
             {/* Chef bio */}
-            <div className="mt-7 lg:mt-[100px] lg:grid lg:grid-cols-12 lg:gap-5">
+            <div className="mt-7 md:mt-[100px] md:grid md:grid-cols-12 md:gap-5">
               <div
-                className="lg:col-start-2 lg:col-end-6"
+                className="md:col-start-2 md:col-end-6"
                 style={{ paddingRight: 'var(--bio-right-pad, 0)' }}
               >
                 <style>{`@media (min-width: 1024px) { :root { --bio-right-pad: calc((100% - 60px) / 8 + 10px); } }`}</style>
@@ -633,15 +633,15 @@ export default function Home() {
             </div>
 
             {/* Bottom paired images */}
-            <div className="mt-[76px] lg:mt-[100px] flex flex-col gap-5 lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-stretch">
-              <div className="lg:col-start-3 lg:col-end-7" style={{ aspectRatio: '4 / 5' }}>
+            <div className="mt-[76px] md:mt-[100px] flex flex-col gap-5 md:gap-0 md:grid md:grid-cols-12 md:gap-5 md:items-stretch">
+              <div className="md:col-start-3 md:col-end-7" style={{ aspectRatio: '4 / 5' }}>
                 <img
                   src="/bio-chef-1.jpg"
                   alt="Chef Fidel Caballero plating a dish at the kitchen pass"
                   className="w-full h-full object-cover block"
                 />
               </div>
-              <div className="block lg:col-start-7 lg:col-end-10" style={{ aspectRatio: '4 / 5' }}>
+              <div className="block md:col-start-7 md:col-end-10" style={{ aspectRatio: '4 / 5' }}>
                 <button
                   type="button"
                   onClick={nextInterior}
@@ -676,16 +676,16 @@ export default function Home() {
           </section>
 
           {/* ===== ETHOS ===== */}
-          <section className="pt-[96px] lg:pt-[140px] px-6 lg:px-9">
-            <div className="lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-2 lg:col-end-4">
+          <section className="pt-[96px] md:pt-[140px] px-6 md:px-9">
+            <div className="md:grid md:grid-cols-12 md:gap-5">
+              <div className="md:col-start-2 md:col-end-4">
                 <p style={{ fontSize: '20px', fontWeight: 400, color: '#CBCBCB', letterSpacing: '0.01em' }}>Ethos</p>
               </div>
             </div>
 
             {/* Staircase headline (SVG) — mobile and desktop variants */}
-            <div className="mt-8 lg:mt-[50px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-2 lg:col-end-7">
+            <div className="mt-8 md:mt-[50px] md:grid md:grid-cols-12 md:gap-5">
+              <div className="md:col-start-2 md:col-end-7">
                 {/* Mobile: two separate text elements — first clause left-aligned, second right-aligned, matching the SVG staircase */}
                 <p
                   className="block min-[620px]:hidden"
@@ -724,31 +724,31 @@ export default function Home() {
                 <img
                   src="/ethos-headline-mobile.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
-                  className="w-full h-auto hidden min-[620px]:block lg:hidden"
+                  className="w-full h-auto hidden min-[620px]:block md:hidden"
                 />
                 {/* Desktop (lg+): staircase SVG */}
                 <img
                   src="/ethos-headline.svg"
                   alt="Circle of Sharing does not just apply to our cuisine, it's a living exchange between our kitchen, our guests, farmers, foragers, and artisans who shape how we cook."
-                  className="w-full h-auto hidden lg:block"
+                  className="w-full h-auto hidden md:block"
                 />
               </div>
             </div>
 
             {/* Body copy + dining-nook image */}
-            <div className="mt-[62px] mb-[62px] lg:mb-0 lg:mt-[60px] flex flex-col gap-[62px] lg:gap-0 lg:grid lg:grid-cols-12 lg:gap-5 lg:items-start">
-              <div className="lg:col-start-3 lg:col-end-6 lg:pt-[190px]">
+            <div className="mt-[62px] mb-[62px] md:mb-0 md:mt-[60px] flex flex-col gap-[62px] md:gap-0 md:grid md:grid-cols-12 md:gap-5 md:items-start">
+              <div className="md:col-start-3 md:col-end-6 md:pt-[190px]">
                 <p className="body-copy" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   Seasonal sourcing, whole-product utilization, and long-term partnerships with responsible producers allow us to honor ingredients fully while creating a resilient, forward-thinking kitchen.
                 </p>
                 <p className="body-copy mt-7" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   We are deeply indebted to our purveyors who ensure we have pristine product throughout the seasons.
                 </p>
-                <p className="body-copy hidden lg:block mt-10 lg:mt-20" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
+                <p className="body-copy hidden md:block mt-10 md:mt-20" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
                   Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
                 </p>
               </div>
-              <div className="lg:col-start-7 lg:col-end-13">
+              <div className="md:col-start-7 md:col-end-13">
                 <button
                   type="button"
                   onClick={nextEthos}
@@ -783,13 +783,13 @@ export default function Home() {
             </div>
 
             {/* Mobile-only: recognition copy between the dining-nook and kitchen images */}
-            <p className="body-copy lg:hidden mt-0" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
+            <p className="body-copy md:hidden mt-0" style={{ lineHeight: 1.6, color: '#CBCBCB' }}>
               Within its first year, Corima earned a Michelin star and was named one of Bon App&eacute;tit&apos;s Best New Restaurants of 2024. Chef Fidel Caballero was also named a James Beard Best Chef finalist in 2026. The restaurant has since been recognized as #36 on North America&apos;s 50 Best Restaurants list, a reflection of the community, craft, and shared table that continue to define Corima.
             </p>
 
             {/* Bottom kitchen action image */}
-            <div className="mt-[62px] lg:mt-[140px] lg:grid lg:grid-cols-12 lg:gap-5">
-              <div className="lg:col-start-3 lg:col-end-9">
+            <div className="mt-[62px] md:mt-[140px] md:grid md:grid-cols-12 md:gap-5">
+              <div className="md:col-start-3 md:col-end-9">
                 <button
                   type="button"
                   onClick={nextEnding}
