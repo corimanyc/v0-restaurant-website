@@ -250,13 +250,27 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
      - When the title WRAPS (.is-wrapped): use real text-decoration so every
        wrapped line of the title (and the date) gets its own underline. */
   .press-link {
-    border-bottom: 1px solid transparent;
+    position: relative;
     padding-bottom: 4px;
   }
-  .press-link.is-flat:hover,
-  .press-link.is-flat:focus-visible {
-    border-bottom-color: #ffffff;
+  /* Flat (single-line) rows: one continuous full-width line via a pseudo-element
+     so it is unaffected by Tailwind's border reset. */
+  .press-link.is-flat::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
   }
+  .press-link.is-flat:hover::after,
+  .press-link.is-flat:focus-visible::after {
+    opacity: 1;
+  }
+  /* Wrapped rows: real text-decoration so every wrapped line gets underlined. */
   .press-link.is-wrapped:hover .press-underline,
   .press-link.is-wrapped:focus-visible .press-underline {
     text-decoration: underline;

@@ -52,11 +52,18 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
     const el = titleRef.current
     if (!el) return
     const measure = () => {
-      const lineHeight = parseFloat(getComputedStyle(el).lineHeight)
-      // More than ~1.5 line boxes tall means the title has wrapped.
-      setWrapped(el.offsetHeight > lineHeight * 1.5)
+      // Count the actual rendered text lines: a Range over the title's text
+      // returns one client rect per line, so >1 rect means it has wrapped.
+      const range = document.createRange()
+      range.selectNodeContents(el)
+      setWrapped(range.getClientRects().length > 1)
     }
     measure()
+    // Re-measure once the web font has loaded (initial measure can run with the
+    // fallback font, which may wrap differently).
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(measure)
+    }
     const ro = new ResizeObserver(measure)
     ro.observe(el)
     return () => ro.disconnect()
