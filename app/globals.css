@@ -243,11 +243,22 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
   .nav-link:focus-visible::after {
     transform: scaleX(1);
   }
-  /* Press rows: hovering the link underlines the title (every wrapped line, via
-     real text-decoration) AND the right-floated date — explicit rule so it does
-     not depend on Tailwind's group-hover generation. */
-  .press-link:hover .press-underline,
-  .press-link:focus-visible .press-underline {
+  /* Press rows.
+     - When the title fits on ONE line (.is-flat): a single continuous line
+       spans the full row from the title to the right-aligned date via a
+       border-bottom on the flex row.
+     - When the title WRAPS (.is-wrapped): use real text-decoration so every
+       wrapped line of the title (and the date) gets its own underline. */
+  .press-link {
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+  }
+  .press-link.is-flat:hover,
+  .press-link.is-flat:focus-visible {
+    border-bottom-color: #ffffff;
+  }
+  .press-link.is-wrapped:hover .press-underline,
+  .press-link.is-wrapped:focus-visible .press-underline {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
@@ -43,6 +43,60 @@ const PRESS_ITEMS = [
     href: 'https://guide.michelin.com/us/en/article/dining-out/michelin-guide-star-spotlight-corima-fidel-caballero-new-york-city',
   },
 ]
+
+function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
+  const titleRef = useRef<HTMLSpanElement>(null)
+  const [wrapped, setWrapped] = useState(false)
+
+  useEffect(() => {
+    const el = titleRef.current
+    if (!el) return
+    const measure = () => {
+      const lineHeight = parseFloat(getComputedStyle(el).lineHeight)
+      // More than ~1.5 line boxes tall means the title has wrapped.
+      setWrapped(el.offsetHeight > lineHeight * 1.5)
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+
+  return (
+    <a
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`press-link flex items-baseline justify-between gap-6 ${wrapped ? 'is-wrapped' : 'is-flat'}`}
+    >
+      <span
+        ref={titleRef}
+        className="press-underline font-sans text-pretty"
+        style={{
+          color: '#FFFFFF',
+          fontSize: 24,
+          lineHeight: 1.4,
+          fontWeight: 400,
+        }}
+      >
+        {item.title}
+      </span>
+      <span
+        className="press-underline font-sans shrink-0"
+        style={{
+          color: '#CBCBCB',
+          fontSize: 16,
+          lineHeight: 1.4,
+          fontWeight: 400,
+          letterSpacing: '0.02em',
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {item.date}
+      </span>
+    </a>
+  )
+}
 
 export default function PressPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -132,37 +186,7 @@ export default function PressPage() {
             <ul className="flex flex-col" style={{ rowGap: 28 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="press-link flex items-baseline justify-between gap-6"
-                  >
-                    <span
-                      className="press-underline font-sans text-pretty"
-                      style={{
-                        color: '#FFFFFF',
-                        fontSize: 24,
-                        lineHeight: 1.4,
-                        fontWeight: 400,
-                      }}
-                    >
-                      {item.title}
-                    </span>
-                    <span
-                      className="press-underline font-sans shrink-0"
-                      style={{
-                        color: '#FFFFFF',
-                        fontSize: 16,
-                        lineHeight: 1.4,
-                        fontWeight: 400,
-                        letterSpacing: '0.02em',
-                        whiteSpace: 'nowrap',
-                      }}
-                    >
-                      {item.date}
-                    </span>
-                  </a>
+                  <PressRow item={item} />
                 </li>
               ))}
             </ul>
