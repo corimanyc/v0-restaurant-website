@@ -6,6 +6,7 @@ import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
+import ProgressiveImage from '@/components/progressive-image'
 
 const POSTERS = [
   { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
@@ -120,7 +121,7 @@ export default function EventsPage() {
             }}
           >
             {POSTERS.map((poster) => (
-              <img
+              <ProgressiveImage
                 key={poster.src}
                 src={poster.src}
                 alt={poster.alt}
@@ -153,7 +154,7 @@ export default function EventsPage() {
             animation: 'lightbox-fade 0.25s ease',
           }}
         >
-          <img
+          <ProgressiveImage
             src={expandedPoster.src}
             alt={expandedPoster.alt}
             onClick={(e) => e.stopPropagation()}

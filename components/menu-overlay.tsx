@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import ProgressiveImage from '@/components/progressive-image'
 
 const sectionImages: Record<string, string> = {
   'a-la-carte': '/a-la-carte-v3.jpg',
@@ -273,7 +274,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
           style={{ marginRight: '24px', marginTop: '16px', width: '550px', alignSelf: 'flex-start', height: 'calc(100% - 16px)' }}
         >
           {Object.entries(sectionImages).map(([section, src]) => (
-            <img
+            <ProgressiveImage
               key={section}
               src={src}
               alt={section}

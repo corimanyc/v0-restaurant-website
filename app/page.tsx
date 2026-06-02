@@ -6,6 +6,7 @@ import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
+import ProgressiveImage from '@/components/progressive-image'
 
 const heroImages = [
   {
@@ -457,7 +458,7 @@ export default function Home() {
             maskComposite: 'intersect',
           }}
         >
-          <img
+          <ProgressiveImage
             src="/flower-sketch.png"
             alt=""
             className="block w-full h-auto"
@@ -481,7 +482,7 @@ export default function Home() {
                   maskComposite: 'intersect',
                 }}
               >
-                <img
+                <ProgressiveImage
                   src="/flower-sketch.png"
                   alt=""
                   className="block h-auto"
@@ -603,12 +604,12 @@ export default function Home() {
                     className="group relative block w-full cursor-pointer overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
                     style={{ aspectRatio: '2048 / 1118' }}
                   >
-                    <img
+                    <ProgressiveImage
                       src={aboutSectionImages[aboutImgIndex].bw || "/placeholder.svg"}
                       alt={aboutSectionImages[aboutImgIndex].alt}
                       className="absolute inset-0 w-full h-full object-cover object-top block"
                     />
-                    <img
+                    <ProgressiveImage
                       src={aboutSectionImages[aboutImgIndex].color || "/placeholder.svg"}
                       alt=""
                       aria-hidden="true"
@@ -635,7 +636,7 @@ export default function Home() {
             {/* Bottom paired images */}
             <div className="mt-[76px] md:mt-[100px] flex flex-col gap-5 md:gap-0 md:grid md:grid-cols-12 md:gap-5 md:items-stretch">
               <div className="md:col-start-3 md:col-end-7" style={{ aspectRatio: '4 / 5' }}>
-                <img
+                <ProgressiveImage
                   src="/bio-chef-1.jpg"
                   alt="Chef Fidel Caballero plating a dish at the kitchen pass"
                   className="w-full h-full object-cover block"
@@ -655,13 +656,13 @@ export default function Home() {
   key={img.bw}
   className={`absolute inset-0 transition-opacity duration-500 ease-out ${i === interiorIndex ? 'opacity-100' : 'opacity-0'}`}
   >
-                  <img
+                  <ProgressiveImage
                     src={img.bw || "/placeholder.svg"}
                     alt={img.alt}
                     style={{ objectPosition: img.position ?? 'center' }}
                     className="absolute inset-0 w-full h-full object-cover block"
                   />
-                  <img
+                  <ProgressiveImage
                     src={img.color || "/placeholder.svg"}
                     alt=""
                     aria-hidden="true"
@@ -763,13 +764,13 @@ export default function Home() {
                       key={img.bw}
                       className={`absolute inset-0 transition-opacity duration-500 ease-out ${i === ethosIndex ? 'opacity-100' : 'opacity-0'}`}
                     >
-                      <img
+                      <ProgressiveImage
                         src={img.bw || "/placeholder.svg"}
                         alt={img.alt}
                         style={{ objectPosition: img.position ?? 'center' }}
                         className="absolute inset-0 w-full h-full object-cover block"
                       />
-                      <img
+                      <ProgressiveImage
                         src={img.color || "/placeholder.svg"}
                         alt=""
                         aria-hidden="true"
@@ -800,7 +801,7 @@ export default function Home() {
                   style={{ aspectRatio: '3 / 2' }}
                 >
                   {endingImages.map((img, i) => (
-                    <img
+                    <ProgressiveImage
                       key={img.src}
                       src={img.src || "/placeholder.svg"}
                       alt={img.alt}
