@@ -74,7 +74,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
       href={item.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`press-link flex items-baseline justify-between gap-6 ${wrapped ? 'is-wrapped' : 'is-flat'}`}
+      className={`press-link flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between md:gap-6 ${wrapped ? 'is-wrapped' : 'is-flat'}`}
     >
       <span
         ref={titleRef}
