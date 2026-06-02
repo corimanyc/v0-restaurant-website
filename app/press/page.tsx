@@ -110,6 +110,29 @@ export default function PressPage() {
   const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false)
   const [menuScrollTarget, setMenuScrollTarget] = useState<'a-la-carte' | 'cocktail' | 'wine' | undefined>(undefined)
   const [isDiningOpen, setIsDiningOpen] = useState(false)
+  const scrollRef = useRef<HTMLElement>(null)
+  const [navVisible, setNavVisible] = useState(true)
+
+  // Match the home page: hide the nav on downward scroll, show it on upward
+  // scroll. The press page scrolls inside <main> (overflow-y-auto), so we listen
+  // on that element rather than the window.
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    let lastY = el.scrollTop
+    const onScroll = () => {
+      const y = el.scrollTop
+      const delta = y - lastY
+      if (delta > 4) {
+        setNavVisible(false)
+      } else if (delta < -4) {
+        setNavVisible(true)
+      }
+      lastY = y
+    }
+    el.addEventListener('scroll', onScroll, { passive: true })
+    return () => el.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <div
@@ -160,14 +183,16 @@ export default function PressPage() {
           onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
         />
 
-        {/* Header */}
+        {/* Header — overlays the scrolling content and slides up/down with the
+            scroll direction, matching the home page behavior. */}
         <header
-          className="relative"
+          className="absolute top-0 left-0 right-0"
           style={{
             zIndex: 46,
             opacity: isDiningOpen ? 0 : 1,
             pointerEvents: isDiningOpen ? 'none' : 'all',
-            transition: 'opacity 0.5s ease',
+            transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(-110%)',
+            transition: 'opacity 0.5s ease, transform 0.35s ease',
           }}
         >
           <SiteNav
@@ -188,8 +213,8 @@ export default function PressPage() {
         />
 
         {/* Main content — full-width editorial press index */}
-        <main className="flex flex-1 flex-col min-h-0 overflow-y-auto">
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 py-16 m-auto">
+        <main ref={scrollRef} className="flex flex-1 flex-col min-h-0 overflow-y-auto">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 pb-16 m-auto">
             <ul className="flex flex-col" style={{ rowGap: 28 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
