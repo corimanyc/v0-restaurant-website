@@ -115,20 +115,37 @@ export default function PressPage() {
 
   // Match the home page: hide the nav on downward scroll, show it on upward
   // scroll. The press page scrolls inside <main> (overflow-y-auto), so we listen
-  // on that element rather than the window.
+  // on that element rather than the window. The work is throttled with rAF and
+  // gated by a threshold so small jitters don't flip the nav back and forth.
   useEffect(() => {
     const el = scrollRef.current
     if (!el) return
     let lastY = el.scrollTop
-    const onScroll = () => {
+    let ticking = false
+    const THRESHOLD = 12
+    const update = () => {
+      ticking = false
       const y = el.scrollTop
-      const delta = y - lastY
-      if (delta > 4) {
-        setNavVisible(false)
-      } else if (delta < -4) {
+      // Always reveal the nav near the top of the list.
+      if (y < 64) {
         setNavVisible(true)
+        lastY = y
+        return
       }
-      lastY = y
+      const delta = y - lastY
+      if (delta > THRESHOLD) {
+        setNavVisible(false)
+        lastY = y
+      } else if (delta < -THRESHOLD) {
+        setNavVisible(true)
+        lastY = y
+      }
+    }
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true
+        requestAnimationFrame(update)
+      }
     }
     el.addEventListener('scroll', onScroll, { passive: true })
     return () => el.removeEventListener('scroll', onScroll)
@@ -213,8 +230,8 @@ export default function PressPage() {
         />
 
         {/* Main content — full-width editorial press index */}
-        <main ref={scrollRef} className="flex flex-1 flex-col min-h-0 overflow-y-auto">
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 pb-16 m-auto">
+        <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 pb-20">
             <ul className="flex flex-col" style={{ rowGap: 28 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
