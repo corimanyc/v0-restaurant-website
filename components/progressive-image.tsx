@@ -1,70 +1,49 @@
 'use client'
 
-import {
-  useEffect,
-  useRef,
-  useState,
-  type CSSProperties,
-  type ImgHTMLAttributes,
-} from 'react'
+import Image from 'next/image'
+import type { ComponentProps } from 'react'
+import { blurDataMap } from '@/lib/blur-data'
 
-type ProgressiveImageProps = ImgHTMLAttributes<HTMLImageElement> & {
-  /** Blur radius (px) shown while the image is still loading. */
-  blurAmount?: number
-  /** How long (seconds) the blur-to-sharp resolve takes. */
-  resolveDuration?: number
+type NextImageProps = ComponentProps<typeof Image>
+
+type ProgressiveImageProps = Omit<
+  NextImageProps,
+  'placeholder' | 'blurDataURL' | 'width' | 'height'
+> & {
+  width?: number
+  height?: number
 }
 
 /**
- * Drop-in replacement for <img> that loads progressively:
- * - defers offscreen images (loading="lazy") and decodes off the main thread
- * - shows a soft blur placeholder until the full image has loaded, then
- *   smoothly resolves to a sharp, opaque image
+ * Renders a next/image with a real "blur-up" placeholder: a tiny base64 preview
+ * (generated at build time in lib/blur-data.ts) fills the frame instantly and
+ * sharpens to the full image once it finishes loading.
  *
- * Only the `filter` (blur) and `opacity` transitions are managed here, so any
- * opacity-based crossfades on the consuming element keep working.
+ * Intrinsic width/height come from the generated map, so callers keep using the
+ * same className-driven layout (object-cover, w-full h-auto, etc.) without
+ * needing `fill` or positioned parents.
  */
 export default function ProgressiveImage({
-  style,
-  blurAmount = 14,
-  resolveDuration = 1.2,
-  onLoad,
+  src,
+  width,
+  height,
+  sizes,
   ...props
 }: ProgressiveImageProps) {
-  const ref = useRef<HTMLImageElement>(null)
-  const [loaded, setLoaded] = useState(false)
-
-  useEffect(() => {
-    // Images already in cache may finish before React attaches onLoad.
-    const img = ref.current
-    if (img?.complete && img.naturalWidth > 0) {
-      setLoaded(true)
-    }
-  }, [])
-
-  const loadTransition = `filter ${resolveDuration}s ease, opacity ${resolveDuration}s ease`
-  const mergedStyle: CSSProperties = {
-    ...style,
-    filter: loaded
-      ? style?.filter
-      : `blur(${blurAmount}px)${style?.filter ? ` ${style.filter}` : ''}`,
-    transition: style?.transition
-      ? `${style.transition}, ${loadTransition}`
-      : loadTransition,
-  }
+  const key = typeof src === 'string' ? src : ''
+  const meta = key ? blurDataMap[key] : undefined
+  const isSvg = key.toLowerCase().endsWith('.svg')
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      ref={ref}
+    <Image
+      src={src}
+      width={width ?? meta?.width ?? 1200}
+      height={height ?? meta?.height ?? 1600}
+      sizes={sizes ?? '100vw'}
+      placeholder={meta ? 'blur' : 'empty'}
+      blurDataURL={meta?.blurDataURL}
+      unoptimized={isSvg}
       {...props}
-      loading={props.loading ?? 'lazy'}
-      decoding={props.decoding ?? 'async'}
-      style={mergedStyle}
-      onLoad={(e) => {
-        setLoaded(true)
-        onLoad?.(e)
-      }}
     />
   )
 }
