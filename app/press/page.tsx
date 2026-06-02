@@ -91,8 +91,8 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
       <span
         className="press-underline font-sans shrink-0"
         style={{
-          color: '#CBCBCB',
-          fontSize: 16,
+          color: '#FFFFFF',
+          fontSize: 18,
           lineHeight: 1.4,
           fontWeight: 400,
           letterSpacing: '0.02em',
