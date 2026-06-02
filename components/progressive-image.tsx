@@ -11,6 +11,8 @@ import {
 type ProgressiveImageProps = ImgHTMLAttributes<HTMLImageElement> & {
   /** Blur radius (px) shown while the image is still loading. */
   blurAmount?: number
+  /** How long (seconds) the blur-to-sharp resolve takes. */
+  resolveDuration?: number
 }
 
 /**
@@ -25,6 +27,7 @@ type ProgressiveImageProps = ImgHTMLAttributes<HTMLImageElement> & {
 export default function ProgressiveImage({
   style,
   blurAmount = 14,
+  resolveDuration = 1.2,
   onLoad,
   ...props
 }: ProgressiveImageProps) {
@@ -39,7 +42,7 @@ export default function ProgressiveImage({
     }
   }, [])
 
-  const loadTransition = 'filter 0.6s ease, opacity 0.6s ease'
+  const loadTransition = `filter ${resolveDuration}s ease, opacity ${resolveDuration}s ease`
   const mergedStyle: CSSProperties = {
     ...style,
     filter: loaded
