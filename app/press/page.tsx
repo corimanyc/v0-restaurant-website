@@ -148,7 +148,7 @@ export default function PressPage() {
         }}
       />
       {/* All content sits above the blurred bg */}
-      <div className="relative flex flex-col flex-1" style={{ zIndex: 1 }}>
+      <div className="relative flex flex-col flex-1 min-h-0" style={{ zIndex: 1 }}>
         <MenuOverlay
           isOpen={isMenuOverlayOpen}
           onClose={() => { setIsMenuOverlayOpen(false); setMenuScrollTarget(undefined) }}
@@ -188,8 +188,8 @@ export default function PressPage() {
         />
 
         {/* Main content — full-width editorial press index */}
-        <main className="flex flex-1 items-center overflow-y-auto">
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 py-16">
+        <main className="flex flex-1 flex-col min-h-0 overflow-y-auto">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 py-16 m-auto">
             <ul className="flex flex-col" style={{ rowGap: 28 }}>
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
