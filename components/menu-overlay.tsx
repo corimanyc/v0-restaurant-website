@@ -246,7 +246,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             </p>
             {wineByGlass.map((group, gi) => (
               <div key={gi} style={{ marginBottom: '32px' }}>
-                <p className="text-black uppercase mb-1" style={{ ...base, fontSize: `${12 + bump}px`, letterSpacing: '0.08em' }}>
+                <p className="text-black uppercase mb-1" style={{ ...base, fontSize: `${14 + bump}px`, letterSpacing: '0.08em' }}>
                   {group.category}
                 </p>
                 <div className="flex flex-col">
