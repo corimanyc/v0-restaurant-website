@@ -53,18 +53,19 @@ const wineByGlass = [
 ]
 
 const cocktailItems = [
-  { name: 'San Pedro', desc: 'Sotol, Lime, Bitter Orange Agave, Nopales', price: '18' },
-  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '18' },
-  { name: 'Orito', desc: 'Tequila Blanco, Bergamot, Squirt, Yellow Chartreuse, Fennel Seed', price: '19' },
-  { name: 'Dust Devil', desc: 'Bourbon, Beet, Pasilla, Aperol', price: '18' },
-  { name: 'Hierba Mora', desc: 'Vodka, Poblano Brine, Empirical Cilantro, Dry Vermouth', price: '18' },
-  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '18' },
-  { name: 'Carajillo de la Casa', desc: 'Aged Rum, Licor 43, Forthave Brown, Café Integral Coffee', price: '18' },
-  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '14' },
-  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '10' },
-  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '10' },
-  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '10' },
-  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '10' },
+  { name: 'Bambú', desc: 'House Lime Leaf Vermouth, Fino Sherry', price: '20' },
+  { name: 'San Pedro', desc: 'Mezcal, Lime, Bitter Orange, Agave, Nopales', price: '20' },
+  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '19' },
+  { name: 'Chupacabra', desc: 'Tequila Blanco, Orange, Tomato, Chiles, Pink Peppercorn', price: '20' },
+  { name: 'Key Largo', desc: 'Charanda Añejo, Celery, Key Lime', price: '19' },
+  { name: 'White Sands', desc: 'Gin, Magnolia, Blanc Vermouth, Sake', price: '22' },
+  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '23' },
+  { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
+  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '17' },
+  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '14' },
+  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '14' },
+  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '15' },
+  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
 ]
 
 interface MenuOverlayProps {
