@@ -211,7 +211,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                   <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax }}>
                     {item.name}
                   </p>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '64px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
@@ -231,7 +231,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                       <p className="text-black" style={base}>{item.name}</p>
                       <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                   </div>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '64px' }}>
                     {item.price || '—'}
                   </p>
                 </div>
@@ -259,7 +259,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                         <p className="text-black" style={base}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                       </div>
-                      <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                      <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '64px' }}>
                         {item.price}
                       </p>
                     </div>
