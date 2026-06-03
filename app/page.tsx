@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -228,13 +228,19 @@ export default function Home() {
   // (e.g. navigating here from the events page). App Router doesn't reliably
   // scroll to a hash after a cross-route navigation, so we handle it on mount
   // and on subsequent hashchange events.
-  useEffect(() => {
-    // Take over scroll positioning so the browser doesn't restore the previous
-    // scroll position on reload (which would drop the user at the About/Corima
-    // paragraph instead of the hero carousel).
-    const prevRestoration = history.scrollRestoration
+  // Take over scroll positioning so the browser never restores the previous
+  // scroll position on reload (which would drop the user at the About/Corima
+  // paragraph instead of the hero carousel). Run before paint to avoid any
+  // visible jump, and keep restoration 'manual' for the life of the page
+  // (no reset-to-'auto' on cleanup, which could race a reload).
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return
     history.scrollRestoration = 'manual'
+    // Only force the top when there's no deep-link hash to honor.
+    if (!window.location.hash) window.scrollTo(0, 0)
+  }, [])
 
+  useEffect(() => {
     const scrollToHash = () => {
       const id = window.location.hash.replace('#', '')
       if (!id) {
@@ -247,11 +253,16 @@ export default function Home() {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       })
     }
+    // Cover bfcache restores (back/forward) which fire 'pageshow', not mount.
+    const onPageShow = () => {
+      if (!window.location.hash) window.scrollTo(0, 0)
+    }
     scrollToHash()
     window.addEventListener('hashchange', scrollToHash)
+    window.addEventListener('pageshow', onPageShow)
     return () => {
       window.removeEventListener('hashchange', scrollToHash)
-      history.scrollRestoration = prevRestoration
+      window.removeEventListener('pageshow', onPageShow)
     }
   }, [])
 
