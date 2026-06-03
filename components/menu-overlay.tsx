@@ -154,6 +154,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   // width; on larger screens each section keeps its own wider value.
   const alaCarteNameMax = isMobile ? '380px' : '550px'
   const itemNameMax = isMobile ? '380px' : '420px'
+  // Intro paragraphs (a la carte + wine) share a narrower width on mobile.
+  const introMax = isMobile ? '300px' : '540px'
 
   return (
     <div
@@ -202,7 +204,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               A La Carte
             </h2>
-            <p className="text-black mb-6" style={{ ...base, fontSize: `${14 + bump}px`, maxWidth: '540px' }}>
+            <p className="text-black mb-6" style={{ ...base, fontSize: '14px', maxWidth: introMax }}>
               Our a la carte menu changes with the seasons and market availability. Below is a sample menu from 5/10/26. Dishes are subject to change.
             </p>
             <div className="flex flex-col">
@@ -244,7 +246,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Wine by the Glass
             </h2>
-            <p className="text-black mb-10" style={{ ...base, fontSize: `${14 + bump}px`, maxWidth: '540px' }}>
+            <p className="text-black mb-10" style={{ ...base, fontSize: '14px', maxWidth: introMax }}>
               We offer a rotating selection of wines by the glass, which change frequently. We additionally have an extensive list of wines by the bottle, along with our offering of agaves.
             </p>
             {wineByGlass.map((group, gi) => (
