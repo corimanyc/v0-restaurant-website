@@ -229,9 +229,19 @@ export default function Home() {
   // scroll to a hash after a cross-route navigation, so we handle it on mount
   // and on subsequent hashchange events.
   useEffect(() => {
+    // Take over scroll positioning so the browser doesn't restore the previous
+    // scroll position on reload (which would drop the user at the About/Corima
+    // paragraph instead of the hero carousel).
+    const prevRestoration = history.scrollRestoration
+    history.scrollRestoration = 'manual'
+
     const scrollToHash = () => {
       const id = window.location.hash.replace('#', '')
-      if (!id) return
+      if (!id) {
+        // No hash: always land on the hero carousel at the top.
+        window.scrollTo(0, 0)
+        return
+      }
       // Defer to the next frame so the target section is mounted/laid out.
       requestAnimationFrame(() => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -239,7 +249,10 @@ export default function Home() {
     }
     scrollToHash()
     window.addEventListener('hashchange', scrollToHash)
-    return () => window.removeEventListener('hashchange', scrollToHash)
+    return () => {
+      window.removeEventListener('hashchange', scrollToHash)
+      history.scrollRestoration = prevRestoration
+    }
   }, [])
 
   return (
