@@ -202,6 +202,9 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               A La Carte
             </h2>
+            <p className="text-black mb-10" style={{ ...base, fontSize: `${14 + bump}px`, maxWidth: '540px' }}>
+              Our a la carte menu changes with the seasons and market availability. Below is a sample menu from 5/10/26. Dishes are subject to change.
+            </p>
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
