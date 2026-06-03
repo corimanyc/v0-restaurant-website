@@ -155,7 +155,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   const alaCarteNameMax = isMobile ? '380px' : '550px'
   const itemNameMax = isMobile ? '380px' : '420px'
   // Intro paragraphs (a la carte + wine) share a narrower width on mobile.
-  const introMax = isMobile ? '300px' : '540px'
+  const introMax = isMobile ? '440px' : '540px'
 
   return (
     <div
