@@ -24,31 +24,31 @@ const alaCarteItems = [
 
 const wineByGlass = [
   { category: 'Sparkling', items: [
-    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '24' },
-    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '18' },
+    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '' },
   ]},
   { category: 'White', items: [
-    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '22' },
-    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '20' },
-    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '18' },
+    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '' },
+    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '' },
+    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '19' },
-    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '21' },
+    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '' },
+    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '' },
   ]},
   { category: 'Red', items: [
-    { name: 'Douhairet-Porcheret, Les Prevaux \'21', desc: 'Pinot Noir · Burgundy, FR', price: '26' },
-    { name: 'Thomas Farge, Grande Angle St Joseph \'21', desc: 'Syrah · Rhone, FR', price: '23' },
+    { name: 'Envinate, Lousas \'23', desc: 'Mencia · Ribera Sacra, ESP', price: '' },
+    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '' },
   ]},
   { category: 'Sherry', items: [
-    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '14' },
+    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Uehara Shuzo, Furosen Usunigori', desc: 'Ginjo Yamahai Nama · Shiga, JP', price: '18' },
+    { name: 'Kato Sake Works, NYNY', desc: 'Jizake · Brooklyn, NY', price: '' },
   ]},
   { category: 'Non Alcoholic', items: [
-    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '12' },
-    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '12' },
+    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY — Wine Alternative', price: '' },
+    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '' },
   ]},
 ]
 
