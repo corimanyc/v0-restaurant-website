@@ -268,6 +268,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <h1 className="sr-only">CORIMA — Contemporary Mexican Restaurant</h1>
       <div
         className="text-white flex-1"
         style={{

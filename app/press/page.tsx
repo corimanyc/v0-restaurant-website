@@ -168,6 +168,7 @@ export default function PressPage() {
         height: '100dvh',
       }}
     >
+      <h1 className="sr-only">CORIMA Press &amp; Recognition</h1>
       {/* Sharp background (bottom layer) */}
       <div
         aria-hidden

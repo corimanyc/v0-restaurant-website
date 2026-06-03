@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tw-animate-css';
 
 /* Site-wide horizontal padding token: matches Tailwind px-6 (24px) on mobile,
    and px-9 (36px) at lg+ (≥1024px). Used by the footer and any element

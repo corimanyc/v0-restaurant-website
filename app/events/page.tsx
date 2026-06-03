@@ -34,6 +34,7 @@ export default function EventsPage() {
         height: '100dvh',
       }}
     >
+      <h1 className="sr-only">CORIMA Events &amp; Collaboration Dinners</h1>
       {/* Sharp background (bottom layer) */}
       <div
         aria-hidden
