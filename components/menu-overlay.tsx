@@ -222,7 +222,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
           {/* Cocktail */}
           <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
-              Cocktail
+              Cocktails & Beverages
             </h2>
             <div className="flex flex-col">
               {cocktailItems.map((item, i) => (
