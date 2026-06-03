@@ -10,60 +10,62 @@ const sectionImages: Record<string, string> = {
   }
 
 const alaCarteItems = [
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '29' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '33' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '24' },
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '23' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '23' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '13' },
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '32' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '40' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '' },
+  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '9' },
+  { name: 'Apples, Kohlrabi, Persimmon, Granola, Tajin', price: '24' },
+  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '26' },
+  { name: 'Squid, King Oyster, Knotweed Aguachile, Nam Jim Jaew, Heart of Palm', price: '26' },
+  { name: 'Surf Clam a la Diabla Toast, Chinese Sausage, Green Tomato', price: '33' },
+  { name: 'Esquites, Mushroom Carnitas, Porcini, Mimolette, Sourdough', price: '35' },
+  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '36' },
+  { name: 'Hamachi Collar, Chintextle, Cascabel Aioli, Chives', price: '36' },
+  { name: 'Turbot, Epazote Pil-Pil, Ramps, Sorrel', price: '56' },
+  { name: '120 Day Dry Aged NY Strip, White Asparagus, Veal Brain Foyot, Grilled Ramps', price: '62' },
 ]
 
 const wineByGlass = [
   { category: 'Sparkling', items: [
-    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '24' },
-    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '18' },
+    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '' },
   ]},
   { category: 'White', items: [
-    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '22' },
-    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '20' },
-    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '18' },
+    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '' },
+    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '' },
+    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '19' },
-    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '21' },
+    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '' },
+    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '' },
   ]},
   { category: 'Red', items: [
-    { name: 'Douhairet-Porcheret, Les Prevaux \'21', desc: 'Pinot Noir · Burgundy, FR', price: '26' },
-    { name: 'Thomas Farge, Grande Angle St Joseph \'21', desc: 'Syrah · Rhone, FR', price: '23' },
+    { name: 'Envinate, Lousas \'23', desc: 'Mencia · Ribera Sacra, ESP', price: '' },
+    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '' },
   ]},
   { category: 'Sherry', items: [
-    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '14' },
+    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Uehara Shuzo, Furosen Usunigori', desc: 'Ginjo Yamahai Nama · Shiga, JP', price: '18' },
+    { name: 'Kato Sake Works, NYNY', desc: 'Jizake · Brooklyn, NY', price: '' },
   ]},
   { category: 'Non Alcoholic', items: [
-    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '12' },
-    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '12' },
+    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY — Wine Alternative', price: '' },
+    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '' },
   ]},
 ]
 
 const cocktailItems = [
-  { name: 'San Pedro', desc: 'Sotol, Lime, Bitter Orange Agave, Nopales', price: '18' },
-  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '18' },
-  { name: 'Orito', desc: 'Tequila Blanco, Bergamot, Squirt, Yellow Chartreuse, Fennel Seed', price: '19' },
-  { name: 'Dust Devil', desc: 'Bourbon, Beet, Pasilla, Aperol', price: '18' },
-  { name: 'Hierba Mora', desc: 'Vodka, Poblano Brine, Empirical Cilantro, Dry Vermouth', price: '18' },
-  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '18' },
-  { name: 'Carajillo de la Casa', desc: 'Aged Rum, Licor 43, Forthave Brown, Café Integral Coffee', price: '18' },
-  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '14' },
-  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '10' },
-  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '10' },
-  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '10' },
-  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '10' },
+  { name: 'Bambú', desc: 'House Lime Leaf Vermouth, Fino Sherry', price: '20' },
+  { name: 'San Pedro', desc: 'Mezcal, Lime, Bitter Orange, Agave, Nopales', price: '20' },
+  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '19' },
+  { name: 'Chupacabra', desc: 'Tequila Blanco, Orange, Tomato, Chiles, Pink Peppercorn', price: '20' },
+  { name: 'Key Largo', desc: 'Charanda Añejo, Celery, Key Lime', price: '19' },
+  { name: 'White Sands', desc: 'Gin, Magnolia, Blanc Vermouth, Sake', price: '22' },
+  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '23' },
+  { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
+  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '17' },
+  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '14' },
+  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '14' },
+  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '15' },
+  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
 ]
 
 interface MenuOverlayProps {
@@ -73,7 +75,7 @@ interface MenuOverlayProps {
 }
 
 export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOverlayProps) {
-  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
+  const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('cocktail')
   // Strictly mobile = below the md (768px) breakpoint, where the nav becomes a
   // hamburger. On mobile every listed text gets +2px.
   const [isMobile, setIsMobile] = useState(false)
@@ -195,28 +197,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             letterSpacing: '-0.02em',
           }}
         >
-          {/* A La Carte */}
-          <div ref={alaCarteRef} data-section="a-la-carte">
-            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
-              A La Carte
-            </h2>
-            <div className="flex flex-col">
-              {alaCarteItems.map((item, i) => (
-                <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax }}>
-                    {item.name}
-                  </p>
-                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
-                    {item.price || '—'}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-          </div>
-
           {/* Cocktail */}
-          <div ref={cocktailRef} data-section="cocktail" style={{ marginTop: '56px' }}>
+          <div ref={cocktailRef} data-section="cocktail">
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Cocktail
             </h2>
@@ -265,9 +247,31 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             ))}
           </div>
 
+          {/* A La Carte */}
+          <div ref={alaCarteRef} data-section="a-la-carte" style={{ marginTop: '56px' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
+              A La Carte
+            </h2>
+            <p className="text-black mb-10" style={{ ...base, fontSize: `${14 + bump}px`, maxWidth: '540px' }}>
+              Our a la carte menu changes with the seasons and market availability. Below is a sample menu from 5/10/26. Dishes are subject to change.
+            </p>
+            <div className="flex flex-col">
+              {alaCarteItems.map((item, i) => (
+                <div key={i} className="flex items-start justify-between py-4">
+                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax }}>
+                    {item.name}
+                  </p>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                    {item.price || '—'}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
 
-        {/* Right — scroll-aware image, top aligned with the "A La Carte" heading */}
+        {/* Right — scroll-aware image, top aligned with the section heading */}
         <div
           ref={imageRef}
           className="hidden lg:block flex-shrink-0 relative overflow-hidden"
