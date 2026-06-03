@@ -10,15 +10,16 @@ const sectionImages: Record<string, string> = {
   }
 
 const alaCarteItems = [
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '29' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '33' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '24' },
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '23' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '23' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '13' },
-  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '32' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '40' },
-  { name: 'Kampachi, Toreados, Kohlrabi, Hoja Santa', price: '' },
+  { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '9' },
+  { name: 'Apples, Kohlrabi, Persimmon, Granola, Tajin', price: '24' },
+  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '26' },
+  { name: 'Squid, King Oyster, Knotweed Aguachile, Nam Jim Jaew, Heart of Palm', price: '26' },
+  { name: 'Surf Clam a la Diabla Toast, Chinese Sausage, Green Tomato', price: '33' },
+  { name: 'Esquites, Mushroom Carnitas, Porcini, Mimolette, Sourdough', price: '35' },
+  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '36' },
+  { name: 'Hamachi Collar, Chintextle, Cascabel Aioli, Chives', price: '36' },
+  { name: 'Turbot, Epazote Pil-Pil, Ramps, Sorrel', price: '56' },
+  { name: '120 Day Dry Aged NY Strip, White Asparagus, Veal Brain Foyot, Grilled Ramps', price: '62' },
 ]
 
 const wineByGlass = [
