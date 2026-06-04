@@ -276,11 +276,13 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 </div>
               </div>
             ))}
+          </div>
 
-            {/* Non-Alcoholic */}
-            <p className="text-black uppercase mb-1" style={{ ...base, fontSize: `${12 + bump}px`, letterSpacing: '0.08em' }}>
+          {/* Non-Alcoholic */}
+          <div data-section="non-alcoholic" style={{ marginTop: '56px' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Non-Alcoholic
-            </p>
+            </h2>
             <div className="flex flex-col">
               {nonAlcoholicItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-3">
