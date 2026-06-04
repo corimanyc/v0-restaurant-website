@@ -24,32 +24,39 @@ const alaCarteItems = [
 
 const wineByGlass = [
   { category: 'Sparkling', items: [
-    { name: 'Andre Huecq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '' },
-    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '' },
+    { name: 'Andre Heucq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '29' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '19' },
   ]},
   { category: 'White', items: [
-    { name: 'Fosse-Sèche, Arcane \'22', desc: 'Chenin Blanc · Loire Valley, FR', price: '' },
-    { name: 'Vollenweider, Felsenfest \'24', desc: 'Riesling · Mosel, DE', price: '' },
-    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '' },
+    { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc · Loire, FR', price: '23' },
+    { name: 'Hermann Ludes, Thornicher \'24', desc: 'Riesling · Mosel, DE', price: '19' },
+    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '21' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '' },
-    { name: 'Romain Le Bars Tavel \'24', desc: 'Grenache · Rhone, FR — Rosé', price: '' },
+    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '21' },
+    { name: 'Thibaud Boudignon Rose de Loire \'25', desc: 'Cabernet Franc · Loire, FR — Rosé', price: '18' },
   ]},
   { category: 'Red', items: [
-    { name: 'Envinate, Lousas \'23', desc: 'Mencia · Ribera Sacra, ESP', price: '' },
-    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '' },
+    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '21' },
+    { name: 'Wills Wine, Blue Plateau \'23', desc: 'Syrah, Gamay · Ardeche, FR', price: '23' },
   ]},
-  { category: 'Sherry', items: [
-    { name: 'Buelan, Las Canciones No 2 Oloroso', desc: 'Palomino · Andalucia, ES — 2oz', price: '' },
+  { category: 'Sweet', items: [
+    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU', price: '20' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Kato Sake Works, NYNY', desc: 'Jizake · Brooklyn, NY', price: '' },
+    { name: 'Kato Sake Works, NYNY', desc: 'Jizake · Brooklyn, NY — 3oz', price: '18' },
   ]},
-  { category: 'Non Alcoholic', items: [
-    { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY — Wine Alternative', price: '' },
-    { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegron · Copenhagen, DK — Sparkling', price: '' },
-  ]},
+]
+
+const nonAlcoholicItems = [
+  { name: 'Tepache Spritz', desc: 'Tepache, Pentire Seaward, Club Soda', price: '14' },
+  { name: 'Mugicha Iced Tea', desc: 'Toasted Barley, Verjus, Coconut', price: '15' },
+  { name: 'Jamaica', desc: 'Hibiscus, Licorice', price: '14' },
+  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
+  { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY — Wine Alternative', price: '14' },
+  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn · Copenhagen, DK — Sparkling', price: '18' },
+  { name: 'Asahi Super-Dry 0.0', desc: 'Lager · Tokyo, JP', price: '9' },
+  { name: 'Mexican Coke', desc: '', price: '4' },
 ]
 
 const cocktailItems = [
@@ -269,6 +276,26 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 </div>
               </div>
             ))}
+
+            {/* Non-Alcoholic */}
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${18 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400, marginTop: '40px' }}>
+              Non-Alcoholic
+            </h2>
+            <div className="flex flex-col">
+              {nonAlcoholicItems.map((item, i) => (
+                <div key={i} className="flex items-start justify-between py-3">
+                  <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
+                    <p className="text-black" style={base}>{item.name}</p>
+                    {item.desc && (
+                      <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
+                    )}
+                  </div>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                    {item.price}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
