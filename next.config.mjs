@@ -3,6 +3,9 @@ const nextConfig = {
   output: 'export',
   basePath: '/v0-restaurant-website',
   assetPrefix: '/v0-restaurant-website',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: '/v0-restaurant-website',
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
