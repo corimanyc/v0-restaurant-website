@@ -131,12 +131,12 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
+      </head>
+      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 400, backgroundColor: '#1f1c18' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
         />
-      </head>
-      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 400, backgroundColor: '#1f1c18' }}>
         {children}
         <Analytics />
       </body>
