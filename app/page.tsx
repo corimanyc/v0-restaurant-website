@@ -22,11 +22,7 @@ const heroImages = [
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel3new.avif',
-    alt: 'CORIMA fine dining interior',
-  },
-  {
-    src: '/hero-carousel4.avif',
+    src: '/carousel4.avif',
     alt: 'CORIMA fine dining interior',
   },
 ]
