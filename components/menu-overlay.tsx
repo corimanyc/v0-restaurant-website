@@ -69,10 +69,6 @@ const cocktailItems = [
   { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '23' },
   { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
   { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '17' },
-  { name: 'Jamaica Cooler (Non-Alcoholic)', desc: 'Hibiscus, Licorice', price: '14' },
-  { name: 'Tepache Spritz (Non-Alcoholic)', desc: 'Tepache, Pentire Seaward, Soda', price: '14' },
-  { name: 'Mugicha Iced Tea', desc: 'Mugicha, Ver Jus, Coconut', price: '15' },
-  { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
 ]
 
 interface MenuOverlayProps {
