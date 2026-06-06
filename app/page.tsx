@@ -236,8 +236,14 @@ export default function Home() {
   useLayoutEffect(() => {
     if (typeof window === 'undefined') return
     history.scrollRestoration = 'manual'
-    // Only force the top when there's no deep-link hash to honor.
-    if (!window.location.hash) window.scrollTo(0, 0)
+    // Always land at the top (hero carousel) on initial load, even if the URL
+    // carries a leftover hash like #about. Strip the hash so the browser's
+    // native anchor jump can't re-scroll us after hydration. In-page hash
+    // clicks are still handled by the 'hashchange' listener below.
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search)
+    }
+    window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
@@ -255,9 +261,12 @@ export default function Home() {
     }
     // Cover bfcache restores (back/forward) which fire 'pageshow', not mount.
     const onPageShow = () => {
-      if (!window.location.hash) window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
     }
-    scrollToHash()
+    // On initial landing, always start at the hero carousel — never auto-anchor
+    // to a leftover hash like #about. In-page hash navigation still works via
+    // the 'hashchange' listener below.
+    window.scrollTo(0, 0)
     window.addEventListener('hashchange', scrollToHash)
     window.addEventListener('pageshow', onPageShow)
     return () => {
