@@ -535,6 +535,7 @@ export default function Home() {
               >
                 Corima (ko-ree-ma) is a cornerstone principle of Tarahumara society. Literally translated, it means &ldquo;circle of sharing.&rdquo;
                 <br />
+                <br />
                 In Tarahumara culture, the community, rather than the individual, owns pretty much everything.
               </p>
             </div>
