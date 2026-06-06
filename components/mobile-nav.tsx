@@ -57,33 +57,68 @@ export default function MobileNav({ isOpen, onClose, onMenuClick, aboutHref = '#
         </button>
       </div>
 
-      {/* Nav links */}
-      <nav className="flex flex-col" style={{ padding: '48px 24px', gap: '4px', flex: 1 }}>
-        {[
-          { label: 'About', href: aboutHref, onClick: onClose },
-          { label: 'Reservations', href: 'https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2', onClick: onClose },
-          { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
-          { label: 'Events', href: '/events', onClick: onClose },
-          { label: 'Press', href: pressHref, onClick: onClose },
-          { label: 'Shop', href: 'https://corimanyc.bigcartel.com', onClick: onClose },
-        ].map(({ label, href, onClick }) => (
-          <Link
-            key={label}
-            href={href}
-            onClick={onClick}
-            className="text-black hover:opacity-50 transition-opacity"
-            style={{
-              fontFamily: 'Switzer, sans-serif',
-              fontSize: '30px',
-              fontWeight: 400,
-              letterSpacing: '-0.01em',
-              lineHeight: '1.8',
-            }}
+      {/* Scrollable middle — nav links + Tasting Menu info */}
+      <div className="flex-1 overflow-y-auto overscroll-contain">
+        {/* Nav links */}
+        <nav className="flex flex-col" style={{ padding: '48px 24px 32px 24px', gap: '4px' }}>
+          {[
+            { label: 'About', href: aboutHref, onClick: onClose },
+            { label: 'Reservations', href: 'https://resy.com/cities/new-york-ny/venues/corima?date=2026-05-08&seats=2', onClick: onClose },
+            { label: 'Menu', href: '#', onClick: () => { onClose(); onMenuClick() } },
+            { label: 'Events', href: '/events', onClick: onClose },
+            { label: 'Press', href: pressHref, onClick: onClose },
+            { label: 'Shop', href: 'https://corimanyc.bigcartel.com', onClick: onClose },
+          ].map(({ label, href, onClick }) => (
+            <Link
+              key={label}
+              href={href}
+              onClick={onClick}
+              className="text-black hover:opacity-50 transition-opacity"
+              style={{
+                fontFamily: 'Switzer, sans-serif',
+                fontSize: '30px',
+                fontWeight: 400,
+                letterSpacing: '-0.01em',
+                lineHeight: '1.8',
+              }}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Tasting Menu — spans the full width of the menu, edge to edge */}
+        <section style={{ padding: '32px 24px 8px 24px' }}>
+          <h2
+            className="text-black uppercase"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '20px', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: '16px' }}
           >
-            {label}
-          </Link>
-        ))}
-      </nav>
+            Tasting Menu
+          </h2>
+          <p
+            className="text-black leading-relaxed"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: '16px' }}
+          >
+            At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+          </p>
+          <p
+            className="text-black leading-relaxed"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em', marginBottom: '16px' }}
+          >
+            The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+          </p>
+          <p
+            className="text-black leading-relaxed"
+            style={{ fontFamily: 'Switzer, sans-serif', fontSize: '16px', fontWeight: 400, letterSpacing: '-0.02em' }}
+          >
+            We are unable to accommodate most allergies or dietary restrictions but please e-mail{' '}
+            <a href="mailto:info@corimanyc.com" className="underline hover:opacity-60 transition">
+              info@corimanyc.com
+            </a>{' '}
+            and we will do our best to accommodate if possible.
+          </p>
+        </section>
+      </div>
 
       {/* Footer */}
       <div style={{ padding: '24px' }}>
