@@ -8,6 +8,11 @@ import SiteNav from '@/components/site-nav'
 
 const PRESS_ITEMS = [
   {
+    title: "North America's 50 Best Restaurants",
+    date: 'May 28, 2026',
+    href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
+  },
+  {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
     date: 'May 10, 2026',
     href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
@@ -243,7 +248,7 @@ export default function PressPage() {
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 md:pt-48 pb-60 md:pb-20">
               <ul className="flex flex-col gap-10 md:gap-7">
               {PRESS_ITEMS.map((item) => (
-                <li key={item.title}>
+                <li key={`${item.title}-${item.date}`}>
                   <PressRow item={item} />
                 </li>
               ))}
