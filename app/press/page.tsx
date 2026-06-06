@@ -250,7 +250,7 @@ export default function PressPage() {
           ref={scrollRef}
           className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
           style={{
-            filter: isDiningOpen ? 'blur(4px)' : 'none',
+            filter: isDiningOpen ? 'blur(2px)' : 'none',
             transition: 'filter 0.35s ease',
           }}
         >

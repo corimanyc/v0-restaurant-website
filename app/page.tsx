@@ -470,6 +470,11 @@ export default function Home() {
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
           paddingBottom: '100px',
+          // Slight blur on the content from the Corima paragraph down while the
+          // dining panel is open. The nav logo lives in the hero's fixed header
+          // (a separate sibling), so it stays sharp.
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
+          transition: 'filter 0.35s ease',
         }}
       >
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
@@ -869,6 +874,9 @@ export default function Home() {
           paddingBottom: '24px',
           paddingLeft: 'var(--site-pad-x, 24px)',
           paddingRight: '132px',
+          // Match the About section: blur while the dining panel is open.
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
+          transition: 'filter 0.35s ease',
         }}
       >
         <div className="hidden min-[880px]:flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>

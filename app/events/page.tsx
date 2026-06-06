@@ -110,7 +110,7 @@ export default function EventsPage() {
       <main
         className="flex-1 flex items-end pb-[130px] lg:pb-14"
         style={{
-          filter: isDiningOpen ? 'blur(4px)' : 'none',
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
           transition: 'filter 0.35s ease',
         }}
       >
