@@ -246,7 +246,14 @@ export default function PressPage() {
         />
 
         {/* Main content — full-width editorial press index */}
-        <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
+        <main
+          ref={scrollRef}
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
+          style={{
+            filter: isDiningOpen ? 'blur(4px)' : 'none',
+            transition: 'filter 0.35s ease',
+          }}
+        >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 md:pt-48 pb-60 md:pb-20">
               <ul className="flex flex-col gap-10 md:gap-7">
               {PRESS_ITEMS.map((item) => (
