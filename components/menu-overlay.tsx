@@ -79,6 +79,9 @@ interface MenuOverlayProps {
 
 export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOverlayProps) {
   const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
+  // Mobile-only: the header swaps "Menu" for the label of the section currently
+  // scrolled up under the sticky header. Empty string means show "Menu".
+  const [headerLabel, setHeaderLabel] = useState('')
   // Strictly mobile = below the md (768px) breakpoint, where the nav becomes a
   // hamburger. On mobile every listed text gets +2px.
   const [isMobile, setIsMobile] = useState(false)
@@ -151,6 +154,40 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     return () => mq.removeEventListener('change', update)
   }, [])
 
+  // Mobile-only: swap the header "Menu" for the label of the section whose
+  // heading has scrolled up past the top of the scroll container.
+  useEffect(() => {
+    const scrollEl = scrollRef.current
+    if (!scrollEl || !isOpen || !isMobile) {
+      setHeaderLabel('')
+      return
+    }
+    const labels: Record<string, string> = {
+      'tasting-menu': 'Tasting Menu',
+      'a-la-carte': 'A La Carte',
+      cocktail: 'Cocktail',
+      wine: 'Wine by the Glass',
+      'non-alcoholic': 'Non-Alcoholic',
+    }
+    const order = ['tasting-menu', 'a-la-carte', 'cocktail', 'wine', 'non-alcoholic']
+    const onScroll = () => {
+      const top = scrollEl.getBoundingClientRect().top
+      let current = ''
+      for (const id of order) {
+        const el = scrollEl.querySelector(`[data-section="${id}"]`) as HTMLElement | null
+        if (!el) continue
+        // Heading top has crossed above the container top (cut off by header).
+        if (el.getBoundingClientRect().top <= top + 1) {
+          current = labels[id]
+        }
+      }
+      setHeaderLabel(current)
+    }
+    onScroll()
+    scrollEl.addEventListener('scroll', onScroll, { passive: true })
+    return () => scrollEl.removeEventListener('scroll', onScroll)
+  }, [isOpen, isMobile])
+
   const bump = isMobile ? 2 : 0
   const base: React.CSSProperties = { fontSize: `${16 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }
   // On strictly mobile, every section's item text shares one (narrower) max
@@ -176,7 +213,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       {/* Header */}
       <div className="flex items-center justify-between flex-shrink-0 p-6">
         <h1 className="text-black uppercase" style={{ fontSize: '24px', letterSpacing: '-0.02em', fontWeight: 400 }}>
-          Menu
+          {headerLabel || 'Menu'}
         </h1>
         <button
           onClick={onClose}
@@ -203,7 +240,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
           }}
         >
           {/* Tasting Menu — spans the full column width, edge to edge */}
-          <div style={{ marginBottom: '56px' }}>
+          <div data-section="tasting-menu" style={{ marginBottom: '56px' }}>
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
               Tasting Menu
             </h2>
