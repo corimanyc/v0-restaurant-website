@@ -14,15 +14,15 @@ const heroImages = [
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel3.avif',
+    src: '/carousel2.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel3new.avif',
+    src: '/carousel3_no_napkin.avif',
     alt: 'CORIMA fine dining interior',
   },
   {
-    src: '/hero-carousel4.avif',
+    src: '/carousel4.avif',
     alt: 'CORIMA fine dining interior',
   },
 ]
@@ -236,8 +236,14 @@ export default function Home() {
   useLayoutEffect(() => {
     if (typeof window === 'undefined') return
     history.scrollRestoration = 'manual'
-    // Only force the top when there's no deep-link hash to honor.
-    if (!window.location.hash) window.scrollTo(0, 0)
+    // Always land at the top (hero carousel) on initial load, even if the URL
+    // carries a leftover hash like #about. Strip the hash so the browser's
+    // native anchor jump can't re-scroll us after hydration. In-page hash
+    // clicks are still handled by the 'hashchange' listener below.
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search)
+    }
+    window.scrollTo(0, 0)
   }, [])
 
   useEffect(() => {
@@ -255,9 +261,12 @@ export default function Home() {
     }
     // Cover bfcache restores (back/forward) which fire 'pageshow', not mount.
     const onPageShow = () => {
-      if (!window.location.hash) window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
     }
-    scrollToHash()
+    // On initial landing, always start at the hero carousel — never auto-anchor
+    // to a leftover hash like #about. In-page hash navigation still works via
+    // the 'hashchange' listener below.
+    window.scrollTo(0, 0)
     window.addEventListener('hashchange', scrollToHash)
     window.addEventListener('pageshow', onPageShow)
     return () => {
@@ -317,7 +326,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 md:hidden"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: 'center',
+                objectPosition: 'top',
               }}
             />
           ))}
@@ -461,6 +470,11 @@ export default function Home() {
           backgroundColor: '#1a1a1a',
           color: '#CBCBCB',
           paddingBottom: '100px',
+          // Slight blur on the content from the Corima paragraph down while the
+          // dining panel is open. The nav logo lives in the hero's fixed header
+          // (a separate sibling), so it stays sharp.
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
+          transition: 'filter 0.35s ease',
         }}
       >
         {/* Full-width vase image — full natural aspect ratio, with bottom + sides masked so it fades into the dark section background instead of dominating vertically. */}
@@ -490,7 +504,7 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative pt-[100px] md:pt-48 pb-[104px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 md:px-9" style={{ zIndex: 1 }}>
+        <div className="relative pt-[40px] md:pt-48 pb-[50px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 md:px-9" style={{ zIndex: 1 }}>
           <div className="w-full md:grid md:grid-cols-12 md:gap-5">
             <div className="md:col-start-2 md:col-end-9 relative">
               {/* Mobile-only flower, anchored just below the paragraph's bottom-right corner with the same bottom + side fade masks as the desktop version. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
@@ -511,11 +525,11 @@ export default function Home() {
                   src="/flower-sketch.png"
                   alt=""
                   className="block h-auto"
-                  style={{ width: 'clamp(200px, 62vw, 360px)' }}
+                  style={{ width: 'clamp(230px, 72vw, 410px)' }}
                 />
               </div>
               <p
-                className="text-[26px] md:text-[36px] relative"
+                className="text-[28px] md:text-[36px] lg:text-[44px] relative"
                 style={{
                   fontFamily: "'Switzer', system-ui, sans-serif",
                   fontWeight: 300,
@@ -527,7 +541,7 @@ export default function Home() {
                 Corima (ko-ree-ma) is a cornerstone principle of Tarahumara society. Literally translated, it means &ldquo;circle of sharing.&rdquo;
                 <br />
                 <br />
-                In Tarahumara culture, the community, rather than the individual, owns pretty much everything. Working with the roughness, yet simplicity of the desert as inspiration, Corima takes what is familiar to some and makes it sensible to all.
+                In Tarahumara culture, the community, rather than the individual, owns pretty much everything.
               </p>
             </div>
           </div>
@@ -860,6 +874,9 @@ export default function Home() {
           paddingBottom: '24px',
           paddingLeft: 'var(--site-pad-x, 24px)',
           paddingRight: '132px',
+          // Match the About section: blur while the dining panel is open.
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
+          transition: 'filter 0.35s ease',
         }}
       >
         <div className="hidden min-[880px]:flex w-full items-center gap-8 justify-between" style={{ fontFamily: "'Switzer', system-ui, sans-serif" }}>

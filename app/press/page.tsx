@@ -8,6 +8,11 @@ import SiteNav from '@/components/site-nav'
 
 const PRESS_ITEMS = [
   {
+    title: "North America's 50 Best Restaurants",
+    date: 'May 28, 2026',
+    href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
+  },
+  {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
     date: 'May 10, 2026',
     href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
@@ -215,10 +220,11 @@ export default function PressPage() {
           className="absolute top-0 left-0 right-0"
           style={{
             zIndex: 46,
-            opacity: isDiningOpen ? 0 : 1,
-            pointerEvents: isDiningOpen ? 'none' : 'all',
+            // Keep the header (and logo) visible while the dining panel is open;
+            // SiteNav's hideLinks fades only the right-side links/burger.
+            pointerEvents: 'none',
             transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(-110%)',
-            transition: 'opacity 0.5s ease, transform 0.35s ease',
+            transition: 'transform 0.35s ease',
           }}
         >
           <SiteNav
@@ -227,6 +233,7 @@ export default function PressPage() {
             onOpenDining={() => setIsDiningOpen(true)}
             onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
             linkColor="#FFFFFF"
+            hideLinks={isDiningOpen}
           />
         </header>
 
@@ -239,11 +246,18 @@ export default function PressPage() {
         />
 
         {/* Main content — full-width editorial press index */}
-        <main ref={scrollRef} className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
+        <main
+          ref={scrollRef}
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
+          style={{
+            filter: isDiningOpen ? 'blur(2px)' : 'none',
+            transition: 'filter 0.35s ease',
+          }}
+        >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 md:pt-48 pb-60 md:pb-20">
               <ul className="flex flex-col gap-10 md:gap-7">
               {PRESS_ITEMS.map((item) => (
-                <li key={item.title}>
+                <li key={`${item.title}-${item.date}`}>
                   <PressRow item={item} />
                 </li>
               ))}

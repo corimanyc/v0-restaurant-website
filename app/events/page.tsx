@@ -9,6 +9,7 @@ import SiteNav from '@/components/site-nav'
 import ProgressiveImage from '@/components/progressive-image'
 
 const POSTERS = [
+  { src: '/events/holbox.jpg', alt: 'Holbox at Corima, presented by Resy', label: 'Holbox' },
   { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
   { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima', label: 'Sanchez' },
   { src: '/events/eliane.png', alt: 'Corima x Eliane', label: 'Eliana' },
@@ -80,9 +81,9 @@ export default function EventsPage() {
         className="relative"
         style={{
           zIndex: 46,
-          opacity: isDiningOpen ? 0 : 1,
-          pointerEvents: isDiningOpen ? 'none' : 'all',
-          transition: 'opacity 0.5s ease',
+          // Keep the header (and logo) visible while the dining panel is open;
+          // SiteNav's hideLinks fades only the right-side links/burger.
+          pointerEvents: 'none',
         }}
       >
         <SiteNav
@@ -91,6 +92,7 @@ export default function EventsPage() {
           onOpenDining={() => setIsDiningOpen(true)}
           onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
           linkColor="#FFFFFF"
+          hideLinks={isDiningOpen}
         />
       </header>
 
@@ -105,7 +107,13 @@ export default function EventsPage() {
       {/* Carousel — single overflow-x scroller. Left padding shifts the first poster
           to the right of the nav gutter. No right padding/margin anywhere.
           Bottom padding: 80px on mobile, 56px on desktop. */}
-      <main className="flex-1 flex items-end pb-[130px] lg:pb-14">
+      <main
+        className="flex-1 flex items-end pb-[130px] lg:pb-14"
+        style={{
+          filter: isDiningOpen ? 'blur(2px)' : 'none',
+          transition: 'filter 0.35s ease',
+        }}
+      >
         <div
           className="overflow-x-auto w-full"
           style={{

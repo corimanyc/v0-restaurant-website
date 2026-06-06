@@ -6,7 +6,7 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'CORIMA | Contemporary Mexican Restaurant',
+    default: 'CORIMA',
     template: '%s | CORIMA',
   },
   description: SITE_DESCRIPTION,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: SITE_NAME,
-    title: 'CORIMA | Contemporary Mexican Restaurant',
+    title: 'CORIMA',
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     locale: 'en_US',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CORIMA | Contemporary Mexican Restaurant',
+    title: 'CORIMA',
     description: SITE_DESCRIPTION,
     images: [OG_IMAGE],
   },
