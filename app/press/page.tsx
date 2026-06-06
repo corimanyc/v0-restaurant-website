@@ -38,11 +38,6 @@ const PRESS_ITEMS = [
     href: 'https://www.bonappetit.com/story/best-new-restaurant-openings-fall-2025',
   },
   {
-    title: "North America's 50 Best Restaurants",
-    date: 'May 28, 2025',
-    href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
-  },
-  {
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
     date: 'January 21, 2025',
     href: 'https://guide.michelin.com/us/en/article/dining-out/michelin-guide-star-spotlight-corima-fidel-caballero-new-york-city',
