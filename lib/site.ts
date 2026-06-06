@@ -5,8 +5,8 @@
  * Restaurant structured data (JSON-LD).
  * ------------------------------------------------------------------------- */
 
-// TODO: replace with the real production domain (no trailing slash).
-export const SITE_URL = 'https://www.corima.example'
+// Production domain (no trailing slash).
+export const SITE_URL = 'https://www.corimanyc.com'
 
 export const SITE_NAME = 'CORIMA'
 
