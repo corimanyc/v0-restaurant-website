@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -134,6 +135,7 @@ export default function Home() {
   const [heroVisible, setHeroVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
   const [navVisible, setNavVisible] = useState(true)
+  const pathname = usePathname()
 
   useEffect(() => {
     let lastY = typeof window !== 'undefined' ? window.scrollY : 0
@@ -274,6 +276,20 @@ export default function Home() {
       window.removeEventListener('pageshow', onPageShow)
     }
   }, [])
+
+  // Deep-link support so /menu and /about are real, crawlable URLs (eligible
+  // for Google sitelinks) while preserving the single-page overlay UX. When the
+  // homepage component renders under one of these routes, open the matching
+  // surface: /menu opens the menu overlay, /about scrolls to the About section.
+  useEffect(() => {
+    if (pathname === '/menu') {
+      setIsMenuOverlayOpen(true)
+    } else if (pathname === '/about') {
+      requestAnimationFrame(() => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
+  }, [pathname])
 
   return (
     <div className="flex flex-col min-h-screen">
