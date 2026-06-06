@@ -44,7 +44,7 @@ const wineByGlass = [
     { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU', price: '20' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Kato Sake Works, NYNY', desc: 'Jizake · Brooklyn, NY — 3oz', price: '18' },
+    { name: 'Kato Sake Works, NY NY', desc: 'Jizake · Brooklyn, NY — 3oz', price: '18' },
   ]},
 ]
 
