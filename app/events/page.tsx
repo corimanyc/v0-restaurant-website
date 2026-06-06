@@ -9,6 +9,7 @@ import SiteNav from '@/components/site-nav'
 import ProgressiveImage from '@/components/progressive-image'
 
 const POSTERS = [
+  { src: '/events/holbox.jpg', alt: 'Holbox at Corima, presented by Resy', label: 'Holbox' },
   { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
   { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima', label: 'Sanchez' },
   { src: '/events/eliane.png', alt: 'Corima x Eliane', label: 'Eliana' },
