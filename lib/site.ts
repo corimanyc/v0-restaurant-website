@@ -10,8 +10,7 @@ export const SITE_URL = 'https://www.corimanyc.com'
 
 export const SITE_NAME = 'CORIMA'
 
-export const SITE_DESCRIPTION =
-  'CORIMA is a contemporary Mexican restaurant serving a seasonal à la carte menu, signature cocktails, and a curated wine list. Reservations available.'
+export const SITE_DESCRIPTION = 'CORIMA'
 
 // 1200x630 social-share image generated from the first landing carousel photo.
 export const OG_IMAGE = '/og-corima.jpg'
