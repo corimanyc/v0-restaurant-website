@@ -63,7 +63,9 @@ export default function SiteNav({
       <Link
         href="/"
         className="flex-shrink-0 h-auto block w-[110px] md:w-[100px]"
-        style={{ pointerEvents: 'auto' }}
+        // Keep the logo visible but non-interactive while the dining panel is
+        // open so no nav element leaks clicks through the overlay.
+        style={{ pointerEvents: hideLinks ? 'none' : 'auto' }}
         onClick={
           pathname === '/'
             ? (e) => {
