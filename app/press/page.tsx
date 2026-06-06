@@ -220,10 +220,11 @@ export default function PressPage() {
           className="absolute top-0 left-0 right-0"
           style={{
             zIndex: 46,
-            opacity: isDiningOpen ? 0 : 1,
-            pointerEvents: isDiningOpen ? 'none' : 'all',
+            // Keep the header (and logo) visible while the dining panel is open;
+            // SiteNav's hideLinks fades only the right-side links/burger.
+            pointerEvents: 'none',
             transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(-110%)',
-            transition: 'opacity 0.5s ease, transform 0.35s ease',
+            transition: 'transform 0.35s ease',
           }}
         >
           <SiteNav
@@ -232,6 +233,7 @@ export default function PressPage() {
             onOpenDining={() => setIsDiningOpen(true)}
             onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
             linkColor="#FFFFFF"
+            hideLinks={isDiningOpen}
           />
         </header>
 

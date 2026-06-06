@@ -81,9 +81,9 @@ export default function EventsPage() {
         className="relative"
         style={{
           zIndex: 46,
-          opacity: isDiningOpen ? 0 : 1,
-          pointerEvents: isDiningOpen ? 'none' : 'all',
-          transition: 'opacity 0.5s ease',
+          // Keep the header (and logo) visible while the dining panel is open;
+          // SiteNav's hideLinks fades only the right-side links/burger.
+          pointerEvents: 'none',
         }}
       >
         <SiteNav
@@ -92,6 +92,7 @@ export default function EventsPage() {
           onOpenDining={() => setIsDiningOpen(true)}
           onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
           linkColor="#FFFFFF"
+          hideLinks={isDiningOpen}
         />
       </header>
 
