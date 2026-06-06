@@ -202,6 +202,26 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             letterSpacing: '-0.02em',
           }}
         >
+          {/* Tasting Menu — spans the full column width, edge to edge */}
+          <div style={{ marginBottom: '56px' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
+              Tasting Menu
+            </h2>
+            <p className="text-black mb-4" style={{ ...base }}>
+              At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            </p>
+            <p className="text-black mb-4" style={{ ...base }}>
+              The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
+            </p>
+            <p className="text-black" style={{ ...base }}>
+              We are unable to accommodate most allergies or dietary restrictions but please e-mail{' '}
+              <a href="mailto:info@corimanyc.com" className="underline hover:opacity-60 transition">
+                info@corimanyc.com
+              </a>{' '}
+              and we will do our best to accommodate if possible.
+            </p>
+          </div>
+
           {/* A La Carte */}
           <div ref={alaCarteRef} data-section="a-la-carte">
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
