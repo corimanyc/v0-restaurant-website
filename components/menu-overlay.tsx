@@ -53,8 +53,8 @@ const nonAlcoholicItems = [
   { name: 'Mugicha Iced Tea', desc: 'Toasted Barley, Verjus, Coconut', price: '15' },
   { name: 'Jamaica', desc: 'Hibiscus, Licorice', price: '14' },
   { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
-  { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY — Wine Alternative', price: '14' },
-  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn · Copenhagen, DK — Sparkling', price: '18' },
+  { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '14' },
+  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn · Copenhagen, DK', price: '18' },
   { name: 'Asahi Super-Dry 0.0', desc: 'Lager · Tokyo, JP', price: '9' },
   { name: 'Mexican Coke', desc: '', price: '4' },
 ]
