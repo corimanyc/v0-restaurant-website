@@ -213,7 +213,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax }}>
+                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax, textTransform: 'uppercase' }}>
                     {item.name}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
@@ -233,7 +233,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
               {cocktailItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
                   <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
-                      <p className="text-black" style={base}>{item.name}</p>
+                      <p className="text-black" style={{ ...base, textTransform: 'uppercase' }}>{item.name}</p>
                       <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                   </div>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
@@ -261,7 +261,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                   {group.items.map((item, i) => (
                     <div key={i} className="flex items-start justify-between py-3">
                       <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
-                        <p className="text-black" style={base}>{item.name}</p>
+                        <p className="text-black" style={{ ...base, textTransform: 'uppercase' }}>{item.name}</p>
                         <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                       </div>
                       <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
@@ -283,7 +283,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
               {nonAlcoholicItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-3">
                   <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
-                    <p className="text-black" style={base}>{item.name}</p>
+                    <p className="text-black" style={{ ...base, textTransform: 'uppercase' }}>{item.name}</p>
                     {item.desc && (
                       <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
                     )}
