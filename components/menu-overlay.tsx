@@ -16,10 +16,10 @@ const alaCarteItems = [
   { name: 'Squid, King Oyster, Knotweed Aguachile, Nam Jim Jaew, Heart of Palm', price: '26' },
   { name: 'Surf Clam a la Diabla Toast, Chinese Sausage, Green Tomato', price: '33' },
   { name: 'Esquites, Mushroom Carnitas, Porcini, Mimolette, Sourdough', price: '35' },
-  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '36' },
   { name: 'Hamachi Collar, Chintextle, Cascabel Aioli, Chives', price: '36' },
+  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '36' },
   { name: 'Turbot, Epazote Pil-Pil, Ramps, Sorrel', price: '56' },
-  { name: '120 Day Dry Aged NY Strip, White Asparagus, Veal Brain Foyot, Grilled Ramps', price: '62' },
+  { name: 'Squab, Rompope, Rhubarb, Tokyo Turnip Cajeta, Amaranth', price: '62' },
 ]
 
 const wineByGlass = [
