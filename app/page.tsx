@@ -499,7 +499,7 @@ export default function Home() {
           />
         </div>
         {/* Headline pinned to left gutter — fills the viewport so the photo + headline act as a hero */}
-        <div className="relative pt-[76px] md:pt-48 pb-[80px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 md:px-9" style={{ zIndex: 1 }}>
+        <div className="relative pt-[56px] md:pt-48 pb-[80px] md:pb-16 min-h-screen md:min-h-screen flex items-center px-6 md:px-9" style={{ zIndex: 1 }}>
           <div className="w-full md:grid md:grid-cols-12 md:gap-5">
             <div className="md:col-start-2 md:col-end-9 relative">
               {/* Mobile-only flower, anchored just below the paragraph's bottom-right corner with the same bottom + side fade masks as the desktop version. Sits BEHIND the text via negative z-index. Hidden from md+ where the absolute version higher up is used instead. */}
