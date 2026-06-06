@@ -317,7 +317,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 md:hidden"
               style={{
                 opacity: index === currentIndex ? 1 : 0,
-                objectPosition: 'center',
+                objectPosition: 'top',
               }}
             />
           ))}
