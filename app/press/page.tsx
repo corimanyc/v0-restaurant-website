@@ -204,7 +204,7 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-12">
+            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-start md:gap-24 lg:gap-32">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
                   <li key={item.title}>
@@ -213,7 +213,7 @@ export default function PressPage() {
                 ))}
               </ul>
               {/* Sticker collage — award emblems scattered down the right side */}
-              <div className="flex flex-col items-center gap-5 md:w-[280px] md:shrink-0 md:gap-5">
+              <div className="flex flex-col items-center gap-5 md:w-[260px] md:shrink-0 md:gap-5">
                 {AWARD_STICKERS.map((sticker) => (
                   <AwardSticker key={sticker.src} sticker={sticker} />
                 ))}

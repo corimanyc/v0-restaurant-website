@@ -263,7 +263,7 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     transition: transform 0.25s ease;
   }
   .press-sticker img {
-    filter: brightness(0.68);
+    filter: brightness(0.72);
   }
   .press-sticker:hover {
     transform: rotate(0deg) scale(1.04) !important;
