@@ -199,8 +199,8 @@ export default function PressPage() {
             transition: 'filter 0.35s ease',
           }}
         >
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 md:pt-48 pb-60 md:pb-20">
-              <ul className="flex flex-col gap-10 md:gap-7">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-28 md:pt-32 pb-60 md:pb-16">
+              <ul className="flex flex-col gap-10 md:gap-6">
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
                   <PressRow item={item} />
