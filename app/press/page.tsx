@@ -204,7 +204,7 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-start md:gap-32 lg:gap-44">
+            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-start md:gap-20 lg:gap-28">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
                   <li key={item.title}>
