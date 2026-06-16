@@ -46,7 +46,7 @@ const PRESS_ITEMS = [
 
 function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
   return (
-    <div className="flex items-center gap-5 md:gap-6">
+    <div className="flex w-full items-center gap-5 md:gap-6">
       <a
         href={item.href}
         target="_blank"
@@ -68,7 +68,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
         <img
           src={item.logo.src || '/placeholder.svg'}
           alt={item.logo.alt}
-          className={`shrink-0 object-contain ${item.logo.className}`}
+          className={`ml-auto shrink-0 object-contain ${item.logo.className}`}
         />
       ) : null}
     </div>
