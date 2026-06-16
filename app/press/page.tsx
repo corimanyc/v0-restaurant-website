@@ -174,6 +174,11 @@ export default function PressPage() {
               {/* Accolades — marquee honors stacked vertically beside the press index */}
               <div className="flex flex-row flex-wrap items-center gap-x-12 gap-y-8 md:flex-col md:items-center md:gap-10 md:shrink-0">
                 <img
+                  src="/footer-logo.png"
+                  alt="Corima emblem"
+                  className="h-24 w-24 md:h-32 md:w-32 object-contain"
+                />
+                <img
                   src="/award-james-beard-2026.png"
                   alt="James Beard Foundation 2026 Award Winner medallion"
                   className="h-32 w-32 md:h-40 md:w-40 object-contain"
@@ -182,11 +187,6 @@ export default function PressPage() {
                   src="/award-worlds-50-best.avif"
                   alt="The World's 50 Best logo"
                   className="h-28 w-auto md:h-36 object-contain"
-                />
-                <img
-                  src="/footer-logo.png"
-                  alt="Corima emblem"
-                  className="h-24 w-24 md:h-32 md:w-32 object-contain"
                 />
               </div>
             </div>
