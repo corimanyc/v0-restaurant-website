@@ -10,14 +10,17 @@ const PRESS_ITEMS = [
   {
     title: 'Michelin Guide: Corima',
     href: 'https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/corima',
+    logo: { src: '/footer-logo.png', alt: 'Corima emblem', className: 'h-12 w-12 md:h-14 md:w-14' },
   },
   {
     title: "North America's 50 Best Restaurants",
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
+    logo: { src: '/award-worlds-50-best.avif', alt: "The World's 50 Best logo", className: 'h-12 w-auto md:h-14' },
   },
   {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
+    logo: { src: '/award-james-beard-2026.png', alt: 'James Beard Foundation 2026 Award Winner medallion', className: 'h-14 w-14 md:h-16 md:w-16' },
   },
   {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
@@ -43,23 +46,32 @@ const PRESS_ITEMS = [
 
 function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
   return (
-    <a
-      href={item.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="press-link inline-flex"
-    >
-      <span
-        className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
-        style={{
-          color: '#FFFFFF',
-          lineHeight: 1.4,
-          fontWeight: 400,
-        }}
+    <div className="flex items-center gap-5 md:gap-6">
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="press-link inline-flex"
       >
-        {item.title}
-      </span>
-    </a>
+        <span
+          className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
+          style={{
+            color: '#FFFFFF',
+            lineHeight: 1.4,
+            fontWeight: 400,
+          }}
+        >
+          {item.title}
+        </span>
+      </a>
+      {'logo' in item && item.logo ? (
+        <img
+          src={item.logo.src || '/placeholder.svg'}
+          alt={item.logo.alt}
+          className={`shrink-0 object-contain ${item.logo.className}`}
+        />
+      ) : null}
+    </div>
   )
 }
 
@@ -163,33 +175,13 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <div className="flex flex-col gap-14 md:flex-row md:items-start md:justify-between md:gap-16">
-              <ul className="flex flex-col gap-10 md:gap-6">
-                {PRESS_ITEMS.map((item) => (
-                  <li key={item.title}>
-                    <PressRow item={item} />
-                  </li>
-                ))}
-              </ul>
-              {/* Accolades — marquee honors stacked vertically beside the press index */}
-              <div className="flex flex-row flex-wrap items-center gap-x-12 gap-y-8 md:flex-col md:items-center md:gap-10 md:shrink-0">
-                <img
-                  src="/footer-logo.png"
-                  alt="Corima emblem"
-                  className="h-24 w-24 md:h-32 md:w-32 object-contain"
-                />
-                <img
-                  src="/award-james-beard-2026.png"
-                  alt="James Beard Foundation 2026 Award Winner medallion"
-                  className="h-32 w-32 md:h-40 md:w-40 object-contain"
-                />
-                <img
-                  src="/award-worlds-50-best.avif"
-                  alt="The World's 50 Best logo"
-                  className="h-28 w-auto md:h-36 object-contain"
-                />
-              </div>
-            </div>
+            <ul className="flex flex-col gap-10 md:gap-6">
+              {PRESS_ITEMS.map((item) => (
+                <li key={item.title}>
+                  <PressRow item={item} />
+                </li>
+              ))}
+            </ul>
           </div>
         </main>
       </div>
