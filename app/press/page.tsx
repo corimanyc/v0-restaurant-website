@@ -13,14 +13,14 @@ const PRESS_ITEMS = [
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
   },
   {
-    title: 'The New York Times: The 100 Best Restaurants in New York City',
-    date: 'May 10, 2026',
-    href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
-  },
-  {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     date: 'March 31, 2026',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
+  },
+  {
+    title: 'The New York Times: The 100 Best Restaurants in New York City',
+    date: 'May 10, 2026',
+    href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
   },
   {
     title: 'The New York Times: Is This the Mexican Restaurant New York Has Been Waiting For?',
