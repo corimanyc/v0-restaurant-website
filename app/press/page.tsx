@@ -208,7 +208,7 @@ export default function PressPage() {
             transition: 'filter 0.35s ease',
           }}
         >
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-20 md:py-12 md:my-auto md:mt-40">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-20 md:py-12 md:my-auto md:mt-36">
             <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-16">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
