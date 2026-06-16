@@ -28,11 +28,6 @@ const PRESS_ITEMS = [
     href: 'https://www.nytimes.com/2026/03/03/dining/corima-chinatown-restaurant-review.html',
   },
   {
-    title: 'The Best Chef Awards',
-    date: 'October 2025',
-    href: 'https://thebestchefawards.com/chefs/fidel-caballero/',
-  },
-  {
     title: 'The 8 Must-Visit Restaurants to Try This Fall',
     date: 'September 22, 2025',
     href: 'https://www.bonappetit.com/story/best-new-restaurant-openings-fall-2025',
@@ -46,6 +41,11 @@ const PRESS_ITEMS = [
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
     date: 'January 21, 2025',
     href: 'https://guide.michelin.com/us/en/article/dining-out/michelin-guide-star-spotlight-corima-fidel-caballero-new-york-city',
+  },
+  {
+    title: 'The Best Chef Awards',
+    date: 'October 2025',
+    href: 'https://thebestchefawards.com/chefs/fidel-caballero/',
   },
 ]
 
