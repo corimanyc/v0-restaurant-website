@@ -254,13 +254,10 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
-  /* Award "stickers" — emblems scattered down the right side in a collage.
-     Display-only: a slight brightness reduction softens the bright white logos
-     against the dark page. The source images are untouched. */
-  .press-sticker {
-    display: inline-flex;
-  }
-  .press-sticker img {
+  /* Award logos shown inline beside their matching press links. Display-only
+     brightness reduction softens the bright white emblems against the dark
+     page; the source images are untouched. */
+  .press-inline-logo {
     filter: brightness(0.9);
   }
 }
