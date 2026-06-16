@@ -71,21 +71,21 @@ const AWARD_STICKERS = [
     alt: 'Michelin Guide flower emblem',
     className: 'h-24 w-24 md:h-32 md:w-32',
     rotate: '-7deg',
-    wrap: 'self-end md:mr-10',
+    wrap: 'self-end md:mr-2',
   },
   {
     src: '/award-james-beard-2026.png',
     alt: 'James Beard Foundation 2026 Award Nominee medallion',
     className: 'h-28 w-28 md:h-36 md:w-36',
-    rotate: '5deg',
-    wrap: 'self-start md:ml-4',
+    rotate: '4deg',
+    wrap: 'self-end md:mr-16',
   },
   {
     src: '/award-worlds-50-best.avif',
     alt: "The World's 50 Best logo",
     className: 'h-28 w-auto md:h-36',
     rotate: '-4deg',
-    wrap: 'self-end md:mr-6',
+    wrap: 'self-end md:mr-0',
   },
 ]
 
@@ -204,7 +204,7 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-12">
+            <div className="flex flex-col gap-16 md:flex-row md:items-stretch md:justify-between md:gap-12">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
                   <li key={item.title}>
@@ -212,8 +212,8 @@ export default function PressPage() {
                   </li>
                 ))}
               </ul>
-              {/* Sticker collage — award emblems scattered down the right side */}
-              <div className="flex flex-col items-center gap-8 md:w-[280px] md:shrink-0 md:gap-10">
+              {/* Sticker collage — award emblems cascading down the right side */}
+              <div className="flex flex-col items-center gap-8 md:w-[300px] md:shrink-0 md:justify-between md:gap-0">
                 {AWARD_STICKERS.map((sticker) => (
                   <AwardSticker key={sticker.src} sticker={sticker} />
                 ))}
