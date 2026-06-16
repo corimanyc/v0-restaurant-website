@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef } from 'react'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
@@ -69,45 +69,8 @@ export default function PressPage() {
   const [menuScrollTarget, setMenuScrollTarget] = useState<'a-la-carte' | 'cocktail' | 'wine' | undefined>(undefined)
   const [isDiningOpen, setIsDiningOpen] = useState(false)
   const scrollRef = useRef<HTMLElement>(null)
-  const [navVisible, setNavVisible] = useState(true)
-
-  // Match the home page: hide the nav on downward scroll, show it on upward
-  // scroll. The press page scrolls inside <main> (overflow-y-auto), so we listen
-  // on that element rather than the window. The work is throttled with rAF and
-  // gated by a threshold so small jitters don't flip the nav back and forth.
-  useEffect(() => {
-    const el = scrollRef.current
-    if (!el) return
-    let lastY = el.scrollTop
-    let ticking = false
-    const THRESHOLD = 12
-    const update = () => {
-      ticking = false
-      const y = el.scrollTop
-      // Always reveal the nav near the top of the list.
-      if (y < 64) {
-        setNavVisible(true)
-        lastY = y
-        return
-      }
-      const delta = y - lastY
-      if (delta > THRESHOLD) {
-        setNavVisible(false)
-        lastY = y
-      } else if (delta < -THRESHOLD) {
-        setNavVisible(true)
-        lastY = y
-      }
-    }
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true
-        requestAnimationFrame(update)
-      }
-    }
-    el.addEventListener('scroll', onScroll, { passive: true })
-    return () => el.removeEventListener('scroll', onScroll)
-  }, [])
+  // The nav stays fixed/visible at all times on the press page (no hide-on-scroll).
+  const [navVisible] = useState(true)
 
   return (
     <div
