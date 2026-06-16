@@ -186,7 +186,7 @@ export default function PressPage() {
                 <img
                   src="/footer-logo.png"
                   alt="Corima emblem"
-                  className="h-32 w-32 md:h-40 md:w-40 object-contain"
+                  className="h-24 w-24 md:h-32 md:w-32 object-contain"
                 />
               </div>
             </div>
