@@ -69,22 +69,22 @@ const AWARD_STICKERS = [
   {
     src: '/footer-logo.png',
     alt: 'Michelin Guide flower emblem',
-    className: 'h-24 w-24 md:h-32 md:w-32',
-    rotate: '-7deg',
+    className: 'h-20 w-20 md:h-28 md:w-28',
+    rotate: '0deg',
     wrap: 'self-end md:mr-2',
   },
   {
     src: '/award-james-beard-2026.png',
     alt: 'James Beard Foundation 2026 Award Nominee medallion',
-    className: 'h-32 w-32 md:h-40 md:w-40',
+    className: 'h-28 w-28 md:h-36 md:w-36',
     rotate: '0deg',
     wrap: 'self-start md:ml-4',
   },
   {
     src: '/award-worlds-50-best.avif',
     alt: "The World's 50 Best logo",
-    className: 'h-32 w-auto md:h-40',
-    rotate: '7deg',
+    className: 'h-28 w-auto md:h-36',
+    rotate: '0deg',
     wrap: 'self-end md:-mr-6',
   },
 ]

@@ -256,17 +256,12 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
   }
   /* Award "stickers" — emblems scattered down the right side in a collage.
      Display-only: a slight brightness reduction softens the bright white logos
-     against the dark page, plus a slight rotation and hover lift via the
-     wrapper. The source images are untouched. */
+     against the dark page. The source images are untouched. */
   .press-sticker {
     display: inline-flex;
-    transition: transform 0.25s ease;
   }
   .press-sticker img {
     filter: brightness(0.9);
-  }
-  .press-sticker:hover {
-    transform: rotate(0deg) scale(1.04) !important;
   }
 }
 
