@@ -178,7 +178,7 @@ export default function PressPage() {
                 ))}
               </ul>
               {/* Award logos — vertical column on the right */}
-              <div className="flex flex-row flex-wrap items-center justify-center gap-10 md:flex-col md:items-center md:gap-12 md:shrink-0">
+              <div className="flex flex-row flex-wrap items-center justify-center gap-10 md:flex-col md:items-end md:gap-12 md:shrink-0">
                 {AWARD_LOGOS.map((logo) => (
                   <img
                     key={logo.src}
