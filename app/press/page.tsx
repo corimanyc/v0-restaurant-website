@@ -85,7 +85,7 @@ const AWARD_STICKERS = [
     alt: "The World's 50 Best logo",
     className: 'h-28 w-auto md:h-36',
     rotate: '7deg',
-    wrap: 'self-end md:mr-1',
+    wrap: 'self-end md:-mr-6',
   },
 ]
 
