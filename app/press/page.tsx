@@ -169,24 +169,26 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            {/* Award logos — centered row above the press index */}
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 mt-12 md:mt-20 mb-14 md:mb-16">
-              {AWARD_LOGOS.map((logo) => (
-                <img
-                  key={logo.src}
-                  src={logo.src || '/placeholder.svg'}
-                  alt={logo.alt}
-                  className={`shrink-0 object-contain press-inline-logo ${logo.className}`}
-                />
-              ))}
+            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-16">
+              <ul className="flex flex-col gap-10 md:gap-6">
+                {PRESS_ITEMS.map((item) => (
+                  <li key={item.title}>
+                    <PressRow item={item} />
+                  </li>
+                ))}
+              </ul>
+              {/* Award logos — vertical column on the right */}
+              <div className="flex flex-row flex-wrap items-center justify-center gap-10 md:flex-col md:items-center md:gap-12 md:shrink-0">
+                {AWARD_LOGOS.map((logo) => (
+                  <img
+                    key={logo.src}
+                    src={logo.src || '/placeholder.svg'}
+                    alt={logo.alt}
+                    className={`shrink-0 object-contain press-inline-logo ${logo.className}`}
+                  />
+                ))}
+              </div>
             </div>
-            <ul className="flex flex-col gap-10 md:gap-6">
-              {PRESS_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <PressRow item={item} />
-                </li>
-              ))}
-            </ul>
           </div>
         </main>
       </div>
