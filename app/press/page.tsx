@@ -65,11 +65,13 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
         </span>
       </a>
       {'logo' in item && item.logo ? (
-        <img
-          src={item.logo.src || '/placeholder.svg'}
-          alt={item.logo.alt}
-          className={`ml-auto shrink-0 object-contain ${item.logo.className}`}
-        />
+        <span className="ml-auto flex w-16 shrink-0 items-center justify-center md:w-20">
+          <img
+            src={item.logo.src || '/placeholder.svg'}
+            alt={item.logo.alt}
+            className={`object-contain ${item.logo.className}`}
+          />
+        </span>
       ) : null}
     </div>
   )
