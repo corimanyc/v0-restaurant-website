@@ -50,7 +50,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
       className="press-link inline-flex"
     >
       <span
-        className="press-underline font-sans text-pretty text-[24px]"
+        className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
         style={{
           color: '#FFFFFF',
           lineHeight: 1.4,
@@ -204,7 +204,7 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-start md:gap-24 lg:gap-32">
+            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-start md:gap-32 lg:gap-44">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
                   <li key={item.title}>
