@@ -50,7 +50,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
       className="press-link inline-flex"
     >
       <span
-        className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
+        className="press-underline font-sans text-pretty text-[24px]"
         style={{
           color: '#FFFFFF',
           lineHeight: 1.4,
