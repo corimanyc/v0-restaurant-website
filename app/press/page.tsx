@@ -28,11 +28,6 @@ const PRESS_ITEMS = [
     href: 'https://www.nytimes.com/2026/03/03/dining/corima-chinatown-restaurant-review.html',
   },
   {
-    title: "North America's 50 Best Restaurants",
-    date: 'May 28, 2025',
-    href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
-  },
-  {
     title: 'Bon Appetit: Best New Restaurants 2024',
     date: 'September 2024',
     href: 'https://www.bonappetit.com/story/best-new-restaurants-2024/?srsltid=AfmBOooubeXt2SVi05FuUYYArLTqqDVbgKeSWuFe53LKEqRzIMhxjSrp',
