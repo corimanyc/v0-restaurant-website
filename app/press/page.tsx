@@ -175,6 +175,11 @@ export default function PressPage() {
                 alt="The World's 50 Best logo"
                 className="h-28 w-auto md:h-36 object-contain"
               />
+              <img
+                src="/footer-logo.png"
+                alt="Corima emblem"
+                className="h-32 w-32 md:h-40 md:w-40 object-contain"
+              />
             </div>
             <ul className="flex flex-col gap-10 md:gap-6">
               {PRESS_ITEMS.map((item) => (
