@@ -69,7 +69,7 @@ const AWARD_STICKERS = [
   {
     src: '/footer-logo.png',
     alt: 'Michelin Guide flower emblem',
-    className: 'h-28 w-28 md:h-36 md:w-36',
+    className: 'h-24 w-24 md:h-32 md:w-32',
     rotate: '-7deg',
     wrap: 'self-end md:mr-10',
   },
@@ -83,7 +83,7 @@ const AWARD_STICKERS = [
   {
     src: '/award-worlds-50-best.avif',
     alt: "The World's 50 Best logo",
-    className: 'h-32 w-auto md:h-40',
+    className: 'h-28 w-auto md:h-36',
     rotate: '-4deg',
     wrap: 'self-end md:mr-6',
   },
