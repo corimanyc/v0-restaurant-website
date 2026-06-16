@@ -8,6 +8,11 @@ import SiteNav from '@/components/site-nav'
 
 const PRESS_ITEMS = [
   {
+    title: 'Michelin Guide: Corima',
+    date: '',
+    href: 'https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/corima',
+  },
+  {
     title: "North America's 50 Best Restaurants",
     date: 'May 28, 2026',
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
