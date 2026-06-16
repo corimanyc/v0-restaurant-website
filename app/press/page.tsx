@@ -6,21 +6,24 @@ import DiningOverlay from '@/components/dining-overlay'
 import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
 
+const AWARD_LOGOS = [
+  { src: '/footer-logo.png', alt: 'Michelin Guide flower emblem', className: 'h-14 w-14 md:h-16 md:w-16' },
+  { src: '/award-james-beard-2026.png', alt: 'James Beard Foundation 2026 Award Nominee medallion', className: 'h-16 w-16 md:h-20 md:w-20' },
+  { src: '/award-worlds-50-best.avif', alt: "The World's 50 Best logo", className: 'h-16 w-auto md:h-20' },
+]
+
 const PRESS_ITEMS = [
   {
     title: 'Michelin Guide: Corima',
     href: 'https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/corima',
-    logo: { src: '/footer-logo.png', alt: 'Michelin Guide flower emblem', className: 'h-11 w-11 md:h-12 md:w-12' },
   },
   {
     title: "North America's 50 Best Restaurants",
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
-    logo: { src: '/award-worlds-50-best.avif', alt: "The World's 50 Best logo", className: 'h-12 w-auto md:h-14' },
   },
   {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
-    logo: { src: '/award-james-beard-2026.png', alt: 'James Beard Foundation 2026 Award Nominee medallion', className: 'h-12 w-12 md:h-14 md:w-14' },
   },
   {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
@@ -46,32 +49,23 @@ const PRESS_ITEMS = [
 
 function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
   return (
-    <div className="flex w-full items-center gap-4 md:gap-5">
-      <a
-        href={item.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="press-link inline-flex"
+    <a
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="press-link inline-flex"
+    >
+      <span
+        className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
+        style={{
+          color: '#FFFFFF',
+          lineHeight: 1.4,
+          fontWeight: 400,
+        }}
       >
-        <span
-          className="press-underline font-sans text-pretty text-[24px] md:text-[32px]"
-          style={{
-            color: '#FFFFFF',
-            lineHeight: 1.4,
-            fontWeight: 400,
-          }}
-        >
-          {item.title}
-        </span>
-      </a>
-      {'logo' in item && item.logo ? (
-        <img
-          src={item.logo.src || '/placeholder.svg'}
-          alt={item.logo.alt}
-          className={`ml-auto shrink-0 object-contain press-inline-logo ${item.logo.className}`}
-        />
-      ) : null}
-    </div>
+        {item.title}
+      </span>
+    </a>
   )
 }
 
@@ -175,6 +169,17 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
+            {/* Award logos — centered row above the press index */}
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 mb-14 md:mb-16">
+              {AWARD_LOGOS.map((logo) => (
+                <img
+                  key={logo.src}
+                  src={logo.src || '/placeholder.svg'}
+                  alt={logo.alt}
+                  className={`shrink-0 object-contain press-inline-logo ${logo.className}`}
+                />
+              ))}
+            </div>
             <ul className="flex flex-col gap-10 md:gap-6">
               {PRESS_ITEMS.map((item) => (
                 <li key={item.title}>
