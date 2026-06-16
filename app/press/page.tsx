@@ -76,14 +76,14 @@ const AWARD_STICKERS = [
   {
     src: '/award-james-beard-2026.png',
     alt: 'James Beard Foundation 2026 Award Nominee medallion',
-    className: 'h-28 w-28 md:h-36 md:w-36',
+    className: 'h-32 w-32 md:h-40 md:w-40',
     rotate: '0deg',
     wrap: 'self-start md:ml-4',
   },
   {
     src: '/award-worlds-50-best.avif',
     alt: "The World's 50 Best logo",
-    className: 'h-28 w-auto md:h-36',
+    className: 'h-32 w-auto md:h-40',
     rotate: '7deg',
     wrap: 'self-end md:-mr-6',
   },
