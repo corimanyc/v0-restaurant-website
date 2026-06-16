@@ -163,31 +163,33 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            {/* Accolades — marquee honors shown prominently above the press index */}
-            <div className="flex flex-wrap items-center gap-x-14 gap-y-10 mb-14 md:mb-16">
-              <img
-                src="/award-james-beard-2026.png"
-                alt="James Beard Foundation 2026 Award Winner medallion"
-                className="h-32 w-32 md:h-40 md:w-40 object-contain"
-              />
-              <img
-                src="/award-worlds-50-best.avif"
-                alt="The World's 50 Best logo"
-                className="h-28 w-auto md:h-36 object-contain"
-              />
-              <img
-                src="/footer-logo.png"
-                alt="Corima emblem"
-                className="h-32 w-32 md:h-40 md:w-40 object-contain"
-              />
+            <div className="flex flex-col gap-14 md:flex-row md:items-start md:justify-between md:gap-16">
+              <ul className="flex flex-col gap-10 md:gap-6">
+                {PRESS_ITEMS.map((item) => (
+                  <li key={item.title}>
+                    <PressRow item={item} />
+                  </li>
+                ))}
+              </ul>
+              {/* Accolades — marquee honors stacked vertically beside the press index */}
+              <div className="flex flex-row flex-wrap items-center gap-x-12 gap-y-8 md:flex-col md:items-center md:gap-10 md:shrink-0">
+                <img
+                  src="/award-james-beard-2026.png"
+                  alt="James Beard Foundation 2026 Award Winner medallion"
+                  className="h-32 w-32 md:h-40 md:w-40 object-contain"
+                />
+                <img
+                  src="/award-worlds-50-best.avif"
+                  alt="The World's 50 Best logo"
+                  className="h-28 w-auto md:h-36 object-contain"
+                />
+                <img
+                  src="/footer-logo.png"
+                  alt="Corima emblem"
+                  className="h-32 w-32 md:h-40 md:w-40 object-contain"
+                />
+              </div>
             </div>
-            <ul className="flex flex-col gap-10 md:gap-6">
-              {PRESS_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <PressRow item={item} />
-                </li>
-              ))}
-            </ul>
           </div>
         </main>
       </div>
