@@ -254,20 +254,12 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
   }
-  /* Award "stickers" — die-cut emblems with a white contour outline (stacked
-     white drop-shadows) plus a soft dark lift shadow for a peel-off feel.
-     The wrapper holds the rotation; the img holds the filter so they compose. */
+  /* Award "stickers" — emblems scattered down the right side in a collage.
+     Logos are shown as-is (no outline or recoloring); only a slight rotation
+     and a hover lift are applied via the wrapper. */
   .press-sticker {
     display: inline-flex;
     transition: transform 0.25s ease;
-  }
-  .press-sticker img {
-    filter:
-      drop-shadow(2px 0 0 #ffffff) drop-shadow(-2px 0 0 #ffffff)
-      drop-shadow(0 2px 0 #ffffff) drop-shadow(0 -2px 0 #ffffff)
-      drop-shadow(1.5px 1.5px 0 #ffffff) drop-shadow(-1.5px -1.5px 0 #ffffff)
-      drop-shadow(1.5px -1.5px 0 #ffffff) drop-shadow(-1.5px 1.5px 0 #ffffff)
-      drop-shadow(0 10px 14px rgba(0, 0, 0, 0.55));
   }
   .press-sticker:hover {
     transform: rotate(0deg) scale(1.04) !important;
