@@ -128,6 +128,46 @@ export default function PressPage() {
           onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
         />
 
+        {/* Gradient blur layer — always visible at the top of the viewport.
+            Sits below the nav header (z-46) so nav text stays sharp, matching
+            the home/events pages. Progressive blur: stacked layers each with a
+            greater blur radius and higher start so blurs accumulate downward,
+            reading as a smooth, edge-less gradient. */}
+        <div
+          aria-hidden
+          className="absolute top-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: '88px',
+            zIndex: 44,
+          }}
+        >
+          {[
+            { blur: 0.75, stops: '1 0%, 1 60%, 0 90%' },
+            { blur: 1.5, stops: '1 0%, 1 35%, 0.6 55%, 0 75%' },
+            { blur: 3, stops: '1 0%, 1 20%, 0.5 40%, 0 55%' },
+          ].map((layer, i) => {
+            const mask = `linear-gradient(to bottom, ${layer.stops
+              .split(',')
+              .map((s) => {
+                const [a, p] = s.trim().split(' ')
+                return `rgba(0,0,0,${a}) ${p}`
+              })
+              .join(', ')})`
+            return (
+              <div
+                key={i}
+                className="absolute inset-0"
+                style={{
+                  backdropFilter: `blur(${layer.blur}px)`,
+                  WebkitBackdropFilter: `blur(${layer.blur}px)`,
+                  maskImage: mask,
+                  WebkitMaskImage: mask,
+                }}
+              />
+            )
+          })}
+        </div>
+
         {/* Header — overlays the scrolling content and slides up/down with the
             scroll direction, matching the home page behavior. */}
         <header
@@ -168,7 +208,7 @@ export default function PressPage() {
             transition: 'filter 0.35s ease',
           }}
         >
-          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto md:mt-40">
+          <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-40 md:py-12 md:my-auto md:mt-40">
             <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-16">
               <ul className="flex flex-col gap-10 md:gap-6">
                 {PRESS_ITEMS.map((item) => (
