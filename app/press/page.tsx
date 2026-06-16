@@ -170,7 +170,7 @@ export default function PressPage() {
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
             {/* Award logos — centered row above the press index */}
-            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 mb-14 md:mb-16">
+            <div className="flex flex-wrap items-center justify-center gap-10 md:gap-14 mt-12 md:mt-20 mb-14 md:mb-16">
               {AWARD_LOGOS.map((logo) => (
                 <img
                   key={logo.src}
