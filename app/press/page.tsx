@@ -71,7 +71,7 @@ const AWARD_STICKERS = [
     alt: 'Michelin Guide flower emblem',
     className: 'h-24 w-24 md:h-32 md:w-32',
     rotate: '-7deg',
-    wrap: 'self-end md:mr-10',
+    wrap: 'self-end md:mr-2',
   },
   {
     src: '/award-james-beard-2026.png',
@@ -85,7 +85,7 @@ const AWARD_STICKERS = [
     alt: "The World's 50 Best logo",
     className: 'h-28 w-auto md:h-36',
     rotate: '7deg',
-    wrap: 'self-end md:mr-6',
+    wrap: 'self-end md:mr-1',
   },
 ]
 
