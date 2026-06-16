@@ -39,7 +39,7 @@ const PRESS_ITEMS = [
   },
   {
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
-    date: 'January 21, 2025',
+    date: 'January 2025',
     href: 'https://guide.michelin.com/us/en/article/dining-out/michelin-guide-star-spotlight-corima-fidel-caballero-new-york-city',
   },
   {
