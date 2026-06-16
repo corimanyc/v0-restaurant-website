@@ -77,14 +77,14 @@ const AWARD_STICKERS = [
     src: '/award-james-beard-2026.png',
     alt: 'James Beard Foundation 2026 Award Nominee medallion',
     className: 'h-28 w-28 md:h-36 md:w-36',
-    rotate: '5deg',
+    rotate: '0deg',
     wrap: 'self-start md:ml-4',
   },
   {
     src: '/award-worlds-50-best.avif',
     alt: "The World's 50 Best logo",
     className: 'h-28 w-auto md:h-36',
-    rotate: '-4deg',
+    rotate: '7deg',
     wrap: 'self-end md:mr-6',
   },
 ]
@@ -213,7 +213,7 @@ export default function PressPage() {
                 ))}
               </ul>
               {/* Sticker collage — award emblems scattered down the right side */}
-              <div className="flex flex-col items-center gap-8 md:w-[280px] md:shrink-0 md:gap-10">
+              <div className="flex flex-col items-center gap-5 md:w-[280px] md:shrink-0 md:gap-5">
                 {AWARD_STICKERS.map((sticker) => (
                   <AwardSticker key={sticker.src} sticker={sticker} />
                 ))}
