@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useLayoutEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import MenuOverlay from '@/components/menu-overlay'
 import DiningOverlay from '@/components/dining-overlay'
@@ -133,23 +134,14 @@ export default function Home() {
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
-  const [navVisible, setNavVisible] = useState(true)
+  const [navVisible] = useState(true)
+  const pathname = usePathname()
 
   useEffect(() => {
-    let lastY = typeof window !== 'undefined' ? window.scrollY : 0
     const onScroll = () => {
       const y = window.scrollY
       setHasScrolled(y > 8)
-      // Pure scroll-direction behavior: hide on downward scroll, show on
-      // upward scroll. The nav starts visible (initial state above) and only
-      // hides once the user actually scrolls downward.
-      const delta = y - lastY
-      if (delta > 4) {
-        setNavVisible(false)
-      } else if (delta < -4) {
-        setNavVisible(true)
-      }
-      lastY = y
+      // The nav stays visible at all times (no hide-on-scroll).
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
@@ -274,6 +266,20 @@ export default function Home() {
       window.removeEventListener('pageshow', onPageShow)
     }
   }, [])
+
+  // Deep-link support so /menu and /about are real, crawlable URLs (eligible
+  // for Google sitelinks) while preserving the single-page overlay UX. When the
+  // homepage component renders under one of these routes, open the matching
+  // surface: /menu opens the menu overlay, /about scrolls to the About section.
+  useEffect(() => {
+    if (pathname === '/menu') {
+      setIsMenuOverlayOpen(true)
+    } else if (pathname === '/about') {
+      requestAnimationFrame(() => {
+        document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      })
+    }
+  }, [pathname])
 
   return (
     <div className="flex flex-col min-h-screen">

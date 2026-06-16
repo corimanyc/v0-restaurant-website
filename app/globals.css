@@ -242,39 +242,14 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
   .nav-link:focus-visible::after {
     transform: scaleX(1);
   }
-  /* Press rows.
-     - When the title fits on ONE line (.is-flat): a single continuous line
-       spans the full row from the title to the right-aligned date via a
-       border-bottom on the flex row.
-     - When the title WRAPS (.is-wrapped): use real text-decoration so every
-       wrapped line of the title (and the date) gets its own underline. */
+  /* Press rows. Each row is just a title link; on hover/focus the title text
+     gets its own underline (only as wide as the text, per wrapped line). */
   .press-link {
     position: relative;
     padding-bottom: 4px;
   }
-  /* Flat (single-line) rows: one continuous full-width line from the title to
-     the right-aligned date via a pseudo-element (unaffected by Tailwind's
-     border reset). Only used on desktop, where title + date share one row;
-     the mobile stacked layout is always classified .is-wrapped in JS. */
-  .press-link.is-flat::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 1px;
-    background-color: #ffffff;
-    opacity: 0;
-    pointer-events: none;
-  }
-  .press-link.is-flat:hover::after,
-  .press-link.is-flat:focus-visible::after {
-    opacity: 1;
-  }
-  /* Wrapped rows (and all mobile rows): real text-decoration so every line of
-     the title — and the date — gets its own underline. */
-  .press-link.is-wrapped:hover .press-underline,
-  .press-link.is-wrapped:focus-visible .press-underline {
+  .press-link:hover .press-underline,
+  .press-link:focus-visible .press-underline {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;

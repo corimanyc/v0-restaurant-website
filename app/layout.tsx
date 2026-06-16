@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, OG_IMAGE } from '@/lib/site'
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, SITE_TAGLINE, OG_IMAGE } from '@/lib/site'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'CORIMA',
     template: '%s | CORIMA',
   },
-  description: SITE_DESCRIPTION,
+  description: SITE_TAGLINE,
   applicationName: SITE_NAME,
   generator: 'v0.app',
   keywords: [
@@ -80,7 +80,7 @@ const restaurantJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Restaurant',
   name: SITE_NAME,
-  description: SITE_DESCRIPTION,
+  description: SITE_TAGLINE,
   url: SITE_URL,
   image: `${SITE_URL}${OG_IMAGE}`,
   servesCuisine: ['Mexican', 'Contemporary Mexican'],
