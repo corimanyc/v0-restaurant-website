@@ -34,7 +34,7 @@ const PRESS_ITEMS = [
   },
   {
     title: 'Bon Appetit: Best New Restaurants 2024',
-    date: 'September 22, 2025',
+    date: 'September 2024',
     href: 'https://www.bonappetit.com/story/best-new-restaurants-2024/?srsltid=AfmBOooubeXt2SVi05FuUYYArLTqqDVbgKeSWuFe53LKEqRzIMhxjSrp',
   },
   {
