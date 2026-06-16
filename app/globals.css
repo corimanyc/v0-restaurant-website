@@ -258,7 +258,7 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
      brightness reduction softens the bright white emblems against the dark
      page; the source images are untouched. */
   .press-inline-logo {
-    filter: brightness(0.9);
+    filter: brightness(0.95);
   }
 }
 
