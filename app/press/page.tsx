@@ -10,17 +10,14 @@ const PRESS_ITEMS = [
   {
     title: 'Michelin Guide: Corima',
     href: 'https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/corima',
-    logo: { src: '/footer-logo.png', alt: 'Corima emblem', className: 'h-12 w-12 md:h-14 md:w-14' },
   },
   {
     title: "North America's 50 Best Restaurants",
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
-    logo: { src: '/award-worlds-50-best.avif', alt: "The World's 50 Best logo", className: 'h-12 w-auto md:h-14' },
   },
   {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
-    logo: { src: '/award-james-beard-2026.png', alt: 'James Beard Foundation 2026 Award Winner medallion', className: 'h-14 w-14 md:h-16 md:w-16' },
   },
   {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
@@ -46,31 +43,63 @@ const PRESS_ITEMS = [
 
 function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
   return (
-    <div className="flex items-center gap-4 md:gap-5">
-      <a
-        href={item.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="press-link inline-flex"
+    <a
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="press-link inline-flex"
+    >
+      <span
+        className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
+        style={{
+          color: '#FFFFFF',
+          lineHeight: 1.4,
+          fontWeight: 400,
+        }}
       >
-        <span
-          className="press-underline font-sans text-pretty text-[24px] md:text-[28px]"
-          style={{
-            color: '#FFFFFF',
-            lineHeight: 1.4,
-            fontWeight: 400,
-          }}
-        >
-          {item.title}
-        </span>
-      </a>
-      {'logo' in item && item.logo ? (
-        <img
-          src={item.logo.src || '/placeholder.svg'}
-          alt={item.logo.alt}
-          className={`shrink-0 object-contain ${item.logo.className}`}
-        />
-      ) : null}
+        {item.title}
+      </span>
+    </a>
+  )
+}
+
+// Award "stickers" — die-cut emblems scattered down the right side with a
+// white outline, lift shadow, and slight rotation for a collage feel.
+const AWARD_STICKERS = [
+  {
+    src: '/footer-logo.png',
+    alt: 'Michelin Guide flower emblem',
+    className: 'h-28 w-28 md:h-36 md:w-36',
+    rotate: '-7deg',
+    wrap: 'self-end md:mr-10',
+  },
+  {
+    src: '/award-james-beard-2026.png',
+    alt: 'James Beard Foundation 2026 Award Nominee medallion',
+    className: 'h-28 w-28 md:h-36 md:w-36',
+    rotate: '5deg',
+    wrap: 'self-start md:ml-4',
+  },
+  {
+    src: '/award-worlds-50-best.avif',
+    alt: "The World's 50 Best logo",
+    className: 'h-32 w-auto md:h-40',
+    rotate: '-4deg',
+    wrap: 'self-end md:mr-6',
+  },
+]
+
+function AwardSticker({ sticker }: { sticker: (typeof AWARD_STICKERS)[number] }) {
+  return (
+    <div
+      className={`press-sticker ${sticker.wrap}`}
+      style={{ transform: `rotate(${sticker.rotate})` }}
+    >
+      <img
+        src={sticker.src || '/placeholder.svg'}
+        alt={sticker.alt}
+        className={`object-contain ${sticker.className}`}
+      />
     </div>
   )
 }
@@ -175,13 +204,21 @@ export default function PressPage() {
           }}
         >
           <div className="w-full pl-6 lg:pl-9 pr-6 lg:pr-9 pt-40 pb-60 md:py-12 md:my-auto">
-            <ul className="flex flex-col gap-10 md:gap-6">
-              {PRESS_ITEMS.map((item) => (
-                <li key={item.title}>
-                  <PressRow item={item} />
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-col gap-16 md:flex-row md:items-center md:justify-between md:gap-12">
+              <ul className="flex flex-col gap-10 md:gap-6">
+                {PRESS_ITEMS.map((item) => (
+                  <li key={item.title}>
+                    <PressRow item={item} />
+                  </li>
+                ))}
+              </ul>
+              {/* Sticker collage — award emblems scattered down the right side */}
+              <div className="flex flex-col items-center gap-8 md:w-[280px] md:shrink-0 md:gap-10">
+                {AWARD_STICKERS.map((sticker) => (
+                  <AwardSticker key={sticker.src} sticker={sticker} />
+                ))}
+              </div>
+            </div>
           </div>
         </main>
       </div>
