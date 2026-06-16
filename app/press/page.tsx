@@ -8,7 +8,7 @@ import SiteNav from '@/components/site-nav'
 
 const AWARD_LOGOS = [
   { src: '/footer-logo.png', alt: 'Michelin Guide flower emblem', className: 'h-14 w-14 md:h-16 md:w-16' },
-  { src: '/award-james-beard-2026.png', alt: 'James Beard Foundation 2026 Award Nominee medallion', className: 'h-16 w-16 md:h-20 md:w-20' },
+  { src: '/award-james-beard-2026-finalist.png', alt: 'James Beard Foundation 2026 Awards Finalist medallion', className: 'h-16 w-16 md:h-20 md:w-20' },
   { src: '/award-worlds-50-best.avif', alt: "The World's 50 Best logo", className: 'h-16 w-auto md:h-20' },
 ]
 
