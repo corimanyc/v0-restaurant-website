@@ -46,7 +46,7 @@ const PRESS_ITEMS = [
 
 function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
   return (
-    <div className="flex items-center gap-4 md:gap-5">
+    <div className="flex w-full items-center gap-4 md:gap-5">
       <a
         href={item.href}
         target="_blank"
@@ -54,7 +54,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
         className="press-link inline-flex"
       >
         <span
-          className="press-underline font-sans text-pretty text-[24px]"
+          className="press-underline font-sans text-pretty text-[24px] md:text-[32px]"
           style={{
             color: '#FFFFFF',
             lineHeight: 1.4,
@@ -68,7 +68,7 @@ function PressRow({ item }: { item: (typeof PRESS_ITEMS)[number] }) {
         <img
           src={item.logo.src || '/placeholder.svg'}
           alt={item.logo.alt}
-          className={`shrink-0 object-contain press-inline-logo ${item.logo.className}`}
+          className={`ml-auto shrink-0 object-contain press-inline-logo ${item.logo.className}`}
         />
       ) : null}
     </div>
