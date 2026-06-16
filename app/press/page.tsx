@@ -33,9 +33,9 @@ const PRESS_ITEMS = [
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
   },
   {
-    title: 'The 8 Must-Visit Restaurants to Try This Fall',
+    title: 'Bon Appetit: Best New Restaurants 2024',
     date: 'September 22, 2025',
-    href: 'https://www.bonappetit.com/story/best-new-restaurant-openings-fall-2025',
+    href: 'https://www.bonappetit.com/story/best-new-restaurants-2024/?srsltid=AfmBOooubeXt2SVi05FuUYYArLTqqDVbgKeSWuFe53LKEqRzIMhxjSrp',
   },
   {
     title: 'Starstruck: How Chef Fidel Caballero Struck Gold with Corima',
