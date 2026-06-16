@@ -14,22 +14,22 @@ const PRESS_ITEMS = [
   },
   {
     title: "North America's 50 Best Restaurants",
-    date: 'May 28, 2026',
+    date: 'May 2026',
     href: 'https://www.theworlds50best.com/northamerica/en/the-list/corima.html',
   },
   {
     title: 'The 2026 James Beard Restaurant and Chef Award Nominees',
-    date: 'March 31, 2026',
+    date: 'March 2026',
     href: 'https://www.jamesbeard.org/stories/james-beard-awards-restaurant-and-chef-nominees-2026',
   },
   {
     title: 'The New York Times: The 100 Best Restaurants in New York City',
-    date: 'May 10, 2026',
+    date: 'May 2026',
     href: 'https://www.nytimes.com/interactive/2026/dining/best-nyc-restaurants.html',
   },
   {
     title: 'The New York Times: Is This the Mexican Restaurant New York Has Been Waiting For?',
-    date: 'March 3, 2026',
+    date: 'March 2026',
     href: 'https://www.nytimes.com/2026/03/03/dining/corima-chinatown-restaurant-review.html',
   },
   {
