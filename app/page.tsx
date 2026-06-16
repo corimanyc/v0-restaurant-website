@@ -134,24 +134,14 @@ export default function Home() {
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
-  const [navVisible, setNavVisible] = useState(true)
+  const [navVisible] = useState(true)
   const pathname = usePathname()
 
   useEffect(() => {
-    let lastY = typeof window !== 'undefined' ? window.scrollY : 0
     const onScroll = () => {
       const y = window.scrollY
       setHasScrolled(y > 8)
-      // Pure scroll-direction behavior: hide on downward scroll, show on
-      // upward scroll. The nav starts visible (initial state above) and only
-      // hides once the user actually scrolls downward.
-      const delta = y - lastY
-      if (delta > 4) {
-        setNavVisible(false)
-      } else if (delta < -4) {
-        setNavVisible(true)
-      }
-      lastY = y
+      // The nav stays visible at all times (no hide-on-scroll).
     }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
