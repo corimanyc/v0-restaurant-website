@@ -44,7 +44,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       <div
         className="fixed top-0 right-0 h-full flex flex-col"
         style={{
-          backgroundColor: '#2f2f2f',
+          backgroundColor: '#454545',
           color: '#000000',
           zIndex: 45,
           width: '50%',
