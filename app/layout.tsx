@@ -30,7 +30,10 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   icons: {
-    icon: [{ url: '/icon.svg?v=6', type: 'image/svg+xml' }],
+    icon: [
+      { url: '/icon.svg?v=6', type: 'image/svg+xml' },
+      { url: '/icon-96.png?v=6', type: 'image/png', sizes: '96x96' },
+    ],
     apple: '/apple-icon.png',
   },
   openGraph: {
