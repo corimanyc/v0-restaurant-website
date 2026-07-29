@@ -194,7 +194,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   const base: React.CSSProperties = { fontSize: `${16 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }
   // On strictly mobile, every section's item text shares one (narrower) max
   // width; on larger screens each section keeps its own wider value.
-  const alaCarteNameMax = isMobile ? '320px' : '550px'
+  const alaCarteNameMax = isMobile ? '320px' : '490px'
   const itemNameMax = isMobile ? '320px' : '420px'
   // Intro paragraphs (a la carte + wine) share a narrower width on mobile.
   const introMax = isMobile ? '440px' : '540px'
