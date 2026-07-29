@@ -111,12 +111,18 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   const imageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (isOpen && scrollToSection) {
+    if (!isOpen) return
+    if (scrollToSection) {
       const refMap = { 'a-la-carte': alaCarteRef, cocktail: cocktailRef, wine: wineRef }
       const target = refMap[scrollToSection]?.current
       if (target) {
         setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
       }
+    } else if (scrollRef.current) {
+      // Reset any stale scroll position from a previous open so the header
+      // starts at "Menu" instead of a section label.
+      scrollRef.current.scrollTop = 0
+      setHeaderLabel('')
     }
   }, [isOpen, scrollToSection])
 
@@ -197,8 +203,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       for (const id of order) {
         const el = scrollEl.querySelector(`[data-section="${id}"]`) as HTMLElement | null
         if (!el) continue
-        // Heading top has crossed above the container top (cut off by header).
-        if (el.getBoundingClientRect().top <= top + 1) {
+        // Heading top has crossed above the container top (cut off by the
+        // header). Strictly above by a few px so a section that is flush with
+        // the top (e.g. right after scrollIntoView on open) doesn't count —
+        // its heading is still fully visible, so the header keeps "Menu".
+        if (el.getBoundingClientRect().top < top - 4) {
           current = labels[id]
         }
       }
