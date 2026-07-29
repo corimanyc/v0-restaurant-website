@@ -11,7 +11,7 @@ const sectionImages: Record<string, string> = {
 
 const alaCarteItems = [
   { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '9' },
-  { name: '+ Golden Osetra Caviar 8g', price: '25' },
+  { name: '+ Golden Osetra Caviar', suffix: ' 8g', indent: true, price: '25' },
   { name: 'Cucumber, Quelites, Piparra, Melon, Salsa Macha', price: '26' },
   { name: 'Beef Cecina Tlayuda, Edamame, Salsa Veracruzana, Chapulines', price: '26' },
   { name: 'Shrimp, English Peas, Wheatgrass Aguachile, Sourdough Miso', price: '28' },
@@ -274,8 +274,14 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
-                  <p className="text-black flex-1 min-w-0" style={{ ...base, maxWidth: alaCarteNameMax, textTransform: 'uppercase' }}>
+                  <p
+                    className="text-black flex-1 min-w-0"
+                    style={{ ...base, maxWidth: alaCarteNameMax, textTransform: 'uppercase', paddingLeft: 'indent' in item && item.indent ? '24px' : 0 }}
+                  >
                     {item.name}
+                    {'suffix' in item && item.suffix ? (
+                      <span style={{ textTransform: 'none' }}>{item.suffix}</span>
+                    ) : null}
                   </p>
                   <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
                     {item.price || '—'}
