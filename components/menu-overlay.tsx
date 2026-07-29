@@ -11,15 +11,17 @@ const sectionImages: Record<string, string> = {
 
 const alaCarteItems = [
   { name: 'Sourdough Flour Tortilla, Recado Negro Butter', price: '9' },
-  { name: 'Apples, Kohlrabi, Persimmon, Granola, Tajin', price: '24' },
-  { name: 'Beef Cecina Tlayuda, Salsa Veracruzana, Edamame Guacamole, Chapulines', price: '26' },
-  { name: 'Squid, King Oyster, Knotweed Aguachile, Nam Jim Jaew, Heart of Palm', price: '26' },
+  { name: '+ Golden Osetra Caviar 8g', price: '25' },
+  { name: 'Cucumber, Quelites, Piparra, Melon, Salsa Macha', price: '26' },
+  { name: 'Beef Cecina Tlayuda, Edamame, Salsa Veracruzana, Chapulines', price: '26' },
+  { name: 'Shrimp, English Peas, Wheatgrass Aguachile, Sourdough Miso', price: '28' },
+  { name: 'Sope, Quelites, Wood Ear, Sauce Vin Jaune, Golden Osetra Caviar', price: '36' },
   { name: 'Surf Clam a la Diabla Toast, Chinese Sausage, Green Tomato', price: '33' },
-  { name: 'Esquites, Mushroom Carnitas, Porcini, Mimolette, Sourdough', price: '35' },
+  { name: 'Esquites, Mushroom Carnitas, Porcini, Mimolette', price: '35' },
   { name: 'Hamachi Collar, Chintextle, Cascabel Aioli, Chives', price: '36' },
-  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '36' },
-  { name: 'Turbot, Epazote Pil-Pil, Ramps, Sorrel', price: '56' },
-  { name: 'Squab, Rompope, Rhubarb, Tokyo Turnip Cajeta, Amaranth', price: '62' },
+  { name: 'Duck Enmoladas, Black Garlic Mole, Chicharron, Cotija', price: '41' },
+  { name: 'Turbot, Epazote Pil-Pil, Spring Onions', price: '56' },
+  { name: 'Squab, Tokyo Turnip Cajeta, Rhubarb, Rompope, Amaranth', price: '62' },
 ]
 
 const wineByGlass = [
@@ -267,7 +269,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
               A La Carte
             </h2>
             <p className="text-black mb-6" style={{ ...base, fontSize: '14px', maxWidth: introMax }}>
-              Our a la carte menu changes with the seasons and market availability. Below is a sample menu from 5/10/26. Dishes are subject to change.
+              Our a la carte menu changes with the seasons and market availability. Below is a sample menu from 7/16/26. Dishes are subject to change.
             </p>
             <div className="flex flex-col">
               {alaCarteItems.map((item, i) => (
