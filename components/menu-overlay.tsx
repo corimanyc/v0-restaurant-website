@@ -223,7 +223,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       className="fixed inset-0 flex flex-col"
       style={{
         zIndex: 60,
-        backgroundColor: '#939393',
+        backgroundColor: '#7c7c7c',
         transform: isOpen ? 'translateY(0)' : 'translateY(100%)',
         transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
         pointerEvents: isOpen ? 'all' : 'none',
