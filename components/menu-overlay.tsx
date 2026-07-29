@@ -98,8 +98,8 @@ interface MenuOverlayProps {
 
 export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOverlayProps) {
   const [activeSection, setActiveSection] = useState<'a-la-carte' | 'cocktail' | 'wine'>('a-la-carte')
-  // Mobile-only: the header swaps "Menu" for the label of the section currently
-  // scrolled up under the sticky header. Empty string means show "Menu".
+  // The header swaps "Menu" for the label of the section currently scrolled
+  // up under the sticky header. Empty string means show "Menu".
   const [headerLabel, setHeaderLabel] = useState('')
   // Strictly mobile = below the md (768px) breakpoint, where the nav becomes a
   // hamburger. On mobile every listed text gets +2px.
@@ -173,11 +173,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     return () => mq.removeEventListener('change', update)
   }, [])
 
-  // Mobile-only: swap the header "Menu" for the label of the section whose
-  // heading has scrolled up past the top of the scroll container.
+  // Swap the header "Menu" for the label of the section whose heading has
+  // scrolled up past the top of the scroll container (mobile and desktop).
   useEffect(() => {
     const scrollEl = scrollRef.current
-    if (!scrollEl || !isOpen || !isMobile) {
+    if (!scrollEl || !isOpen) {
       setHeaderLabel('')
       return
     }
