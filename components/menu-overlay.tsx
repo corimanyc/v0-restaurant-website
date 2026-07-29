@@ -333,11 +333,8 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
           {/* Destilados */}
           <div data-section="destilados" style={{ marginTop: '56px' }}>
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
-              Destilados
+              Destilados <span style={{ textTransform: 'none' }}>1oz / 2oz</span>
             </h2>
-            <p className="text-black mb-6" style={{ ...base, fontSize: '14px', maxWidth: introMax }}>
-              1oz / 2oz
-            </p>
             <div className="flex flex-col">
               {destiladosItems.map((item, i) => (
                 <div key={i} className="flex items-start justify-between py-4">
