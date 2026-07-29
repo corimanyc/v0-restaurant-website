@@ -203,8 +203,11 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       for (const id of order) {
         const el = scrollEl.querySelector(`[data-section="${id}"]`) as HTMLElement | null
         if (!el) continue
-        // Heading top has crossed above the container top (cut off by header).
-        if (el.getBoundingClientRect().top <= top + 1) {
+        // Heading top has crossed above the container top (cut off by the
+        // header). Strictly above by a few px so a section that is flush with
+        // the top (e.g. right after scrollIntoView on open) doesn't count —
+        // its heading is still fully visible, so the header keeps "Menu".
+        if (el.getBoundingClientRect().top < top - 4) {
           current = labels[id]
         }
       }
