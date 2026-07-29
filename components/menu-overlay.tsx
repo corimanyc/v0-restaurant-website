@@ -64,13 +64,30 @@ const nonAlcoholicItems = [
 const cocktailItems = [
   { name: 'Bambú', desc: 'House Lime Leaf Vermouth, Fino Sherry', price: '20' },
   { name: 'San Pedro', desc: 'Mezcal, Lime, Bitter Orange, Agave, Nopales', price: '20' },
-  { name: 'Puntilla', desc: 'Tequila Reposado, Red Wine, Cinnamon, Grapefruit', price: '19' },
-  { name: 'Chupacabra', desc: 'Tequila Blanco, Orange, Tomato, Chiles, Pink Peppercorn', price: '20' },
+  { name: 'Makawi', desc: 'Sotol, Grapefruit, Apricot, Eucalyptus', price: '19' },
   { name: 'Key Largo', desc: 'Charanda Añejo, Celery, Key Lime', price: '19' },
-  { name: 'White Sands', desc: 'Gin, Magnolia, Blanc Vermouth, Sake', price: '22' },
-  { name: 'Six Feet', desc: 'Sotol Desierto, Marigold, Blanc Vermouth, Bonal Quinquina', price: '23' },
+  { name: 'White Sands', desc: 'Gin, Peony, Dry Vermouth', price: '22' },
+  { name: 'Mi Manera', desc: 'Tequila Reposado, Mango, Tarragon', price: '22' },
   { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
-  { name: 'Pelirroja', desc: 'Carta Blanca, Persimmon, Habanero, Peppercorn', price: '17' },
+  { name: 'Pelirroja', desc: 'Carta Blanca Lager, Persimmon, Habanero, Peppercorn', price: '17' },
+]
+
+const destiladosItems = [
+  { name: 'Sotol Flight', desc: 'La Higeura Wheeleri, Leiophyllum, Cedrosanum', price: '25' },
+  { name: 'Sotol Parejo, Hermanos Arrieta', desc: 'Leiophyllum · Aldama, Chihuahua', price: '14/24' },
+  { name: 'Flor del Desierto, Carnei', desc: 'Vension Pechuga, Wheeleri · Madera, Chihuahua', price: '14/24' },
+  { name: 'Cinco Sentidos, Reynaldo Alejandro', desc: 'Tobala · Santa Canterina Albarradas, Oaxaca', price: '18/32' },
+  { name: 'Lalocura, Eduardo Angeles', desc: 'Cuishe · Santa Catarina Minas, Oaxaca', price: '24/43' },
+  { name: 'Caballito Cerrero, Blanco 46', desc: 'Chato · Amatitán, Jalisco', price: '12/22' },
+  { name: 'Arette, Extra Añejo', desc: 'Tequila, Jalisco', price: '20/35' },
+]
+
+const beerItems = [
+  { name: 'Carta Blanca', desc: 'Mexican Lager · Monterrey, MX · 12oz', price: '9' },
+  { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale · Freeport, ME', price: '11' },
+  { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale · CDMX, MX', price: '11' },
+  { name: 'Grimm, Super Spruce', desc: 'Gose · Brooklyn, NY', price: '12' },
+  { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager · Monterrey, MX · 32oz', price: '26' },
 ]
 
 interface MenuOverlayProps {
@@ -168,10 +185,12 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       'tasting-menu': 'Tasting Menu',
       'a-la-carte': 'A La Carte',
       cocktail: 'Cocktail',
+      destilados: 'Destilados',
       wine: 'Wine by the Glass',
+      beer: 'Beer',
       'non-alcoholic': 'Non-Alcoholic',
     }
-    const order = ['tasting-menu', 'a-la-carte', 'cocktail', 'wine', 'non-alcoholic']
+    const order = ['tasting-menu', 'a-la-carte', 'cocktail', 'destilados', 'wine', 'beer', 'non-alcoholic']
     const onScroll = () => {
       const top = scrollEl.getBoundingClientRect().top
       let current = ''
@@ -311,6 +330,29 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
             </div>
           </div>
 
+          {/* Destilados */}
+          <div data-section="destilados" style={{ marginTop: '56px' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
+              Destilados
+            </h2>
+            <p className="text-black mb-6" style={{ ...base, fontSize: '14px', maxWidth: introMax }}>
+              1oz / 2oz
+            </p>
+            <div className="flex flex-col">
+              {destiladosItems.map((item, i) => (
+                <div key={i} className="flex items-start justify-between py-4">
+                  <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
+                    <p className="text-black" style={{ ...base, textTransform: 'uppercase' }}>{item.name}</p>
+                    <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
+                  </div>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                    {item.price || '—'}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Wine */}
           <div ref={wineRef} data-section="wine" style={{ marginTop: '56px' }}>
             <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
@@ -339,6 +381,26 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Beer */}
+          <div data-section="beer" style={{ marginTop: '56px' }}>
+            <h2 className="text-black uppercase mb-4" style={{ fontSize: `${20 + bump}px`, letterSpacing: '-0.02em', fontWeight: 400 }}>
+              Beer
+            </h2>
+            <div className="flex flex-col">
+              {beerItems.map((item, i) => (
+                <div key={i} className="flex items-start justify-between py-3">
+                  <div className="flex-1 min-w-0" style={{ maxWidth: itemNameMax }}>
+                    <p className="text-black" style={{ ...base, textTransform: 'uppercase' }}>{item.name}</p>
+                    <p className="text-black" style={{ ...base, fontSize: `${14 + bump}px`, marginTop: '2px' }}>{item.desc}</p>
+                  </div>
+                  <p className="text-black flex-shrink-0 text-right" style={{ ...base, marginLeft: '40px' }}>
+                    {item.price || '—'}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Non-Alcoholic */}
