@@ -111,12 +111,18 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
   const imageRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (isOpen && scrollToSection) {
+    if (!isOpen) return
+    if (scrollToSection) {
       const refMap = { 'a-la-carte': alaCarteRef, cocktail: cocktailRef, wine: wineRef }
       const target = refMap[scrollToSection]?.current
       if (target) {
         setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
       }
+    } else if (scrollRef.current) {
+      // Reset any stale scroll position from a previous open so the header
+      // starts at "Menu" instead of a section label.
+      scrollRef.current.scrollTop = 0
+      setHeaderLabel('')
     }
   }, [isOpen, scrollToSection])
 
