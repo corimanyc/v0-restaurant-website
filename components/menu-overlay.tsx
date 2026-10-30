@@ -51,7 +51,7 @@ const wineByGlass = [
 ]
 
 const nonAlcoholicItems = [
-  { name: 'Tepache Spritz', desc: 'Tepache, Pentire Seaward, Club Soda', price: '14' },
+  { name: 'Sandia Soda', desc: 'Watermelon, Rind Tepache, Huacatay', price: '15' },
   { name: 'Mugicha Iced Tea', desc: 'Toasted Barley, Verjus, Coconut', price: '15' },
   { name: 'Jamaica', desc: 'Hibiscus, Licorice', price: '14' },
   { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
@@ -87,7 +87,6 @@ const beerItems = [
   { name: 'Carta Blanca', desc: 'Mexican Lager · Monterrey, MX · 12oz', price: '9' },
   { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale · Freeport, ME', price: '11' },
   { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale · CDMX, MX', price: '11' },
-  { name: 'Grimm, Super Spruce', desc: 'Gose · Brooklyn, NY', price: '12' },
   { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager · Monterrey, MX · 32oz', price: '26' },
 ]
 
