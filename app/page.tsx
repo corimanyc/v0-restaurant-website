@@ -348,9 +348,16 @@ export default function Home() {
             and a higher start position. Because each layer fully covers from
             its start to the top, blurs accumulate downward, which the eye
             reads as a smooth, edge-less gradient blur. */}
+        {/* iOS 26 Safari treats any fixed element spanning >=90% of the
+            viewport width at the top edge as a toolbar and paints a solid
+            strip over the status bar instead of showing it. Splitting the
+            band into two half-width fixed elements keeps the blur flush to
+            the very top without triggering that behavior. */}
+        {(['left-0', 'right-0'] as const).map((side) => (
         <div
+          key={side}
           aria-hidden
-          className="fixed top-0 left-0 right-0 pointer-events-none"
+          className={`fixed top-0 ${side} w-1/2 pointer-events-none`}
           style={{
             height: 'calc(88px + env(safe-area-inset-top))',
             zIndex: 44,
@@ -389,11 +396,15 @@ export default function Home() {
             )
           })}
         </div>
+        ))}
 
         {/* Header/Navigation — fixed; logo stays put always, only links/burger fade when dining opens */}
         <header
-          className="fixed top-0 left-0 right-0"
+          className="fixed left-0 right-0"
           style={{
+            // Offset from the top edge (instead of padding inside) so iOS 26
+            // Safari doesn't sample this full-width fixed bar for toolbar tint.
+            top: 'calc(24px + env(safe-area-inset-top))',
             zIndex: 46,
             color: '#FFFFFF',
             // Header itself must not block clicks/hover on what's beneath
@@ -403,7 +414,7 @@ export default function Home() {
             // Slide the nav up out of view when the user scrolls down; it
             // re-enters as soon as they scroll up. Keep it visible while the
             // dining panel is open so the close affordance stays reachable.
-            transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(-110%)',
+            transform: (navVisible || isDiningOpen) ? 'translateY(0)' : 'translateY(calc(-100% - 32px - env(safe-area-inset-top)))',
             transition: 'transform 0.35s ease',
           }}
         >
@@ -414,6 +425,7 @@ export default function Home() {
             onOpenDining={() => setIsDiningOpen(true)}
             onToggleMobileMenu={() => setIsMenuOpen(!isMenuOpen)}
             hideLinks={isDiningOpen}
+            noTopPadding
           />
 
         </header>
@@ -426,23 +438,21 @@ export default function Home() {
         />
 
         {/* Footer — persistent icon, address only on landing */}
-        <footer
-          className="fixed bottom-0 left-0 right-0 z-40"
-          style={{
-            // Wrapper itself never blocks clicks; only the icon below opts back into pointer events.
-            pointerEvents: 'none',
-            transition: 'opacity 0.5s ease',
-          }}
-        >
-          <div className="relative flex items-end justify-between px-6 md:px-9 pt-6" style={{ paddingBottom: 'calc(24px + env(safe-area-inset-bottom))' }}>
+        {/* iOS 26 Safari paints a solid band under its toolbar whenever a
+            full-width fixed element touches the bottom edge (visible when the
+            toolbar expands on scroll-up). The address and icon are separate
+            narrow fixed elements offset from the edge so nothing qualifies. */}
+        <footer className="contents">
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below.
                 Two whitespace-nowrap spans inside a flex-wrap container so they
                 stay inline on wide viewports and stack (left-aligned) when
                 they would otherwise wrap mid-line. */}
             <div
-              className="tracking-wider text-white flex flex-wrap gap-x-3"
+              className="fixed left-6 md:left-9 z-40 tracking-wider text-white flex flex-wrap gap-x-3"
               style={{
+                bottom: 'calc(24px + env(safe-area-inset-bottom))',
+                maxWidth: 'calc(100% - 96px)',
                 fontSize: '16px',
                 opacity: heroVisible && !addressScrolledAway ? 1 : 0,
                 pointerEvents: 'none',
@@ -457,14 +467,14 @@ export default function Home() {
             <img
               src="/footer-logo.png"
               alt="CORIMA"
-              className="w-6 h-6 object-contain ml-auto"
+              className="fixed right-6 md:right-9 z-40 w-6 h-6 object-contain"
               style={{
+                bottom: 'calc(24px + env(safe-area-inset-bottom))',
                 pointerEvents: isDiningOpen ? 'none' : 'auto',
                 opacity: isDiningOpen ? 0 : 1,
                 transition: 'opacity 0.5s ease',
               }}
             />
-          </div>
         </footer>
       </section>
 
