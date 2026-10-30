@@ -22,6 +22,8 @@ type SiteNavProps = {
   linkColor?: string
   /** When true, fade the right-side nav links and burger but keep the logo fully visible. */
   hideLinks?: boolean
+  /** When true, omit the built-in top padding (the parent offsets the nav from the edge instead). */
+  noTopPadding?: boolean
 }
 
 /**
@@ -38,6 +40,7 @@ export default function SiteNav({
   linkFontSize = 15,
   linkColor,
   hideLinks = false,
+  noTopPadding = false,
 }: SiteNavProps) {
   const pathname = usePathname()
   const linkStyle = { color: linkColor ?? 'inherit', fontSize: `${linkFontSize}px` }
@@ -55,7 +58,7 @@ export default function SiteNav({
   return (
     <nav
       className="relative flex items-center justify-between px-6 lg:px-9"
-      style={{ pointerEvents: 'none', paddingTop: 'calc(24px + env(safe-area-inset-top))' }}
+      style={{ pointerEvents: 'none', paddingTop: noTopPadding ? 0 : 'calc(24px + env(safe-area-inset-top))' }}
     >
       {/* Logo — 100px on mobile, 88px on desktop. Logo SVG aspect is 1070:302
           (~3.543:1), so the rendered height is ~28.2px on mobile and ~24.8px
