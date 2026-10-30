@@ -73,7 +73,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       {/* Header — fixed at top */}
       <div
         className="flex items-center justify-between flex-shrink-0"
-        style={{ padding: '24px 24px 24px 24px' }}
+        style={{ padding: '24px 24px 24px 24px', paddingTop: 'calc(24px + env(safe-area-inset-top))' }}
       >
         <h1
           className="uppercase tracking-widest flex items-center"

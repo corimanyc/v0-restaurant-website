@@ -54,8 +54,8 @@ export default function SiteNav({
 
   return (
     <nav
-      className="relative flex items-center justify-between px-6 lg:px-9 pt-6"
-      style={{ pointerEvents: 'none' }}
+      className="relative flex items-center justify-between px-6 lg:px-9"
+      style={{ pointerEvents: 'none', paddingTop: 'calc(24px + env(safe-area-inset-top))' }}
     >
       {/* Logo — 100px on mobile, 88px on desktop. Logo SVG aspect is 1070:302
           (~3.543:1), so the rendered height is ~28.2px on mobile and ~24.8px

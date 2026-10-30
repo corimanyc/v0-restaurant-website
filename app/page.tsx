@@ -134,6 +134,7 @@ export default function Home() {
   const heroRef = useRef<HTMLElement | null>(null)
   const [heroVisible, setHeroVisible] = useState(true)
   const [hasScrolled, setHasScrolled] = useState(false)
+  const [addressScrolledAway, setAddressScrolledAway] = useState(false)
   const [navVisible] = useState(true)
   const pathname = usePathname()
 
@@ -141,6 +142,8 @@ export default function Home() {
     const onScroll = () => {
       const y = window.scrollY
       setHasScrolled(y > 8)
+      // On mobile the address fades out almost as soon as scrolling starts.
+      setAddressScrolledAway(window.innerWidth < 768 && y > 40)
       // The nav stays visible at all times (no hide-on-scroll).
     }
     onScroll()
@@ -349,7 +352,7 @@ export default function Home() {
           aria-hidden
           className="fixed top-0 left-0 right-0 pointer-events-none"
           style={{
-            height: '88px',
+            height: 'calc(88px + env(safe-area-inset-top))',
             zIndex: 44,
             opacity: hasScrolled ? 1 : 0,
             transition: 'opacity 0.25s ease',
@@ -431,7 +434,7 @@ export default function Home() {
             transition: 'opacity 0.5s ease',
           }}
         >
-          <div className="relative flex items-end justify-between px-6 md:px-9 pt-6 pb-6">
+          <div className="relative flex items-end justify-between px-6 md:px-9 pt-6" style={{ paddingBottom: 'calc(24px + env(safe-area-inset-bottom))' }}>
             {/* Address — visible only while the hero is intersecting the viewport.
                 Driven by IntersectionObserver on the hero ref below.
                 Two whitespace-nowrap spans inside a flex-wrap container so they
@@ -441,7 +444,7 @@ export default function Home() {
               className="tracking-wider text-white flex flex-wrap gap-x-3"
               style={{
                 fontSize: '16px',
-                opacity: heroVisible ? 1 : 0,
+                opacity: heroVisible && !addressScrolledAway ? 1 : 0,
                 pointerEvents: 'none',
                 transition: 'opacity 0.2s ease',
                 fontWeight: 400,

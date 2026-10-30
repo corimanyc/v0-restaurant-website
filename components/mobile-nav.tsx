@@ -43,7 +43,7 @@ export default function MobileNav({ isOpen, onClose, onMenuClick, aboutHref = '#
       }}
     >
       {/* Top bar — logo + close */}
-      <div className="flex items-center justify-between" style={{ padding: '24px' }}>
+      <div className="flex items-center justify-between" style={{ padding: '24px', paddingTop: 'calc(24px + env(safe-area-inset-top))' }}>
         <Link href="/" onClick={onClose}>
           <img src="/logo.svg" alt="CORIMA" style={{ width: '120px', height: 'auto', filter: 'brightness(0)' }} />
         </Link>

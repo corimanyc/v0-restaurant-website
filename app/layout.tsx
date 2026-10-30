@@ -75,6 +75,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: '#1f1c18',
   colorScheme: 'dark',
+  // Draw under the iPhone status bar / home-indicator areas instead of
+  // letterboxing them with the page background color.
+  viewportFit: 'cover',
 }
 
 /* Restaurant structured data (JSON-LD). PLACEHOLDER values — replace address,
