@@ -85,7 +85,7 @@ a.text-black:hover, button.text-black:hover, [role="button"].text-black:hover,
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #1f1c18;
+  --background: #1a1a1a;
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
