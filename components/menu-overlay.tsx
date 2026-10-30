@@ -31,22 +31,22 @@ const wineByGlass = [
   ]},
   { category: 'White', items: [
     { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc · Loire, FR', price: '23' },
-    { name: 'Hermann Ludes, Thornicher \'24', desc: 'Riesling · Mosel, DE', price: '19' },
-    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '21' },
+    { name: 'Stein, Blauschiefer Trocken \'25', desc: 'Riesling · Mosel, DE', price: '19' },
+    { name: 'Vino Fractura, Colombard \'25', desc: 'Colombard · Valle de Guadalupe, MX', price: '21' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '21' },
-    { name: 'Thibaud Boudignon Rose de Loire \'25', desc: 'Cabernet Franc · Loire, FR — Rosé', price: '18' },
+    { name: 'Bruma, Plan B \'20', desc: 'Chardonnay · Valle de Guadalupe, MX — Orange', price: '21' },
+    { name: 'Romain Le Bars, Tavel \'25', desc: 'Grenache, Cinsault, Syrah · Rhone, FR — Rosé', price: '18' },
   ]},
   { category: 'Red', items: [
-    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '21' },
-    { name: 'Wills Wine, Blue Plateau \'23', desc: 'Syrah, Gamay · Ardeche, FR', price: '23' },
+    { name: 'Casa Jipi \'25', desc: 'Mexican Nebbiolo · Valle de Guadalupe, MX', price: '21' },
+    { name: 'Envinate, La Santa \'24', desc: 'Negramoll, Listan Negro · Canary Islands, SP', price: '23' },
   ]},
   { category: 'Sweet', items: [
-    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU', price: '20' },
+    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU · 3oz', price: '20' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Kato Sake Works, NY NY', desc: 'Jizake · Brooklyn, NY', price: '18' },
+    { name: 'Kato Sake Works, NY NY', desc: 'Jizake · Brooklyn, NY · 3oz', price: '18' },
   ]},
 ]
 
@@ -62,14 +62,15 @@ const nonAlcoholicItems = [
 ]
 
 const cocktailItems = [
-  { name: 'Bambú', desc: 'House Lime Leaf Vermouth, Fino Sherry', price: '20' },
+  { name: 'Kaixo', desc: 'House Vermouth, Mahon Gin, Forthave Yellow, Amontillado', price: '20' },
   { name: 'San Pedro', desc: 'Mezcal, Lime, Bitter Orange, Agave, Nopales', price: '20' },
-  { name: 'Makawi', desc: 'Sotol, Grapefruit, Apricot, Eucalyptus', price: '19' },
+  { name: 'Zacate', desc: 'Tequila Blanco, Concord Grape, Mosaic Hops, Bubbles', price: '20' },
+  { name: 'Makawi', desc: 'Sotol, Grapefruit, Nectarine, Eucalyptus', price: '19' },
   { name: 'Key Largo', desc: 'Charanda Añejo, Celery, Key Lime', price: '19' },
-  { name: 'White Sands', desc: 'Gin, Peony, Dry Vermouth', price: '22' },
   { name: 'Mi Manera', desc: 'Tequila Reposado, Mango, Tarragon', price: '22' },
   { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
-  { name: 'Pelirroja', desc: 'Carta Blanca Lager, Persimmon, Habanero, Peppercorn', price: '17' },
+  { name: 'Chela Chinaloa', desc: 'Carta Blanca Lager, Koji Tomatoes, Black Vinegar, Oloroso', price: '17' },
+  { name: 'Chela Nana', desc: 'Carta Blanca Lager, Grilled Pineapple, Jalapeño — Available N/A', price: '17' },
 ]
 
 const destiladosItems = [
