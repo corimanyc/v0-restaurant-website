@@ -9,6 +9,8 @@ import MobileNav from '@/components/mobile-nav'
 import SiteNav from '@/components/site-nav'
 import ProgressiveImage from '@/components/progressive-image'
 
+const BLUR_BLEED = 120
+
 const heroImages = [
   {
     src: '/hero-carousel1new.avif',
@@ -357,9 +359,13 @@ export default function Home() {
         <div
           key={side}
           aria-hidden
-          className={`fixed top-0 ${side} w-1/2 pointer-events-none`}
-          style={{
-            height: 'calc(88px + env(safe-area-inset-top))',
+  className={`fixed ${side} w-1/2 pointer-events-none`}
+  style={{
+  // iOS Safari scrolls page content under the status bar / Dynamic Island,
+  // but fixed `top: 0` anchors below it. Bleed the blur upward so that strip
+  // is covered too; masks below are offset so the visible fade is unchanged.
+  top: `-${BLUR_BLEED}px`,
+  height: `calc(${BLUR_BLEED}px + 88px + env(safe-area-inset-top))`,
             zIndex: 44,
             opacity: hasScrolled ? 1 : 0,
             transition: 'opacity 0.25s ease',
@@ -375,13 +381,14 @@ export default function Home() {
             // than a hard stop so it doesn't read as a band edge.
             { blur: 3, stops: '1 0%, 1 20%, 0.5 40%, 0 55%' },
           ].map((layer, i) => {
-            const mask = `linear-gradient(to bottom, ${layer.stops
-              .split(',')
-              .map((s) => {
-                const [a, p] = s.trim().split(' ')
-                return `rgba(0,0,0,${a}) ${p}`
-              })
-              .join(', ')})`
+  const mask = `linear-gradient(to bottom, rgba(0,0,0,1) 0px, ${layer.stops
+  .split(',')
+  .map((s) => {
+  const [a, p] = s.trim().split(' ')
+  const fraction = parseFloat(p) / 100
+  return `rgba(0,0,0,${a}) calc(${BLUR_BLEED}px + (88px + env(safe-area-inset-top)) * ${fraction})`
+  })
+  .join(', ')})`
             return (
               <div
                 key={i}
