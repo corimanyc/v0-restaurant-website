@@ -76,7 +76,9 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1f1c18',
+  // Must match the page surface (#1a1a1a): iOS Safari paints this color into
+  // the status-bar strip and the area around its floating toolbar.
+  themeColor: '#1a1a1a',
   colorScheme: 'dark',
   // Draw under the iPhone status bar / home-indicator areas instead of
   // letterboxing them with the page background color.
@@ -124,7 +126,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-background" style={{ backgroundColor: '#1a1a1a' }}>
       <head>
         <link
           rel="preload"
@@ -141,7 +143,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 400, backgroundColor: '#1f1c18' }}>
+      <body className="font-sans antialiased bg-background text-foreground" style={{ fontFamily: "'Switzer', system-ui, sans-serif", fontWeight: 400, backgroundColor: '#1a1a1a' }}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
