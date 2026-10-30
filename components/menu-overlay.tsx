@@ -115,8 +115,17 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     if (scrollToSection) {
       const refMap = { 'a-la-carte': alaCarteRef, cocktail: cocktailRef, wine: wineRef }
       const target = refMap[scrollToSection]?.current
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      const scrollEl = scrollRef.current
+      if (target && scrollEl) {
+        // Jump directly within the menu's own scroll container. A smooth
+        // scrollIntoView during the overlay's open transition could get
+        // interrupted and leave the menu stuck near A La Carte.
+        const id = window.setTimeout(() => {
+          const offset =
+            target.getBoundingClientRect().top - scrollEl.getBoundingClientRect().top + scrollEl.scrollTop
+          scrollEl.scrollTop = offset
+        }, 50)
+        return () => window.clearTimeout(id)
       }
     } else if (scrollRef.current) {
       // Reset any stale scroll position from a previous open so the header

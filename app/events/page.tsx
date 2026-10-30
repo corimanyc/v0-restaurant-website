@@ -75,7 +75,7 @@ export default function EventsPage() {
       <DiningOverlay
         isOpen={isDiningOpen}
         onClose={() => setIsDiningOpen(false)}
-        onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
+        onViewMenu={(section) => { setIsDiningOpen(false); setMenuScrollTarget(section); setIsMenuOverlayOpen(true) }}
       />
 
       {/* Header */}
