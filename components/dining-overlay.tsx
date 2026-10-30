@@ -114,10 +114,10 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-2" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             To accompany your tasting menu, we offer three distinct beverage pairings:
           </p>
-          <ul className="leading-relaxed mb-4 flex flex-col pl-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
-            <li>- Mexican Spirit Pairing $95</li>
-            <li>- Traditional Beverage Pairing $85</li>
-            <li>- Non-Alcoholic Pairing $75</li>
+          <ul className="leading-relaxed mb-4 flex flex-col" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <li>Mexican Spirit Pairing $95</li>
+            <li>Traditional Beverage Pairing $85</li>
+            <li>Non-Alcoholic Pairing $75</li>
           </ul>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.85 }}>
             We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
