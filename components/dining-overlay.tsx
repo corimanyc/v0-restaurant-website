@@ -111,6 +111,15 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
           </p>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            The tasting menu may be accompanied by one of our beverage pairings:
+            <br />
+            Mexican Spirit Pairing $95
+            <br />
+            Traditional Beverage Pairing $85
+            <br />
+            Non-Alcoholic Pairing $75
+          </p>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.85 }}>
             We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
           </p>
@@ -149,7 +158,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         {/* Beverage */}
         <section style={{ marginBottom: '80px' }}>
           <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
-            Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
+            Beverage
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The beverage program consists of a collection of cocktails that mirror the essence of Corima. Sotol is heavily featured as an ode to the Northern region of Mexico.
