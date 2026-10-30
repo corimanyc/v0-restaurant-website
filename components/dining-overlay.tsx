@@ -73,7 +73,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
       {/* Header — fixed at top */}
       <div
         className="flex items-center justify-between flex-shrink-0"
-        style={{ padding: '24px 24px 24px 24px' }}
+        style={{ padding: '24px 24px 24px 24px', paddingTop: 'calc(24px + env(safe-area-inset-top))' }}
       >
         <h1
           className="uppercase tracking-widest flex items-center"
@@ -106,11 +106,19 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
             Tasting Menu
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
-            At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+            At Corima, our Tasting Menu consists of approximately 7-12 courses and is priced at $140 per person.
           </p>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.
           </p>
+          <p className="leading-relaxed mb-2" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            To accompany your tasting menu, we offer three distinct beverage pairings:
+          </p>
+          <ul className="leading-relaxed mb-4 flex flex-col pl-6" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            <li>- Mexican Spirit Pairing $95</li>
+            <li>- Traditional Beverage Pairing $85</li>
+            <li>- Non-Alcoholic Pairing $75</li>
+          </ul>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em', opacity: 0.85 }}>
             We are unable to accommodate most allergies or dietary restrictions but please e-mail info@corimanyc.com and we will do our best to accommodate if possible.
           </p>
@@ -134,6 +142,9 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             While the selection evolves over time, the focus here is on immediacy and choice, allowing each dish to stand on its own while reflecting the same perspective as our tasting menu.
           </p>
+          <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
+            We unfortunately are unable to accommodate all celiac and mushroom restrictions for our menus. Please contact info@corimanyc.com if there are any questions in regards to dietary restrictions.
+          </p>
           <button
             onClick={() => onViewMenu('a-la-carte')}
             className="nav-link text-left"
@@ -146,7 +157,7 @@ export default function DiningOverlay({ isOpen, onClose, onViewMenu }: DiningOve
         {/* Beverage */}
         <section style={{ marginBottom: '80px' }}>
           <h2 className="uppercase mb-4" style={{ fontSize: '18px', letterSpacing: '-0.02em', fontWeight: 400 }}>
-            Beverage <span style={{ textTransform: 'none' }}>(Spirit Pairing $90)</span>
+            Beverage
           </h2>
           <p className="leading-relaxed mb-4" style={{ fontSize: '16px', letterSpacing: '-0.02em' }}>
             The beverage program consists of a collection of cocktails that mirror the essence of Corima. Sotol is heavily featured as an ode to the Northern region of Mexico.

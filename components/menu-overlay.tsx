@@ -26,68 +26,68 @@ const alaCarteItems = [
 
 const wineByGlass = [
   { category: 'Sparkling', items: [
-    { name: 'Andre Heucq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '29' },
-    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '19' },
+    { name: 'Andre Heucq, Heritage Brut Nature', desc: 'Pinot Meunier • Champagne, FR', price: '29' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo • Valle de Bernal, MX', price: '19' },
   ]},
   { category: 'White', items: [
-    { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc · Loire, FR', price: '23' },
-    { name: 'Hermann Ludes, Thornicher \'24', desc: 'Riesling · Mosel, DE', price: '19' },
-    { name: 'Vino Figura, "Fig 3"', desc: 'Chardonnay · Valle de Guadalupe, MX', price: '21' },
+    { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc • Loire, FR', price: '23' },
+    { name: 'Stein, Blauschiefer Trocken \'25', desc: 'Riesling • Mosel, DE', price: '19' },
+    { name: 'Vino Fractura, Colombard \'25', desc: 'Colombard • Valle de Guadalupe, MX', price: '21' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'La Casa Vieja \'24', desc: 'Palomino · Valle de Guadalupe, MX — Orange', price: '21' },
-    { name: 'Thibaud Boudignon Rose de Loire \'25', desc: 'Cabernet Franc · Loire, FR — Rosé', price: '18' },
+    { name: 'Bruma, Plan B \'20', desc: 'Chardonnay • Valle de Guadalupe, MX — Orange', price: '21' },
+    { name: 'Romain Le Bars, Tavel \'25', desc: 'Grenache, Cinsault, Syrah • Rhone, FR — Rosé', price: '18' },
   ]},
   { category: 'Red', items: [
-    { name: 'Casa Jipi, Rancho Llano Colorado \'24', desc: 'Nebbiolo · Valle de San Vicente, MX', price: '21' },
-    { name: 'Wills Wine, Blue Plateau \'23', desc: 'Syrah, Gamay · Ardeche, FR', price: '23' },
+    { name: 'Casa Jipi \'25', desc: 'Mexican Nebbiolo • Valle de Guadalupe, MX', price: '21' },
+    { name: 'Envinate, La Santa \'24', desc: 'Negramoll, Listan Negro • Canary Islands, SP', price: '23' },
   ]},
   { category: 'Sweet', items: [
-    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU', price: '20' },
+    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű • Tokaj, HU • 3oz', price: '20' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Kato Sake Works, NY NY', desc: 'Jizake · Brooklyn, NY', price: '18' },
+    { name: 'Kato Sake Works, NY NY', desc: 'Jizake • Brooklyn, NY • 3oz', price: '18' },
   ]},
 ]
 
 const nonAlcoholicItems = [
-  { name: 'Tepache Spritz', desc: 'Tepache, Pentire Seaward, Club Soda', price: '14' },
+  { name: 'Sandia Soda', desc: 'Watermelon, Rind Tepache, Huacatay', price: '15' },
   { name: 'Mugicha Iced Tea', desc: 'Toasted Barley, Verjus, Coconut', price: '15' },
   { name: 'Jamaica', desc: 'Hibiscus, Licorice', price: '14' },
   { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
-  { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '14' },
-  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn · Copenhagen, DK', price: '18' },
-  { name: 'Asahi Super-Dry 0.0', desc: 'Lager · Tokyo, JP', price: '9' },
+  { name: 'Unified Ferments', desc: 'Rhododendron • Brooklyn, NY', price: '14' },
+  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn • Copenhagen, DK', price: '18' },
+  { name: 'Asahi Super-Dry 0.0', desc: 'Lager • Tokyo, JP', price: '9' },
   { name: 'Mexican Coke', desc: '', price: '4' },
 ]
 
 const cocktailItems = [
-  { name: 'Bambú', desc: 'House Lime Leaf Vermouth, Fino Sherry', price: '20' },
+  { name: 'Kaixo', desc: 'House Vermouth, Mahon Gin, Forthave Yellow, Amontillado', price: '20' },
   { name: 'San Pedro', desc: 'Mezcal, Lime, Bitter Orange, Agave, Nopales', price: '20' },
-  { name: 'Makawi', desc: 'Sotol, Grapefruit, Apricot, Eucalyptus', price: '19' },
+  { name: 'Zacate', desc: 'Tequila Blanco, Concord Grape, Mosaic Hops, Bubbles', price: '20' },
+  { name: 'Makawi', desc: 'Sotol, Grapefruit, Nectarine, Eucalyptus', price: '19' },
   { name: 'Key Largo', desc: 'Charanda Añejo, Celery, Key Lime', price: '19' },
-  { name: 'White Sands', desc: 'Gin, Peony, Dry Vermouth', price: '22' },
   { name: 'Mi Manera', desc: 'Tequila Reposado, Mango, Tarragon', price: '22' },
   { name: 'Corajudo', desc: 'Licor 43, Pineapple Amaro, Cold Brew, Tonic', price: '20' },
-  { name: 'Pelirroja', desc: 'Carta Blanca Lager, Persimmon, Habanero, Peppercorn', price: '17' },
+  { name: 'Chela Chinaloa', desc: 'Carta Blanca Lager, Koji Tomatoes, Black Vinegar, Oloroso', price: '17' },
+  { name: 'Chela Nana', desc: 'Carta Blanca Lager, Grilled Pineapple, Jalapeño — Available N/A', price: '17' },
 ]
 
 const destiladosItems = [
   { name: 'Sotol Flight', desc: 'La Higeura Wheeleri, Leiophyllum, Cedrosanum', price: '25' },
-  { name: 'Sotol Parejo, Hermanos Arrieta', desc: 'Leiophyllum · Aldama, Chihuahua', price: '14/24' },
-  { name: 'Flor del Desierto, Carnei', desc: 'Vension Pechuga, Wheeleri · Madera, Chihuahua', price: '14/24' },
-  { name: 'Cinco Sentidos, Reynaldo Alejandro', desc: 'Tobala · Santa Canterina Albarradas, Oaxaca', price: '18/32' },
-  { name: 'Lalocura, Eduardo Angeles', desc: 'Cuishe · Santa Catarina Minas, Oaxaca', price: '24/43' },
-  { name: 'Caballito Cerrero, Blanco 46', desc: 'Chato · Amatitán, Jalisco', price: '12/22' },
+  { name: 'Sotol Parejo, Hermanos Arrieta', desc: 'Leiophyllum • Aldama, Chihuahua', price: '14/24' },
+  { name: 'Flor del Desierto, Carnei', desc: 'Vension Pechuga, Wheeleri • Madera, Chihuahua', price: '14/24' },
+  { name: 'Cinco Sentidos, Reynaldo Alejandro', desc: 'Tobala • Santa Canterina Albarradas, Oaxaca', price: '18/32' },
+  { name: 'Lalocura, Eduardo Angeles', desc: 'Cuishe • Santa Catarina Minas, Oaxaca', price: '24/43' },
+  { name: 'Caballito Cerrero, Blanco 46', desc: 'Chato • Amatitán, Jalisco', price: '12/22' },
   { name: 'Arette, Extra Añejo', desc: 'Tequila, Jalisco', price: '20/35' },
 ]
 
 const beerItems = [
-  { name: 'Carta Blanca', desc: 'Mexican Lager · Monterrey, MX · 12oz', price: '9' },
-  { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale · Freeport, ME', price: '11' },
-  { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale · CDMX, MX', price: '11' },
-  { name: 'Grimm, Super Spruce', desc: 'Gose · Brooklyn, NY', price: '12' },
-  { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager · Monterrey, MX · 32oz', price: '26' },
+  { name: 'Carta Blanca', desc: 'Mexican Lager • Monterrey, MX • 12oz', price: '9' },
+  { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale • Freeport, ME', price: '11' },
+  { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale • CDMX, MX', price: '11' },
+  { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager • Monterrey, MX • 32oz', price: '26' },
 ]
 
 interface MenuOverlayProps {
@@ -115,8 +115,17 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
     if (scrollToSection) {
       const refMap = { 'a-la-carte': alaCarteRef, cocktail: cocktailRef, wine: wineRef }
       const target = refMap[scrollToSection]?.current
-      if (target) {
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+      const scrollEl = scrollRef.current
+      if (target && scrollEl) {
+        // Jump directly within the menu's own scroll container. A smooth
+        // scrollIntoView during the overlay's open transition could get
+        // interrupted and leave the menu stuck near A La Carte.
+        const id = window.setTimeout(() => {
+          const offset =
+            target.getBoundingClientRect().top - scrollEl.getBoundingClientRect().top + scrollEl.scrollTop
+          scrollEl.scrollTop = offset
+        }, 50)
+        return () => window.clearTimeout(id)
       }
     } else if (scrollRef.current) {
       // Reset any stale scroll position from a previous open so the header
@@ -241,7 +250,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
       <style>{`*::-webkit-scrollbar{display:none}`}</style>
 
       {/* Header */}
-      <div className="flex items-center justify-between flex-shrink-0 p-6">
+      <div className="flex items-center justify-between flex-shrink-0 p-6" style={{ paddingTop: 'calc(24px + env(safe-area-inset-top))' }}>
         <h1 className="text-black uppercase" style={{ fontSize: '24px', letterSpacing: '-0.02em', fontWeight: 400 }}>
           {headerLabel || 'Menu'}
         </h1>
@@ -276,7 +285,7 @@ export default function MenuOverlay({ isOpen, onClose, scrollToSection }: MenuOv
                 Tasting Menu
               </h2>
               <p className="text-black mb-4" style={{ ...base }}>
-                At Corima, our Tasting Menu consists of approximately 10-13 courses and is priced at $140 per person.
+                At Corima, our Tasting Menu consists of approximately 7-12 courses and is priced at $140 per person.
               </p>
               <p className="text-black mb-4" style={{ ...base }}>
                 The menu is a seasonal expression of what Northern Mexican cuisine means to Chef Fidel Caballero rooted in tradition, shaped by place, but constantly evolving. The menu changes throughout the year, guided by what is freshest and most vibrant at the farmers market, allowing each dish to tell a story through technique, memory, and ingredients. We often refer to this approach as Progressive Mexican: respectful of heritage but open to reinterpretation and discovery.

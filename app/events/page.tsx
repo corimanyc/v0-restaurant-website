@@ -9,6 +9,8 @@ import SiteNav from '@/components/site-nav'
 import ProgressiveImage from '@/components/progressive-image'
 
 const POSTERS = [
+  { src: '/events/kol.jpg', alt: 'KOL x Corima, presented by Resy', label: 'KOL' },
+  { src: '/events/iwa.jpg', alt: 'Corima x IWA', label: 'IWA' },
   { src: '/events/holbox.jpg', alt: 'Holbox at Corima, presented by Resy', label: 'Holbox' },
   { src: '/events/contra.jpg', alt: 'Corima x Contra', label: 'Contra' },
   { src: '/events/sanchez.jpg', alt: 'Sanchez x Corima', label: 'Sanchez' },
@@ -73,7 +75,7 @@ export default function EventsPage() {
       <DiningOverlay
         isOpen={isDiningOpen}
         onClose={() => setIsDiningOpen(false)}
-        onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
+        onViewMenu={(section) => { setIsDiningOpen(false); setMenuScrollTarget(section); setIsMenuOverlayOpen(true) }}
       />
 
       {/* Header */}

@@ -31,8 +31,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
       { url: '/icon.svg?v=6', type: 'image/svg+xml' },
+      { url: '/icon-48.png', type: 'image/png', sizes: '48x48' },
       { url: '/icon-96.png?v=6', type: 'image/png', sizes: '96x96' },
+      { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: '/apple-icon.png',
   },
@@ -75,6 +78,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: '#1f1c18',
   colorScheme: 'dark',
+  // Draw under the iPhone status bar / home-indicator areas instead of
+  // letterboxing them with the page background color.
+  viewportFit: 'cover',
 }
 
 /* Restaurant structured data (JSON-LD). PLACEHOLDER values — replace address,

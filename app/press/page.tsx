@@ -125,7 +125,7 @@ export default function PressPage() {
         <DiningOverlay
           isOpen={isDiningOpen}
           onClose={() => setIsDiningOpen(false)}
-          onViewMenu={() => { setIsDiningOpen(false); setIsMenuOverlayOpen(true) }}
+          onViewMenu={(section) => { setIsDiningOpen(false); setMenuScrollTarget(section); setIsMenuOverlayOpen(true) }}
         />
 
         {/* Gradient blur layer — always visible at the top of the viewport.
