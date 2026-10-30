@@ -26,27 +26,27 @@ const alaCarteItems = [
 
 const wineByGlass = [
   { category: 'Sparkling', items: [
-    { name: 'Andre Heucq, Heritage Brut Nature', desc: 'Pinot Meunier · Champagne, FR', price: '29' },
-    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo · Valle de Bernal, MX', price: '19' },
+    { name: 'Andre Heucq, Heritage Brut Nature', desc: 'Pinot Meunier • Champagne, FR', price: '29' },
+    { name: 'El Bajio Brut', desc: 'Xarel-lo, Macabeo • Valle de Bernal, MX', price: '19' },
   ]},
   { category: 'White', items: [
-    { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc · Loire, FR', price: '23' },
-    { name: 'Stein, Blauschiefer Trocken \'25', desc: 'Riesling · Mosel, DE', price: '19' },
-    { name: 'Vino Fractura, Colombard \'25', desc: 'Colombard · Valle de Guadalupe, MX', price: '21' },
+    { name: 'Jousset, Premier Rendez-Vous \'23', desc: 'Chenin Blanc • Loire, FR', price: '23' },
+    { name: 'Stein, Blauschiefer Trocken \'25', desc: 'Riesling • Mosel, DE', price: '19' },
+    { name: 'Vino Fractura, Colombard \'25', desc: 'Colombard • Valle de Guadalupe, MX', price: '21' },
   ]},
   { category: 'Skin Contact', items: [
-    { name: 'Bruma, Plan B \'20', desc: 'Chardonnay · Valle de Guadalupe, MX — Orange', price: '21' },
-    { name: 'Romain Le Bars, Tavel \'25', desc: 'Grenache, Cinsault, Syrah · Rhone, FR — Rosé', price: '18' },
+    { name: 'Bruma, Plan B \'20', desc: 'Chardonnay • Valle de Guadalupe, MX — Orange', price: '21' },
+    { name: 'Romain Le Bars, Tavel \'25', desc: 'Grenache, Cinsault, Syrah • Rhone, FR — Rosé', price: '18' },
   ]},
   { category: 'Red', items: [
-    { name: 'Casa Jipi \'25', desc: 'Mexican Nebbiolo · Valle de Guadalupe, MX', price: '21' },
-    { name: 'Envinate, La Santa \'24', desc: 'Negramoll, Listan Negro · Canary Islands, SP', price: '23' },
+    { name: 'Casa Jipi \'25', desc: 'Mexican Nebbiolo • Valle de Guadalupe, MX', price: '21' },
+    { name: 'Envinate, La Santa \'24', desc: 'Negramoll, Listan Negro • Canary Islands, SP', price: '23' },
   ]},
   { category: 'Sweet', items: [
-    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű · Tokaj, HU · 3oz', price: '20' },
+    { name: 'Lenkey, Szamorodni \'18', desc: 'Furmint, Hárslevelű • Tokaj, HU • 3oz', price: '20' },
   ]},
   { category: 'Sake', items: [
-    { name: 'Kato Sake Works, NY NY', desc: 'Jizake · Brooklyn, NY · 3oz', price: '18' },
+    { name: 'Kato Sake Works, NY NY', desc: 'Jizake • Brooklyn, NY • 3oz', price: '18' },
   ]},
 ]
 
@@ -55,9 +55,9 @@ const nonAlcoholicItems = [
   { name: 'Mugicha Iced Tea', desc: 'Toasted Barley, Verjus, Coconut', price: '15' },
   { name: 'Jamaica', desc: 'Hibiscus, Licorice', price: '14' },
   { name: 'Chuchupaste', desc: 'Aloe Vera, Chuchupaste Root, Gentian, Avocado Leaf', price: '15' },
-  { name: 'Unified Ferments', desc: 'Rhododendron · Brooklyn, NY', price: '14' },
-  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn · Copenhagen, DK', price: '18' },
-  { name: 'Asahi Super-Dry 0.0', desc: 'Lager · Tokyo, JP', price: '9' },
+  { name: 'Unified Ferments', desc: 'Rhododendron • Brooklyn, NY', price: '14' },
+  { name: 'Copenhagen Sparkling Tea Co', desc: 'Lysegrøn • Copenhagen, DK', price: '18' },
+  { name: 'Asahi Super-Dry 0.0', desc: 'Lager • Tokyo, JP', price: '9' },
   { name: 'Mexican Coke', desc: '', price: '4' },
 ]
 
@@ -75,19 +75,19 @@ const cocktailItems = [
 
 const destiladosItems = [
   { name: 'Sotol Flight', desc: 'La Higeura Wheeleri, Leiophyllum, Cedrosanum', price: '25' },
-  { name: 'Sotol Parejo, Hermanos Arrieta', desc: 'Leiophyllum · Aldama, Chihuahua', price: '14/24' },
-  { name: 'Flor del Desierto, Carnei', desc: 'Vension Pechuga, Wheeleri · Madera, Chihuahua', price: '14/24' },
-  { name: 'Cinco Sentidos, Reynaldo Alejandro', desc: 'Tobala · Santa Canterina Albarradas, Oaxaca', price: '18/32' },
-  { name: 'Lalocura, Eduardo Angeles', desc: 'Cuishe · Santa Catarina Minas, Oaxaca', price: '24/43' },
-  { name: 'Caballito Cerrero, Blanco 46', desc: 'Chato · Amatitán, Jalisco', price: '12/22' },
+  { name: 'Sotol Parejo, Hermanos Arrieta', desc: 'Leiophyllum • Aldama, Chihuahua', price: '14/24' },
+  { name: 'Flor del Desierto, Carnei', desc: 'Vension Pechuga, Wheeleri • Madera, Chihuahua', price: '14/24' },
+  { name: 'Cinco Sentidos, Reynaldo Alejandro', desc: 'Tobala • Santa Canterina Albarradas, Oaxaca', price: '18/32' },
+  { name: 'Lalocura, Eduardo Angeles', desc: 'Cuishe • Santa Catarina Minas, Oaxaca', price: '24/43' },
+  { name: 'Caballito Cerrero, Blanco 46', desc: 'Chato • Amatitán, Jalisco', price: '12/22' },
   { name: 'Arette, Extra Añejo', desc: 'Tequila, Jalisco', price: '20/35' },
 ]
 
 const beerItems = [
-  { name: 'Carta Blanca', desc: 'Mexican Lager · Monterrey, MX · 12oz', price: '9' },
-  { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale · Freeport, ME', price: '11' },
-  { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale · CDMX, MX', price: '11' },
-  { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager · Monterrey, MX · 32oz', price: '26' },
+  { name: 'Carta Blanca', desc: 'Mexican Lager • Monterrey, MX • 12oz', price: '9' },
+  { name: 'Maine Beer Company, Lunch', desc: 'India Pale Ale • Freeport, ME', price: '11' },
+  { name: 'Monstruo de Agua, Nochtli', desc: 'Prickly Pear Golden Ale • CDMX, MX', price: '11' },
+  { name: "Carta Blanca 'Caguama'", desc: 'Mexican Lager • Monterrey, MX • 32oz', price: '26' },
 ]
 
 interface MenuOverlayProps {
